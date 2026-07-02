@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+    <title>Dashboard | TopGrade.pk</title>
+    <meta NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <link rel="icon" type="image/png" href="https://app.topgrade.pk/assets/images/fav.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        />
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        />
+    <!-- Google Fonts: Outfit -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+        />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://app.topgrade.pk/assets/learning_session/css/custom.css?v=1782990199" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114282899-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-114282899-2', {'optimize_id': 'GTM-523GCW9'});
+        </script>
+    <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-P4H5QPV');</script>
+
+    
+                    <script type="text/javascript">
+                (function (c, l, a, r, i, t, y) {
+                    c[a] = c[a] || function () {
+                        (c[a].q = c[a].q || []).push(arguments)
+                    };
+                    t = l.createElement(r);t.async = 1;t.src = "https://www.clarity.ms/tag/" + i;
+                    y = l.getElementsByTagName(r)[0];
+                    y.parentNode.insertBefore(t, y);
+                })(window, document, "clarity", "script", "fjri95a5s1");
+                clarity("set", "username", "03294121768");
+            </script>
+        
+        <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=35124c2c"></script>
+        <script>
+            window.LOQ = window.LOQ || [];
+            window.LOQ.push(['ready', async LO => {
+                    await LO.$internal.ready('events');
+
+                    // Track Product Name if exists
+        
+                    // Identify User
+                            await LO.$internal.ready('visitor');
+                    LO.visitor.identify('453531', {
+                        name: 'Testing',
+                        email: 'testing@gmail.com',
+                        type: 'Trial User',
+                        subscription: 'None'
+                    });
+                }]);
+        </script>
+    
+</head>
+
+<style>
+    :root {
+        --primary-blue: #3f6ad8;
+        --primary-green: #3ac47d;
+        --bg-gray: #f8f9fa;
+        --blue-primary: #1676dd;
+    }
+
+    /* Prevent scrolling on desktop, allow on mobile if content is tall */
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        background-color: var(--bg-gray);
+        /* font-family: 'Inter', -apple-system, sans-serif; */
+    }
+
+    /* Main App Wrapper */
+    .app-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        /* Use min-height to allow expansion */
+        align-items: center;
+        padding: 10px;
+        position: relative;
+    }
+
+    /* The Content Card - Pushed to center */
+    .app-card {
+        width: 100%;
+        max-width: 700px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        margin-top: auto;
+        /* Magic: pushes card from top */
+        margin-bottom: auto;
+        /* Magic: pushes card from bottom */
+        border: 1px solid #ccc;
+    }
+
+    .video-section {
+        background: #000;
+    }
+
+    .info-section {
+        padding: 1.25rem;
+    }
+
+    .breadcrumb-text {
+        font-size: 18px;
+        line-height: 24px;
+        /* text-transform: uppercase; */
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: #1754bb;
+    }
+
+    .stat-badge {
+        background: #f1f3f5;
+        padding: 4px 12px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        color: #495057;
+        font-weight: 500;
+    }
+
+    /* Fixed Sticky Footer */
+    .app-footer {
+        width: 100%;
+        max-width: 500px;
+        /* Small and centered like an app */
+        position: sticky;
+        bottom: 20px;
+        /* Distance from bottom */
+        margin: 0 auto 10px auto;
+        z-index: 1000;
+    }
+
+    .nav-container {
+        display: flex;
+        border-radius: 50px;
+        /* Pill shape for app feel */
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        background: white;
+    }
+
+    .nav-btn {
+        flex: 1;
+        border: none;
+        padding: 14px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    }
+
+    .btn-prev {
+        background-color: var(--primary-blue);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-next {
+        background-color: var(--primary-green);
+    }
+
+    .nav-btn:hover {
+        opacity: 0.9;
+        color: white;
+    }
+
+    .nav-btn:active {
+        transform: scale(0.98);
+    }
+
+    .heading-title {
+        font-size: 20px;
+        font-weight: bold;
+        /* color: #1754bb; */
+        margin: 0;
+        line-height: 34px;
+    }
+
+    /* -------------------------------------
+           GREETING SECTION
+        -------------------------------------- */
+    .greeting-section {
+        display: grid;
+        grid-template-columns: 65px 1fr;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 8px;
+        flex-shrink: 0;
+        width: 700px;
+    }
+
+    .hero-mascot {
+        display: block;
+        margin: 0 auto 12px;
+        width: 70px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .speech-bubble {
+        position: relative;
+        background: var(--blue-primary);
+        color: #fff;
+        border-radius: 10px;
+        /* 1. Flexbox alignment add karein */
+        display: flex;
+        align-items: center;
+        /* Vertical center */
+        justify-content: center;
+        /* Horizontal center */
+        text-align: center;
+        padding: 10px 14px;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 2px 8px rgba(27, 72, 174, 0.1);
+        font-size: 0.85rem;
+        line-height: 1.35;
+        font-weight: 500;
+    }
+
+    .speech-bubble::before {
+        content: "";
+        position: absolute;
+        left: -14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 14px solid var(--blue-primary);
+    }
+
+    .app-subtitle {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .badge-views {
+        background-color: #eef2ff;
+        color: #4338ca;
+    }
+
+    .badge-likes {
+        background-color: #ecfdf5;
+        color: #065f46;
+    }
+
+    .badge-dislikes {
+        background-color: #fef2f2;
+        color: #991b1b;
+    }
+
+    .stat-badge {
+        border: none;
+        border-radius: 8px;
+        padding: 6px 16px;
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+
+    .bottom-nav .btn-app-action.bg-success {
+        /* background-image: linear-gradient(to right, #198754, #0a5b35); */
+        background: linear-gradient(90deg, #ffc400 0%, #ff7a12 100%);
+    }
+
+    /* Responsive Tweaks */
+    @media (max-width: 768px) {
+
+        body,
+        html {
+            overflow-y: auto;
+        }
+
+        /* Ensure mobile can scroll if video is large */
+
+        .app-wrapper {
+            padding-bottom: 100px;
+            /* Space for the fixed footer */
+            justify-content: flex-start;
+        }
+
+        .app-footer {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: none;
+        }
+
+        .app-card {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .nav-btn span {
+            font-size: 0.85rem;
+        }
+
+        .greeting-section {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .btn-app-action {
+            font-size: 14px;
+            line-height: 20px;
+            padding-top: 12px !important;
+            padding-bottom: 12px !important;
+        }
+
+        .bottom-nav {
+            height: 60px;
+        }
+
+        .app-subtitle {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        .heading-title {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+
+
+        .app-card {
+            margin-top: 0px !important;
+        }
+
+        .breadcrumb-text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+</style>
+
+<body>
+    <style>
+    /* Container for the logo + spinner */
+    .loader-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* The custom icon in the center */
+    .loader-icon {
+        position: absolute;
+        width: 33px; /* Adjust size to fit inside the spinner */
+        /*height: 30px;*/
+        object-fit: contain;
+    }
+
+    /* Adjusting the spinner size to wrap the icon */
+    .custom-spinner {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-width: 0.25em;
+    }
+</style>
+
+<div id="page-loader" class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white opacity-75 d-none" style="z-index: 9999;">
+    <div class="loader-wrapper">
+        <div class="spinner-border text-primary custom-spinner" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <img src="https://www.topgrade.pk/public/assets/website/images/tg-insignia.webp" alt="Loading Icon" class="loader-icon">
+    </div>
+</div>    <header class="p-1 bg-brand border-bottom fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-1">
+                    <a id="dashboard-back-link" style="cursor: pointer; text-decoration: none;">
+                <span id="header_home_text" class="ms-2 fw-bold text-white "><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</span>
+            </a>
+                <style>
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        text-align: center !important;
+    }
+
+    /** */
+    .select2-container--default .select2-results>.select2-results__options {
+        padding: 0px 10px 10px 10px;
+    }
+
+    .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+        background-color: #cccccc82 !important;
+        color: #000;
+        margin-bottom: 7px !important;
+        margin-top: 7px !important;
+    }
+
+    .select2-results__option {
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 14px;
+    }
+</style>
+<select
+    id="courseSearch"
+    class="form-select dropdown-premium mx-auto"
+    style="
+    width: auto;
+    min-width: 220px;
+    border-radius: 12px;
+    /*padding: 10px 20px;*/
+    border: 1px solid #ccc;
+    /*                        font-weight: 600;
+                            color: #1e293b;*/
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    "
+    onchange="BuildCourse(this.value, 'https://app.topgrade.pk/', '0')">
+    <option selected disabled>Select Your Course</option>
+                    <option value="229"  >F.Sc 1st Year Pre-Med. (Punjab - 2025 Sm</option>
+                                <option value="170"  >F.Sc 2nd Year Pre-Medical (Punjab)</option>
+                                <option value="188" selected data-badge='Active'>MDCAT (Punjab)</option>
+                </select>        <div class="d-flex align-items-center">
+                            <a href="https://app.topgrade.pk/logout">
+                    <i class="fa fa-sign-out text-white" aria-hidden="true"></i>
+                </a>
+                    </div>
+    </div>
+</header>
+
+        <div class="app-wrapper mt-2 py-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="heading-title w-100 text-center">Video Lecture</h1>
+        </div>
+        <div class="greeting-section">
+            <img
+                src="https://app.topgrade.pk/assets/learning_session/images/docm-vl.png"
+                alt="Review Mascot"
+                class="hero-mascot" />
+            <div class="speech-bubble shadow-sm">
+                <p class="app-subtitle text-white">Aakhir tak dekho… End pe tum khud bologe: “Yaar, yeh itna easy tha?”.</p>
+            </div>
+        </div>
+        <div class="app-card">
+            <div class="video-section">
+                <div class="ratio ratio-16x9">
+                                            <iframe
+                            src="https://www.youtube.com/embed/qVhGQBtlTF4"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                                    </div>
+            </div>
+        </div>
+        <div class="app-card mt-3 mb-5">
+            <div class="info-section">
+                <div class="breadcrumb-text mb-2">
+                    <b>Cell Structure & Function</b>
+- (Introduction to Cell, Plasma Membrane)                </div>
+
+                <div class="d-flex gap-2 align-items-center justify-content-start mb-2">
+                    <div class="stat-badge badge-views"><i class="bi bi-eye-fill me-1"></i> 13.6k</div>
+                    <!--                        <div class="stat-badge">
+                                                    <i class="bi bi-hand-thumbs-up-fill me-1"></i> 908
+                                                    <span class="mx-1">|</span>
+                                                    <i class="bi bi-hand-thumbs-down"></i>
+                                                </div>-->
+                    <div class="stat-badge badge-likes">
+                        <span id="like" style="cursor:pointer;" onclick="UpdateVideofeedback(1)">
+                            <i id="yt-up-fill" class="bi bi-hand-thumbs-up-fill me-1" style="display:none;"></i>
+                            <i id="yt-up-empty" class="bi bi-hand-thumbs-up me-1" style="display:inline-block;"></i>
+
+                            <span id="likescounts">713</span>
+                        </span>
+                    </div>
+                    <div class="stat-badge badge-dislikes">
+                        <span id="dislike" style="cursor:pointer;" onclick="UpdateVideofeedback(0)">
+                            <i id="yt-down-empty" class="bi bi-hand-thumbs-down me-1" style="display:inline-block;"></i>
+                            <i id="yt-down-fill" class="bi bi-hand-thumbs-down-fill me-1" style="display:none;"></i>
+                        </span>
+                    </div>
+                    <input type="hidden" id="_v_id" value="3997">
+                </div>
+                                <style>
+                    #comment-input:focus {
+                        /* border-bottom: 2px solid #000 !important; */
+                    }
+
+                    #comment-input::placeholder {
+                        color: #999999;
+                    }
+
+                    .comment-user {
+                        font-size: 13px;
+                        font-weight: bold;
+                        margin-right: 8px;
+                    }
+
+                    .comment-time {
+                        font-size: 12px;
+                        color: #606060;
+                    }
+
+                    .comment-text {
+                        font-size: 14px;
+                        margin-top: 2px;
+                    }
+
+                    .action-icon {
+                        font-size: 14px;
+                        cursor: pointer;
+                        color: #030303;
+                    }
+                </style>
+                <div class="border rounded-3 p-2 mt-4">
+                    <div class="d-flex align-items-center gap-2 mb-2" style="font-size: 0.85rem;color:#1754bb;">
+                        <i class="bi bi-chat-left-text"></i> <span class="fw-bold">Comments & Feedback <span id="all-comments-counter"></span></span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="bg-light rounded-circle border d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                            <i class="bi bi-person text-secondary"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="comment-input" class="form-control form-control-sm border-1 bg-light" placeholder="Post your comment or feedback here..." aria-label="Comment">
+                            <div id="action-buttons" class="text-end mt-2 d-none">
+                                <button class="btn btn-sm btn-link text-primary" type="button" id="submit-btn" onclick="postComment('https://app.topgrade.pk/', 'v', '10774')">
+                                    <i class="bi bi-send-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3 p-3" id="comments-container">
+                        <!-- Comments will be appended here via AJAX -->
+                    </div>
+                    <div class="text-center mt-2">
+                        <button id="load-more-btn" class="btn btn-primary d-none">Read More</button>
+                    </div>
+                </div>
+                <div class="container mt-3 d-none" style="max-width: 800px;">
+                    <h5 class="mb-2">Drop your feedback about the teachers</h5>
+                    <div class="d-flex gap-3 mb-5">
+                        <div class="w-100">
+                            <input type="text" id="comment-input" class="form-control border-0 border-bottom rounded-0 shadow-none" placeholder="Add a comment...">
+                            <div id="action-buttons" class="text-end mt-2 d-none">
+                                <button class="btn btn-sm btn-light rounded-pill px-3 me-2" onclick="cancelComment()">Cancel</button>
+                                <button class="btn btn-sm btn-primary rounded-pill px-3" style="cursor:pointer;" id="submit-btn" onclick="postComment('https://app.topgrade.pk/', 'v', '10774')">Comment</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="comments-container">
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <nav class="bottom-nav">
+                        <div class="container py-3 d-flex justify-content-center gap-3">
+                <div class="d-flex flex-wrap justify-content-center gap-3" style="max-width: 600px; width: 100%;">
+                    <a id="bottom-roadmap-link"
+                        class="btn-app-action flex-fill text-decoration-none text-center" style="cursor: pointer; min-width: 140px;">
+                        <i class="fa-solid fa-angles-left"></i> Roadmap
+                    </a>
+                    <a id="bottom-next-step"
+                        class="btn-app-action flex-fill text-decoration-none text-center bg-success" style="cursor: pointer; min-width: 140px; background: linear-gradient(90deg, #ffc400 0%, #ff7a12 100%); box-shadow: 0 6px 15px rgba(255, 122, 18, 0.24);">
+                        Next Step <i class="fa-solid fa-angles-right"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="app-footer d-none">
+            <div class="nav-container">
+                                <a href="https://app.topgrade.pk/main-session/1?day_topic_id=MQ&day=MQ"
+                    class="nav-btn btn-prev text-decoration-none">
+                    <i class="bi bi-chevron-left me-2"></i>
+                    <span>Road Map</span>
+                </a>
+
+                <a onclick="startStep('Mg', 'NDU4NA', 'MQ')" style="cursor:pointer;"
+                    class="nav-btn btn-next text-decoration-none">
+                    <span>Next Step</span>
+                    <i class="bi bi-chevron-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal fade" id="report_issue_model" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 pb-4">
+                    <div class="text-center mb-4">
+                        <img src="https://app.topgrade.pk/assets/images/video-issue.png" class="img-fluid mb-3" style="max-height: 120px;">
+                        <h4 class="fw-bold text-dark">Give Feedback</h4>
+                        <p class="text-muted small">Help us improve your learning experience</p>
+                    </div>
+
+                    <div class="list-group border-0">
+                        <label class="list-group-item d-flex gap-3 border-0 bg-light rounded-3 mb-2 py-3 cursor-pointer">
+                            <input class="form-check-input flex-shrink-0" type="radio" name="issue" id="issue1" value="Video Seems to have a mistake" checked>
+                            <span class="small fw-medium">Video seems to have a mistake</span>
+                        </label>
+                        <label class="list-group-item d-flex gap-3 border-0 bg-light rounded-3 mb-2 py-3 cursor-pointer">
+                            <input class="form-check-input flex-shrink-0" type="radio" name="issue" id="issue2" value="Teaching strategy Needs Improvement">
+                            <span class="small fw-medium">Teaching strategy needs improvement</span>
+                        </label>
+                        <label class="list-group-item d-flex gap-3 border-0 bg-light rounded-3 mb-2 py-3 cursor-pointer">
+                            <input class="form-check-input flex-shrink-0" type="radio" name="issue" id="issue3" value="Video Seems to be out of exam scope">
+                            <span class="small fw-medium">Video seems out of exam scope</span>
+                        </label>
+                        <label class="list-group-item d-flex gap-3 border-0 bg-light rounded-3 mb-2 py-3 cursor-pointer">
+                            <input class="form-check-input flex-shrink-0" type="radio" name="issue" id="issue4" value="0">
+                            <span class="small fw-medium">Other Issue</span>
+                        </label>
+                    </div>
+
+                    <textarea class="form-control border-0 bg-light mt-3" id="issue_msg" name="issue_msg" rows="3" placeholder="Tell us more about the issue..." style="display:none; border-radius: 12px;"></textarea>
+
+                    <button onclick="SendVideoFrnIssue('https://app.topgrade.pk/', 'v', '10774')" class="btn btn-primary w-100 mt-4 py-2 fw-bold" style="border-radius: 12px; background: var(--primary-blue);">
+                        Submit Feedback
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="report_issue_model_thanks" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered shadow-sm">
+            <div class="modal-content text-center p-5 border-0" style="border-radius: 20px;">
+                <img src="https://app.topgrade.pk/assets/images/thanks.png" class="img-fluid mx-auto mb-3" style="max-height: 100px;">
+                <h4 class="fw-bold">Thank You!</h4>
+                <p class="text-muted">Comment posted successfully.</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm mx-auto w-50" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="../assets/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    function SessionTarget(url, way, learning_session_id) {
+        $("#page-loader").removeClass('d-none');
+        if (url == "") {
+            $("#page-loader").addClass('d-none');
+            return false;
+        } else {
+            if (learning_session_id == 3 || learning_session_id == 1) {
+                SetTag(127);
+            } else if (learning_session_id == 27) {
+                SetTag(134);
+            }
+            ajaxurl = "https://app.topgrade.pk/session-preparation-way";
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                async: false,
+                data: {
+                    way: way,
+                    learning_session_id: learning_session_id
+                },
+                success: function(term) {
+                    setTimeout(function() {
+                        $("#page-loader").addClass('d-none');
+                        location.href = url;
+                    }, 1000);
+                    //                    $("#page-loader").addClass('d-none');
+                    //                    location.href = url;
+                }
+            });
+        }
+    }
+</script>
+<script>
+    function BuildCourse(course_id, hrefurl, show_parent_home) {
+        $("#page-loader").removeClass('d-none');
+        if (course_id == "155") {
+            BuildCourseByCategory(course_id, hrefurl);
+            return false;
+        }
+        $.ajax({
+            url: 'https://app.topgrade.pk/BuildCourse',
+            data: {
+                course_id: course_id,
+                show_parent_home: show_parent_home
+            },
+            type: 'post',
+            async: false,
+            success: function(msg) {
+                setTimeout(function() {
+                    $("#page-loader").addClass('d-none');
+                    location.href = hrefurl;
+                }, 2000);
+            }
+        });
+    }
+</script>
+<script>
+    function BuildCourseByCategory(course_id, hrefurl) {
+        $("#page-loader").removeClass('d-none');
+        $.ajax({
+            url: 'https://app.topgrade.pk/BuildCourseByCategory',
+            data: {
+                course_id: course_id
+            },
+            type: 'post',
+            async: false,
+            success: function(msg) {
+                setTimeout(function() {
+                    $("#page-loader").addClass('d-none');
+                    location.href = hrefurl;
+                }, 2000);
+            }
+        });
+    }
+</script>
+<script>
+    $(document).ready(function() {
+        $('#courseSearch').select2({
+            placeholder: "Search Your Course",
+            allowClear: false,
+            width: 'resolve',
+            templateResult: function(data) {
+                if (!data.id) return data.text; // placeholder
+
+                var badge = $(data.element).data("badge") || "";
+                var text = $('<span class="option-text">' + data.text + '</span>');
+
+                // Only show badge if exists
+                if (badge) {
+                    return $(
+                        '<span style="display:flex; justify-content:space-between; width:100%;">' +
+                        "<span>" + data.text + "</span>" +
+                        '<span class="option-badge" style="flex-shrink: 0;align-self: center;display: inline-flex;align-items: center;justify-content: center;background: green;color: #fff;border-radius: 12px;padding: 3px 8px;font-size: 11px;height: fit-content;white-space: nowrap;">' +
+                        badge +
+                        "</span>" +
+                        "</span>"
+                    );
+                } else {
+                    return data.text;
+                }
+            },
+            templateSelection: function(data) {
+                // Optional: how selected item appears in the box
+                return data.text;
+            }
+        });
+    });
+</script>
+<script>
+    function FlutterDialer(IsApp, type, phone, message) {
+        $("#page-loader").removeClass('d-none');
+        if (IsApp == 1) {
+            $("#page-loader").addClass('d-none');
+            // Inside Flutter app: call handlers with phone and message
+            if (message !== '') {
+                message = decodeURIComponent(message);
+            }
+            if (type === 0) {
+                window.flutter_inappwebview.callHandler('dialer', phone, message);
+            } else {
+                window.flutter_inappwebview.callHandler('whatsapp', phone, message);
+            }
+        } else {
+            $("#page-loader").addClass('d-none');
+            // Outside app (browser)
+            if (type == 0) {
+                // Dialer fallback
+                window.location.href = `tel:${phone}`;
+            } else {
+                // WhatsApp web with message support (URL encoded)
+                const url = message ?
+                    `https://wa.me/${phone}?text=${message}` :
+                    `https://wa.me/${phone}`;
+                window.open(url, '_blank');
+            }
+        }
+    }
+</script>
+<script>
+    function SetTag(tag_id) {
+        $("#page-loader").removeClass('d-none');
+        $.ajax({
+            url: 'https://app.topgrade.pk/SetTag',
+            data: {
+                tag_id: tag_id
+            },
+            type: 'post',
+            async: false,
+            success: function(msg) {
+                $("#page-loader").addeClass('d-none');
+            }
+        });
+    }
+</script>
+<script>
+    function PreparationWay(way) {
+        $("#page-loader").removeClass('d-none');
+        url = "https://app.topgrade.pk/preparation-way";
+        $.ajax({
+            url: url,
+            type: 'POST',
+            async: false,
+            data: {
+                way: way
+            },
+            success: function(term) {
+                $("#page-loader").addClass('d-none');
+                location.href = 'https://app.topgrade.pk/';
+            }
+        });
+    }
+</script>
+<script>
+    function loadYouTube(el) {
+        $("#page-loader").removeClass('d-none');
+        const id = el.dataset.id;
+        el.innerHTML = `
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/${id}?autoplay=1"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            `;
+        setTimeout(function() {
+            $("#page-loader").addClass('d-none');
+        }, 1000);
+    }
+</script>
+<script>
+    function GetInvoice() {
+        location.href = 'https://app.topgrade.pk/get-invoice';
+    }
+</script>    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function UpdateVideofeedback(stat) {
+            // Show loader if exists
+            $("#page-loader").removeClass('d-none');
+
+            var likescounts = parseInt($('#likescounts').text());
+            var video_id = $('#_v_id').val();
+            var url = 'https://app.topgrade.pk/' + "video-lectures/videofeedback";
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {
+                    video_id: video_id,
+                    v_stat: stat
+                },
+                success: function(result) {
+                    // result == 1 or 2 means success
+                    if (result == 1 || result == 2) {
+                        if (stat == 0) {
+                            // User Disliked
+                            $("#yt-down-fill").show();
+                            $("#yt-down-empty").hide();
+                            $("#yt-up-fill").hide();
+                            $("#yt-up-empty").show();
+
+                            // Update count (agar user ne pehle like kiya hua tha to -1)
+                            if (result == 1) { // 1 usually means switched from like to dislike
+                                $('#likescounts').text(likescounts - 1);
+                            }
+                        } else {
+                            // User Liked
+                            $("#yt-down-fill").hide();
+                            $("#yt-down-empty").show();
+                            $("#yt-up-fill").show();
+                            $("#yt-up-empty").hide();
+
+                            // Update count
+                            $('#likescounts').text(likescounts + 1);
+                        }
+                    }
+                    $("#page-loader").addClass('d-none');
+                },
+                error: function() {
+                    $("#page-loader").addClass('d-none');
+                    alert("Error updating feedback");
+                }
+            });
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Other option show/hide textarea
+            $('input[name="issue"]').on('change', function() {
+                if ($(this).val() == '0') {
+                    $('#issue_msg').fadeIn();
+                } else {
+                    $('#issue_msg').fadeOut();
+                }
+            });
+        });
+
+        function ReportIssueModal() {
+            return false;
+            $("#page-loader").removeClass('d-none');
+            var video_id = $('#_v_id').val();
+
+            $.ajax({
+                url: 'https://app.topgrade.pk/video-lectures/already-report-issue',
+                data: {
+                    video_frn_id: video_id,
+                    video_frn: 'video_id'
+                },
+                type: 'post',
+                success: function(msg) {
+                    $("#page-loader").addClass('d-none');
+                    if (msg == 1) {
+                        Swal.fire({
+                            title: "Feedback Already Received",
+                            text: "You have already given feedback against this video, try again after 48 hours.",
+                            icon: "info",
+                            confirmButtonColor: '#3f6ad8',
+                            confirmButtonText: 'OK',
+                            customClass: {
+                                confirmButton: 'btn btn-info'
+                            }
+                        });
+                        return false;
+                    } else {
+                        $('#report_issue_model').modal('show');
+                    }
+                }
+            });
+        }
+
+        function SendVideoFrnIssue(base_url, type, s_id) {
+            // 1. Get Values
+            var issue = $('input[name="issue"]:checked').val();
+            var other_issue_msg = $("#issue_msg").val().trim();
+
+            // 2. Validation Logic
+            // Agar "Other" select ho ya mistake wali options hon to message required hai
+            $("#issue_msg").removeClass('is-invalid').css('border', '1px solid #ced4da');
+
+            if ((issue == "0" || issue == 'Video Seems to have a mistake' || issue == 'FRN Seems to have a mistake') && other_issue_msg == '') {
+                $("#issue_msg").addClass('is-invalid').css('border', '1px solid red').focus();
+                return false;
+            }
+
+            // 3. ID Selection based on type
+            var id = (type == 'v') ? $('#_v_id').val() : $('#_frn_id').val();
+
+            // 4. URL Construction
+            var folder = (type == 'v') ? '/video-lectures/' : '/fast-revision-notes/';
+            var url = base_url + folder + 'report-issue';
+
+            $("#page-loader").removeClass('d-none');
+
+            // 5. AJAX Call
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: {
+                    id: id,
+                    type: type,
+                    u_sub_section_id: s_id,
+                    other_issue_msg: other_issue_msg,
+                    issue: issue
+                },
+                success: function(msg) {
+                    $("#page-loader").addClass('d-none');
+
+                    // UI Reset
+                    $("#issue_msg").val('').hide();
+                    $('#report_issue_model').modal('hide');
+
+                    // Show Success Modal
+                    $('#report_issue_model_thanks').modal('show');
+
+                    // Auto hide thanks modal
+                    setTimeout(function() {
+                        $('#report_issue_model_thanks').modal('hide');
+                    }, 4000);
+                },
+                error: function() {
+                    $("#page-loader").addClass('d-none');
+                    alert("Something went wrong. Please try again.");
+                }
+            });
+        }
+    </script>
+    <script>
+        function startStep(enc_type, enc_media_id, enc_topic_id) {
+            // atob() function base64 ko wapis normal string banata hai
+            $("#page-loader").removeClass('d-none');
+            var type = atob(enc_type);
+            var baseUrl = "https://app.topgrade.pk/";
+            if (type == 1) {
+                // video
+                window.location.href = baseUrl + "video_player/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            } else if (type == 2) {
+                // slides
+                SetTag(130);
+                window.location.href = baseUrl + "slides_viewer/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            } else if (type == 3) {
+                //test
+                SetTag(131);
+                window.location.href = baseUrl + "take_test/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            }
+        }
+    </script>
+    <script>
+        const SUBJECT_DATA = {
+            biology: {
+                title: "Cell Structure & Function",
+                subtitle: "(Introduction to Cell, Plasma Membrane)",
+                videoTitle: "Cell Structure & Function",
+                videoSubtitle: " - (Introduction to Cell, Plasma Membrane)",
+                videoUrl: "https://www.youtube.com/embed/8IlzKri08kk",
+                speechText: "Aakhir tak dekho… End pe tum khud bologe: “Yaar, yeh itna easy tha?”."
+            },
+            physics: {
+                title: "Force And Motion",
+                subtitle: "(Displacement, Velocity, Acceleration, Equations of Motion)",
+                videoTitle: "Force And Motion",
+                videoSubtitle: " - (Displacement, Velocity, Acceleration, Equations of Motion)",
+                videoUrl: "https://www.youtube.com/embed/EwY6p-r_hyY",
+                speechText: "Force & Motion is full of concepts. Pay attention to velocity-time graphs!"
+            },
+            chemistry: {
+                title: "Fundamentals Concept Of Chemistry",
+                subtitle: "(Moles And Avogadro's Number)",
+                videoTitle: "Introduction Of Fundamentals Concept Of Chemistry",
+                videoSubtitle: " - (Moles And Avogadro's Number)",
+                videoUrl: "https://www.youtube.com/embed/O552g-m1Vq4",
+                speechText: "Moles and stoichiometry calculations are simple if you follow this approach."
+            },
+            english: {
+                title: "English & Logical Reasoning",
+                subtitle: "(Parts of sentences, Phrases)",
+                videoTitle: "English & Logical Reasoning",
+                videoSubtitle: " - (Parts of sentences, Phrases)",
+                videoUrl: "https://www.youtube.com/embed/EngW7tLk6r8",
+                speechText: "English grammar rules and sentence structures made crystal clear."
+            }
+        };
+
+        const INITIAL_COMMENTS = [
+            { name: "FAHEEM ULLAH", comment: "I'm ready sir" },
+            { name: "Eman", comment: "Yes sir I with you" },
+            { name: "Eman", comment: "Yes I will sir" },
+            { name: "Harmain Arif", comment: "Yes I will win InshaAllah" },
+            { name: "Harmain Arif", comment: "Yes I m ready" }
+        ];
+
+        const subjectStates = {
+            biology: { likes: 714, liked: null, comments: [...INITIAL_COMMENTS] },
+            physics: { likes: 582, liked: null, comments: [{ name: "Ali Khan", comment: "Excellent explanation of displacement and velocity vectors!" }, { name: "Sana", comment: "Equations of motion are super clear now." }, ...INITIAL_COMMENTS] },
+            chemistry: { likes: 649, liked: null, comments: [{ name: "Zainab", comment: "The mole concept is simplified so well." }, { name: "Ahmad", comment: "Ready to solve MCQs on stoichiometry!" }, ...INITIAL_COMMENTS] },
+            english: { likes: 412, liked: null, comments: [{ name: "Fatima", comment: "Phrases and sentences structure is perfect." }, { name: "Hamza", comment: "I am ready for the test sir." }, ...INITIAL_COMMENTS] }
+        };
+
+        // Extract subject from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const subjectKey = urlParams.get('subject') || 'biology';
+        const currentData = SUBJECT_DATA[subjectKey] || SUBJECT_DATA.biology;
+        const currentState = subjectStates[subjectKey];
+
+        $(document).ready(function() {
+            // 1. Load Subject Data into UI
+            $('.video-section iframe').attr('src', currentData.videoUrl);
+            $('.breadcrumb-text').html(`<b>${currentData.videoTitle}</b>${currentData.videoSubtitle}`);
+            $('.speech-bubble p').text(currentData.speechText);
+            
+            updateLikesUI();
+            renderCommentsList();
+
+            // 2. Setup Back and Roadmap Links
+            const backUrl = `index.html?roadmap=${subjectKey}`;
+            $('#dashboard-back-link').attr('href', backUrl);
+            $('#bottom-roadmap-link').attr('href', backUrl);
+
+            // 3. Setup Next Step Action
+            $('#bottom-next-step').on('click', function(e) {
+                e.preventDefault();
+                alert("Moving to next step: Revise Lecture in Minutes!");
+                window.location.href = backUrl;
+            });
+
+            // 4. Comment input action buttons visibility
+            $('#comment-input').on('focus', function() {
+                $('#action-buttons').removeClass('d-none');
+            });
+
+            $('#comment-input').on('input', function() {
+                $('#submit-btn').prop('disabled', this.value.trim() === "");
+            });
+
+            // Likes/Dislikes click binds
+            $('#like').on('click', function() {
+                toggleLike(true);
+            });
+            $('#dislike').on('click', function() {
+                toggleLike(false);
+            });
+        });
+
+        function updateLikesUI() {
+            $('#likescounts').text(currentState.likes);
+            if (currentState.liked === true) {
+                $("#yt-up-fill").show();
+                $("#yt-up-empty").hide();
+                $("#yt-down-fill").hide();
+                $("#yt-down-empty").show();
+            } else if (currentState.liked === false) {
+                $("#yt-up-fill").hide();
+                $("#yt-up-empty").show();
+                $("#yt-down-fill").show();
+                $("#yt-down-empty").hide();
+            } else {
+                $("#yt-up-fill").hide();
+                $("#yt-up-empty").show();
+                $("#yt-down-fill").hide();
+                $("#yt-down-empty").show();
+            }
+        }
+
+        function toggleLike(isLike) {
+            if (isLike) {
+                if (currentState.liked === true) {
+                    currentState.liked = null;
+                    currentState.likes--;
+                } else {
+                    if (currentState.liked === false) {
+                        currentState.liked = null;
+                    }
+                    currentState.liked = true;
+                    currentState.likes++;
+                }
+            } else {
+                if (currentState.liked === false) {
+                    currentState.liked = null;
+                } else {
+                    if (currentState.liked === true) {
+                        currentState.likes--;
+                    }
+                    currentState.liked = false;
+                }
+            }
+            updateLikesUI();
+        }
+
+        function renderCommentsList() {
+            $("#all-comments-counter").html("(" + currentState.comments.length + ")");
+            $('#comments-container').empty();
+            currentState.comments.forEach(function(comment) {
+                let html = `
+                    <div class="d-flex mt-3 align-items-start">
+                        <div class="flex-shrink-0">
+                            <div class="bg-light rounded-circle border d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                                <i class="bi bi-person text-secondary"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-2">
+                            <div>
+                                <strong style="font-size: 0.9rem; text-transform: capitalize; color: #12224d;">${comment.name}</strong>
+                                <p class="mb-0 text-muted" style="font-size: 0.85rem; word-break: break-word;">${comment.comment}</p>
+                            </div>
+                        </div>
+                    </div>`;
+                $('#comments-container').append(html);
+            });
+        }
+
+        function cancelComment() {
+            $('#comment-input').val('');
+            $('#action-buttons').addClass('d-none');
+        }
+
+        function postComment(base_url, type, s_id) {
+            let text = $('#comment-input').val().trim();
+            if (text == "") {
+                $("#comment-input").addClass('is-invalid').css('border', '1px solid red').focus();
+                return false;
+            }
+
+            $("#comment-input").removeClass('is-invalid').css('border', '1px solid #ced4da');
+            currentState.comments.unshift({
+                name: "Testing User",
+                comment: text
+            });
+
+            cancelComment();
+            renderCommentsList();
+
+            // Show Success Modal
+            $('#report_issue_model_thanks').modal('show');
+            setTimeout(function() {
+                $('#report_issue_model_thanks').modal('hide');
+            }, 3000);
+        }
+
+        // Setup Load More mock comment action
+        $('#load-more-btn').removeClass('d-none').on('click', function() {
+            currentState.comments.push(
+                { name: "Kashif Ali", comment: "Really nice explanations, sir." },
+                { name: "Areeba", comment: "Very helpful video lectures for entry test preparations." }
+            );
+            renderCommentsList();
+            $('#load-more-btn').addClass('d-none');
+        });
+    </script>
+</body>
+
+</html>
