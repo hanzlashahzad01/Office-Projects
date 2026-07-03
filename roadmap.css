@@ -133,11 +133,11 @@
 
 .roadmap-node.left {
     padding-left: 36px;
-    padding-right: 10px;
+    padding-right: 36px;
 }
 
 .roadmap-node.right {
-    padding-left: 10px;
+    padding-left: 36px;
     padding-right: 36px;
 }
 
@@ -289,11 +289,11 @@
 
     .roadmap-node.left {
         padding-left: 32px;
-        padding-right: 8px;
+        padding-right: 32px;
     }
 
     .roadmap-node.right {
-        padding-left: 8px;
+        padding-left: 32px;
         padding-right: 32px;
     }
 

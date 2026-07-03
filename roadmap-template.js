@@ -13,21 +13,21 @@ window.SUBJECT_DATA = {
         subtitle: "(Displacement, Velocity, Acceleration, Equations of Motion)",
         videoTitle: "Force And Motion",
         videoSubtitle: " - (Displacement, Velocity, Acceleration, Equations of Motion)",
-        videoUrl: "https://www.youtube.com/embed/EwY6p-r_hyY"
+        videoUrl: "https://www.youtube.com/embed/q3ELSPuVDVY"
     },
     chemistry: {
         title: "Fundamentals Concept Of Chemistry",
         subtitle: "(Moles And Avogadro's Number)",
         videoTitle: "Introduction Of Fundamentals Concept Of Chemistry",
         videoSubtitle: " - (Moles And Avogadro's Number)",
-        videoUrl: "https://www.youtube.com/embed/O552g-m1Vq4"
+        videoUrl: "https://www.youtube.com/embed/VTzViGFqF2k"
     },
     english: {
         title: "English & Logical Reasoning",
         subtitle: "(Parts of sentences, Phrases)",
         videoTitle: "English & Logical Reasoning",
         videoSubtitle: " - (Parts of sentences, Phrases)",
-        videoUrl: "https://www.youtube.com/embed/EngW7tLk6r8"
+        videoUrl: "https://www.youtube.com/embed/ouYIhN4Kujc"
     }
 };
 
