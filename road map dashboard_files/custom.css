@@ -8,7 +8,7 @@
 
 body {
     /*font-family: 'Outfit', 'Inter', sans-serif;*/
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: var(--bg-color);
     color: #1e293b;
     padding-bottom: var(--nav-height);
@@ -98,7 +98,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-
+//---------------------
 /* Specific Styles to Match Image Precisely */
 .brand-logo {
     font-weight: 800;
@@ -192,7 +192,7 @@ body {
     height: 8px;
     border-radius: 4px;
     background-color: #c8d3df;
-    
+    //#f1f5f9;
 }
 .progress-bar {
     border-radius: 20px;

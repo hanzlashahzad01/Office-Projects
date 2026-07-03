@@ -1,12 +1,34 @@
+/* ===================================================================
+   ROADMAP SCREEN – CSS (rebuilt to match road map dashboard design)
+   =================================================================== */
+
+/* ─── CSS Variables ─────────────────────────────────────────────── */
+#roadmap-area,
+.roadmap-screen {
+    --brand-blue:    #1d52df;
+    --brand-dark-blue: #0b1a42;
+    --success-green: #1ca63d;
+    --orange-alert:  #f26b1d;
+    --text-muted:    #7c889a;
+    --surface:       #ffffff;
+    --border-soft:   #e8edf5;
+    --fs-title:      clamp(0.75rem, 0.65rem + 0.5vw, 0.95rem);
+    --fs-subtitle:   clamp(0.65rem, 0.55rem + 0.4vw, 0.8rem);
+    --fs-badge-action: clamp(0.58rem, 0.5rem + 0.4vw, 0.7rem);
+    --fs-footer-btn: clamp(0.75rem, 0.65rem + 0.5vw, 0.9rem);
+    font-family: "Nunito Sans", system-ui, -apple-system, sans-serif;
+}
+
+/* ─── Wrapper ───────────────────────────────────────────────────── */
 .app-container,
 #roadmap-area {
     max-width: 700px;
     width: 100%;
     margin: 40px auto 90px;
-    background: var(--bg-color, #f7f8fd);
-    padding: 12px 16px 24px;
+    background: #f0f2f5;
+    padding: 12px 10px 80px 10px;
     border-radius: 24px;
-    border: 1px solid var(--border-color, #e5e8f0);
+    border: 1px solid var(--border-soft, #e5e8f0);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -14,261 +36,327 @@
     width: 100%;
 }
 
+/* ─── Topic Header ──────────────────────────────────────────────── */
 .roadmap-topic-header .topic-title {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 800;
     margin: 0;
-    line-height: 1.35;
-    color: var(--text-dark);
+    line-height: 1.3;
+    color: #111827;
 }
 
 .roadmap-topic-header .topic-subtitle {
     font-size: 13px;
     color: var(--text-muted);
-    margin: 4px 0 0;
+    margin: 2px 0 0;
 }
 
-.roadmap-greeting {
-    margin-bottom: 14px;
+/* ─── Mascot Row ────────────────────────────────────────────────── */
+.roadmap-welcome-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 2px;
+    margin-bottom: 12px;
+}
+
+.roadmap-mascot-wrap {
+    width: 90px;
+    min-width: 90px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .roadmap-mascot {
-    width: 72px;
-    height: auto;
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
     object-fit: contain;
-    margin: 0 auto;
-}
-
-.journey-container {
-    background: #fff;
-    border-radius: 12px;
-    padding: 12px 16px;
-    margin-bottom: 18px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--border-color);
-}
-
-.journey-icon-box {
-    background-color: #eef2ff;
-    width: 56px;
-    height: 56px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1.5px solid #c7d2fe;
-    flex-shrink: 0;
-    color: #64748b;
-    font-size: 22px;
-}
-
-.roadmap-journey-title {
-    font-size: 15px;
-    color: var(--text-dark);
-}
-
-.roadmap-journey-sub {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-top: 2px;
-}
-
-.roadmap-progress-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.roadmap-progress-bar {
-    flex: 1;
-    height: 6px;
-    border-radius: 999px;
-    background: #e9eef5;
-    overflow: hidden;
-}
-
-.roadmap-progress-bar .progress-bar {
-    background: #22c55e;
-    border-radius: 999px;
-}
-
-.roadmap-percent {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text-muted);
-    min-width: 28px;
-    text-align: right;
-}
-
-.roadmap-track {
-    position: relative;
-    padding: 10px 0;
-}
-
-.roadmap-track-svg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.roadmap-path-line {
-    fill: none;
-    stroke: #7da7f9; /* soft sky blue */
-    stroke-width: 4px;
-    stroke-dasharray: 8 6;
-    stroke-linecap: round;
-}
-
-.roadmap-node {
+    display: block;
     position: relative;
     z-index: 1;
-    display: flex;
-    width: 100%;
-    margin-bottom: 20px;
 }
 
-.roadmap-node:last-child {
-    margin-bottom: 4px;
-}
-
-.roadmap-node.left {
-    padding-left: 36px;
-    padding-right: 12px;
-}
-
-.roadmap-node.right {
-    padding-left: 12px;
-    padding-right: 36px;
-}
-
-.node-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: #fff;
-    border: 3.5px solid #e55b1e;
-    color: #e55b1e;
+/* ─── Banner / Speech Bubble ─────────────────────────────────────── */
+.banner-card {
+    flex: 1 1 0;
+    max-width: calc(100% - 110px);
+    min-width: 0;
+    background: #1676dd;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    box-shadow: 0 4px 12px rgba(229, 91, 30, 0.15);
-    z-index: 10;
-    transition: transform 0.2s ease;
-    position: relative;
-}
-
-/* Node circle states matching screenshot */
-.roadmap-node.completed .node-icon,
-.roadmap-node.active .node-icon {
-    background: #1676dd;
-    border: 3px solid #bfdbfe;
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(22, 118, 221, 0.2);
-}
-
-.roadmap-node.locked .node-icon {
-    background: #fff;
-    border: 3px solid #e55b1e;
-    color: #e55b1e;
-    box-shadow: 0 4px 12px rgba(229, 91, 30, 0.15);
-}
-
-.badge-check {
-    position: absolute;
-    top: -3px;
-    right: -3px;
-    width: 18px;
-    height: 18px;
-    background-color: #22c55e;
-    border-radius: 50%;
+    text-align: center;
     color: white;
+    border-radius: 8px;
+    margin-top: 14px;
+    padding: 10px 14px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2), 0 4px 10px rgba(11,26,66,0.06);
+    position: relative;
+    overflow: visible;
+    z-index: 3;
+}
+
+.banner-card::after {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 17px solid #1676dd;
+    z-index: 5;
+}
+
+/* ─── Progress Card (Your Roadmap) ─────────────────────────────── */
+.progress-card {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 9px 11px;
+    box-shadow: 0 3px 12px rgba(11, 26, 66, 0.055);
+    border: 1px solid var(--border-soft);
+    margin-bottom: 10px;
+}
+
+.custom-bar {
+    height: 5px;
+    background-color: #eef1f6;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+.custom-bar-fill {
+    height: 100%;
+    background-color: var(--success-green);
+    border-radius: 10px;
+}
+
+/* ─── Timeline Container ────────────────────────────────────────── */
+.roadmap-timeline-container {
+    --icon-column-width: 76px;
+    --connector-lane-offset: calc(var(--icon-column-width) / 2);
+    position: relative;
+    padding: 12px 12px 10px;
+}
+
+/* ─── Step Blocks ───────────────────────────────────────────────── */
+.step-block {
+    position: relative;
+    padding-bottom: 28px;
+    isolation: isolate;
+    gap: 0 !important;
+}
+
+.step-block:last-child {
+    padding-bottom: 0;
+}
+
+/* ─── Icon Column ───────────────────────────────────────────────── */
+.icon-column {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 76px;
+    min-width: 76px;
+    z-index: 4;
+}
+
+/* ─── Card Column ───────────────────────────────────────────────── */
+.card-column {
+    flex: 1 1 0;
+    width: 100%;
+    min-width: 0;
+    z-index: 3;
+    position: relative;
+    margin-left: -25px;
+}
+
+.step-block.flex-row-reverse .card-column {
+    margin-left: 0;
+    margin-right: -25px;
+}
+
+/* ─── Node Circle ───────────────────────────────────────────────── */
+.node-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--surface);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
-    border: 1.5px solid white;
-    z-index: 12;
-}
-
-.roadmap-node.left .node-icon {
-    position: absolute;
-    left: -28px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.roadmap-node.right .node-icon {
-    position: absolute;
-    right: -28px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.node-icon:hover {
-    transform: translateY(-50%) scale(1.08);
-}
-
-.node-card {
+    font-size: clamp(1.05rem, 0.95rem + 0.45vw, 1.25rem);
     position: relative;
+    box-shadow: 0 7px 18px rgba(11, 26, 66, 0.12);
+    border: 3px solid #fff;
+    z-index: 6;
+    transition: transform 0.2s ease;
+}
+
+.node-circle:hover {
+    transform: scale(1.07);
+}
+
+.node-circle.completed {
+    border-color: var(--brand-blue);
+    background-color: var(--brand-blue);
+    color: white;
+}
+
+.node-circle.active {
+    border-color: var(--brand-blue);
+    background-color: var(--brand-blue);
+    color: white;
+}
+
+.node-circle.pending {
+    border-color: var(--orange-alert);
+    color: var(--orange-alert);
     background: #fff;
-    border: 1px solid #e5e8f0;
-    border-radius: 16px;
-    padding: 18px 24px;
+}
+
+.node-circle.completed::after,
+.node-circle.active::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid var(--brand-blue);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.node-circle i {
+    position: relative;
+    z-index: 2;
+}
+
+/* ─── Sub Badge (check mark) ────────────────────────────────────── */
+.sub-badge {
+    position: absolute;
+    top: -10px;
+    right: -4px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: white;
+    z-index: 7;
+}
+
+/* ─── Step Card ─────────────────────────────────────────────────── */
+.step-card {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-soft);
+    position: relative;
+    z-index: 6;
     width: 100%;
-    box-shadow: 5px 5px 0px 0px #b3c9f0;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 4px 4px 0 0 #ccc;
+    padding-left: 20px;
+    transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
-.roadmap-node.left .node-card {
-    padding-left: 44px;
-    padding-right: 16px;
+.step-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 28px rgba(11, 26, 66, 0.11);
 }
 
-.roadmap-node.right .node-card {
-    padding-right: 44px;
-    padding-left: 16px;
-}
-
-.node-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 7px 7px 0px 0px #8fb2e8;
-}
-
-.node-card h6 {
-    margin: 0 0 6px 0;
-    font-size: 15px;
+.step-title {
+    font-size: var(--fs-title);
     font-weight: 700;
-    line-height: 1.4;
-    color: #12224d;
+    color: #111827;
+    line-height: 1.25;
 }
 
-.node-card p {
-    margin: 0 0 12px 0;
-    font-size: 12px;
-    color: #828a9e;
+.step-subtitle {
+    font-size: var(--fs-subtitle);
+    color: var(--text-muted);
 }
 
+/* ─── Action Buttons ────────────────────────────────────────────── */
+.btn-action {
+    font-weight: 600;
+    font-size: var(--fs-badge-action);
+    padding: 3px 15px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(29, 82, 223, 0.14);
+    transition: transform 160ms ease, filter 160ms ease;
+    cursor: pointer;
+}
+
+.btn-action:hover {
+    filter: brightness(0.96);
+    transform: translateY(-1px);
+}
+
+.btn-revise {
+    background-color: var(--brand-blue);
+    color: white;
+}
+
+.btn-resume {
+    background-color: var(--brand-blue);
+    color: white;
+}
+
+/* Locked state */
+.btn-action.btn-locked-action {
+    background-color: #f1f3f7;
+    color: #7c889a;
+    cursor: default;
+    box-shadow: none;
+}
+
+.btn-action.btn-locked-action:hover {
+    filter: none;
+    transform: none;
+}
+
+/* ─── Connector SVG Path ────────────────────────────────────────── */
+.connector-path {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 30px;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+/* ─── Backward compat – keep old .btn-start / .btn-locked ──────── */
 .btn-start {
-    background: #1676dd;
+    background: var(--brand-blue);
     color: #fff;
     border: none;
-    border-radius: 8px;
-    padding: 6px 20px;
+    border-radius: 6px;
+    padding: 4px 16px;
     font-size: 12px;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(22, 118, 221, 0.2);
+    box-shadow: 0 4px 10px rgba(22,118,221,0.2);
     transition: all 0.2s ease;
 }
 
 .btn-start:hover {
-    background: #125fb3;
-    box-shadow: 0 6px 14px rgba(22, 118, 221, 0.3);
+    background: #1644b8;
     transform: translateY(-1px);
 }
 
@@ -277,7 +365,7 @@
     color: #64748b;
     border: none;
     border-radius: 6px;
-    padding: 6px 16px;
+    padding: 4px 14px;
     font-size: 12px;
     font-weight: 600;
     cursor: not-allowed;
@@ -286,48 +374,57 @@
     gap: 6px;
 }
 
+/* ─── Responsive Tweaks ─────────────────────────────────────────── */
 @media (max-width: 480px) {
-    .roadmap-node {
-        margin-bottom: 16px;
+    .roadmap-timeline-container {
+        padding: 8px 6px 8px;
     }
 
-    .roadmap-node.left {
-        padding-left: 28px;
-        padding-right: 8px;
+    .icon-column {
+        width: 60px;
+        min-width: 60px;
     }
 
-    .roadmap-node.right {
-        padding-left: 8px;
-        padding-right: 28px;
+    .card-column {
+        margin-left: -18px;
     }
 
-    .roadmap-node.left .node-icon {
-        left: -24px;
-        width: 48px;
-        height: 48px;
-        font-size: 18px;
-        border-width: 3px;
+    .step-block.flex-row-reverse .card-column {
+        margin-right: -18px;
     }
 
-    .roadmap-node.right .node-icon {
-        right: -24px;
-        width: 48px;
-        height: 48px;
-        font-size: 18px;
-        border-width: 3px;
+    .node-circle {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
     }
 
-    .roadmap-node.left .node-card {
-        padding-left: 38px;
-        padding-right: 12px;
+    .step-card {
+        padding: 8px 10px;
+        padding-left: 14px;
     }
 
-    .roadmap-node.right .node-card {
-        padding-right: 38px;
-        padding-left: 12px;
+    .step-title {
+        font-size: 0.78rem;
     }
 
-    .node-card h6 {
-        font-size: 14px;
+    .step-subtitle {
+        font-size: 0.65rem;
+    }
+
+    .banner-card {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .roadmap-mascot {
+        width: 72px;
+        height: 72px;
+        min-width: 72px;
+    }
+
+    .roadmap-mascot-wrap {
+        width: 72px;
+        min-width: 72px;
     }
 }

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Slides | TopGrade.pk</title>
+    <meta NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <link rel="icon" type="image/png" href="https://app.topgrade.pk/assets/images/fav.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <!-- Google Fonts: Nunito Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+</head>
+
+<style>
+    :root {
+        --primary-blue: #3f6ad8;
+        --primary-green: #3ac47d;
+        --bg-gray: #f8f9fa;
+        --blue-primary: #1676dd;
+    }
+
+    /* Prevent scrolling on desktop, allow on mobile if content is tall */
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        background-color: var(--bg-gray);
+        font-family: 'Nunito Sans', -apple-system, sans-serif;
+    }
+
+    /* Main App Wrapper */
+    .app-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        align-items: center;
+        padding: 10px;
+        position: relative;
+    }
+
+    /* The Content Card */
+    .app-card {
+        width: 100%;
+        max-width: 700px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        border: 1px solid #ccc;
+    }
+
+    .info-section {
+        padding: 1.25rem;
+    }
+
+    .breadcrumb-text {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        font-weight: 700;
+        color: #1754bb;
+    }
+
+    .heading-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+        line-height: 34px;
+    }
+
+    /* GREETING SECTION */
+    .greeting-section {
+        display: grid;
+        grid-template-columns: 65px 1fr;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 8px;
+        flex-shrink: 0;
+        width: 700px;
+    }
+
+    .hero-mascot {
+        display: block;
+        margin: 0 auto 12px;
+        width: 70px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .speech-bubble {
+        position: relative;
+        background: var(--blue-primary);
+        color: #fff;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 14px;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 2px 8px rgba(27, 72, 174, 0.1);
+        font-size: 0.85rem;
+        line-height: 1.35;
+        font-weight: 500;
+    }
+
+    .speech-bubble::before {
+        content: "";
+        position: absolute;
+        left: -14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 14px solid var(--blue-primary);
+    }
+
+    .app-subtitle {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    /* Stat badges */
+    .badge-views { background-color: #eef2ff; color: #4338ca; }
+    .badge-likes { background-color: #ecfdf5; color: #065f46; }
+    .badge-dislikes { background-color: #fef2f2; color: #991b1b; }
+
+    .stat-badge {
+        border: none;
+        border-radius: 8px;
+        padding: 6px 16px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* Bottom Nav */
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: #fff;
+        border-top: 1px solid #e5e8f0;
+        box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        padding: 0 12px;
+    }
+
+    .btn-app-action {
+        background-image: linear-gradient(to right, #054dc7, #081236);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        box-shadow: 0 6px 15px rgba(93, 70, 226, 0.3);
+        cursor: pointer;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        text-decoration: none;
+        height: 44px;
+    }
+
+    .btn-app-action:hover {
+        color: white;
+        opacity: 0.92;
+    }
+
+    /* Slide Viewer */
+    .slide-section {
+        position: relative;
+        background: #000;
+        width: 100%;
+        aspect-ratio: 16/9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .slide-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .slide-nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 36px;
+        height: 36px;
+        background: rgba(255,255,255,0.85);
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #334155;
+        font-size: 15px;
+        cursor: pointer;
+        z-index: 10;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        transition: background 0.2s, transform 0.2s;
+    }
+
+    .slide-nav-btn:hover {
+        background: #fff;
+        transform: translateY(-50%) scale(1.05);
+    }
+
+    .slide-prev { left: 10px; }
+    .slide-next { right: 10px; }
+
+    /* Slide counter */
+    .slide-counter {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: #4f46e5;
+        margin: 10px 0 6px;
+    }
+
+    /* Actions row */
+    .actions-row {
+        border: 1.5px solid #e5e8f0;
+        border-radius: 14px;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .action-item {
+        cursor: pointer;
+        padding: 14px 8px;
+        transition: background 0.2s;
+        text-align: center;
+    }
+
+    .action-item:hover { background: #f8fafc; }
+    .action-item:active { background: #f1f5f9; }
+
+    .action-item .action-icon {
+        font-size: 22px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .action-item .action-label {
+        font-size: 12.5px;
+        font-weight: 600;
+        color: #12224d;
+    }
+
+    /* Comment input placeholder */
+    #comment-input::placeholder { color: #999; font-size: 13px; }
+    #comment-input:focus { outline: none; box-shadow: none; }
+
+    /* Loader */
+    .loader-wrapper { position: relative; display: flex; align-items: center; justify-content: center; }
+    .loader-icon { position: absolute; width: 33px; object-fit: contain; }
+    .custom-spinner { width: 4.5rem; height: 4.5rem; border-width: 0.25em; }
+
+    /* BG brand */
+    .bg-brand { background-color: #0d1b41 !important; }
+
+    /* Dropdown */
+    .dropdown-premium {
+        width: auto;
+        min-width: 220px;
+        border-radius: 12px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        body, html { overflow-y: auto; }
+        .app-wrapper { padding-bottom: 90px; justify-content: flex-start; }
+        .app-card { margin-top: 10px; margin-bottom: 20px; }
+        .greeting-section { width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+        .btn-app-action { font-size: 14px; }
+        .app-subtitle { font-size: 12px; line-height: 18px; }
+        .heading-title { font-size: 20px; line-height: 26px; }
+        .app-card { margin-top: 0 !important; }
+        .breadcrumb-text { font-size: 14px; line-height: 20px; }
+    }
+</style>
+
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader" class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white opacity-75 d-none" style="z-index: 9999;">
+        <div class="loader-wrapper">
+            <div class="spinner-border text-primary custom-spinner" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <img src="https://www.topgrade.pk/public/assets/website/images/tg-insignia.webp" alt="Loading Icon" class="loader-icon">
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="p-1 bg-brand border-bottom fixed-top">
+        <div class="container-fluid d-flex justify-content-between align-items-center px-1">
+            <a id="slides-back-link" style="cursor: pointer; text-decoration: none;">
+                <span class="ms-2 fw-bold text-white"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</span>
+            </a>
+            <select class="form-select dropdown-premium mx-auto">
+                <option selected>MDCAT (Punjab)</option>
+                <option>F.Sc 1st Year Pre-Med. (Punjab)</option>
+                <option>F.Sc 2nd Year Pre-Medical (Punjab)</option>
+            </select>
+            <div class="d-flex align-items-center">
+                <a href="#">
+                    <i class="fa fa-sign-out text-white" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main wrapper -->
+    <div class="app-wrapper mt-2 py-3" style="padding-top: 70px;">
+
+        <!-- Title -->
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="heading-title w-100 text-center">Slides</h1>
+        </div>
+
+        <!-- Mascot & Speech Bubble -->
+        <div class="greeting-section">
+            <img
+                src="https://app.topgrade.pk/assets/learning_session/images/docm-vl.png"
+                alt="Slides Mascot"
+                class="hero-mascot" />
+            <div class="speech-bubble shadow-sm">
+                <p class="app-subtitle text-white mb-0" id="speech-text">Revise with slides, clear with video, save with bookmark.</p>
+            </div>
+        </div>
+
+        <!-- Slide Counter -->
+        <div class="slide-counter" id="slide-counter">Slide 1 / 39</div>
+
+        <!-- Slide Image Card -->
+        <div class="app-card mb-3">
+            <div class="slide-section">
+                <button type="button" class="slide-nav-btn slide-prev" id="btn-prev">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <img
+                    src="https://app.topgrade.pk/assets/learning_session/slides/10774/1.webp"
+                    alt="Slide"
+                    id="slide-img"
+                    onerror="this.src='assets/cell_structure_slide_1.png'"
+                />
+                <button type="button" class="slide-nav-btn slide-next" id="btn-next">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Actions Card: Bookmark | Download | Play Video -->
+        <div class="app-card mb-3">
+            <div class="actions-row">
+                <div class="row g-0 align-items-stretch">
+                    <div class="col-4 border-end action-item" id="btn-bookmark">
+                        <i class="bi bi-bookmark action-icon text-primary" id="bookmark-icon"></i>
+                        <span class="action-label" id="bookmark-label">Bookmark</span>
+                    </div>
+                    <div class="col-4 border-end action-item" id="btn-download">
+                        <i class="bi bi-download action-icon text-success"></i>
+                        <span class="action-label">Download All Slides</span>
+                    </div>
+                    <div class="col-4 action-item" id="btn-play-video">
+                        <i class="bi bi-play-circle action-icon" style="color: #7c3aed;"></i>
+                        <span class="action-label">Play Video</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info card: Title + Stats + Comments -->
+        <div class="app-card mt-0 mb-5">
+            <div class="info-section">
+                <!-- Subject Title -->
+                <div class="breadcrumb-text mb-2" id="slide-topic-title">
+                    <b>Cell Structure &amp; Function</b> - (Introduction to Cell, Plasma Membrane)
+                </div>
+
+                <!-- Stats -->
+                <div class="d-flex gap-2 align-items-center justify-content-start mb-2">
+                    <div class="stat-badge badge-views">
+                        <i class="bi bi-eye-fill me-1"></i> <span id="views-count">3.1k</span>
+                    </div>
+                    <div class="stat-badge badge-likes" style="cursor:pointer;" id="btn-like">
+                        <span>
+                            <i id="up-fill" class="bi bi-hand-thumbs-up-fill me-1" style="display:none;"></i>
+                            <i id="up-empty" class="bi bi-hand-thumbs-up me-1" style="display:inline-block;"></i>
+                            <span id="likes-count">110</span>
+                        </span>
+                    </div>
+                    <div class="stat-badge badge-dislikes" style="cursor:pointer;" id="btn-dislike">
+                        <span>
+                            <i id="down-empty" class="bi bi-hand-thumbs-down me-1" style="display:inline-block;"></i>
+                            <i id="down-fill" class="bi bi-hand-thumbs-down-fill me-1" style="display:none;"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Comments & Feedback -->
+                <div class="border rounded-3 p-2 mt-4">
+                    <div class="d-flex align-items-center gap-2 mb-2" style="font-size: 0.85rem; color: #1754bb;">
+                        <i class="bi bi-chat-left-text"></i>
+                        <span class="fw-bold">Comments &amp; Feedback <span id="comments-counter"></span></span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="bg-light rounded-circle border d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink:0;">
+                            <i class="bi bi-person text-secondary"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="comment-input" class="form-control form-control-sm border-1 bg-light" placeholder="Post your comment or feedback here..." aria-label="Comment">
+                            <button class="btn btn-sm btn-link text-primary" type="button" id="submit-btn" disabled style="padding: 0.25rem 0.5rem; text-decoration:none;">
+                                <i class="bi bi-send-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="rounded-3 p-1 mt-2" id="comments-container"></div>
+                    <div class="text-center mt-2">
+                        <button id="load-more-btn" class="btn btn-primary btn-sm px-3" style="border-radius:8px; font-weight:600; background-color:#1676dd; border:none; font-size:13px; padding:6px 16px;">Read More</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom Nav -->
+        <nav class="bottom-nav">
+            <div class="container py-2 d-flex justify-content-center gap-3" style="max-width: 600px; width: 100%; padding: 0 12px;">
+                <a id="bottom-roadmap-link"
+                    class="btn-app-action flex-fill text-decoration-none text-center" style="cursor: pointer; min-width: 140px;">
+                    <i class="fa-solid fa-angles-left"></i> Roadmap
+                </a>
+                <a id="bottom-next-step"
+                    class="btn-app-action flex-fill text-decoration-none text-center bg-success" style="cursor: pointer; min-width: 140px; background: linear-gradient(90deg, #ffc400 0%, #ff7a12 100%) !important; box-shadow: 0 6px 15px rgba(255, 122, 18, 0.24);">
+                    Next Step <i class="fa-solid fa-angles-right"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="report_issue_model_thanks" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered shadow-sm">
+            <div class="modal-content text-center p-5 border-0" style="border-radius: 20px;">
+                <img src="https://app.topgrade.pk/assets/images/thanks.png" class="img-fluid mx-auto mb-3" style="max-height: 100px;">
+                <h4 class="fw-bold" id="modal-title-text">Done!</h4>
+                <p class="text-muted" id="modal-body-text">Comment posted successfully.</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm mx-auto w-50" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        // ─── Subject Data ───────────────────────────────────────────────
+        const SUBJECT_DATA = {
+            biology: {
+                title: "Cell Structure &amp; Function - (Introduction to Cell, Plasma Membrane)",
+                slidesCount: 39,
+                views: "3.1k",
+                likes: 110,
+                speechText: "Revise with slides, clear with video, save with bookmark.",
+                // Slide URLs: numbered per slide - add more as needed
+                slideUrls: Array.from({length: 39}, (_, i) =>
+                    `https://app.topgrade.pk/assets/learning_session/slides/10774/${i+1}.webp`
+                ),
+                fallback: "assets/cell_structure_slide_1.png"
+            },
+            physics: {
+                title: "Force And Motion - (Displacement, Velocity, Acceleration, Equations of Motion)",
+                slidesCount: 39,
+                views: "2.8k",
+                likes: 98,
+                speechText: "Revise with slides, clear with video, save with bookmark.",
+                slideUrls: Array.from({length: 39}, (_, i) =>
+                    `https://app.topgrade.pk/assets/learning_session/slides/physics/${i+1}.webp`
+                ),
+                fallback: "assets/cell_structure_slide_1.png"
+            },
+            chemistry: {
+                title: "Fundamentals Concept Of Chemistry - (Moles And Avogadro's Number)",
+                slidesCount: 39,
+                views: "2.4k",
+                likes: 87,
+                speechText: "Revise with slides, clear with video, save with bookmark.",
+                slideUrls: Array.from({length: 39}, (_, i) =>
+                    `https://app.topgrade.pk/assets/learning_session/slides/chemistry/${i+1}.webp`
+                ),
+                fallback: "assets/cell_structure_slide_1.png"
+            },
+            english: {
+                title: "English &amp; Logical Reasoning - (Parts of sentences, Phrases)",
+                slidesCount: 39,
+                views: "1.9k",
+                likes: 72,
+                speechText: "Revise with slides, clear with video, save with bookmark.",
+                slideUrls: Array.from({length: 39}, (_, i) =>
+                    `https://app.topgrade.pk/assets/learning_session/slides/english/${i+1}.webp`
+                ),
+                fallback: "assets/cell_structure_slide_1.png"
+            }
+        };
+
+        const INITIAL_COMMENTS = [
+            { name: "FAHEEM ULLAH", comment: "Excellent slides, very concise!" },
+            { name: "Eman", comment: "The diagrams make it easy to memorize." },
+            { name: "Harmain Arif", comment: "Ready to take the test now!" },
+            { name: "Ali Khan", comment: "Helped me revise the whole topic in minutes." },
+            { name: "Sana", comment: "Highly recommended for quick revision." }
+        ];
+
+        // ─── Init ────────────────────────────────────────────────────────
+        const urlParams = new URLSearchParams(window.location.search);
+        const subjectKey = urlParams.get('subject') || 'biology';
+        const data = SUBJECT_DATA[subjectKey] || SUBJECT_DATA.biology;
+
+        let currentSlide = 1;
+        const totalSlides = data.slidesCount;
+        let isBookmarked = false;
+        let likeState = null;
+        let likesCount = data.likes;
+        let commentsList = [...INITIAL_COMMENTS];
+
+        $(document).ready(function() {
+            // 1. Set UI Data
+            $('#slide-topic-title').html(`<b>${data.title.split(' - ')[0]}</b> - ${data.title.split(' - ').slice(1).join(' - ')}`);
+            $('#views-count').text(data.views);
+            $('#likes-count').text(likesCount);
+            $('#speech-text').text(data.speechText);
+            updateSlideCounter();
+            loadSlide(1);
+            renderComments();
+
+            // 2. Navigation URLs
+            const roadmapUrl = `index.html?roadmap=${subjectKey}`;
+            $('#slides-back-link').attr('href', roadmapUrl);
+            $('#bottom-roadmap-link').attr('href', roadmapUrl);
+            $('#slides-back-link').on('click', function(e) {
+                e.preventDefault();
+                window.location.href = roadmapUrl;
+            });
+
+            // 3. Next Step
+            $('#bottom-next-step').on('click', function(e) {
+                e.preventDefault();
+                alert("Moving to next step: Take the Test!");
+                window.location.href = roadmapUrl;
+            });
+
+            // 4. Slide Navigation
+            $('#btn-prev').on('click', function() {
+                if (currentSlide > 1) {
+                    currentSlide--;
+                    loadSlide(currentSlide);
+                    updateSlideCounter();
+                }
+            });
+            $('#btn-next').on('click', function() {
+                if (currentSlide < totalSlides) {
+                    currentSlide++;
+                    loadSlide(currentSlide);
+                    updateSlideCounter();
+                }
+            });
+
+            // 5. Bookmark
+            $('#btn-bookmark').on('click', function() {
+                isBookmarked = !isBookmarked;
+                if (isBookmarked) {
+                    $('#bookmark-icon').removeClass('bi-bookmark').addClass('bi-bookmark-fill');
+                    $('#bookmark-label').text('Bookmarked').css('color', '#1676dd');
+                    showModal('Bookmarked!', 'This topic has been saved to your bookmarks.');
+                } else {
+                    $('#bookmark-icon').removeClass('bi-bookmark-fill').addClass('bi-bookmark');
+                    $('#bookmark-label').text('Bookmark').css('color', '');
+                }
+            });
+
+            // 6. Download
+            $('#btn-download').on('click', function() {
+                showModal('Downloading...', 'Starting download of all ' + totalSlides + ' slides as PDF.');
+            });
+
+            // 7. Play Video
+            $('#btn-play-video').on('click', function() {
+                window.location.href = `Dashboard.html?subject=${subjectKey}`;
+            });
+
+            // 8. Like / Dislike
+            $('#btn-like').on('click', function() {
+                if (likeState === true) {
+                    likeState = null; likesCount--;
+                } else {
+                    if (likeState === false) likeState = null;
+                    likeState = true; likesCount++;
+                }
+                updateLikesUI();
+            });
+            $('#btn-dislike').on('click', function() {
+                if (likeState === false) {
+                    likeState = null;
+                } else {
+                    if (likeState === true) likesCount--;
+                    likeState = false;
+                }
+                updateLikesUI();
+            });
+
+            // 9. Comment Input
+            $('#comment-input').on('input', function() {
+                $('#submit-btn').prop('disabled', this.value.trim() === '');
+            });
+            $('#submit-btn').on('click', function() {
+                const text = $('#comment-input').val().trim();
+                if (!text) return;
+                commentsList.unshift({ name: 'Testing User', comment: text });
+                $('#comment-input').val('');
+                $('#submit-btn').prop('disabled', true);
+                renderComments();
+                showModal('Comment Posted', 'Your comment has been added.');
+            });
+
+            // 10. Load More Comments
+            $('#load-more-btn').on('click', function() {
+                commentsList.push(
+                    { name: 'Kashif Ali', comment: 'Really nice slides, sir.' },
+                    { name: 'Areeba', comment: 'Very helpful for entry test prep.' }
+                );
+                renderComments();
+                $('#load-more-btn').hide();
+            });
+        });
+
+        function loadSlide(num) {
+            const url = data.slideUrls[num - 1];
+            const img = document.getElementById('slide-img');
+            img.src = url;
+            img.onerror = function() { this.src = data.fallback; };
+        }
+
+        function updateSlideCounter() {
+            $('#slide-counter').text(`Slide ${currentSlide} / ${totalSlides}`);
+        }
+
+        function updateLikesUI() {
+            $('#likes-count').text(likesCount);
+            if (likeState === true) {
+                $('#up-fill').show(); $('#up-empty').hide();
+                $('#down-fill').hide(); $('#down-empty').show();
+            } else if (likeState === false) {
+                $('#up-fill').hide(); $('#up-empty').show();
+                $('#down-fill').show(); $('#down-empty').hide();
+            } else {
+                $('#up-fill').hide(); $('#up-empty').show();
+                $('#down-fill').hide(); $('#down-empty').show();
+            }
+        }
+
+        function renderComments() {
+            $('#comments-counter').text(`(${commentsList.length})`);
+            $('#comments-container').empty();
+            commentsList.forEach(function(c) {
+                $('#comments-container').append(`
+                    <div class="d-flex mt-3 align-items-start">
+                        <div class="flex-shrink-0">
+                            <div class="bg-light rounded-circle border d-flex align-items-center justify-content-center" style="width:32px;height:32px;">
+                                <i class="bi bi-person text-secondary"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-2">
+                            <strong style="font-size:0.9rem;text-transform:capitalize;color:#12224d;">${c.name}</strong>
+                            <p class="mb-0 text-muted" style="font-size:0.85rem;word-break:break-word;">${c.comment}</p>
+                        </div>
+                    </div>
+                `);
+            });
+        }
+
+        function showModal(title, message) {
+            $('#modal-title-text').text(title);
+            $('#modal-body-text').text(message);
+            $('#report_issue_model_thanks').modal('show');
+            setTimeout(function() { $('#report_issue_model_thanks').modal('hide'); }, 2500);
+        }
+    </script>
+</body>
+</html>

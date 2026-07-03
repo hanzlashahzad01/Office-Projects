@@ -1,4 +1,4 @@
-window.ROADMAP_MASCOT = "assets/roadmap-mascot.png";
+window.ROADMAP_MASCOT_SRC = "assets/roadmap-mascot.png";
 
 window.SUBJECT_DATA = {
     biology: {
@@ -33,87 +33,150 @@ window.SUBJECT_DATA = {
 
 window.getRoadmapScreenHtml = function getRoadmapScreenHtml(subjectKey) {
     const data = window.SUBJECT_DATA[subjectKey] || window.SUBJECT_DATA.biology;
+    const mascot = window.ROADMAP_MASCOT_SRC;
     return `
         <div class="roadmap-screen" data-subject="${subjectKey}">
+
+            <!-- ── Topic Header ── -->
             <div class="roadmap-topic-header text-center mb-2">
-                <h1 class="topic-title" style="font-weight: 800; font-size: 22px;">${data.title}</h1>
-                <p class="topic-subtitle" style="font-size: 13px;">${data.subtitle}</p>
+                <h1 class="topic-title">${data.title}</h1>
+                <p class="topic-subtitle">${data.subtitle}</p>
             </div>
 
-            <div class="greeting-section roadmap-greeting">
-                <img src="${window.ROADMAP_MASCOT}" alt="Roadmap Mascot" class="roadmap-mascot" />
-                <div class="speech-bubble shadow-sm" style="background-color: #1676dd; border: 1.5px solid rgba(255, 255, 255, 0.4);">
-                    <p class="app-subtitle text-white mb-0">Roadmap follow kro, tum is topic k master ban jao gay.</p>
+            <!-- ── Mascot + Banner Row ── -->
+            <div class="roadmap-welcome-row d-flex align-items-start">
+                <div class="roadmap-mascot-wrap">
+                    <img src="${mascot}" alt="Learning roadmap assistant" class="roadmap-mascot">
+                </div>
+                <div class="banner-card flex-grow-1">
+                    Roadmap follow kro, tum is topic k master ban jao gay.
                 </div>
             </div>
 
-            <div class="journey-container" style="border-radius: 12px; border: 1.5px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-                <div class="d-flex align-items-start gap-3">
-                    <div class="journey-icon-box" style="background-color: #f1f5f9; border: 1.5px solid #e2e8f0; border-radius: 12px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 18px;">
-                        <i class="fa-solid fa-road"></i>
+            <!-- ── Progress Card ── -->
+            <div class="progress-card mb-1">
+                <div class="d-flex align-items-center gap-2 w-100">
+                    <div style="font-size:24px;">
+                        <i class="fa-solid fa-road text-muted"></i>
                     </div>
-                    <div class="flex-grow-1">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h6 class="mb-0 fw-bold roadmap-journey-title" style="color: #1e3a8a; font-size: 15px;">Your Roadmap</h6>
-                            <span class="roadmap-percent" style="font-size: 12px; font-weight: 700; color: #1e293b;">50%</span>
+                    <div>
+                        <h5 class="mb-0 fw-bold" style="font-size:16px;color:#1754bb;">Your Roadmap</h5>
+                        <p class="mb-0 text-muted" style="font-size:11px;">2/4 Steps Completed</p>
+                    </div>
+                    <span class="ms-auto fw-bold" style="font-size:12px;color:#1e293b;">50%</span>
+                </div>
+                <div class="custom-bar w-100">
+                    <div class="custom-bar-fill h-100" style="width:50%"></div>
+                </div>
+            </div>
+
+            <!-- ── Timeline ── -->
+            <div class="roadmap-timeline-container">
+
+                <!-- Step 1 – Watch Lecture (icon LEFT) -->
+                <div class="d-flex align-items-center step-block">
+                    <!-- connector svg to next step -->
+                    <svg class="connector-path" viewBox="0 0 476 96" fill="none"
+                         xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                        <path d="M 38,0 L 38,40 C 38,58 58,58 80,58 L 396,58 C 418,58 438,58 438,78 L 438,96"
+                              stroke="#1d52df" stroke-width="2.5" stroke-dasharray="6 5"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <div class="icon-column" style="cursor:pointer;" id="icon-watch-lecture">
+                        <div class="node-circle completed">
+                            <i class="bi bi-display"></i>
+                            <span class="sub-badge bg-success"><i class="bi bi-check-lg"></i></span>
                         </div>
-                        <p class="mb-0 roadmap-journey-sub" style="font-size: 12px; color: #64748b; margin-top: 1px;">2/4 Steps Completed</p>
-                        <div class="roadmap-progress-row" style="margin-top: 6px; gap: 0;">
-                            <div class="progress roadmap-progress-bar" style="height: 6px; background-color: #e2e8f0; border-radius: 99px; width: 100%;">
-                                <div class="progress-bar" role="progressbar" style="width: 50%; background-color: #22c55e;"></div>
+                    </div>
+
+                    <div class="card-column" style="cursor:pointer;" id="card-watch-lecture">
+                        <div class="step-card">
+                            <div class="step-title">Watch Lecture &amp; Build Concepts</div>
+                            <div class="d-flex gap-2 align-items-center mt-1 mb-1">
+                                <span class="step-subtitle fw-normal">1 Video</span>
                             </div>
+                            <button class="btn-action btn-revise btn-watch-lecture" type="button">Revise</button>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="roadmap-track">
-                <svg class="roadmap-track-svg" aria-hidden="true">
-                    <path class="roadmap-path-line" d="" fill="none"></path>
-                </svg>
+                <!-- Step 2 – Revise Slides (icon RIGHT) -->
+                <div class="d-flex align-items-center step-block flex-row-reverse">
+                    <!-- connector svg to next step -->
+                    <svg class="connector-path" viewBox="0 0 476 96" fill="none"
+                         xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                        <path d="M 438,0 L 438,40 C 438,58 418,58 396,58 L 80,58 C 58,58 38,58 38,78 L 38,96"
+                              stroke="#1d52df" stroke-width="2.5" stroke-dasharray="6 5"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
 
-                <div class="roadmap-node left completed">
-                    <div class="node-card" style="border: 1.5px solid #e2e8f0; border-radius: 16px; box-shadow: 5px 5px 0px 0px #b3c9f0;">
-                        <div class="node-icon">
-                            <i class="fa-solid fa-desktop"></i>
-                            <span class="badge-check"><i class="bi bi-check-lg"></i></span>
+                    <div class="icon-column" style="cursor:pointer;" id="icon-revise-slides">
+                        <div class="node-circle completed">
+                            <i class="bi bi-window-stack"></i>
+                            <span class="sub-badge bg-success"><i class="bi bi-check-lg"></i></span>
                         </div>
-                        <h6 style="color: #12224d; font-weight: 700; font-size: 15px; margin-bottom: 4px;">Watch Lecture & Build Concepts</h6>
-                        <p style="font-size: 12px; color: #64748b; margin-bottom: 12px;">1 Video</p>
-                        <button type="button" class="btn-start btn-watch-lecture" style="padding: 6px 24px;">Revise</button>
                     </div>
-                </div>
 
-                <div class="roadmap-node right completed">
-                    <div class="node-card" style="border: 1.5px solid #e2e8f0; border-radius: 16px; box-shadow: 5px 5px 0px 0px #b3c9f0;">
-                        <div class="node-icon">
-                            <i class="fa-regular fa-window-restore"></i>
-                            <span class="badge-check"><i class="bi bi-check-lg"></i></span>
+                    <div class="card-column" style="cursor:pointer;" id="card-revise-slides">
+                        <div class="step-card">
+                            <div class="step-title">Revise Lecture in Minutes</div>
+                            <div class="d-flex gap-2 align-items-center mt-1 mb-1">
+                                <span class="step-subtitle fw-normal">39 Slides</span>
+                            </div>
+                            <button class="btn-action btn-revise btn-revise-slides" type="button">Revise</button>
                         </div>
-                        <h6 style="color: #12224d; font-weight: 700; font-size: 15px; margin-bottom: 4px;">Revise Lecture in Minutes</h6>
-                        <p style="font-size: 12px; color: #64748b; margin-bottom: 12px;">39 Slides</p>
-                        <button type="button" class="btn-start" style="padding: 6px 24px;">Revise</button>
                     </div>
                 </div>
 
-                <div class="roadmap-node left active">
-                    <div class="node-card" style="border: 1.5px solid #e2e8f0; border-radius: 16px; box-shadow: 5px 5px 0px 0px #b3c9f0;">
-                        <div class="node-icon"><i class="fa-solid fa-clipboard-check"></i></div>
-                        <h6 style="color: #12224d; font-weight: 700; font-size: 15px; margin-bottom: 4px;">Take the test. Learn through discussion</h6>
-                        <p style="font-size: 12px; color: #64748b; margin-bottom: 12px;">60 MCQs</p>
-                        <button type="button" class="btn-start" style="padding: 6px 24px;">Resume</button>
+                <!-- Step 3 – Take Test (icon LEFT) -->
+                <div class="d-flex align-items-center step-block">
+                    <!-- connector svg to next step -->
+                    <svg class="connector-path" viewBox="0 0 476 96" fill="none"
+                         xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                        <path d="M 38,0 L 38,40 C 38,58 58,58 80,58 L 396,58 C 418,58 438,58 438,78 L 438,96"
+                              stroke="#1d52df" stroke-width="2.5" stroke-dasharray="6 5"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <div class="icon-column" style="cursor:pointer;" id="icon-take-test">
+                        <div class="node-circle active">
+                            <i class="bi bi-clipboard-check"></i>
+                        </div>
+                    </div>
+
+                    <div class="card-column" style="cursor:pointer;" id="card-take-test">
+                        <div class="step-card">
+                            <div class="step-title">Take the test. Learn through discussion</div>
+                            <div class="d-flex gap-2 align-items-center mt-1 mb-1">
+                                <span class="step-subtitle fw-normal">60 MCQs</span>
+                            </div>
+                            <button class="btn-action btn-resume" type="button">Resume</button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="roadmap-node right locked">
-                    <div class="node-card" style="border: 1.5px solid #e2e8f0; border-radius: 16px; box-shadow: 5px 5px 0px 0px #b3c9f0;">
-                        <div class="node-icon"><i class="fa-solid fa-clipboard-check"></i></div>
-                        <h6 style="color: #12224d; font-weight: 700; font-size: 15px; margin-bottom: 4px;">Incorrect MCQs Test</h6>
-                        <p style="font-size: 12px; color: #64748b; margin-bottom: 12px;">Locked after test completion</p>
-                        <button type="button" class="btn-locked" disabled style="padding: 6px 20px; font-size: 12px;"><i class="fa-solid fa-lock" style="font-size: 10px;"></i> Locked</button>
+                <!-- Step 4 – Incorrect MCQs (icon RIGHT, locked) -->
+                <div class="d-flex align-items-center step-block flex-row-reverse">
+
+                    <div class="icon-column" id="icon-incorrect-mcqs">
+                        <div class="node-circle pending">
+                            <i class="bi bi-clipboard-check" style="color:var(--orange-alert)"></i>
+                        </div>
+                    </div>
+
+                    <div class="card-column" id="card-incorrect-mcqs">
+                        <div class="step-card">
+                            <div class="step-title">Incorrect MCQs Test</div>
+                            <div class="d-flex gap-2 align-items-center mt-1 mb-1"></div>
+                            <button class="btn-action btn-locked-action" type="button" disabled>
+                                <i class="bi bi-lock text-secondary"></i> Locked
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+            </div><!-- /roadmap-timeline-container -->
         </div>
     `;
 };
