@@ -35,7 +35,7 @@ window.getRoadmapScreenHtml = function getRoadmapScreenHtml(subjectKey) {
     const data = window.SUBJECT_DATA[subjectKey] || window.SUBJECT_DATA.biology;
     return `
         <div class="roadmap-screen" data-subject="${subjectKey}">
-            <div class="roadmap-topic-header text-center mb-3">
+            <div class="roadmap-topic-header text-center mb-2">
                 <h1 class="topic-title" style="font-weight: 800; font-size: 22px;">${data.title}</h1>
                 <p class="topic-subtitle" style="font-size: 13px;">${data.subtitle}</p>
             </div>
