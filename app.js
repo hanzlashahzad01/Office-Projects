@@ -144,7 +144,7 @@ function updateRoadmapPath() {
         const direction = p2.x > p1.x ? 1 : -1;
         
         // Define corner radius R
-        const R = Math.min(isMobile ? 12 : 20, Math.abs(p2.x - p1.x) / 2);
+        const R = Math.min(isMobile ? 24 : 36, Math.abs(p2.x - p1.x) / 2);
         
         if (i === 0) {
             d += `M ${p1.x} ${y_start}`;

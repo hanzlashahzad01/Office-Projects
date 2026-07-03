@@ -46,7 +46,7 @@ body {
 .session-app-container {
     max-width: 700px;
     width: 100%;
-    margin: 40px auto 80px;
+    margin: 0px auto 80px;
     background: var(--bg-color);
     padding: 12px 8px 24px;
     display: flex;
@@ -707,14 +707,10 @@ body.roadmap-active .floating-container .btn-floating i {
     justify-content: center !important;
 }
 
-#roadmap-footer .schedule-cta-btn {
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.2px;
-}
-
-#roadmap-footer .schedule-cta-btn:hover {
-    background: rgba(255, 255, 255, 0.07);
+#roadmap-footer .btn-full-roadmap:hover {
+    background-color: #334155 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(71, 85, 105, 0.3) !important;
 }
 
 
