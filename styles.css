@@ -27,6 +27,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Outfit", system-ui, -apple-system, sans-serif;
+    padding-top: 56px;
     padding-bottom: 64px;
 }
 
@@ -47,7 +48,7 @@ body {
     width: 100%;
     margin: 40px auto 80px;
     background: var(--bg-color);
-    padding: 12px 10px 24px;
+    padding: 12px 8px 24px;
     display: flex;
     flex-direction: column;
     border-radius: 24px;
@@ -348,12 +349,9 @@ body {
 
 @media (max-width: 480px) {
     .session-app-container {
-        margin: 8px 0 80px;
-        padding: 10px 4px 24px;
-        border-radius: 12px;
-        border-left: none;
-        border-right: none;
-        box-shadow: none;
+        margin: 16px 0 80px;
+        padding: 10px 6px 24px;
+        border-radius: 16px;
     }
 
     .btn-app-action {

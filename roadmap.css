@@ -132,13 +132,13 @@
 }
 
 .roadmap-node.left {
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-left: 36px;
+    padding-right: 36px;
 }
 
 .roadmap-node.right {
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-left: 36px;
+    padding-right: 36px;
 }
 
 .node-icon {
@@ -216,7 +216,7 @@
     border-radius: 16px;
     padding: 18px 24px;
     width: 100%;
-    box-shadow: 4px 4px 0px 0px #c8d8f5, 0 6px 18px rgba(0, 0, 0, 0.04);
+    box-shadow: 5px 5px 0px 0px #b3c9f0;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -232,7 +232,7 @@
 
 .node-card:hover {
     transform: translateY(-2px);
-    box-shadow: 6px 6px 0px 0px #b3c9f0, 0 10px 24px rgba(0, 0, 0, 0.07);
+    box-shadow: 7px 7px 0px 0px #8fb2e8;
 }
 
 .node-card h6 {
@@ -288,39 +288,39 @@
     }
 
     .roadmap-node.left {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .roadmap-node.right {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .roadmap-node.left .node-icon {
-        left: -20px;
-        width: 42px;
-        height: 42px;
-        font-size: 17px;
+        left: -24px;
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
         border-width: 3px;
     }
 
     .roadmap-node.right .node-icon {
-        right: -20px;
-        width: 42px;
-        height: 42px;
-        font-size: 17px;
+        right: -24px;
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
         border-width: 3px;
     }
 
     .roadmap-node.left .node-card {
-        padding-left: 30px;
-        padding-right: 10px;
+        padding-left: 36px;
+        padding-right: 12px;
     }
 
     .roadmap-node.right .node-card {
-        padding-right: 30px;
-        padding-left: 10px;
+        padding-right: 36px;
+        padding-left: 12px;
     }
 
     .node-card h6 {

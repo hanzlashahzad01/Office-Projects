@@ -73,7 +73,7 @@ window.getRoadmapScreenHtml = function getRoadmapScreenHtml(subjectKey) {
                 </svg>
 
                 <div class="roadmap-node left completed">
-                    <div class="node-card" style="border: 1.5px solid #e2e8f0; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.02);">
+                    <div class="node-card" style="border: 1.5px solid #e2e8f0; border-radius: 16px; box-shadow: 5px 5px 0px 0px #b3c9f0;">
                         <div class="node-icon">
                             <i class="fa-solid fa-desktop"></i>
                             <span class="badge-check"><i class="bi bi-check-lg"></i></span>
@@ -85,7 +85,7 @@ window.getRoadmapScreenHtml = function getRoadmapScreenHtml(subjectKey) {
                 </div>
 
                 <div class="roadmap-node right completed">
-                    <div class="node-card" style="border: 1.5px solid #e2e8f0; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.02);">
+                    <div class="node-card" style="border: 1.5px solid #e2e8f0; border-radius: 16px; box-shadow: 5px 5px 0px 0px #b3c9f0;">
                         <div class="node-icon">
                             <i class="fa-regular fa-window-restore"></i>
                             <span class="badge-check"><i class="bi bi-check-lg"></i></span>
@@ -97,7 +97,7 @@ window.getRoadmapScreenHtml = function getRoadmapScreenHtml(subjectKey) {
                 </div>
 
                 <div class="roadmap-node left active">
-                    <div class="node-card" style="border: 1.5px solid #e2e8f0; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.02);">
+                    <div class="node-card" style="border: 1.5px solid #e2e8f0; border-radius: 16px; box-shadow: 5px 5px 0px 0px #b3c9f0;">
                         <div class="node-icon"><i class="fa-solid fa-clipboard-check"></i></div>
                         <h6 style="color: #12224d; font-weight: 700; font-size: 15px; margin-bottom: 4px;">Take the test. Learn through discussion</h6>
                         <p style="font-size: 12px; color: #64748b; margin-bottom: 12px;">60 MCQs</p>
@@ -106,7 +106,7 @@ window.getRoadmapScreenHtml = function getRoadmapScreenHtml(subjectKey) {
                 </div>
 
                 <div class="roadmap-node right locked">
-                    <div class="node-card" style="border: 1.5px solid #e2e8f0; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.02);">
+                    <div class="node-card" style="border: 1.5px solid #e2e8f0; border-radius: 16px; box-shadow: 5px 5px 0px 0px #b3c9f0;">
                         <div class="node-icon"><i class="fa-solid fa-clipboard-check"></i></div>
                         <h6 style="color: #12224d; font-weight: 700; font-size: 15px; margin-bottom: 4px;">Incorrect MCQs Test</h6>
                         <p style="font-size: 12px; color: #64748b; margin-bottom: 12px;">Locked after test completion</p>
