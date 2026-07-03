@@ -348,8 +348,8 @@ body {
 
 @media (max-width: 480px) {
     .session-app-container {
-        margin: 40px auto 80px;
-        padding: 10px 12px 24px;
+        margin: 40px 0 80px;
+        padding: 10px 6px 24px;
         border-radius: 16px;
     }
 

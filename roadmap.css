@@ -288,13 +288,13 @@
     }
 
     .roadmap-node.left {
-        padding-left: 32px;
-        padding-right: 32px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .roadmap-node.right {
-        padding-left: 32px;
-        padding-right: 32px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .roadmap-node.left .node-icon {
