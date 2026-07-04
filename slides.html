@@ -458,10 +458,6 @@
                             </button>
                         </div>
                     </div>
-                    <div class="rounded-3 p-1 mt-2" id="comments-container"></div>
-                    <div class="text-center mt-2">
-                        <button id="load-more-btn" class="btn btn-primary btn-sm px-3" style="border-radius:8px; font-weight:600; background-color:#1676dd; border:none; font-size:13px; padding:6px 16px;">Read More</button>
-                    </div>
                 </div>
 
             </div>
@@ -502,14 +498,6 @@
     <script>
         const SUBJECT_DATA = window.SLIDES_SUBJECT_DATA;
 
-        const INITIAL_COMMENTS = [
-            { name: "FAHEEM ULLAH", comment: "Excellent slides, very concise!" },
-            { name: "Eman", comment: "The diagrams make it easy to memorize." },
-            { name: "Harmain Arif", comment: "Ready to take the test now!" },
-            { name: "Ali Khan", comment: "Helped me revise the whole topic in minutes." },
-            { name: "Sana", comment: "Highly recommended for quick revision." }
-        ];
-
         // ─── Init ────────────────────────────────────────────────────────
         const urlParams = new URLSearchParams(window.location.search);
         const subjectKey = urlParams.get('subject') || 'biology';
@@ -520,7 +508,6 @@
         let isBookmarked = false;
         let likeState = null;
         let likesCount = data.likes;
-        let commentsList = [...INITIAL_COMMENTS];
 
         $(document).ready(function() {
             // 1. Set UI Data
@@ -529,7 +516,6 @@
             $('#likes-count').text(likesCount);
             updateSlideCounter();
             loadSlide(1);
-            renderComments();
 
             // 2. Navigation URLs
             const roadmapUrl = `index.html?roadmap=${subjectKey}`;
@@ -606,29 +592,6 @@
                 updateLikesUI();
             });
 
-            // 9. Comment Input
-            $('#comment-input').on('input', function() {
-                $('#submit-btn').prop('disabled', this.value.trim() === '');
-            });
-            $('#submit-btn').on('click', function() {
-                const text = $('#comment-input').val().trim();
-                if (!text) return;
-                commentsList.unshift({ name: 'Testing User', comment: text });
-                $('#comment-input').val('');
-                $('#submit-btn').prop('disabled', true);
-                renderComments();
-                showModal('Comment Posted', 'Your comment has been added.');
-            });
-
-            // 10. Load More Comments
-            $('#load-more-btn').on('click', function() {
-                commentsList.push(
-                    { name: 'Kashif Ali', comment: 'Really nice slides, sir.' },
-                    { name: 'Areeba', comment: 'Very helpful for entry test prep.' }
-                );
-                renderComments();
-                $('#load-more-btn').hide();
-            });
         });
 
         function loadSlide(num) {
@@ -653,26 +616,6 @@
                 $('#up-fill').hide(); $('#up-empty').show();
                 $('#down-fill').hide(); $('#down-empty').show();
             }
-        }
-
-        function renderComments() {
-            $('#comments-counter').text(`(${commentsList.length})`);
-            $('#comments-container').empty();
-            commentsList.forEach(function(c) {
-                $('#comments-container').append(`
-                    <div class="d-flex mt-3 align-items-start">
-                        <div class="flex-shrink-0">
-                            <div class="bg-light rounded-circle border d-flex align-items-center justify-content-center" style="width:32px;height:32px;">
-                                <i class="bi bi-person text-secondary"></i>
-                            </div>
-                        </div>
-                        <div class="flex-grow-1 ms-2">
-                            <strong style="font-size:0.9rem;text-transform:capitalize;color:#12224d;">${c.name}</strong>
-                            <p class="mb-0 text-muted" style="font-size:0.85rem;word-break:break-word;">${c.comment}</p>
-                        </div>
-                    </div>
-                `);
-            });
         }
 
         function showModal(title, message) {
