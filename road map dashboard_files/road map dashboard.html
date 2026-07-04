@@ -1166,7 +1166,7 @@
                     </div>
                     <div class="timeline-container">
                         
-                                                            <div class="task-wrapper subject-wrapper-569" style="cursor:pointer;" onclick="ClicktoRoadMap(&#39;1&#39;, &#39;1&#39;)">
+                                                            <div class="task-wrapper subject-wrapper-569" style="cursor:pointer;" onclick="window.location.href='Test folder/biology test.html'">
                                     <div class="timeline-dot "></div>
                                     <div class="task-card bio-card">
                                         <div class="task-icon text-white bg-bio"><i class="fas fa-microscope"></i></div>
@@ -1180,7 +1180,7 @@
                                 </div>
 
                                                     
-                                                            <div class="task-wrapper subject-wrapper-567" style="cursor:pointer;" onclick="ClicktoRoadMap(&#39;1&#39;, &#39;61&#39;)">
+                                                            <div class="task-wrapper subject-wrapper-567" style="cursor:pointer;" onclick="window.location.href='Test folder/physics test.html'">
                                     <div class="timeline-dot "></div>
                                     <div class="task-card phys-card">
                                         <div class="task-icon text-white bg-phys"><i class="fas fa-atom"></i></div>
@@ -1194,7 +1194,7 @@
                                 </div>
 
                                                     
-                                                            <div class="task-wrapper subject-wrapper-568" style="cursor:pointer;" onclick="ClicktoRoadMap(&#39;1&#39;, &#39;113&#39;)">
+                                                            <div class="task-wrapper subject-wrapper-568" style="cursor:pointer;" onclick="window.location.href='Test folder/chemistry test.html'">
                                     <div class="timeline-dot "></div>
                                     <div class="task-card chem-card">
                                         <div class="task-icon text-white bg-chem"><i class="fas fa-flask"></i></div>
@@ -1208,7 +1208,7 @@
                                 </div>
 
                                                     
-                                                            <div class="task-wrapper subject-wrapper-570" style="cursor:pointer;" onclick="ClicktoRoadMap(&#39;1&#39;, &#39;165&#39;)">
+                                                            <div class="task-wrapper subject-wrapper-570" style="cursor:pointer;" onclick="window.location.href='Test folder/english test.html'">
                                     <div class="timeline-dot "></div>
                                     <div class="task-card eng-card">
                                         <div class="task-icon text-white bg-eng"><i class="bi bi-spellcheck"></i></div>
@@ -7422,6 +7422,16 @@
             // atob() function base64 ko wapis normal string banata hai
             var type = atob(enc_type);
             var baseUrl = "https://app.topgrade.pk/";
+            console.log("startStep called with type:", type);
+            
+            // For test types (3 and 4), open local test file
+            if (type == 3 || type == 4) {
+                SetTag(131);
+                console.log("Opening test file: Test folder/biology test.html");
+                window.location.href = "Test folder/biology test.html";
+                return;
+            }
+            
             if (type == 1) {
                 // video
                 SetTag(129);
@@ -7430,14 +7440,6 @@
                 // slides
                 SetTag(130);
                 window.location.href = baseUrl + "slides_viewer/" + enc_topic_id + "/" + enc_media_id;
-            } else if (type == 3) {
-                //test
-                SetTag(131);
-                window.location.href = baseUrl + "take_test/" + enc_topic_id + "/" + enc_media_id;
-            } else if (type == 4) {
-                //test
-                SetTag(131);
-                window.location.href = baseUrl + "take_test/" + enc_topic_id + "/" + enc_media_id + "/" + type;
             }
         }
     </script>

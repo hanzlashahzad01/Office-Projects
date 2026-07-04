@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://app.topgrade.pk/take_test/test/855513148/1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopGrade | Professional Quiz</title>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <link rel="icon" type="image/png" href="https://app.topgrade.pk/assets/images/fav.png">
+    <link href="./TopGrade _ Professional Quiz_files/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./TopGrade _ Professional Quiz_files/bootstrap-icons.css">
+    <link href="./TopGrade _ Professional Quiz_files/css2" rel="stylesheet">
+    <script src="./TopGrade _ Professional Quiz_files/MathJax.js.download"></script>
+    <link rel="stylesheet" href="./TopGrade _ Professional Quiz_files/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        :root {
+            --primary-blue: #446ee7;
+            --success-green: #36c781;
+            --border-color: #f1f3f5;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f4f7f6;
+            color: #2d3436;
+            overflow: hidden;
+            /* Keeps the app-like feel */
+            margin: 0;
+        }
+
+        .header-glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .dull-green {
+            background: #36c78196 !important;
+        }
+
+        /* 1. MAIN CONTAINER FIX */
+        main {
+            /* Remove overflow from here so columns handle it */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 75%;
+        }
+
+        .paragraph {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #fff;
+            /*#d0e7dc !important;*/
+        }
+
+        #desktop {
+            display: none;
+        }
+
+        .bg-blue {
+            background: #2e53d4 !important;
+        }
+
+        .bg-dark-blue {
+            background-color: #081236;
+        }
+
+        .bg-light-blue {
+            background-color: #3157a7;
+        }
+
+        .bg-light-green {
+            background-color: #004D47;
+        }
+
+        .optborder_bg {
+            background: #ffe699;
+            border: 2px solid #ffe699;
+        }
+
+        .text-orange {
+            color: #f1b605;
+        }
+
+        .text-light-blue {
+            color: #acc4ec;
+        }
+
+        .verified-bg {
+            background-color: #d0e7dc !important;
+        }
+
+        .btn-pill-blue:hover {
+            background: var(--primary-blue) !important;
+        }
+
+        .btn-pill-green:hover {
+            background: var(--success-green) !important;
+        }
+
+        .btn-pill-red:hover {
+            background: #ff370b !important;
+        }
+
+        .MJXc-display {
+            display: inline !important;
+        }
+
+        #bookmark_icon {
+            font-size: 24px;
+        }
+
+        .watermark-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .central-watermark {
+            width: 300px;
+            height: auto;
+            opacity: .3;
+        }
+
+        .app-container {
+            margin-bottom: 3rem !important;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: rgb(225 225 225);
+            backdrop-filter: blur(15px);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid rgba(0, 0, 0, .05);
+            z-index: 1000;
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        .btn-app-action {
+            background-image: linear-gradient(to right, #054dc7, #081236);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: .9rem;
+            font-weight: 700;
+            letter-spacing: .3px;
+            box-shadow: 0 6px 15px rgba(93, 70, 226, .3);
+            transition: all .2s cubic-bezier(.4, 0, .2, 1);
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .btn-app-action.previous {
+            background-image: linear-gradient(to right, #054dc7, #081236);
+            color: #fff !important;
+            border-right: 1px solid #eee !important;
+        }
+
+        .btn-app-action.next {
+            background: linear-gradient(90deg, #ffc400 0%, #ff7a12 100%);
+            color: #fff !important;
+            /* border-right: 1px solid rgba(255, 255, 255, .2) !important; */
+        }
+
+        .dull-orange {
+            background: linear-gradient(90deg, #ffc40073 0%, #ff7a126b 100%) !important;
+        }
+
+        .btn-app-action.discussion {
+            background: linear-gradient(90deg, #198754cc 0%, #198754 100%);
+            color: #fff !important;
+            border-right: 1px solid rgba(255, 255, 255, .2) !important;
+        }
+
+        .btn-app-action.finish {
+            background: #ff370b !important;
+            color: #fff !important;
+        }
+
+        /* 2. DESKTOP SPECIFIC FIX */
+        @media (min-width: 768px) {
+            .app-container {
+                max-width: 1250px;
+                margin: auto;
+            }
+
+            /* Make the row fill the white box */
+            .quiz-row {
+                height: 100%;
+            }
+
+            /* Make columns independently scrollable */
+            .col-md-6 {
+                height: 100%;
+                /*overflow-y: auto;*/
+                padding-bottom: 20px;
+            }
+
+            .paragraph {
+                height: 100%;
+                overflow-y: auto;
+            }
+
+            .border-end-md {
+                border-right: 1px solid #acc4ec !important;
+            }
+        }
+
+        .option-item {
+            display: block;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .option-item .card {
+            /*border: 2px solid var(--border-color);*/
+            transition: 0.2s;
+            border-radius: 16px;
+        }
+
+        .option-item input:checked+.card {
+            border-color: var(--primary-blue);
+            background-color: #f0f4ff;
+        }
+
+        /*            .opt-label {
+                        width: 32px;
+                        height: 32px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: #081236;
+                        border-radius: 8px;
+                        font-weight: 800;
+                        color: #f1b605;
+                        font-size: 0.9rem;
+                    }*/
+        .opt-label {
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            /* Extra safety */
+            min-height: 28px;
+            /* Extra safety */
+            flex-shrink: 0;
+            /* Yeh sabse zaroori hai */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #004D47;
+            border-radius: 8px;
+            font-weight: 800;
+            color: #f1b605;
+            font-size: .9rem;
+        }
+
+        .option-item input:checked+.card .opt-label {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .pill-button-group {
+            display: inline-flex;
+            border-radius: 60px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 450px;
+            background: white;
+        }
+
+        .pill-button-group .btn {
+            flex: 1;
+            padding: 12px 10px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .btn-pill-white {
+            background: #ccc;
+            color: #444a4f !important;
+            border-right: 1px solid #eee !important;
+        }
+
+        .btn-pill-white:hover {
+            background: #ccc !important;
+        }
+
+        .btn-pill-blue {
+            background: var(--primary-blue);
+            color: white !important;
+            border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .btn-pill-green {
+            background: var(--success-green);
+            color: white !important;
+        }
+
+        .btn-pill-red {
+            background: #ff370b !important;
+            color: white !important;
+        }
+
+        .footer-sticky {
+            position: sticky;
+            bottom: 0;
+            background: #f4f7f6;
+            padding-top: 10px;
+            z-index: 10;
+        }
+
+        /* 3. MOBILE TIGHTENING */
+        @media (max-width: 575px) {
+            .stats-pill {
+                padding-left: 8px !important;
+                padding-right: 8px !important;
+                padding-top: 10px !important;
+                padding-bottom: 10px !important;
+                font-size: 12px;
+            }
+
+            #bookmark_icon {
+                font-size: 20px;
+            }
+
+            .bottom-nav a.btn-app-action {
+                min-width: 0 !important;
+                /* width: 70px; */
+                font-size: 12px;
+                padding: 10px 8px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .app-container {
+                padding: 6px !important;
+            }
+
+            main {
+                padding: 1rem !important;
+                height: auto !important;
+                flex-grow: 1;
+                overflow-y: auto;
+                /* Re-enable scroll for mobile only */
+            }
+
+            .question-section {
+                height: auto !important;
+                margin-bottom: 15px !important;
+            }
+
+            .options-section {
+                padding-left: 0 !important;
+            }
+
+            .quiz-options {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 8px;
+            }
+
+            .paragraph {
+                max-height: 200px;
+                overflow-y: auto;
+            }
+        }
+
+        /* Clean scrollbars */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #e0e0e0;
+            border-radius: 10px;
+        }
+    </style>
+<style>:root{--swal2-outline: 0 0 0 3px rgba(100, 150, 200, 0.5);--swal2-container-padding: 0.625em;--swal2-backdrop: rgba(0, 0, 0, 0.4);--swal2-backdrop-transition: background-color 0.15s;--swal2-width: 32em;--swal2-padding: 0 0 1.25em;--swal2-border: none;--swal2-border-radius: 0.3125rem;--swal2-background: white;--swal2-color: #545454;--swal2-show-animation: swal2-show 0.3s;--swal2-hide-animation: swal2-hide 0.15s forwards;--swal2-icon-zoom: 1;--swal2-title-padding: 0.8em 1em 0;--swal2-html-container-padding: 1em 1.6em 0.3em;--swal2-input-border: 1px solid #d9d9d9;--swal2-input-border-radius: 0.1875em;--swal2-input-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;--swal2-input-background: transparent;--swal2-input-transition: border-color 0.2s, box-shadow 0.2s;--swal2-input-hover-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;--swal2-input-focus-border: 1px solid #b4dbed;--swal2-input-focus-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px rgba(100, 150, 200, 0.5);--swal2-progress-step-background: #add8e6;--swal2-validation-message-background: #f0f0f0;--swal2-validation-message-color: #666;--swal2-footer-border-color: #eee;--swal2-footer-background: transparent;--swal2-footer-color: inherit;--swal2-timer-progress-bar-background: rgba(0, 0, 0, 0.3);--swal2-close-button-position: initial;--swal2-close-button-inset: auto;--swal2-close-button-font-size: 2.5em;--swal2-close-button-color: #ccc;--swal2-close-button-transition: color 0.2s, box-shadow 0.2s;--swal2-close-button-outline: initial;--swal2-close-button-box-shadow: inset 0 0 0 3px transparent;--swal2-close-button-focus-box-shadow: inset var(--swal2-outline);--swal2-close-button-hover-transform: none;--swal2-actions-justify-content: center;--swal2-actions-width: auto;--swal2-actions-margin: 1.25em auto 0;--swal2-actions-padding: 0;--swal2-actions-border-radius: 0;--swal2-actions-background: transparent;--swal2-action-button-transition: background-color 0.2s, box-shadow 0.2s;--swal2-action-button-hover: black 10%;--swal2-action-button-active: black 10%;--swal2-confirm-button-box-shadow: none;--swal2-confirm-button-border-radius: 0.25em;--swal2-confirm-button-background-color: #7066e0;--swal2-confirm-button-color: #fff;--swal2-deny-button-box-shadow: none;--swal2-deny-button-border-radius: 0.25em;--swal2-deny-button-background-color: #dc3741;--swal2-deny-button-color: #fff;--swal2-cancel-button-box-shadow: none;--swal2-cancel-button-border-radius: 0.25em;--swal2-cancel-button-background-color: #6e7881;--swal2-cancel-button-color: #fff;--swal2-toast-show-animation: swal2-toast-show 0.5s;--swal2-toast-hide-animation: swal2-toast-hide 0.1s forwards;--swal2-toast-border: none;--swal2-toast-box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 1px 2px hsl(0deg 0% 0% / 0.075), 1px 2px 4px hsl(0deg 0% 0% / 0.075), 1px 3px 8px hsl(0deg 0% 0% / 0.075), 2px 4px 16px hsl(0deg 0% 0% / 0.075)}[data-swal2-theme=dark]{--swal2-dark-theme-black: #19191a;--swal2-dark-theme-white: #e1e1e1;--swal2-background: var(--swal2-dark-theme-black);--swal2-color: var(--swal2-dark-theme-white);--swal2-footer-border-color: #555;--swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);--swal2-validation-message-background: color-mix( in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10% );--swal2-validation-message-color: var(--swal2-dark-theme-white);--swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7)}@media(prefers-color-scheme: dark){[data-swal2-theme=auto]{--swal2-dark-theme-black: #19191a;--swal2-dark-theme-white: #e1e1e1;--swal2-background: var(--swal2-dark-theme-black);--swal2-color: var(--swal2-dark-theme-white);--swal2-footer-border-color: #555;--swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);--swal2-validation-message-background: color-mix( in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10% );--swal2-validation-message-color: var(--swal2-dark-theme-white);--swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7)}}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto !important}body.swal2-no-backdrop .swal2-container{background-color:rgba(0,0,0,0) !important;pointer-events:none}body.swal2-no-backdrop .swal2-container .swal2-popup{pointer-events:auto}body.swal2-no-backdrop .swal2-container .swal2-modal{box-shadow:0 0 10px var(--swal2-backdrop)}body.swal2-toast-shown .swal2-container{box-sizing:border-box;width:360px;max-width:100%;background-color:rgba(0,0,0,0);pointer-events:none}body.swal2-toast-shown .swal2-container.swal2-top{inset:0 auto auto 50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{inset:0 0 auto auto}body.swal2-toast-shown .swal2-container.swal2-top-start,body.swal2-toast-shown .swal2-container.swal2-top-left{inset:0 auto auto 0}body.swal2-toast-shown .swal2-container.swal2-center-start,body.swal2-toast-shown .swal2-container.swal2-center-left{inset:50% auto auto 0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{inset:50% auto auto 50%;transform:translate(-50%, -50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{inset:50% 0 auto auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-start,body.swal2-toast-shown .swal2-container.swal2-bottom-left{inset:auto auto 0 0}body.swal2-toast-shown .swal2-container.swal2-bottom{inset:auto auto 0 50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{inset:auto 0 0 auto}@media print{body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown){overflow-y:scroll !important}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown) .swal2-container{position:static !important}}div:where(.swal2-container){display:grid;position:fixed;z-index:1060;inset:0;box-sizing:border-box;grid-template-areas:"top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";grid-template-rows:minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);height:100%;padding:var(--swal2-container-padding);overflow-x:hidden;transition:var(--swal2-backdrop-transition);-webkit-overflow-scrolling:touch}div:where(.swal2-container).swal2-backdrop-show,div:where(.swal2-container).swal2-noanimation{background:var(--swal2-backdrop)}div:where(.swal2-container).swal2-backdrop-hide{background:rgba(0,0,0,0) !important}div:where(.swal2-container).swal2-top-start,div:where(.swal2-container).swal2-center-start,div:where(.swal2-container).swal2-bottom-start{grid-template-columns:minmax(0, 1fr) auto auto}div:where(.swal2-container).swal2-top,div:where(.swal2-container).swal2-center,div:where(.swal2-container).swal2-bottom{grid-template-columns:auto minmax(0, 1fr) auto}div:where(.swal2-container).swal2-top-end,div:where(.swal2-container).swal2-center-end,div:where(.swal2-container).swal2-bottom-end{grid-template-columns:auto auto minmax(0, 1fr)}div:where(.swal2-container).swal2-top-start>.swal2-popup{align-self:start}div:where(.swal2-container).swal2-top>.swal2-popup{grid-column:2;place-self:start center}div:where(.swal2-container).swal2-top-end>.swal2-popup,div:where(.swal2-container).swal2-top-right>.swal2-popup{grid-column:3;place-self:start end}div:where(.swal2-container).swal2-center-start>.swal2-popup,div:where(.swal2-container).swal2-center-left>.swal2-popup{grid-row:2;align-self:center}div:where(.swal2-container).swal2-center>.swal2-popup{grid-column:2;grid-row:2;place-self:center center}div:where(.swal2-container).swal2-center-end>.swal2-popup,div:where(.swal2-container).swal2-center-right>.swal2-popup{grid-column:3;grid-row:2;place-self:center end}div:where(.swal2-container).swal2-bottom-start>.swal2-popup,div:where(.swal2-container).swal2-bottom-left>.swal2-popup{grid-column:1;grid-row:3;align-self:end}div:where(.swal2-container).swal2-bottom>.swal2-popup{grid-column:2;grid-row:3;place-self:end center}div:where(.swal2-container).swal2-bottom-end>.swal2-popup,div:where(.swal2-container).swal2-bottom-right>.swal2-popup{grid-column:3;grid-row:3;place-self:end end}div:where(.swal2-container).swal2-grow-row>.swal2-popup,div:where(.swal2-container).swal2-grow-fullscreen>.swal2-popup{grid-column:1/4;width:100%}div:where(.swal2-container).swal2-grow-column>.swal2-popup,div:where(.swal2-container).swal2-grow-fullscreen>.swal2-popup{grid-row:1/4;align-self:stretch}div:where(.swal2-container).swal2-no-transition{transition:none !important}div:where(.swal2-container)[popover]{width:auto;border:0}div:where(.swal2-container) div:where(.swal2-popup){display:none;position:relative;box-sizing:border-box;grid-template-columns:minmax(0, 100%);width:var(--swal2-width);max-width:100%;padding:var(--swal2-padding);border:var(--swal2-border);border-radius:var(--swal2-border-radius);background:var(--swal2-background);color:var(--swal2-color);font-family:inherit;font-size:1rem}div:where(.swal2-container) div:where(.swal2-popup):focus{outline:none}div:where(.swal2-container) div:where(.swal2-popup).swal2-loading{overflow-y:hidden}div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable{cursor:grab}div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable div:where(.swal2-icon){cursor:grab}div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging{cursor:grabbing}div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging div:where(.swal2-icon){cursor:grabbing}div:where(.swal2-container) h2:where(.swal2-title){position:relative;max-width:100%;margin:0;padding:var(--swal2-title-padding);color:inherit;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;overflow-wrap:break-word;cursor:initial}div:where(.swal2-container) div:where(.swal2-actions){display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:var(--swal2-actions-justify-content);width:var(--swal2-actions-width);margin:var(--swal2-actions-margin);padding:var(--swal2-actions-padding);border-radius:var(--swal2-actions-border-radius);background:var(--swal2-actions-background)}div:where(.swal2-container) div:where(.swal2-loader){display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 rgba(0,0,0,0) #2778c4 rgba(0,0,0,0)}div:where(.swal2-container) button:where(.swal2-styled){margin:.3125em;padding:.625em 1.1em;transition:var(--swal2-action-button-transition);border:none;box-shadow:0 0 0 3px rgba(0,0,0,0);font-weight:500}div:where(.swal2-container) button:where(.swal2-styled):not([disabled]){cursor:pointer}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){border-radius:var(--swal2-confirm-button-border-radius);background:initial;background-color:var(--swal2-confirm-button-background-color);box-shadow:var(--swal2-confirm-button-box-shadow);color:var(--swal2-confirm-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):hover{background-color:color-mix(in srgb, var(--swal2-confirm-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):active{background-color:color-mix(in srgb, var(--swal2-confirm-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny){border-radius:var(--swal2-deny-button-border-radius);background:initial;background-color:var(--swal2-deny-button-background-color);box-shadow:var(--swal2-deny-button-box-shadow);color:var(--swal2-deny-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny):hover{background-color:color-mix(in srgb, var(--swal2-deny-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny):active{background-color:color-mix(in srgb, var(--swal2-deny-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel){border-radius:var(--swal2-cancel-button-border-radius);background:initial;background-color:var(--swal2-cancel-button-background-color);box-shadow:var(--swal2-cancel-button-box-shadow);color:var(--swal2-cancel-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel):hover{background-color:color-mix(in srgb, var(--swal2-cancel-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel):active{background-color:color-mix(in srgb, var(--swal2-cancel-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):focus-visible{outline:none;box-shadow:var(--swal2-action-button-focus-box-shadow)}div:where(.swal2-container) button:where(.swal2-styled)[disabled]:not(.swal2-loading){opacity:.4}div:where(.swal2-container) button:where(.swal2-styled)::-moz-focus-inner{border:0}div:where(.swal2-container) div:where(.swal2-footer){margin:1em 0 0;padding:1em 1em 0;border-top:1px solid var(--swal2-footer-border-color);background:var(--swal2-footer-background);color:var(--swal2-footer-color);font-size:1em;text-align:center;cursor:initial}div:where(.swal2-container) .swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;grid-column:auto !important;overflow:hidden;border-bottom-right-radius:var(--swal2-border-radius);border-bottom-left-radius:var(--swal2-border-radius)}div:where(.swal2-container) div:where(.swal2-timer-progress-bar){width:100%;height:.25em;background:var(--swal2-timer-progress-bar-background)}div:where(.swal2-container) img:where(.swal2-image){max-width:100%;margin:2em auto 1em;cursor:initial}div:where(.swal2-container) button:where(.swal2-close){position:var(--swal2-close-button-position);inset:var(--swal2-close-button-inset);z-index:2;align-items:center;justify-content:center;width:1.2em;height:1.2em;margin-top:0;margin-right:0;margin-bottom:-1.2em;padding:0;overflow:hidden;transition:var(--swal2-close-button-transition);border:none;border-radius:var(--swal2-border-radius);outline:var(--swal2-close-button-outline);background:rgba(0,0,0,0);color:var(--swal2-close-button-color);font-family:monospace;font-size:var(--swal2-close-button-font-size);cursor:pointer;justify-self:end}div:where(.swal2-container) button:where(.swal2-close):hover{transform:var(--swal2-close-button-hover-transform);background:rgba(0,0,0,0);color:#f27474}div:where(.swal2-container) button:where(.swal2-close):focus-visible{outline:none;box-shadow:var(--swal2-close-button-focus-box-shadow)}div:where(.swal2-container) button:where(.swal2-close)::-moz-focus-inner{border:0}div:where(.swal2-container) div:where(.swal2-html-container){z-index:1;justify-content:center;margin:0;padding:var(--swal2-html-container-padding);overflow:auto;color:inherit;font-size:1.125em;font-weight:normal;line-height:normal;text-align:center;overflow-wrap:break-word;word-break:break-word;cursor:initial}div:where(.swal2-container) input:where(.swal2-input),div:where(.swal2-container) input:where(.swal2-file),div:where(.swal2-container) textarea:where(.swal2-textarea),div:where(.swal2-container) select:where(.swal2-select),div:where(.swal2-container) div:where(.swal2-radio),div:where(.swal2-container) label:where(.swal2-checkbox){margin:1em 2em 3px}div:where(.swal2-container) input:where(.swal2-input),div:where(.swal2-container) input:where(.swal2-file),div:where(.swal2-container) textarea:where(.swal2-textarea){box-sizing:border-box;width:auto;transition:var(--swal2-input-transition);border:var(--swal2-input-border);border-radius:var(--swal2-input-border-radius);background:var(--swal2-input-background);box-shadow:var(--swal2-input-box-shadow);color:inherit;font-size:1.125em}div:where(.swal2-container) input:where(.swal2-input).swal2-inputerror,div:where(.swal2-container) input:where(.swal2-file).swal2-inputerror,div:where(.swal2-container) textarea:where(.swal2-textarea).swal2-inputerror{border-color:#f27474 !important;box-shadow:0 0 2px #f27474 !important}div:where(.swal2-container) input:where(.swal2-input):hover,div:where(.swal2-container) input:where(.swal2-file):hover,div:where(.swal2-container) textarea:where(.swal2-textarea):hover{box-shadow:var(--swal2-input-hover-box-shadow)}div:where(.swal2-container) input:where(.swal2-input):focus,div:where(.swal2-container) input:where(.swal2-file):focus,div:where(.swal2-container) textarea:where(.swal2-textarea):focus{border:var(--swal2-input-focus-border);outline:none;box-shadow:var(--swal2-input-focus-box-shadow)}div:where(.swal2-container) input:where(.swal2-input)::placeholder,div:where(.swal2-container) input:where(.swal2-file)::placeholder,div:where(.swal2-container) textarea:where(.swal2-textarea)::placeholder{color:#ccc}div:where(.swal2-container) .swal2-range{margin:1em 2em 3px;background:var(--swal2-background)}div:where(.swal2-container) .swal2-range input{width:80%}div:where(.swal2-container) .swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}div:where(.swal2-container) .swal2-range input,div:where(.swal2-container) .swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}div:where(.swal2-container) .swal2-input{height:2.625em;padding:0 .75em}div:where(.swal2-container) .swal2-file{width:75%;margin-right:auto;margin-left:auto;background:var(--swal2-input-background);font-size:1.125em}div:where(.swal2-container) .swal2-textarea{height:6.75em;padding:.75em}div:where(.swal2-container) .swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:var(--swal2-input-background);color:inherit;font-size:1.125em}div:where(.swal2-container) .swal2-radio,div:where(.swal2-container) .swal2-checkbox{align-items:center;justify-content:center;background:var(--swal2-background);color:inherit}div:where(.swal2-container) .swal2-radio label,div:where(.swal2-container) .swal2-checkbox label{margin:0 .6em;font-size:1.125em}div:where(.swal2-container) .swal2-radio input,div:where(.swal2-container) .swal2-checkbox input{flex-shrink:0;margin:0 .4em}div:where(.swal2-container) label:where(.swal2-input-label){display:flex;justify-content:center;margin:1em auto 0}div:where(.swal2-container) div:where(.swal2-validation-message){align-items:center;justify-content:center;margin:1em 0 0;padding:.625em;overflow:hidden;background:var(--swal2-validation-message-background);color:var(--swal2-validation-message-color);font-size:1em;font-weight:300}div:where(.swal2-container) div:where(.swal2-validation-message)::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}div:where(.swal2-container) .swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:1.25em auto;padding:0;background:rgba(0,0,0,0);font-weight:600}div:where(.swal2-container) .swal2-progress-steps li{display:inline-block;position:relative}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:var(--swal2-progress-step-background);color:#fff}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:var(--swal2-progress-step-background)}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}div:where(.swal2-icon){position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:2.5em auto .6em;zoom:var(--swal2-icon-zoom);border:.25em solid rgba(0,0,0,0);border-radius:50%;border-color:#000;font-family:inherit;line-height:5em;cursor:default;user-select:none}div:where(.swal2-icon) .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}div:where(.swal2-icon).swal2-error{border-color:#f27474;color:#f27474}div:where(.swal2-icon).swal2-error .swal2-x-mark{position:relative;flex-grow:1}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-error.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-error.swal2-icon-show .swal2-x-mark{animation:swal2-animate-error-x-mark .5s}div:where(.swal2-icon).swal2-warning{border-color:#f8bb86;color:#f8bb86}div:where(.swal2-icon).swal2-warning.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-warning.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .5s}div:where(.swal2-icon).swal2-info{border-color:#3fc3ee;color:#3fc3ee}div:where(.swal2-icon).swal2-info.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-info.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .8s}div:where(.swal2-icon).swal2-question{border-color:#87adbd;color:#87adbd}div:where(.swal2-icon).swal2-question.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-question.swal2-icon-show .swal2-icon-content{animation:swal2-animate-question-mark .8s}div:where(.swal2-icon).swal2-success{border-color:#a5dc86;color:#a5dc86}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;border-radius:50%}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}div:where(.swal2-icon).swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-0.25em;left:-0.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}div:where(.swal2-icon).swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-animate-success-line-tip .75s}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-animate-success-line-long .75s}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-circular-line-right{animation:swal2-rotate-success-circular-line 4.25s ease-in}[class^=swal2]{-webkit-tap-highlight-color:rgba(0,0,0,0)}.swal2-show{animation:var(--swal2-show-animation)}.swal2-hide{animation:var(--swal2-hide-animation)}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{margin-right:initial;margin-left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}.swal2-toast{box-sizing:border-box;grid-column:1/4 !important;grid-row:1/4 !important;grid-template-columns:min-content auto min-content;padding:1em;overflow-y:hidden;border:var(--swal2-toast-border);background:var(--swal2-background);box-shadow:var(--swal2-toast-box-shadow);pointer-events:auto}.swal2-toast>*{grid-column:2}.swal2-toast h2:where(.swal2-title){margin:.5em 1em;padding:0;font-size:1em;text-align:initial}.swal2-toast .swal2-loading{justify-content:center}.swal2-toast input:where(.swal2-input){height:2em;margin:.5em;font-size:1em}.swal2-toast .swal2-validation-message{font-size:1em}.swal2-toast div:where(.swal2-footer){margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-toast button:where(.swal2-close){grid-column:3/3;grid-row:1/99;align-self:center;width:.8em;height:.8em;margin:0;font-size:2em}.swal2-toast div:where(.swal2-html-container){margin:.5em 1em;padding:0;overflow:initial;font-size:1em;text-align:initial}.swal2-toast div:where(.swal2-html-container):empty{padding:0}.swal2-toast .swal2-loader{grid-column:1;grid-row:1/99;align-self:center;width:2em;height:2em;margin:.25em}.swal2-toast .swal2-icon{grid-column:1;grid-row:1/99;align-self:center;width:2em;min-width:2em;height:2em;margin:0 .5em 0 0}.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:bold}.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-toast div:where(.swal2-actions){justify-content:flex-start;height:auto;margin:0;margin-top:.5em;padding:0 .5em}.swal2-toast button:where(.swal2-styled){margin:.25em .5em;padding:.4em .6em;font-size:1em}.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;border-radius:50%}.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.8em;left:-0.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-toast-animate-success-line-tip .75s}.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-toast-animate-success-line-long .75s}.swal2-toast.swal2-show{animation:var(--swal2-toast-show-animation)}.swal2-toast.swal2-hide{animation:var(--swal2-toast-hide-animation)}@keyframes swal2-show{0%{transform:translate3d(0, -50px, 0) scale(0.9);opacity:0}100%{transform:translate3d(0, 0, 0) scale(1);opacity:1}}@keyframes swal2-hide{0%{transform:translate3d(0, 0, 0) scale(1);opacity:1}100%{transform:translate3d(0, -50px, 0) scale(0.9);opacity:0}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-0.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(0.4);opacity:0}50%{margin-top:1.625em;transform:scale(0.4);opacity:0}80%{margin-top:-0.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0deg);opacity:1}}@keyframes swal2-rotate-loading{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes swal2-animate-question-mark{0%{transform:rotateY(-360deg)}100%{transform:rotateY(0)}}@keyframes swal2-animate-i-mark{0%{transform:rotateZ(45deg);opacity:0}25%{transform:rotateZ(-25deg);opacity:.4}50%{transform:rotateZ(15deg);opacity:.8}75%{transform:rotateZ(-5deg);opacity:1}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-toast-show{0%{transform:translateY(-0.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(0.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0deg)}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-0.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}</style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body style="overflow: auto;"><div id="MathJax_Message" style="display: none;"></div>
+    <style>
+    /* Container for the logo + spinner */
+    .loader-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* The custom icon in the center */
+    .loader-icon {
+        position: absolute;
+        width: 33px; /* Adjust size to fit inside the spinner */
+        /*height: 30px;*/
+        object-fit: contain;
+    }
+
+    /* Adjusting the spinner size to wrap the icon */
+    .custom-spinner {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-width: 0.25em;
+    }
+</style>
+
+<div id="page-loader" class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white opacity-75 d-none" style="z-index: 9999;">
+    <div class="loader-wrapper">
+        <div class="spinner-border text-primary custom-spinner" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <img src="./TopGrade _ Professional Quiz_files/tg-insignia.webp" alt="Loading Icon" class="loader-icon">
+    </div>
+</div>    <div class="app-container d-flex flex-column vh-100 p-2 p-md-3" style="padding-top: 5px !important">
+        <header class="header-glass shadow-sm rounded-4 mb-2 p-2 px-3 d-flex justify-content-between align-items-center">
+            <a>
+                <picture>
+                    <source srcset="https://www.topgrade.pk/public/assets/website/images/tg-insignia.webp" type="image/webp">
+                    <source srcset="https://www.topgrade.pk/public/assets/website/images/tg-insignia.png" type="image/png">
+                    <img class="img-fluid" style="width: 32px; border-radius: 0" src="./TopGrade _ Professional Quiz_files/tg-insignia.png" alt="Online Entry Test Preparation" title="Online Entry Test Preparation" data-pagespeed-url-hash="369966240" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </picture>
+            </a>
+            <div class="badge text-dark rounded-pill px-3 py-2 fw-bold small" style="border: 1px solid #ccc;">
+                <i class="bi bi-clock me-1"></i>
+                <span id="quiz-clock">00:01:25</span>
+            </div>
+            <!--<button class="btn btn-soft-danger rounded-pill px-3" onclick="EndTestPopup(2)" style="background-color: #fee2e2; color: #dc3545; border: none; font-weight: 700; font-size: 0.8rem;">End</button>-->
+            <a class="btn btn-soft-danger rounded px-3" onclick="EndTestPopup(2)" style="background-color: #fee2e2; color: #dc3545; border: none; font-weight: 700; font-size: 0.8rem;"><i class="fa fa-sign-out" aria-hidden="true"></i> End</a>
+
+        </header>
+                    <p class="command-text-p w-100 text-center mb-1">
+                <b class="command-text">
+                    Choose the single best answer </b>
+            </p>
+                <main class="flex-grow-1 rounded-4 mb-2 bg-light-green shadow-sm p-3 p-md-4">
+            <div class="watermark-container">
+                <img src="./TopGrade _ Professional Quiz_files/watermark.png.pagespeed.ce.3euC8kglAV.png" alt="Watermark" class="central-watermark" data-pagespeed-url-hash="2982933266" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+            </div>
+            <div class="row quiz-row">
+                <div class="col-md-6 border-end-md pe-md-4 question-section">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <span class="fw-bold text-orange small">1 / 60</span>
+                        <span id="qid" class="badge text-light-blue rounded-pill border px-2 py-1" style="font-size: 0.7rem; cursor:pointer;border-color: #acc4ec !important;" onclick="copyQID(&#39;249864569&#39;)">
+                            QID: 249864569 <i class="bi bi-copy ms-1"></i>
+                        </span>
+                                                    <span class="badge verified-bg text-success rounded-pill border border-success-subtle">
+                                <i class="bi bi-check-circle-fill"></i> Verified
+                            </span>
+                                                <div class="ms-auto">
+                            <i class="bi bi-bookmark-fill" id="bookmark_icon" style="cursor: pointer; color: #fff;" onclick="Mark_Question(&#39;https://app.topgrade.pk/&#39;, &#39;0&#39;, &#39;237338&#39;)">
+                            </i>
+                        </div>
+                    </div>
+                                        <input type="hidden" value="62226849" name="test_question_link_id" id="test_question_link_id">
+                    <div class="paragraph fw-semibold">
+                        <p>The fluid mosaic model was proposed by</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 ps-md-4 options-section">
+                    <div class="quiz-options">
+                                                
+                                <label class="option-item w-100" style="cursor: pointer;">
+                                    <input onclick="submit_answer(&#39;https://app.topgrade.pk/&#39;, true, &#39;0&#39;, 1)" type="radio" name="answer_val" class="d-none" value="1">
+
+                                    <!--                                        <div class="card p-2 px-3 shadow-sm mb-2 " id="optborder_1">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="d-flex align-items-center">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <span class="opt-label me-3 fw-bold " id="optlabel_1">A</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <span class="opt-text fw-normal flex-grow-1">
+                                        Watson and Crick                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </span>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="ms-2">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="bi bi-check-circle-fill text-success" id="g_1" style="display: none;"></i>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="bi bi-x-circle-fill text-danger" id="r_1" style="display: none;"></i>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>-->
+                                    <div class="card p-2 px-3 shadow-sm mb-2 optborder_bg " id="optborder_1">
+                                        <div class="d-flex align-items-center">
+                                            <span class="opt-label me-3 fw-bold " id="optlabel_1">
+                                                A                                            </span>
+
+                                            <small class="opt-text fw-normal flex-grow-1">
+                                                Watson and Crick                                            </small>
+
+                                            <div class="ms-2 mt-1">
+                                                <i class="bi bi-check-circle-fill text-success" id="g_1" style="display: none;"></i>
+                                                <i class="bi bi-x-circle-fill text-danger" id="r_1" style="display: none;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+
+                        
+                                <label class="option-item w-100" style="cursor: pointer;">
+                                    <input onclick="submit_answer(&#39;https://app.topgrade.pk/&#39;, true, &#39;0&#39;, 2)" type="radio" name="answer_val" class="d-none" value="2">
+
+                                    <!--                                        <div class="card p-2 px-3 shadow-sm mb-2 " id="optborder_2">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="d-flex align-items-center">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <span class="opt-label me-3 fw-bold " id="optlabel_2">B</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <span class="opt-text fw-normal flex-grow-1">
+                                        Singer and Nicolson                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </span>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="ms-2">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="bi bi-check-circle-fill text-success" id="g_2" style="display: none;"></i>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="bi bi-x-circle-fill text-danger" id="r_2" style="display: none;"></i>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>-->
+                                    <div class="card p-2 px-3 shadow-sm mb-2 optborder_bg " id="optborder_2">
+                                        <div class="d-flex align-items-center">
+                                            <span class="opt-label me-3 fw-bold " id="optlabel_2">
+                                                B                                            </span>
+
+                                            <small class="opt-text fw-normal flex-grow-1">
+                                                Singer and Nicolson                                            </small>
+
+                                            <div class="ms-2 mt-1">
+                                                <i class="bi bi-check-circle-fill text-success" id="g_2" style="display: none;"></i>
+                                                <i class="bi bi-x-circle-fill text-danger" id="r_2" style="display: none;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+
+                        
+                                <label class="option-item w-100" style="cursor: pointer;">
+                                    <input onclick="submit_answer(&#39;https://app.topgrade.pk/&#39;, true, &#39;0&#39;, 3)" type="radio" name="answer_val" class="d-none" value="3">
+
+                                    <!--                                        <div class="card p-2 px-3 shadow-sm mb-2 " id="optborder_3">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="d-flex align-items-center">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <span class="opt-label me-3 fw-bold " id="optlabel_3">C</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <span class="opt-text fw-normal flex-grow-1">
+                                        Robert Hooke                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </span>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="ms-2">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="bi bi-check-circle-fill text-success" id="g_3" style="display: none;"></i>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="bi bi-x-circle-fill text-danger" id="r_3" style="display: none;"></i>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>-->
+                                    <div class="card p-2 px-3 shadow-sm mb-2 optborder_bg " id="optborder_3">
+                                        <div class="d-flex align-items-center">
+                                            <span class="opt-label me-3 fw-bold " id="optlabel_3">
+                                                C                                            </span>
+
+                                            <small class="opt-text fw-normal flex-grow-1">
+                                                Robert Hooke                                            </small>
+
+                                            <div class="ms-2 mt-1">
+                                                <i class="bi bi-check-circle-fill text-success" id="g_3" style="display: none;"></i>
+                                                <i class="bi bi-x-circle-fill text-danger" id="r_3" style="display: none;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+
+                        
+                                <label class="option-item w-100" style="cursor: pointer;">
+                                    <input onclick="submit_answer(&#39;https://app.topgrade.pk/&#39;, true, &#39;0&#39;, 4)" type="radio" name="answer_val" class="d-none" value="4">
+
+                                    <!--                                        <div class="card p-2 px-3 shadow-sm mb-2 " id="optborder_4">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="d-flex align-items-center">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <span class="opt-label me-3 fw-bold " id="optlabel_4">D</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <span class="opt-text fw-normal flex-grow-1">
+                                        Schleiden and Schwann                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </span>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="ms-2">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="bi bi-check-circle-fill text-success" id="g_4" style="display: none;"></i>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="bi bi-x-circle-fill text-danger" id="r_4" style="display: none;"></i>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>-->
+                                    <div class="card p-2 px-3 shadow-sm mb-2 optborder_bg " id="optborder_4">
+                                        <div class="d-flex align-items-center">
+                                            <span class="opt-label me-3 fw-bold " id="optlabel_4">
+                                                D                                            </span>
+
+                                            <small class="opt-text fw-normal flex-grow-1">
+                                                Schleiden and Schwann                                            </small>
+
+                                            <div class="ms-2 mt-1">
+                                                <i class="bi bi-check-circle-fill text-success" id="g_4" style="display: none;"></i>
+                                                <i class="bi bi-x-circle-fill text-danger" id="r_4" style="display: none;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+
+                                            </div>
+                </div>
+            </div>
+            
+
+        </main>
+        <div class="stats-container text-center p-md-4" style="padding-top:0px !important;">
+            <div class="d-flex gap-2 justify-content-center">
+
+                <div class="stats-pill shadow-sm py-1 px-3 bg-white rounded-3 border small text-black">
+                    <i class="bi bi-eye me-1"></i>3.1k views
+
+                                            <span class="mx-1 text-secondary opacity-50">|</span>
+                        <i class="far fa-file-text" aria-hidden="true"></i> 2,658 attempted
+                        <span class="mx-1 text-secondary opacity-50">|</span>
+                        60% <i class="bi bi-check-circle-fill text-success"></i>
+                                        <span class="mx-1 text-secondary opacity-50">|</span>
+                    <span id="like" style="cursor:pointer;" onclick="UpdateQBfeedbackLikeDislike(1, &#39;https://app.topgrade.pk/&#39;)">
+                        <i class="bi bi-hand-thumbs-up-fill text-primary" id="like_fill" style="display:none;"></i>
+                        <i class="bi bi-hand-thumbs-up" id="like_empty" style="display:inline-block;"></i>
+                        <span id="likescounts" class="">15</span>
+                    </span>
+
+                    <span class="mx-1 text-secondary opacity-50">|</span>
+
+                    <span id="dislike" style="cursor:pointer;" onclick="UpdateQBfeedbackLikeDislike(0, &#39;https://app.topgrade.pk/&#39;)">
+                        <i class="bi bi-hand-thumbs-down-fill text-danger" id="dislike_fill" style="display:none;"></i>
+                        <i class="bi bi-hand-thumbs-down" id="dislike_empty" style="display:inline-block;"></i>
+                    </span>
+                </div>
+
+                <!-- <div class="stats-pill shadow-sm py-1 px-3 bg-white rounded-pill border small text-black">
+                    
+                </div> -->
+
+            </div>
+            <div class="text-center mt-2">
+                <a onclick="ReportIssueModal()" style="cursor:pointer;" class="text-decoration-none small fw-bold text-primary">
+                    <i class="bi bi-question-circle me-1"></i> Report Doubt
+                </a>
+            </div>
+        </div>
+
+        
+<style>
+    /* Elite App Theme Colors */
+    :root {
+        --app-bg: #f3f6fd;
+        --app-accent: #4361ee;
+        --app-glass: rgba(255, 255, 255, 0.9);
+    }
+
+    body {
+        background-color: var(--app-bg) !important;
+    }
+
+    /* Modern Floating Card */
+    .app-card {
+        background: var(--app-glass);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        transition: transform 0.3s ease;
+        margin-bottom: 24px;
+    }
+
+    /* Interactive Headers */
+    .app-header {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-bottom: 1px solid #edf2f7;
+    }
+
+    .icon-badge {
+        width: 40px;
+        height: 40px;
+        background: rgba(67, 97, 238, 0.1);
+        color: var(--app-accent);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    .app-title {
+        font-weight: 800;
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin: 0;
+        letter-spacing: -0.3px;
+    }
+
+    /* Video Player Styling */
+    .video-wrapper {
+        border-radius: 20px;
+        overflow: hidden;
+        background: #000;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Data Analytics Grid */
+    .stat-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    .stat-label {
+        flex: 1;
+        /* Ye label ko baki bachi hui jagah de dega */
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .stat-value,
+    .badge-premium {
+        min-width: 120px;
+        /* Sab values ki width ek jaisi rakhein */
+        text-align: center;
+        /* Text ko is 120px ke center mein rakhega */
+        display: inline-block;
+        font-weight: 600;
+    }
+
+    /*    .stat-row {
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f1f5f9;
+        }*/
+
+    .stat-row:last-child {
+        border-bottom: none;
+    }
+
+    /*    .stat-label {
+            font-weight: 600;
+            color: #64748b;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }*/
+
+    .stat-value {
+        font-weight: 700;
+        color: #0f172a;
+    }
+
+    /* Professional Status Badges */
+    .badge-premium {
+        padding: 8px 16px;
+        border-radius: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    .bg-soft-success {
+        background: #ecfdf5;
+        color: #059669;
+    }
+
+    .bg-soft-danger {
+        background: #fef2f2;
+        color: #dc2626;
+    }
+
+    .bg-soft-warning {
+        background: #fffbeb;
+        color: #d97706;
+    }
+
+    /* Micro-animations */
+    .app-card:hover {
+        transform: translateY(-5px);
+    }
+
+    @media (max-width: 575px) {
+        .app-title {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .icon-badge {
+            width: 25px;
+            height: 25px;
+            font-size: 10px;
+            line-height: 16px;
+        }
+
+        .stat-row {
+            padding: 1rem 1rem;
+        }
+
+        .stat-label,
+        .stat-value {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+</style>
+
+<div class="container py-4" id="desktop">
+    <div class="row">
+
+                    <div class="col-12 col-xl-10 mx-auto">
+                <div class="app-card overflow-hidden">
+                    <div class="app-header">
+                        <div class="icon-badge"><i class="fas fa-play"></i></div>
+                        <h5 class="app-title">Video Discussion</h5>
+                    </div>
+                    <div class="p-3 p-md-4">
+                        <div class="video-wrapper">
+                            
+    <style>
+        .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } 
+        .embed-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    </style>
+    <div class="embed-container">
+        <iframe id="video-ifram" src="./TopGrade _ Professional Quiz_files/NNPcS6NQCao.html" frameborder="0" allowfullscreen="">
+        </iframe>
+    </div>                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+        <div class="col-12 col-xl-10 mx-auto mb-5">
+            <div class="app-card">
+                <div class="app-header">
+                    <div class="icon-badge"><i class="fas fa-clipboard"></i></div>
+                    <h5 class="app-title">Question Details</h5>
+                </div>
+                <div class="p-0">
+                                            <div class="stat-row">
+                            <span class="stat-label"><i class="fas fa-bullseye"></i> Your Result</span>
+                            <span id="auto-mark-result" class="stat-value badge-premium bg-soft-warning">Unanswered</span>
+                        </div>
+                    
+                    <div class="stat-row">
+                        <span class="stat-label"><i class="fas fa-graduation-cap"></i> Subject</span>
+                        <span class="stat-value text-muted">Biology</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label"><i class="fas fa-graduation-cap"></i> Topic</span>
+                        <span class="stat-value text-muted"><b>Cell Structure &amp; Function</b>
+- (Introduction to Cell, Plasma Membrane)</span>
+                    </div>
+
+                    <div class="stat-row">
+                        <span class="stat-label"><i class="fas fa-stopwatch text-danger"></i> Your Pace</span>
+                        <span class="stat-value" id="your-pace-stat-value">0s</span>
+                    </div>
+
+                    <div class="stat-row">
+                        <span class="stat-label"><i class="fas fa-tachometer-alt text-success"></i> Avg. Time</span>
+                        <span class="stat-value">30s</span>
+                    </div>
+
+                    <div class="stat-row bg-light-subtle rounded-bottom-4">
+                        <span class="stat-label"><i class="fas fa-exclamation-circle"></i>Difficulty Rating</span>
+                                                <span class="stat-value text-primary fw-bolder">Random</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" name="_q_r" id="_q_r" value="245151">
+<input type="hidden" name="_fill_v" id="_fill_v" value="0">
+<input type="hidden" name="_fill_r" id="_fill_r" value="0">
+<input type="hidden" name="_q_id" id="_q_id" value="237338">
+<input type="hidden" name="_sub_s_id" id="_sub_s_id" value="10774">
+<input type="hidden" name="_t_id" id="_t_id" value="1878641">        <script src="./TopGrade _ Professional Quiz_files/jquery.min.js.download"></script>
+        <script src="./TopGrade _ Professional Quiz_files/sweetalert2@11"></script>
+        <link rel="stylesheet" href="./TopGrade _ Professional Quiz_files/toastr.min.css">
+        <script src="./TopGrade _ Professional Quiz_files/toastr.min.js.download"></script>
+        <script src="./TopGrade _ Professional Quiz_files/bootstrap.bundle.min.js.download"></script>
+                    <nav class="bottom-nav">
+                <div class="container py-3 d-flex justify-content-center gap-3">
+                    <div class="d-flex flex-wrap justify-content-center gap-2" style="max-width: 600px; width: 100%;">
+                        <a onclick="PreQuestion(&#39;https://app.topgrade.pk/&#39;, &#39;855513148&#39;, &#39;0&#39;, &#39;&#39;)" class="btn-app-action previous flex-fill text-decoration-none text-center dull" style="pointer-events:none; opacity:0.6;min-width: 140px;">
+                            <i class="bi bi-chevron-left"></i> Previous
+                        </a>
+                                                    <a onclick="submit_answer(&#39;https://app.topgrade.pk/&#39;, true, &#39;0&#39;, 0)" id="submit" class="btn-app-action discussion flex-fill text-decoration-none text-center" style="cursor:pointer;min-width: 140px;">
+                                Discussion                            </a>
+                                                                            <a onclick="NextQuestion(&#39;https://app.topgrade.pk/&#39;, &#39;2&#39;, &#39;855513148&#39;, &#39;&#39;, &#39;2&#39;, &#39;0&#39;)" class="btn-app-action next flex-fill text-decoration-none text-center " style="cursor:pointer;pointer-events: min-width: 140px;">
+                                Next <i class="bi bi-chevron-right ms-1"></i>
+                            </a>
+
+                                            </div>
+                </div>
+            </nav>
+            </div>
+
+    <div class="modal fade" id="report_issue_model_thanks" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered shadow-sm">
+            <div class="modal-content text-center p-5 border-0" style="border-radius: 20px;">
+                <img src="./TopGrade _ Professional Quiz_files/thanks.png" class="img-fluid mx-auto mb-3" style="max-height: 100px;">
+                <h4 class="fw-bold">Thank You!</h4>
+                <p class="text-muted">Your feedback helps us make TopGrade better.</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm mx-auto w-50" style="    background-color: #0d6efd;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    font-size: 16px;" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        #endTestModal .modal-sm {
+            --bs-modal-width: 500px !important;
+        }
+
+        #endTestModal .modal-content {
+            border-radius: 1rem;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        #endTestModal .warning-icon {
+            font-size: 3rem;
+            color: #ffc107;
+        }
+
+        #endTestModal .btn-yes {
+            border: 1px solid #0d6efd;
+            color: #0d6efd;
+            /* width: 50px; */
+            padding: 10px 20px 10px 20px;
+        }
+
+        #endTestModal .btn-no {
+            background-color: #0d6efd;
+            color: #fff;
+            padding: 10px 20px 10px 20px;
+        }
+
+        /* Make image responsive */
+        #endTestModal .modal-body img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #endTestModal h5 {
+            font-size: 1.5rem;
+        }
+
+        .greeting-section {
+            display: grid;
+            grid-template-columns: 65px 1fr;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 0px;
+            flex-shrink: 0;
+            width: 100%;
+        }
+
+        .hero-mascot {
+            display: block;
+            margin: 0 auto 12px;
+            width: 70px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .speech-bubble {
+            position: relative;
+            background: #1676dd;
+            color: #fff;
+            border-radius: 10px;
+            /* 1. Flexbox alignment add karein */
+            display: flex;
+            align-items: center;
+            /* Vertical center */
+            justify-content: center;
+            /* Horizontal center */
+            text-align: center;
+            padding: 10px 14px;
+            border: 1.5px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 2px 8px rgba(27, 72, 174, 0.1);
+            font-size: 0.85rem;
+            line-height: 1.35;
+            font-weight: 500;
+        }
+
+        .speech-bubble::before {
+            content: "";
+            position: absolute;
+            left: -14px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-right: 14px solid #1676dd;
+        }
+
+        .greeting-section .app-subtitle {
+            font-size: 16px;
+            line-height: 22px;
+            margin: 0 auto;
+        }
+
+        #issue_msg::placeholder {
+            color: #1754bb;
+            /* Placeholder color */
+        }
+
+        @media (max-width: 768px) {
+
+
+            .greeting-section .app-subtitle {
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+        /* Adjust text for small screens */
+        @media (max-width: 576px) {
+            #endTestModal {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            #endTestModal .modal-content {
+                padding: 1rem;
+            }
+
+            #endTestModal h5 {
+                font-size: 1.2rem;
+            }
+
+            #endTestModal p {
+                font-size: 0.95rem;
+            }
+
+            #endTestModal .btn {
+                font-size: 1rem;
+                padding: 0.4rem 1.5rem;
+            }
+
+            #endTestModal .modal-sm {
+                --bs-modal-width: 100% !important;
+            }
+        }
+    </style>
+    <div class="modal fade" id="endTestModal" tabindex="-1" aria-labelledby="endTestModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!-- Robot image -->
+                    <img src="./TopGrade _ Professional Quiz_files/docm-endtest.png" class="mb-3" alt="Robot">
+                    <!-- Text -->
+                    <h5 class="fw-bold">
+                        <span class="text-primary">Doc M</span> ko beech raaste chhor kar jaoge?
+                    </h5>
+                    <p>Hamari dosti itni kamzor thi?</p>
+
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap">
+                        <button type="button" class="btn btn-yes" id="endTestYesBtn">
+                            Yes
+                        </button>
+                        <button type="button" class="btn btn-no" data-bs-dismiss="modal">
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="report_issue_model" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 pb-4">
+                    <div class="greeting-section">
+                        <img src="./TopGrade _ Professional Quiz_files/reportdoubt-docm.png" alt="Review Mascot" class="hero-mascot">
+                        <div class="speech-bubble shadow-sm">
+                            <p class="app-subtitle text-white">Confusion Hai? Yahan Pucho Expert Coach Answer Dega.</p>
+                        </div>
+                    </div>
+                    <div class="text-center mb-4">
+                        <!--<img src="https://app.topgrade.pk/assets/images/video-issue.png" class="img-fluid mb-3" style="max-height: 120px;">-->
+                        <h4 class="fw-bold" style="color: #1754bb;">Report Doubt</h4>
+                        <!--<p class="text-muted small">Help us improve your learning experience</p>-->
+                    </div>
+
+                    <div class="list-group border-0">
+                                                    <label class="list-group-item d-flex gap-3 border-1 bg-light rounded-4 mb-2 py-2 cursor-pointer">
+                                <input class="form-check-input flex-shrink-0" style="border: 1px solid #1754bb;" type="radio" name="issue" id="featured-1" value="Statement / options seems to have a mistake" checked="">
+                                <span class="small fw-medium" style="color: #1754bb;">Statement / options seems to have a mistake</span>
+                            </label>
+                                                <label class="list-group-item d-flex gap-3 border-1 bg-light rounded-4 mb-2 py-2 cursor-pointer">
+                            <input class="form-check-input flex-shrink-0" style="border: 1px solid #1754bb;" type="radio" name="issue" id="featured-4" value="Question does not belong to given topic">
+                            <span class="small fw-medium" style="color: #1754bb;">Question does not belong to given topic</span>
+                        </label>
+                        <label class="list-group-item d-flex gap-3 border-1 bg-light rounded-4 mb-2 py-2 cursor-pointer">
+                            <input class="form-check-input flex-shrink-0" style="border: 1px solid #1754bb;" type="radio" name="issue" id="featured-6" value="Question not covered in Lecture">
+                            <span class="small fw-medium" style="color: #1754bb;">Question not covered in Lecture</span>
+                        </label>
+
+                                                    <label class="list-group-item d-flex gap-3 border-1 bg-light rounded-4 mb-2 py-2 cursor-pointer">
+                                <input class="form-check-input flex-shrink-0" style="border: 1px solid #1754bb;" type="radio" name="issue" id="featured-3" value="Explanation required">
+                                <span class="small fw-medium" style="color: #1754bb;">Explanation required</span>
+                            </label>
+                                                <label class="list-group-item d-flex gap-3 border-1 bg-light rounded-4 mb-2 py-2 cursor-pointer">
+                            <input class="form-check-input flex-shrink-0" style="border: 1px solid #1754bb;" type="radio" name="issue" id="featured-5" value="0">
+                            <span class="small fw-medium" style="color: #1754bb;">Other</span>
+                        </label>
+                    </div>
+
+                    <textarea class="form-control border-1 bg-light mt-1 rounded-4" id="issue_msg" name="issue_msg" rows="3" placeholder="Tell us more about the issue..." style="display:none; border-radius: 12px;"></textarea>
+
+                    <button onclick="SendQsIssue(&#39;https://app.topgrade.pk/&#39;)" class="btn btn-primary w-100 mt-4 py-2 fw-bold" style="border-radius: 12px; background-image: linear-gradient(to right, #054dc7, #081236);">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyQID(id) {
+            navigator.clipboard.writeText(id);
+            const badge = document.getElementById('qid');
+            badge.innerHTML = "Copied!";
+            setTimeout(() => {
+                badge.innerHTML = `QID: ${id} <i class="bi bi-copy ms-1"></i>`;
+            }, 1000);
+        }
+
+        // 1. Initialize the starting value from PHP (Old Logic)
+        var php_total_seconds = 6.000000;
+        var initialSeconds = php_total_seconds;
+
+        // 2. Check Session Storage (Old Logic)
+        // This ensures that if the user refreshes, the timer doesn't reset to the PHP starting value
+        if (sessionStorage.getItem("total_seconds") != null && sessionStorage.getItem("total_seconds") != 'NaN') {
+            initialSeconds = parseInt(sessionStorage.getItem("total_seconds"));
+        }
+
+        // 3. New Logic Function (Enhanced to save state)
+        function startTimer(secondsPassed) {
+            const timerElement = document.getElementById('quiz-clock');
+            let totalSeconds = secondsPassed;
+
+            // Run once immediately to prevent the "00:00:00" flicker on load
+            updateDisplay(totalSeconds, timerElement);
+
+            setInterval(() => {
+                totalSeconds++;
+
+                // Save to sessionStorage so it persists on refresh (Old Logic requirement)
+                sessionStorage.setItem("total_seconds", totalSeconds);
+
+                updateDisplay(totalSeconds, timerElement);
+            }, 1000);
+        }
+
+        // Helper function for cleaner code
+        function updateDisplay(totalSeconds, element) {
+            const h = Math.floor(totalSeconds / 3600);
+            const m = Math.floor((totalSeconds % 3600) / 60);
+            const s = totalSeconds % 60;
+
+            element.textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+
+        // 4. Start the timer using the resolved initial value
+        $(document).ready(function() {
+            startTimer(initialSeconds);
+        });
+    </script>
+    <script>
+        function NextQuestion(base_url, sr_no, test_id, question_mode, status, type) {
+            $("#page-loader").removeClass('d-none');
+            if (type == 0) {
+                var answer = $("input[name='answer_val']").is(':checked');
+                var responce = true;
+                var answer_disable = $("input[name='answer_val']").is(':disabled');
+
+                if (answer != false && status == 2 && answer_disable == false) {
+
+                    responce = submit_answer(base_url, false, type, 0);
+                    if (responce != false) {
+                        window.location.href = base_url + 'take_test/test/' + test_id + '/' + sr_no + question_mode;
+                    }
+                } else {
+                    window.location.href = base_url + 'take_test/test/' + test_id + '/' + sr_no + question_mode;
+                }
+            } else {
+                window.location.href = base_url + 'take_test/test/' + test_id + '/' + sr_no + question_mode;
+            }
+            $("#page-loader").addClass('d-none');
+
+        }
+    </script>
+    <script>
+        function PreQuestion(base_url, test_id, pre, question_mode) {
+            window.location.href = base_url + 'take_test/test/' + test_id + '/' + pre + question_mode;
+        }
+    </script>
+    <script>
+        function submit_answer(base_url, load_screen, type, answer_clicked) {
+            $("#page-loader").removeClass('d-none');
+            if (type == 0) {
+                var answer_input = $("input[name='answer_val']");
+                var is_checked = answer_input.is(':checked');
+                var is_disabled = answer_input.is(':disabled');
+
+                var question_revision_id = $("#_q_r").val();
+                var q_id = $("#_q_id").val();
+                var test_link_id = $("#test_question_link_id").val();
+                var test_id = $("#_t_id").val();
+
+                // 1. If already answered, just scroll to explanation
+                if (is_disabled) {
+                    $("#page-loader").addClass('d-none');
+                    var desktopSection = $("#desktop");
+                    desktopSection.show(); // Display: block;
+
+                    // 2. Browser ko thora sa time dein layout update karne ke liye
+                    setTimeout(function() {
+                        // Offset check karne se pehlay dobara confirm karein ke undefined na ho
+                        var offset = desktopSection.offset();
+
+                        if (offset && typeof offset.top !== 'undefined') {
+                            $('html, body').animate({
+                                scrollTop: offset.top - 20
+                            }, 800);
+                        } else {
+                            // Agar phir bhi top na miley (rare case), toh scrollIntoView use karein
+                            desktopSection[0].scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    }, 50); // 50ms ka delay layout rendering ke liye kaafi hai
+                    //                        $("#desktop").show();
+                    //                        $('html, body').animate({
+                    //                            scrollTop: $("#till_showable_exp_div").offset().top
+                    //                        }, 1000);
+                    return false;
+                }
+
+                // 2. Timer Validation
+                // Logic: If timer is 00:00:00 or whatever your 'timer' variable tracks
+                if (typeof timer !== 'undefined' && timer == false) {
+                    $("#page-loader").addClass('d-none');
+                    Swal.fire({
+                        title: "Info!",
+                        text: "Please Start Timer before Submit Answer",
+                        icon: "info", // 'type' ki jagah 'icon' use hota hai swal2 mein
+                        confirmButtonClass: 'btn btn-primary',
+                        buttonsStyling: false, // Agar aap apni custom bootstrap class use karna chahte hain
+                        confirmButtonText: 'OK'
+                    });
+
+                    return false;
+                }
+                // 3. Selection Validation
+                if (is_checked == false) {
+                    $("#page-loader").addClass('d-none');
+                    Swal.fire({
+                        title: "Info!",
+                        text: "Please Choose an Answer",
+                        icon: "info", // 'type' ki jagah 'icon' use hota hai swal2 mein
+                        confirmButtonClass: '#d33',
+                        customClass: {
+                            confirmButton: 'btn btn-danger mx-2',
+                        },
+                        buttonsStyling: false, // Agar aap apni custom bootstrap class use karna chahte hain
+                        confirmButtonText: 'OK'
+                    });
+
+                    return false;
+                } else {
+                    // 4. PARSE NEW TIMER
+                    // Takes "00:12:45" and splits it
+                    var timerText = $("#quiz-clock").text().split(':');
+                    var minutes = timerText[1]; // Middle part
+                    var seconds = timerText[2]; // Last part
+                    var selected_answer = $('input[name=answer_val]:checked').val();
+
+
+                    //                        document.getElementById('img_loader').style.display = "block";
+
+                    $.ajax({
+                        url: base_url + 'question-bank-tests/' + 'submit_answer',
+                        data: {
+                            answer: selected_answer,
+                            question_test_link: test_link_id,
+                            test_id: test_id,
+                            question_revision_id: question_revision_id,
+                            question_id: q_id,
+                            minutes: minutes, // Sent to backend
+                            seconds: seconds // Sent to backend
+                        },
+                        type: 'post',
+                        success: function(data) {
+                            //                                document.getElementById('img_loader').style.display = "none";
+
+                            if (load_screen == true) {
+                                var res = data.split('^^^');
+                                var msg = res[0];
+                                var text = 'Correct';
+
+                                if (msg) {
+                                    var parts = msg.split('--');
+                                    // Show Green Icon (Correct ID)
+                                    $("#g_" + parts[0]).show();
+                                    $("#optborder_" + parts[0]).addClass('border-success bg-success-subtle');
+
+                                    if (parts[1]) {
+                                        // Show Red Icon (User's Incorrect ID)
+                                        $("#r_" + parts[1]).show();
+                                        $("#ans_" + parts[1]).addClass('give-answer');
+                                        text = 'Incorrect';
+                                    } else {
+                                        $("#ans_" + parts[0]).addClass('give-answer');
+                                    }
+                                }
+
+                                // Update UI Feedback
+                                if (text == 'Correct') {
+                                    $("#optborder_" + answer_clicked).addClass('border-success bg-success-subtle');
+                                    $("#optlabel_" + answer_clicked).addClass('bg-blue');
+                                    $("#auto-mark-result").removeClass('bg-soft-warning');
+                                    $("#auto-mark-result").addClass('bg-soft-success');
+                                    $("#auto-mark-result").html(text);
+                                } else if (text == 'Incorrect') {
+                                    $("#optborder_" + answer_clicked).addClass('border-danger bg-danger-subtle');
+                                    $("#auto-mark-result").removeClass('bg-soft-warning');
+                                    $("#auto-mark-result").addClass('bg-soft-danger');
+                                    $("#auto-mark-result").html(text);
+                                }
+
+
+                                // If "Discussion" was clicked, or if you want to auto-scroll on click
+                                if (answer_clicked == 0) {
+                                    var desktopSection = $("#desktop");
+                                    desktopSection.show(); // Display: block;
+
+                                    // 2. Browser ko thora sa time dein layout update karne ke liye
+                                    setTimeout(function() {
+                                        // Offset check karne se pehlay dobara confirm karein ke undefined na ho
+                                        var offset = desktopSection.offset();
+
+                                        if (offset && typeof offset.top !== 'undefined') {
+                                            $('html, body').animate({
+                                                scrollTop: offset.top - 20
+                                            }, 800);
+                                        } else {
+                                            // Agar phir bhi top na miley (rare case), toh scrollIntoView use karein
+                                            desktopSection[0].scrollIntoView({
+                                                behavior: 'smooth'
+                                            });
+                                        }
+                                    }, 50); // 50ms ka delay layout rendering ke liye kaafi hai
+
+                                }
+
+                                // Disable radio buttons after submission
+                                $("input[name='answer_val']").prop("disabled", true);
+                            }
+                        }
+                    });
+                }
+            } else {
+                // For non-MCQ types, just show explanation
+                $("#desktop").show();
+                $('html, body').animate({
+                    scrollTop: $("#till_showable_exp_div").offset().top
+                }, 1000);
+            }
+            setTimeout(() => {
+                $("#page-loader").addClass('d-none');
+            }, 1000);
+
+        }
+    </script>
+    <input type="hidden" id="roadmap_url" value="https://app.topgrade.pk/main-session/1?day_topic_id=MQ&amp;day=MQ">
+
+    <script>
+        /* End test pop up By Clicking End Button */
+        function EndTestPopup(EndButtonValue) {
+            // Show the Bootstrap modal
+            var endTestModal = new bootstrap.Modal(document.getElementById('endTestModal'));
+            endTestModal.show();
+
+            // Handle Yes button click
+            var yesBtn = document.getElementById('endTestYesBtn');
+
+            // Remove any previous click listeners to prevent duplicates
+            yesBtn.replaceWith(yesBtn.cloneNode(true));
+            yesBtn = document.getElementById('endTestYesBtn');
+
+            yesBtn.addEventListener('click', function() {
+                var id = (EndButtonValue == 1) ? 1 : 2;
+
+                // Call FinishTest
+                FinishTest(
+                    'https://app.topgrade.pk/',
+                    '855513148',
+                    id,
+                    2,
+                    0                );
+
+                // Hide the modal after Yes
+                endTestModal.hide();
+                console.log("Test Ended");
+            });
+        }
+    </script>
+    <script>
+        function FinishTest(base_url, test_id, end_test, status, type) {
+            $("#page-loader").removeClass('d-none');
+
+            var answer = $("input[name='answer_val']").is(':checked');
+            var responce = true;
+            var answer_disable = $("input[name='answer_val']").is(':disabled');
+
+            // Naye timer logic ke variables
+            var test_hours = '00',
+                test_minutes = '00',
+                test_seconds = '00';
+
+            // 1. Single span se timer text nikal kar split karein
+            var timerText = $("#quiz-clock").text().trim(); // "01:20:45"
+
+            if (timerText != "") {
+                var timeParts = timerText.split(':');
+                if (timeParts.length === 3) {
+                    test_hours = timeParts[0];
+                    test_minutes = timeParts[1];
+                    test_seconds = timeParts[2];
+                } else if (timeParts.length === 2) {
+                    // Agar kabhi sirf MM:SS ho
+                    test_minutes = timeParts[0];
+                    test_seconds = timeParts[1];
+                }
+            } else {
+                // Fallback: Agar timer text na mile toh Session Storage check karein
+                test_hours = sessionStorage.getItem("test_finish_hours") || '00';
+                test_minutes = sessionStorage.getItem("test_finish_minutes") || '00';
+                test_seconds = sessionStorage.getItem("test_finish_seconds") || '00';
+            }
+
+            // Logic for Answer Submission
+            if (answer != false && status == 2 && answer_disable == false) {
+                responce = submit_answer(base_url, false, type, 0);
+                if (responce == false) {
+                    $("#page-loader").addClass('d-none');
+                    return false;
+                }
+            }
+
+            // AJAX Call
+            if (responce != false) {
+                $.ajax({
+                    url: base_url + 'take_test/' + 'finish_test',
+                    data: {
+                        Endtest: end_test,
+                        test_id: test_id,
+                        hours: test_hours,
+                        minutes: test_minutes,
+                        seconds: test_seconds
+                    },
+                    type: 'post',
+                    success: function(msg) {
+                        if (end_test == 0) {
+                            window.location.href = base_url + 'take_test/test-results?test_id=' + test_id;
+                        } else if (end_test == 2) {
+                            roadmap_url = $("#roadmap_url").val();
+                            if (roadmap_url != "") {
+                                window.location.href = roadmap_url;
+                                return false;
+                            }
+                            window.location.href = base_url;
+                        }
+                        //                            PreparationWay(0);
+                    },
+                    error: function() {
+                        $("#page-loader").addClass('d-none');
+                        console.error("Test finish request failed.");
+                    }
+                });
+            } else {
+                $("#page-loader").addClass('d-none');
+            }
+        }
+    </script>
+    <script>
+        function PreparationWay(way) {
+            $("#page-loader").removeClass('d-none');
+            url = "https://app.topgrade.pk/preparation-way";
+            $.ajax({
+                url: url,
+                type: 'POST',
+                async: false,
+                data: {
+                    way: way
+                },
+                success: function(term) {
+                    $("#page-loader").addClass('d-none');
+                    location.href = 'https://app.topgrade.pk/';
+                }
+            });
+        }
+    </script>
+    <script>
+        function UpdateQBfeedbackLikeDislike(stat, base_url) {
+            const loader = $("#page-loader");
+            const questionId = $('#_q_id').val();
+            const likesElement = $('#likescounts');
+
+            // Har click par fresh current value lein
+            let currentLikes = parseInt(likesElement.text()) || 0;
+
+            loader.removeClass('d-none');
+
+            $.ajax({
+                type: "POST",
+                url: base_url + "question-bank/qbfeedback",
+                data: {
+                    question_id: questionId,
+                    qb_stat: stat
+                },
+                success: function(result) {
+                    // result 1: Update existing (e.g., Like to Dislike)
+                    // result 2: New entry (e.g., First time liking)
+
+                    if (result == 1 || result == 2) {
+                        if (stat == 1) {
+                            // Case: Clicked LIKE
+                            if ($("#like_fill").is(":hidden")) {
+                                likesElement.text(currentLikes + 1);
+                            }
+                            toggleIcons('like');
+                        } else {
+                            // Case: Clicked DISLIKE
+                            // Agar pehle Like tha (like_fill visible tha), toh count 1 kam karein
+                            if ($("#like_fill").is(":visible") && currentLikes > 0) {
+                                likesElement.text(currentLikes - 1);
+                            }
+                            toggleIcons('dislike');
+                        }
+                    }
+                },
+                complete: function() {
+                    loader.addClass('d-none');
+                },
+                error: function() {
+                    alert("Connection error. Please try again.");
+                    loader.addClass('d-none');
+                }
+            });
+        }
+
+        function toggleIcons(type) {
+            if (type === 'like') {
+                $("#like_fill").show();
+                $("#like_empty").hide();
+                $("#dislike_fill").hide();
+                $("#dislike_empty").show();
+            } else {
+                $("#like_fill").hide();
+                $("#like_empty").show();
+                $("#dislike_fill").show();
+                $("#dislike_empty").hide();
+            }
+        }
+    </script>
+    <script>
+        function Mark_Question(base_url, type, question_id) {
+            var answer = '';
+            var test_link_id = $("#test_question_link_id").val();
+            var icon = $("#bookmark_icon");
+
+            if (type == 0) {
+                answer = $('input[name=answer_val]:checked').val();
+            }
+
+            $.ajax({
+                url: base_url + 'question-bank-tests/mark_question',
+                data: {
+                    answer: answer,
+                    question_test_link: test_link_id,
+                    type: type,
+                    question_id: question_id
+                },
+                type: 'post',
+                success: function(msg) {
+                    // msg == '1' matlab Bookmark HO GAYA (Red + Outline)
+                    if (msg == '1') {
+                        //                            icon.removeClass('bi-bookmark-fill').addClass('bi-bookmark-fill');
+                        icon.css('color', '#dc3545'); // Red color
+
+                        if (typeof toastr !== 'undefined') {
+                            toastr.success('Bookmarked!');
+                        }
+                    }
+                    // Bookmark khatam (Blue + Filled)
+                    else {
+                        icon.removeClass('bi-bookmark').addClass('bi-bookmark-fill');
+                        icon.css('color', '#fff'); // Blue color
+
+                        if (typeof toastr !== 'undefined') {
+                            toastr.info('Bookmark Removed');
+                        }
+                    }
+                },
+                error: function() {
+                    if (typeof toastr !== 'undefined')
+                        toastr.error('Network Error');
+                }
+            });
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Other option show/hide textarea
+            $('input[name="issue"]').on('change', function() {
+                if ($(this).val() == '0') {
+                    $('#issue_msg').fadeIn();
+                } else {
+                    $('#issue_msg').fadeOut();
+                }
+            });
+        });
+
+        function ReportIssueModal() {
+            $("#page-loader").removeClass('d-none');
+            var question_id = $("#_q_id").val();
+
+            $.ajax({
+                url: 'https://app.topgrade.pk/question-bank-tests/already-report-issue',
+                data: {
+                    question_id: question_id
+                }, // Fixed: question_id' se quote hataya
+                type: 'post',
+                success: function(msg) {
+                    $("#page-loader").addClass('d-none');
+                    if (msg == 1) {
+                        Swal.fire({
+                            title: "Feedback Already Received",
+                            text: "You have already given feedback against this question, try again after 48 hours.",
+                            icon: "info",
+                            confirmButtonColor: '#3f6ad8',
+                            confirmButtonText: 'OK',
+                            customClass: {
+                                confirmButton: 'btn btn-info'
+                            }
+                        });
+                        return false;
+                    } else {
+                        $('#report_issue_model').modal('show');
+                    }
+                } // Success function ends here
+            }); // Fixed: AJAX call yahan close hogi ); se
+        } // Function ends here
+    </script>
+    <script>
+        function SendQsIssue(base_url) {
+            // 1. Get Values
+            var issue = $('input[name="issue"]:checked').val();
+            var other_issue_msg = $("#issue_msg").val().trim();
+            // 2. Validation Logic
+            // Agar "Other" select ho ya mistake wali options hon to message required hai
+            $("#issue_msg").removeClass('is-invalid').css('border', '1px solid #ced4da');
+            if (issue == "0" && other_issue_msg == '') {
+                $("#issue_msg").addClass('is-invalid').css('border', '1px solid red').focus();
+                return false;
+            }
+
+            // 3. ID Selection based on type
+            var question_id = $("#_q_id").val();
+            var test_id = $("#_t_id").val();
+            var u_sub_section_id = $("#_sub_s_id").val();
+            // 4. URL Construction
+            var url = base_url + '/question-bank-tests/report-issue';
+            $("#page-loader").removeClass('d-none');
+            // 5. AJAX Call
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: {
+                    question_id: question_id,
+                    test_id: test_id,
+                    u_sub_section_id: u_sub_section_id,
+                    other_issue_msg: other_issue_msg,
+                    issue: issue,
+                    new_source: 1
+                },
+                success: function(msg) {
+                    $("#page-loader").addClass('d-none');
+                    $("#issue_msg").val('');
+                    $('#report_issue_model').modal('hide');
+                    if (msg == 2) {
+                        swal({
+                            title: "Your today's feedback limit is exceeded",
+                            type: "info",
+                            showCancelButton: false,
+                            showConfirmButton: true,
+                            confirmButtonColor: '#DD6B55',
+                            confirmButtonText: 'OK',
+                            confirmButtonClass: 'btn btn-info',
+                            closeOnConfirm: true,
+                            //closeOnCancel: false
+                        });
+                        return false;
+                    } else {
+                        $('#report_issue_model_thanks').modal('show');
+                        setTimeout(function() {
+                            $('#report_issue_model_thanks').modal('hide')
+                        }, 3000);
+                    }
+                },
+                error: function() {
+                    $("#page-loader").addClass('d-none');
+                    alert("Something went wrong. Please try again.");
+                }
+            });
+        }
+    </script>
+
+
+
+</body></html>

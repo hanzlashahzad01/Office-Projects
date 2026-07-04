@@ -130,6 +130,23 @@ function openRoadmap(event) {
             window.location.href = `slides.html?subject=${activeSubject}`;
         });
     }
+
+    // Attach click listener for Take Test button → test files
+    const takeTestCard = roadmapContent.querySelector("#card-take-test");
+    const takeTestIcon = roadmapContent.querySelector("#icon-take-test");
+    const resumeTestBtn = roadmapContent.querySelector(".btn-resume");
+    
+    const openTestFile = () => {
+        const testFile = `Test folder/${activeSubject} test.html`;
+        console.log("Opening test file:", testFile);
+        window.location.href = testFile;
+    };
+    
+    [takeTestCard, takeTestIcon, resumeTestBtn].forEach(element => {
+        if (element) {
+            element.addEventListener("click", openTestFile);
+        }
+    });
 }
 
 function openVideoLecture(subjectKey) {
