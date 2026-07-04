@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://app.topgrade.pk/slides_viewer/MQ/NDU4NA -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dashboard | TopGrade.pk</title>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <link rel="icon" type="image/png" href="https://app.topgrade.pk/assets/images/fav.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="./biology slides_files/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="./biology slides_files/bootstrap-icons.css">
+    <!-- Google Fonts: Outfit -->
+    <link href="./biology slides_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./biology slides_files/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./biology slides_files/custom.css">
+    <link href="./biology slides_files/select2.min.css" rel="stylesheet">
+        <script async="" src="./biology slides_files/clarity.js.download"></script><script type="text/javascript" async="" src="./biology slides_files/js"></script><script async="" src="./biology slides_files/fjri95a5s1"></script><script async="" src="./biology slides_files/gtm.js.download"></script><script type="text/javascript" async="" src="./biology slides_files/analytics.js.download"></script><script type="text/javascript" async="" src="./biology slides_files/js(1)"></script><script async="" src="./biology slides_files/js(2)"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-114282899-2', {'optimize_id': 'GTM-523GCW9'});
+        </script>
+    <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-P4H5QPV');</script>
+
+    
+                    <script type="text/javascript">
+                (function (c, l, a, r, i, t, y) {
+                    c[a] = c[a] || function () {
+                        (c[a].q = c[a].q || []).push(arguments)
+                    };
+                    t = l.createElement(r);t.async = 1;t.src = "https://www.clarity.ms/tag/" + i;
+                    y = l.getElementsByTagName(r)[0];
+                    y.parentNode.insertBefore(t, y);
+                })(window, document, "clarity", "script", "fjri95a5s1");
+                clarity("set", "username", "03294121768");
+            </script>
+        
+        <script async="" defer="" src="./biology slides_files/lo.js.download"></script>
+        <script>
+            window.LOQ = window.LOQ || [];
+            window.LOQ.push(['ready', async LO => {
+                    await LO.$internal.ready('events');
+
+                    // Track Product Name if exists
+        
+                    // Identify User
+                            await LO.$internal.ready('visitor');
+                    LO.visitor.identify('453531', {
+                        name: 'Testing',
+                        email: 'testing@gmail.com',
+                        type: 'Trial User',
+                        subscription: 'None'
+                    });
+                }]);
+        </script>
+    
+<style>
+    :root {
+        --primary-blue: #3f6ad8;
+        --primary-green: #3ac47d;
+        --bg-gray: #f8f9fa;
+        --blue-primary: #1676dd;
+    }
+
+    /* Prevent scrolling on desktop, allow on mobile if content is tall */
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        background-color: var(--bg-gray);
+        font-family: 'Inter', -apple-system, sans-serif;
+    }
+
+    /* Main App Wrapper */
+    .app-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        /* Use min-height to allow expansion */
+        align-items: center;
+        padding: 10px;
+        position: relative;
+    }
+
+    /* The Content Card - Pushed to center */
+    .app-card {
+        width: 100%;
+        max-width: 700px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        margin-top: auto;
+        /* Magic: pushes card from top */
+        margin-bottom: auto;
+        /* Magic: pushes card from bottom */
+    }
+
+    .video-section {
+        width: 100%;
+        max-width: 700px;
+        /* background: #000; */
+    }
+
+    .info-section {
+        padding: 1.25rem;
+    }
+
+    .breadcrumb-text {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: #1754bb;
+    }
+
+    .stat-badge {
+        border: none;
+        border-radius: 8px;
+        padding: 6px 16px;
+        font-weight: 500;
+        font-size: .9rem;
+    }
+
+    .badge-views {
+        background-color: #eef2ff;
+        color: #4338ca;
+    }
+
+    .badge-likes {
+        background-color: #ecfdf5;
+        color: #065f46;
+    }
+
+    .badge-dislikes {
+        background-color: #fef2f2;
+        color: #991b1b;
+    }
+
+    .bottom-nav .btn-app-action.bg-success {
+        /* background-image: linear-gradient(to right, #198754, #0a5b35); */
+        background: linear-gradient(90deg, #ffc400 0%, #ff7a12 100%);
+    }
+
+    /* Fixed Sticky Footer */
+    .app-footer {
+        width: 100%;
+        max-width: 500px;
+        /* Small and centered like an app */
+        position: sticky;
+        bottom: 20px;
+        /* Distance from bottom */
+        margin: 0 auto 10px auto;
+        z-index: 1000;
+    }
+
+    .nav-container {
+        display: flex;
+        border-radius: 50px;
+        /* Pill shape for app feel */
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        background: white;
+    }
+
+    .nav-btn {
+        flex: 1;
+        border: none;
+        padding: 14px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    }
+
+    .btn-prev {
+        background-color: var(--primary-blue);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-next {
+        background-color: var(--primary-green);
+    }
+
+    .nav-btn:hover {
+        opacity: 0.9;
+        color: white;
+    }
+
+    .nav-btn:active {
+        transform: scale(0.98);
+    }
+
+    /* Mobile par jab image click ho to scroll allow karein */
+    /* Image par zoom-in cursor dikhane ke liye */
+    .carousel-item img {
+        cursor: zoom-in;
+    }
+
+    /* Modal ke andar image ki styling */
+    .slide-zoom {
+        max-height: 90vh;
+        transition: transform 0.3s ease;
+        cursor: grab;
+    }
+
+    .heading-title {
+        font-size: 22px;
+        font-weight: bold;
+        /* color: #1754bb; */
+        margin: 0;
+        line-height: 34px;
+    }
+
+    /* -------------------------------------
+           GREETING SECTION
+        -------------------------------------- */
+    .greeting-section {
+        display: grid;
+        grid-template-columns: 65px 1fr;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 0px;
+        flex-shrink: 0;
+        width: 700px;
+    }
+
+    .hero-mascot {
+        display: block;
+        margin: 0 auto 12px;
+        width: 70px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .speech-bubble {
+        position: relative;
+        background: var(--blue-primary);
+        color: #fff;
+        border-radius: 10px;
+        /* 1. Flexbox alignment add karein */
+        display: flex;
+        align-items: center;
+        /* Vertical center */
+        justify-content: center;
+        /* Horizontal center */
+        text-align: center;
+        padding: 10px 14px;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 2px 8px rgba(27, 72, 174, 0.1);
+        font-size: 0.85rem;
+        line-height: 1.35;
+        font-weight: 500;
+    }
+
+    .speech-bubble::before {
+        content: "";
+        position: absolute;
+        left: -14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 14px solid var(--blue-primary);
+    }
+
+    .app-subtitle {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .slide-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px 0;
+        width: 30%;
+    }
+
+    .slide-indicator .line-container {
+        flex: 1;
+        position: relative;
+        height: 2px;
+        background-color: #c0c0ff;
+        /* line color */
+    }
+
+    /* Left line: use ::after for the diamond */
+    .slide-indicator .line-container:first-child::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #c0c0ff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: -3px;
+        right: -4px;
+    }
+
+    /* Right line: use ::before for the diamond */
+    .slide-indicator .line-container:last-child::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #c0c0ff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: -3px;
+        left: -4px;
+    }
+
+    .slide-indicator .text {
+        font-weight: 500;
+        font-size: 14px;
+        color: #4a4aee;
+        margin: 0 12px;
+        white-space: nowrap;
+    }
+
+    .text-purple {
+        color: #9b5de5;
+    }
+
+    /* Actions Row (card-style) */
+    .actions-row {
+        border: 1px solid #e5e8f0;
+        border-radius: 12px;
+        background: #fff;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+
+    .action-item {
+        cursor: pointer;
+        padding: 14px 8px;
+        transition: background 0.2s;
+        text-align: center;
+    }
+
+    .action-item:hover { background: #f8fafc; }
+    .action-item:active { background: #f1f5f9; }
+
+    .action-item .action-icon {
+        font-size: 22px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .action-item .action-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: #111827;
+    }
+
+    .action-link {
+        text-decoration: none !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        line-height: 1.2;
+    }
+
+    /* Mobile responsive full view */
+    @media (max-width: 576px) {
+        .modal-body {
+            overflow: auto !important;
+            /* Mobile par user scroll/pinch kar sakay */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .slide-zoom {
+            max-height: unset;
+            width: 100%;
+        }
+
+
+    }
+
+    @media (max-width: 480px) {
+        .bottom-nav {
+            height: 60px;
+        }
+
+        .action-item .action-icon {
+            font-size: 16px;
+        }
+
+        .action-item .action-label {
+            font-size: 11px;
+        }
+
+        .slide-indicator {
+            width: 80%;
+        }
+
+        .breadcrumb-text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    /* Glassmorphism Background */
+    #fullViewModal .modal-content {
+        background: rgba(0, 0, 0, 0.85) !important;
+        backdrop-filter: blur(8px);
+    }
+
+    /* Responsive Tweaks */
+    @media (max-width: 768px) {
+
+        body,
+        html {
+            overflow-y: auto;
+        }
+
+        /* Ensure mobile can scroll if video is large */
+
+        .app-wrapper {
+            padding-bottom: 100px;
+            /* Space for the fixed footer */
+            justify-content: flex-start;
+        }
+
+        .app-footer {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: none;
+        }
+
+        .app-card {
+            /* margin-top: 15px; */
+            margin-bottom: 20px;
+        }
+
+        .nav-btn span {
+            font-size: 0.85rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .heading-title {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        .greeting-section {
+            width: 100%;
+        }
+
+        .app-subtitle {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+</style><style>:root{--swal2-outline: 0 0 0 3px rgba(100, 150, 200, 0.5);--swal2-container-padding: 0.625em;--swal2-backdrop: rgba(0, 0, 0, 0.4);--swal2-backdrop-transition: background-color 0.15s;--swal2-width: 32em;--swal2-padding: 0 0 1.25em;--swal2-border: none;--swal2-border-radius: 0.3125rem;--swal2-background: white;--swal2-color: #545454;--swal2-show-animation: swal2-show 0.3s;--swal2-hide-animation: swal2-hide 0.15s forwards;--swal2-icon-zoom: 1;--swal2-title-padding: 0.8em 1em 0;--swal2-html-container-padding: 1em 1.6em 0.3em;--swal2-input-border: 1px solid #d9d9d9;--swal2-input-border-radius: 0.1875em;--swal2-input-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;--swal2-input-background: transparent;--swal2-input-transition: border-color 0.2s, box-shadow 0.2s;--swal2-input-hover-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;--swal2-input-focus-border: 1px solid #b4dbed;--swal2-input-focus-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px rgba(100, 150, 200, 0.5);--swal2-progress-step-background: #add8e6;--swal2-validation-message-background: #f0f0f0;--swal2-validation-message-color: #666;--swal2-footer-border-color: #eee;--swal2-footer-background: transparent;--swal2-footer-color: inherit;--swal2-timer-progress-bar-background: rgba(0, 0, 0, 0.3);--swal2-close-button-position: initial;--swal2-close-button-inset: auto;--swal2-close-button-font-size: 2.5em;--swal2-close-button-color: #ccc;--swal2-close-button-transition: color 0.2s, box-shadow 0.2s;--swal2-close-button-outline: initial;--swal2-close-button-box-shadow: inset 0 0 0 3px transparent;--swal2-close-button-focus-box-shadow: inset var(--swal2-outline);--swal2-close-button-hover-transform: none;--swal2-actions-justify-content: center;--swal2-actions-width: auto;--swal2-actions-margin: 1.25em auto 0;--swal2-actions-padding: 0;--swal2-actions-border-radius: 0;--swal2-actions-background: transparent;--swal2-action-button-transition: background-color 0.2s, box-shadow 0.2s;--swal2-action-button-hover: black 10%;--swal2-action-button-active: black 10%;--swal2-confirm-button-box-shadow: none;--swal2-confirm-button-border-radius: 0.25em;--swal2-confirm-button-background-color: #7066e0;--swal2-confirm-button-color: #fff;--swal2-deny-button-box-shadow: none;--swal2-deny-button-border-radius: 0.25em;--swal2-deny-button-background-color: #dc3741;--swal2-deny-button-color: #fff;--swal2-cancel-button-box-shadow: none;--swal2-cancel-button-border-radius: 0.25em;--swal2-cancel-button-background-color: #6e7881;--swal2-cancel-button-color: #fff;--swal2-toast-show-animation: swal2-toast-show 0.5s;--swal2-toast-hide-animation: swal2-toast-hide 0.1s forwards;--swal2-toast-border: none;--swal2-toast-box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 1px 2px hsl(0deg 0% 0% / 0.075), 1px 2px 4px hsl(0deg 0% 0% / 0.075), 1px 3px 8px hsl(0deg 0% 0% / 0.075), 2px 4px 16px hsl(0deg 0% 0% / 0.075)}[data-swal2-theme=dark]{--swal2-dark-theme-black: #19191a;--swal2-dark-theme-white: #e1e1e1;--swal2-background: var(--swal2-dark-theme-black);--swal2-color: var(--swal2-dark-theme-white);--swal2-footer-border-color: #555;--swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);--swal2-validation-message-background: color-mix( in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10% );--swal2-validation-message-color: var(--swal2-dark-theme-white);--swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7)}@media(prefers-color-scheme: dark){[data-swal2-theme=auto]{--swal2-dark-theme-black: #19191a;--swal2-dark-theme-white: #e1e1e1;--swal2-background: var(--swal2-dark-theme-black);--swal2-color: var(--swal2-dark-theme-white);--swal2-footer-border-color: #555;--swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);--swal2-validation-message-background: color-mix( in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10% );--swal2-validation-message-color: var(--swal2-dark-theme-white);--swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7)}}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto !important}body.swal2-no-backdrop .swal2-container{background-color:rgba(0,0,0,0) !important;pointer-events:none}body.swal2-no-backdrop .swal2-container .swal2-popup{pointer-events:auto}body.swal2-no-backdrop .swal2-container .swal2-modal{box-shadow:0 0 10px var(--swal2-backdrop)}body.swal2-toast-shown .swal2-container{box-sizing:border-box;width:360px;max-width:100%;background-color:rgba(0,0,0,0);pointer-events:none}body.swal2-toast-shown .swal2-container.swal2-top{inset:0 auto auto 50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{inset:0 0 auto auto}body.swal2-toast-shown .swal2-container.swal2-top-start,body.swal2-toast-shown .swal2-container.swal2-top-left{inset:0 auto auto 0}body.swal2-toast-shown .swal2-container.swal2-center-start,body.swal2-toast-shown .swal2-container.swal2-center-left{inset:50% auto auto 0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{inset:50% auto auto 50%;transform:translate(-50%, -50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{inset:50% 0 auto auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-start,body.swal2-toast-shown .swal2-container.swal2-bottom-left{inset:auto auto 0 0}body.swal2-toast-shown .swal2-container.swal2-bottom{inset:auto auto 0 50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{inset:auto 0 0 auto}@media print{body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown){overflow-y:scroll !important}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown) .swal2-container{position:static !important}}div:where(.swal2-container){display:grid;position:fixed;z-index:1060;inset:0;box-sizing:border-box;grid-template-areas:"top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";grid-template-rows:minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);height:100%;padding:var(--swal2-container-padding);overflow-x:hidden;transition:var(--swal2-backdrop-transition);-webkit-overflow-scrolling:touch}div:where(.swal2-container).swal2-backdrop-show,div:where(.swal2-container).swal2-noanimation{background:var(--swal2-backdrop)}div:where(.swal2-container).swal2-backdrop-hide{background:rgba(0,0,0,0) !important}div:where(.swal2-container).swal2-top-start,div:where(.swal2-container).swal2-center-start,div:where(.swal2-container).swal2-bottom-start{grid-template-columns:minmax(0, 1fr) auto auto}div:where(.swal2-container).swal2-top,div:where(.swal2-container).swal2-center,div:where(.swal2-container).swal2-bottom{grid-template-columns:auto minmax(0, 1fr) auto}div:where(.swal2-container).swal2-top-end,div:where(.swal2-container).swal2-center-end,div:where(.swal2-container).swal2-bottom-end{grid-template-columns:auto auto minmax(0, 1fr)}div:where(.swal2-container).swal2-top-start>.swal2-popup{align-self:start}div:where(.swal2-container).swal2-top>.swal2-popup{grid-column:2;place-self:start center}div:where(.swal2-container).swal2-top-end>.swal2-popup,div:where(.swal2-container).swal2-top-right>.swal2-popup{grid-column:3;place-self:start end}div:where(.swal2-container).swal2-center-start>.swal2-popup,div:where(.swal2-container).swal2-center-left>.swal2-popup{grid-row:2;align-self:center}div:where(.swal2-container).swal2-center>.swal2-popup{grid-column:2;grid-row:2;place-self:center center}div:where(.swal2-container).swal2-center-end>.swal2-popup,div:where(.swal2-container).swal2-center-right>.swal2-popup{grid-column:3;grid-row:2;place-self:center end}div:where(.swal2-container).swal2-bottom-start>.swal2-popup,div:where(.swal2-container).swal2-bottom-left>.swal2-popup{grid-column:1;grid-row:3;align-self:end}div:where(.swal2-container).swal2-bottom>.swal2-popup{grid-column:2;grid-row:3;place-self:end center}div:where(.swal2-container).swal2-bottom-end>.swal2-popup,div:where(.swal2-container).swal2-bottom-right>.swal2-popup{grid-column:3;grid-row:3;place-self:end end}div:where(.swal2-container).swal2-grow-row>.swal2-popup,div:where(.swal2-container).swal2-grow-fullscreen>.swal2-popup{grid-column:1/4;width:100%}div:where(.swal2-container).swal2-grow-column>.swal2-popup,div:where(.swal2-container).swal2-grow-fullscreen>.swal2-popup{grid-row:1/4;align-self:stretch}div:where(.swal2-container).swal2-no-transition{transition:none !important}div:where(.swal2-container)[popover]{width:auto;border:0}div:where(.swal2-container) div:where(.swal2-popup){display:none;position:relative;box-sizing:border-box;grid-template-columns:minmax(0, 100%);width:var(--swal2-width);max-width:100%;padding:var(--swal2-padding);border:var(--swal2-border);border-radius:var(--swal2-border-radius);background:var(--swal2-background);color:var(--swal2-color);font-family:inherit;font-size:1rem}div:where(.swal2-container) div:where(.swal2-popup):focus{outline:none}div:where(.swal2-container) div:where(.swal2-popup).swal2-loading{overflow-y:hidden}div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable{cursor:grab}div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable div:where(.swal2-icon){cursor:grab}div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging{cursor:grabbing}div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging div:where(.swal2-icon){cursor:grabbing}div:where(.swal2-container) h2:where(.swal2-title){position:relative;max-width:100%;margin:0;padding:var(--swal2-title-padding);color:inherit;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;overflow-wrap:break-word;cursor:initial}div:where(.swal2-container) div:where(.swal2-actions){display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:var(--swal2-actions-justify-content);width:var(--swal2-actions-width);margin:var(--swal2-actions-margin);padding:var(--swal2-actions-padding);border-radius:var(--swal2-actions-border-radius);background:var(--swal2-actions-background)}div:where(.swal2-container) div:where(.swal2-loader){display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 rgba(0,0,0,0) #2778c4 rgba(0,0,0,0)}div:where(.swal2-container) button:where(.swal2-styled){margin:.3125em;padding:.625em 1.1em;transition:var(--swal2-action-button-transition);border:none;box-shadow:0 0 0 3px rgba(0,0,0,0);font-weight:500}div:where(.swal2-container) button:where(.swal2-styled):not([disabled]){cursor:pointer}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){border-radius:var(--swal2-confirm-button-border-radius);background:initial;background-color:var(--swal2-confirm-button-background-color);box-shadow:var(--swal2-confirm-button-box-shadow);color:var(--swal2-confirm-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):hover{background-color:color-mix(in srgb, var(--swal2-confirm-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):active{background-color:color-mix(in srgb, var(--swal2-confirm-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny){border-radius:var(--swal2-deny-button-border-radius);background:initial;background-color:var(--swal2-deny-button-background-color);box-shadow:var(--swal2-deny-button-box-shadow);color:var(--swal2-deny-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny):hover{background-color:color-mix(in srgb, var(--swal2-deny-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny):active{background-color:color-mix(in srgb, var(--swal2-deny-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel){border-radius:var(--swal2-cancel-button-border-radius);background:initial;background-color:var(--swal2-cancel-button-background-color);box-shadow:var(--swal2-cancel-button-box-shadow);color:var(--swal2-cancel-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel):hover{background-color:color-mix(in srgb, var(--swal2-cancel-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel):active{background-color:color-mix(in srgb, var(--swal2-cancel-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):focus-visible{outline:none;box-shadow:var(--swal2-action-button-focus-box-shadow)}div:where(.swal2-container) button:where(.swal2-styled)[disabled]:not(.swal2-loading){opacity:.4}div:where(.swal2-container) button:where(.swal2-styled)::-moz-focus-inner{border:0}div:where(.swal2-container) div:where(.swal2-footer){margin:1em 0 0;padding:1em 1em 0;border-top:1px solid var(--swal2-footer-border-color);background:var(--swal2-footer-background);color:var(--swal2-footer-color);font-size:1em;text-align:center;cursor:initial}div:where(.swal2-container) .swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;grid-column:auto !important;overflow:hidden;border-bottom-right-radius:var(--swal2-border-radius);border-bottom-left-radius:var(--swal2-border-radius)}div:where(.swal2-container) div:where(.swal2-timer-progress-bar){width:100%;height:.25em;background:var(--swal2-timer-progress-bar-background)}div:where(.swal2-container) img:where(.swal2-image){max-width:100%;margin:2em auto 1em;cursor:initial}div:where(.swal2-container) button:where(.swal2-close){position:var(--swal2-close-button-position);inset:var(--swal2-close-button-inset);z-index:2;align-items:center;justify-content:center;width:1.2em;height:1.2em;margin-top:0;margin-right:0;margin-bottom:-1.2em;padding:0;overflow:hidden;transition:var(--swal2-close-button-transition);border:none;border-radius:var(--swal2-border-radius);outline:var(--swal2-close-button-outline);background:rgba(0,0,0,0);color:var(--swal2-close-button-color);font-family:monospace;font-size:var(--swal2-close-button-font-size);cursor:pointer;justify-self:end}div:where(.swal2-container) button:where(.swal2-close):hover{transform:var(--swal2-close-button-hover-transform);background:rgba(0,0,0,0);color:#f27474}div:where(.swal2-container) button:where(.swal2-close):focus-visible{outline:none;box-shadow:var(--swal2-close-button-focus-box-shadow)}div:where(.swal2-container) button:where(.swal2-close)::-moz-focus-inner{border:0}div:where(.swal2-container) div:where(.swal2-html-container){z-index:1;justify-content:center;margin:0;padding:var(--swal2-html-container-padding);overflow:auto;color:inherit;font-size:1.125em;font-weight:normal;line-height:normal;text-align:center;overflow-wrap:break-word;word-break:break-word;cursor:initial}div:where(.swal2-container) input:where(.swal2-input),div:where(.swal2-container) input:where(.swal2-file),div:where(.swal2-container) textarea:where(.swal2-textarea),div:where(.swal2-container) select:where(.swal2-select),div:where(.swal2-container) div:where(.swal2-radio),div:where(.swal2-container) label:where(.swal2-checkbox){margin:1em 2em 3px}div:where(.swal2-container) input:where(.swal2-input),div:where(.swal2-container) input:where(.swal2-file),div:where(.swal2-container) textarea:where(.swal2-textarea){box-sizing:border-box;width:auto;transition:var(--swal2-input-transition);border:var(--swal2-input-border);border-radius:var(--swal2-input-border-radius);background:var(--swal2-input-background);box-shadow:var(--swal2-input-box-shadow);color:inherit;font-size:1.125em}div:where(.swal2-container) input:where(.swal2-input).swal2-inputerror,div:where(.swal2-container) input:where(.swal2-file).swal2-inputerror,div:where(.swal2-container) textarea:where(.swal2-textarea).swal2-inputerror{border-color:#f27474 !important;box-shadow:0 0 2px #f27474 !important}div:where(.swal2-container) input:where(.swal2-input):hover,div:where(.swal2-container) input:where(.swal2-file):hover,div:where(.swal2-container) textarea:where(.swal2-textarea):hover{box-shadow:var(--swal2-input-hover-box-shadow)}div:where(.swal2-container) input:where(.swal2-input):focus,div:where(.swal2-container) input:where(.swal2-file):focus,div:where(.swal2-container) textarea:where(.swal2-textarea):focus{border:var(--swal2-input-focus-border);outline:none;box-shadow:var(--swal2-input-focus-box-shadow)}div:where(.swal2-container) input:where(.swal2-input)::placeholder,div:where(.swal2-container) input:where(.swal2-file)::placeholder,div:where(.swal2-container) textarea:where(.swal2-textarea)::placeholder{color:#ccc}div:where(.swal2-container) .swal2-range{margin:1em 2em 3px;background:var(--swal2-background)}div:where(.swal2-container) .swal2-range input{width:80%}div:where(.swal2-container) .swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}div:where(.swal2-container) .swal2-range input,div:where(.swal2-container) .swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}div:where(.swal2-container) .swal2-input{height:2.625em;padding:0 .75em}div:where(.swal2-container) .swal2-file{width:75%;margin-right:auto;margin-left:auto;background:var(--swal2-input-background);font-size:1.125em}div:where(.swal2-container) .swal2-textarea{height:6.75em;padding:.75em}div:where(.swal2-container) .swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:var(--swal2-input-background);color:inherit;font-size:1.125em}div:where(.swal2-container) .swal2-radio,div:where(.swal2-container) .swal2-checkbox{align-items:center;justify-content:center;background:var(--swal2-background);color:inherit}div:where(.swal2-container) .swal2-radio label,div:where(.swal2-container) .swal2-checkbox label{margin:0 .6em;font-size:1.125em}div:where(.swal2-container) .swal2-radio input,div:where(.swal2-container) .swal2-checkbox input{flex-shrink:0;margin:0 .4em}div:where(.swal2-container) label:where(.swal2-input-label){display:flex;justify-content:center;margin:1em auto 0}div:where(.swal2-container) div:where(.swal2-validation-message){align-items:center;justify-content:center;margin:1em 0 0;padding:.625em;overflow:hidden;background:var(--swal2-validation-message-background);color:var(--swal2-validation-message-color);font-size:1em;font-weight:300}div:where(.swal2-container) div:where(.swal2-validation-message)::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}div:where(.swal2-container) .swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:1.25em auto;padding:0;background:rgba(0,0,0,0);font-weight:600}div:where(.swal2-container) .swal2-progress-steps li{display:inline-block;position:relative}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:var(--swal2-progress-step-background);color:#fff}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:var(--swal2-progress-step-background)}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}div:where(.swal2-icon){position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:2.5em auto .6em;zoom:var(--swal2-icon-zoom);border:.25em solid rgba(0,0,0,0);border-radius:50%;border-color:#000;font-family:inherit;line-height:5em;cursor:default;user-select:none}div:where(.swal2-icon) .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}div:where(.swal2-icon).swal2-error{border-color:#f27474;color:#f27474}div:where(.swal2-icon).swal2-error .swal2-x-mark{position:relative;flex-grow:1}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-error.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-error.swal2-icon-show .swal2-x-mark{animation:swal2-animate-error-x-mark .5s}div:where(.swal2-icon).swal2-warning{border-color:#f8bb86;color:#f8bb86}div:where(.swal2-icon).swal2-warning.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-warning.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .5s}div:where(.swal2-icon).swal2-info{border-color:#3fc3ee;color:#3fc3ee}div:where(.swal2-icon).swal2-info.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-info.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .8s}div:where(.swal2-icon).swal2-question{border-color:#87adbd;color:#87adbd}div:where(.swal2-icon).swal2-question.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-question.swal2-icon-show .swal2-icon-content{animation:swal2-animate-question-mark .8s}div:where(.swal2-icon).swal2-success{border-color:#a5dc86;color:#a5dc86}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;border-radius:50%}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}div:where(.swal2-icon).swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-0.25em;left:-0.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}div:where(.swal2-icon).swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-animate-success-line-tip .75s}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-animate-success-line-long .75s}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-circular-line-right{animation:swal2-rotate-success-circular-line 4.25s ease-in}[class^=swal2]{-webkit-tap-highlight-color:rgba(0,0,0,0)}.swal2-show{animation:var(--swal2-show-animation)}.swal2-hide{animation:var(--swal2-hide-animation)}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{margin-right:initial;margin-left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}.swal2-toast{box-sizing:border-box;grid-column:1/4 !important;grid-row:1/4 !important;grid-template-columns:min-content auto min-content;padding:1em;overflow-y:hidden;border:var(--swal2-toast-border);background:var(--swal2-background);box-shadow:var(--swal2-toast-box-shadow);pointer-events:auto}.swal2-toast>*{grid-column:2}.swal2-toast h2:where(.swal2-title){margin:.5em 1em;padding:0;font-size:1em;text-align:initial}.swal2-toast .swal2-loading{justify-content:center}.swal2-toast input:where(.swal2-input){height:2em;margin:.5em;font-size:1em}.swal2-toast .swal2-validation-message{font-size:1em}.swal2-toast div:where(.swal2-footer){margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-toast button:where(.swal2-close){grid-column:3/3;grid-row:1/99;align-self:center;width:.8em;height:.8em;margin:0;font-size:2em}.swal2-toast div:where(.swal2-html-container){margin:.5em 1em;padding:0;overflow:initial;font-size:1em;text-align:initial}.swal2-toast div:where(.swal2-html-container):empty{padding:0}.swal2-toast .swal2-loader{grid-column:1;grid-row:1/99;align-self:center;width:2em;height:2em;margin:.25em}.swal2-toast .swal2-icon{grid-column:1;grid-row:1/99;align-self:center;width:2em;min-width:2em;height:2em;margin:0 .5em 0 0}.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:bold}.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-toast div:where(.swal2-actions){justify-content:flex-start;height:auto;margin:0;margin-top:.5em;padding:0 .5em}.swal2-toast button:where(.swal2-styled){margin:.25em .5em;padding:.4em .6em;font-size:1em}.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;border-radius:50%}.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.8em;left:-0.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-toast-animate-success-line-tip .75s}.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-toast-animate-success-line-long .75s}.swal2-toast.swal2-show{animation:var(--swal2-toast-show-animation)}.swal2-toast.swal2-hide{animation:var(--swal2-toast-hide-animation)}@keyframes swal2-show{0%{transform:translate3d(0, -50px, 0) scale(0.9);opacity:0}100%{transform:translate3d(0, 0, 0) scale(1);opacity:1}}@keyframes swal2-hide{0%{transform:translate3d(0, 0, 0) scale(1);opacity:1}100%{transform:translate3d(0, -50px, 0) scale(0.9);opacity:0}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-0.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(0.4);opacity:0}50%{margin-top:1.625em;transform:scale(0.4);opacity:0}80%{margin-top:-0.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0deg);opacity:1}}@keyframes swal2-rotate-loading{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes swal2-animate-question-mark{0%{transform:rotateY(-360deg)}100%{transform:rotateY(0)}}@keyframes swal2-animate-i-mark{0%{transform:rotateZ(45deg);opacity:0}25%{transform:rotateZ(-25deg);opacity:.4}50%{transform:rotateZ(15deg);opacity:.8}75%{transform:rotateZ(-5deg);opacity:1}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-toast-show{0%{transform:translateY(-0.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(0.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0deg)}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-0.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}</style></head>
+
+
+
+<body>
+    <style>
+    /* Container for the logo + spinner */
+    .loader-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* The custom icon in the center */
+    .loader-icon {
+        position: absolute;
+        width: 33px; /* Adjust size to fit inside the spinner */
+        /*height: 30px;*/
+        object-fit: contain;
+    }
+
+    /* Adjusting the spinner size to wrap the icon */
+    .custom-spinner {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-width: 0.25em;
+    }
+</style>
+
+    <header class="p-1 bg-brand border-bottom fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-1">
+                    <a onclick="PreparationWay(0)" style="cursor: pointer;" id="header_home_link">
+                <picture id="header_home_image" class="d-none">
+                    <source srcset="https://www.topgrade.pk/public/assets/website/images/tg-insignia-white.webp" type="image/webp">
+                    <source srcset="https://www.topgrade.pk/public/assets/website/images/tg-insignia-white.png" type="image/png">
+                    <img class="img-fluid" style="width: 32px; border-radius: 0" src="./biology slides_files/tg-insignia-white.png" alt="Online Entry Test Preparation" title="Online Entry Test Preparation">
+                </picture>
+                <span id="header_home_text" class="ms-2 fw-bold text-white "><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</span>
+            </a>
+                <style>
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        text-align: center !important;
+    }
+
+    /** */
+    .select2-container--default .select2-results>.select2-results__options {
+        padding: 0px 10px 10px 10px;
+    }
+
+    .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+        background-color: #cccccc82 !important;
+        color: #000;
+        margin-bottom: 7px !important;
+        margin-top: 7px !important;
+    }
+
+    .select2-results__option {
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 14px;
+    }
+</style>
+<select id="courseSearch" class="form-select dropdown-premium mx-auto select2-hidden-accessible" style="
+    width: auto;
+    min-width: 220px;
+    border-radius: 12px;
+    /*padding: 10px 20px;*/
+    border: 1px solid #ccc;
+    /*                        font-weight: 600;
+                            color: #1e293b;*/
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    " onchange="BuildCourse(this.value, &#39;https://app.topgrade.pk/&#39;, &#39;0&#39;)" data-select2-id="select2-data-courseSearch" tabindex="-1" aria-hidden="true">
+    <option selected="" disabled="">Select Your Course</option>
+                    <option value="170">F.Sc 2nd Year Pre-Medical (Punjab)</option>
+                                <option value="229">F.Sc 1st Year Pre-Med. (Punjab - 2025 Sm</option>
+                                <option value="188" selected="" data-badge="Active" data-select2-id="select2-data-2-2cp9">MDCAT (Punjab)</option>
+                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-1-4jlr" style="width: 352px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-courseSearch-container" aria-controls="select2-courseSearch-container"><span class="select2-selection__rendered" id="select2-courseSearch-container" role="textbox" aria-readonly="true" title="MDCAT (Punjab)">MDCAT (Punjab)</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>        <div class="d-flex align-items-center">
+                            <a href="https://app.topgrade.pk/logout">
+                    <i class="fa fa-sign-out text-white" aria-hidden="true"></i>
+                </a>
+                    </div>
+    </div>
+</header>
+
+
+    <div class="app-wrapper mt-4 py-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="heading-title w-100 text-center">Slides</h1>
+        </div>
+        <div class="greeting-section">
+            <img src="./biology slides_files/docm-frn.png" alt="Review Mascot" class="hero-mascot">
+            <div class="speech-bubble shadow-sm">
+                <p class="app-subtitle text-white">Revise with slides, clear with video, save with bookmark.</p>
+            </div>
+        </div>
+                    <div class="slide-indicator">
+                <!-- <div class="line-container"></div> -->
+                <div class="text">Slide <span id="current_idx">1</span> / 39</div>
+                <!-- <div class="line-container"></div> -->
+            </div>
+                <div class="video-section border rounded shadow-sm mb-3" id="slide_show">
+                            <div id="slideCarousel" class="carousel slide" data-bs-interval="false">
+                    <!-- <div class="text-center py-2 bg-light border-bottom">
+                            <span class="fw-bold text-primary" style="font-size:14px;">
+                                Slide - <span id="current_idx">1</span> of 39                            </span>
+                        </div> -->
+
+                    <div class="carousel-inner" id="slider">
+                                                    <div class="carousel-item active" data-slide-id="1" data-index="1" data-video-url="" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/1^^818575bbfc58db0b03f2865a4c16b6c2MTc3NTEwNzg0NjgxODU3NWJiZmM1OGRiMGIwM2YyODY1YTRjMTZiNmMy.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/1^^818575bbfc58db0b03f2865a4c16b6c2MTc3NTEwNzg0NjgxODU3NWJiZmM1OGRiMGIwM2YyODY1YTRjMTZiNmMy.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="2" data-index="2" data-video-url="https://player.vimeo.com/video/1180208242" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/2^^29b6924b46823e0a27f71728145c7231MTc3NTEwNzg0NjI5YjY5MjRiNDY4MjNlMGEyN2Y3MTcyODE0NWM3MjMx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/2^^29b6924b46823e0a27f71728145c7231MTc3NTEwNzg0NjI5YjY5MjRiNDY4MjNlMGEyN2Y3MTcyODE0NWM3MjMx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="3" data-index="3" data-video-url="https://player.vimeo.com/video/1180208320" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/3^^2986d535f3f61696134d2ed6f4ed06bcMTc3NTEwNzg0NjI5ODZkNTM1ZjNmNjE2OTYxMzRkMmVkNmY0ZWQwNmJj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/3^^2986d535f3f61696134d2ed6f4ed06bcMTc3NTEwNzg0NjI5ODZkNTM1ZjNmNjE2OTYxMzRkMmVkNmY0ZWQwNmJj.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="4" data-index="4" data-video-url="https://player.vimeo.com/video/1180208701" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/4^^1ce1d887891f2980b65c1013c5f31b53MTc3NTEwNzg0NjFjZTFkODg3ODkxZjI5ODBiNjVjMTAxM2M1ZjMxYjUz.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/4^^1ce1d887891f2980b65c1013c5f31b53MTc3NTEwNzg0NjFjZTFkODg3ODkxZjI5ODBiNjVjMTAxM2M1ZjMxYjUz.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="5" data-index="5" data-video-url="https://player.vimeo.com/video/1180209040" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/5^^97527adbd3448e60ba6a308f02e4ad05MTc3NTEwNzg0Njk3NTI3YWRiZDM0NDhlNjBiYTZhMzA4ZjAyZTRhZDA1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/5^^97527adbd3448e60ba6a308f02e4ad05MTc3NTEwNzg0Njk3NTI3YWRiZDM0NDhlNjBiYTZhMzA4ZjAyZTRhZDA1.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="6" data-index="6" data-video-url="https://player.vimeo.com/video/1180209636" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/6^^3e71a96fddb923612da909ab6aaec266MTc3NTEwNzg0NjNlNzFhOTZmZGRiOTIzNjEyZGE5MDlhYjZhYWVjMjY2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/6^^3e71a96fddb923612da909ab6aaec266MTc3NTEwNzg0NjNlNzFhOTZmZGRiOTIzNjEyZGE5MDlhYjZhYWVjMjY2.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="7" data-index="7" data-video-url="https://player.vimeo.com/video/1180210693" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/7^^7c419686eb2a6eb503a4c00bc48e2de0MTc3NTEwNzg0NjdjNDE5Njg2ZWIyYTZlYjUwM2E0YzAwYmM0OGUyZGUw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/7^^7c419686eb2a6eb503a4c00bc48e2de0MTc3NTEwNzg0NjdjNDE5Njg2ZWIyYTZlYjUwM2E0YzAwYmM0OGUyZGUw.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="8" data-index="8" data-video-url="https://player.vimeo.com/video/1180212260" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/8^^4f854dc78f0a899cbadbea5fe534eda5MTc3NTEwNzg0NjRmODU0ZGM3OGYwYTg5OWNiYWRiZWE1ZmU1MzRlZGE1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/8^^4f854dc78f0a899cbadbea5fe534eda5MTc3NTEwNzg0NjRmODU0ZGM3OGYwYTg5OWNiYWRiZWE1ZmU1MzRlZGE1.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="9" data-index="9" data-video-url="https://player.vimeo.com/video/1180214318" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/9^^4258ff369a5447e1fe8bbea12fdd91d7MTc3NTEwNzg0NjQyNThmZjM2OWE1NDQ3ZTFmZThiYmVhMTJmZGQ5MWQ3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/9^^4258ff369a5447e1fe8bbea12fdd91d7MTc3NTEwNzg0NjQyNThmZjM2OWE1NDQ3ZTFmZThiYmVhMTJmZGQ5MWQ3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="10" data-index="10" data-video-url="https://player.vimeo.com/video/1180214567" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/10^^46f7058138c7b7a7a2a1d4df40c1df34MTc3NTEwNzg0NjQ2ZjcwNTgxMzhjN2I3YTdhMmExZDRkZjQwYzFkZjM0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/10^^46f7058138c7b7a7a2a1d4df40c1df34MTc3NTEwNzg0NjQ2ZjcwNTgxMzhjN2I3YTdhMmExZDRkZjQwYzFkZjM0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="11" data-index="11" data-video-url="https://player.vimeo.com/video/1180215159" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/11^^a7ca978441317e47dd84778b4ef00044MTc3NTEwNzg0NmE3Y2E5Nzg0NDEzMTdlNDdkZDg0Nzc4YjRlZjAwMDQ0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/11^^a7ca978441317e47dd84778b4ef00044MTc3NTEwNzg0NmE3Y2E5Nzg0NDEzMTdlNDdkZDg0Nzc4YjRlZjAwMDQ0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="12" data-index="12" data-video-url="https://player.vimeo.com/video/1180215361" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/12^^08d5aa0c292d73237631eaf585af2e78MTc3NTEwNzg0NjA4ZDVhYTBjMjkyZDczMjM3NjMxZWFmNTg1YWYyZTc4.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/12^^08d5aa0c292d73237631eaf585af2e78MTc3NTEwNzg0NjA4ZDVhYTBjMjkyZDczMjM3NjMxZWFmNTg1YWYyZTc4.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="13" data-index="13" data-video-url="https://player.vimeo.com/video/1180215806" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/13^^8e7124ca1e6f85465df7fef7ff23b0afMTc3NTEwNzg0NjhlNzEyNGNhMWU2Zjg1NDY1ZGY3ZmVmN2ZmMjNiMGFm.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/13^^8e7124ca1e6f85465df7fef7ff23b0afMTc3NTEwNzg0NjhlNzEyNGNhMWU2Zjg1NDY1ZGY3ZmVmN2ZmMjNiMGFm.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="14" data-index="14" data-video-url="https://player.vimeo.com/video/1180215917" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/14^^f11a590d92ee88ed5c8d71650aae9274MTc3NTEwNzg0NmYxMWE1OTBkOTJlZTg4ZWQ1YzhkNzE2NTBhYWU5Mjc0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/14^^f11a590d92ee88ed5c8d71650aae9274MTc3NTEwNzg0NmYxMWE1OTBkOTJlZTg4ZWQ1YzhkNzE2NTBhYWU5Mjc0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="15" data-index="15" data-video-url="https://player.vimeo.com/video/1180216369" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/15^^edd1ad137a9dfd7d3b4679f86023d3cbMTc3NTEwNzg0NmVkZDFhZDEzN2E5ZGZkN2QzYjQ2NzlmODYwMjNkM2Ni.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/15^^edd1ad137a9dfd7d3b4679f86023d3cbMTc3NTEwNzg0NmVkZDFhZDEzN2E5ZGZkN2QzYjQ2NzlmODYwMjNkM2Ni.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="16" data-index="16" data-video-url="https://player.vimeo.com/video/1180216597" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/16^^3f8f0a15275502151624a5a82ab0c1ccMTc3NTEwNzg0NjNmOGYwYTE1Mjc1NTAyMTUxNjI0YTVhODJhYjBjMWNj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/16^^3f8f0a15275502151624a5a82ab0c1ccMTc3NTEwNzg0NjNmOGYwYTE1Mjc1NTAyMTUxNjI0YTVhODJhYjBjMWNj.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="17" data-index="17" data-video-url="https://player.vimeo.com/video/1180217296" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/17^^594682d15ff92943ad7aead164203444MTc3NTEwNzg0NjU5NDY4MmQxNWZmOTI5NDNhZDdhZWFkMTY0MjAzNDQ0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/17^^594682d15ff92943ad7aead164203444MTc3NTEwNzg0NjU5NDY4MmQxNWZmOTI5NDNhZDdhZWFkMTY0MjAzNDQ0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="18" data-index="18" data-video-url="https://player.vimeo.com/video/1180217610" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/18^^8ef0720d3efdf68749b7dbebaaa8f176MTc3NTEwNzg0NjhlZjA3MjBkM2VmZGY2ODc0OWI3ZGJlYmFhYThmMTc2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/18^^8ef0720d3efdf68749b7dbebaaa8f176MTc3NTEwNzg0NjhlZjA3MjBkM2VmZGY2ODc0OWI3ZGJlYmFhYThmMTc2.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="19" data-index="19" data-video-url="https://player.vimeo.com/video/1180218270" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/19^^98345057fefeb0224d510a01c49d73d1MTc3NTEwNzg0Njk4MzQ1MDU3ZmVmZWIwMjI0ZDUxMGEwMWM0OWQ3M2Qx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/19^^98345057fefeb0224d510a01c49d73d1MTc3NTEwNzg0Njk4MzQ1MDU3ZmVmZWIwMjI0ZDUxMGEwMWM0OWQ3M2Qx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="20" data-index="20" data-video-url="https://player.vimeo.com/video/1180218838" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/20^^525b8240633b5c27552c7683d2e47f22MTc3NTEwNzg0NjUyNWI4MjQwNjMzYjVjMjc1NTJjNzY4M2QyZTQ3ZjIy.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/20^^525b8240633b5c27552c7683d2e47f22MTc3NTEwNzg0NjUyNWI4MjQwNjMzYjVjMjc1NTJjNzY4M2QyZTQ3ZjIy.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="21" data-index="21" data-video-url="https://player.vimeo.com/video/1180219082" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/21^^0b91f53bf9f7904faf0d437a208052e0MTc3NTEwNzg0NjBiOTFmNTNiZjlmNzkwNGZhZjBkNDM3YTIwODA1MmUw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/21^^0b91f53bf9f7904faf0d437a208052e0MTc3NTEwNzg0NjBiOTFmNTNiZjlmNzkwNGZhZjBkNDM3YTIwODA1MmUw.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="22" data-index="22" data-video-url="https://player.vimeo.com/video/1180219261" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/22^^356e93531077bb5177c5dec0e4eea9b9MTc3NTEwNzg0NjM1NmU5MzUzMTA3N2JiNTE3N2M1ZGVjMGU0ZWVhOWI5.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/22^^356e93531077bb5177c5dec0e4eea9b9MTc3NTEwNzg0NjM1NmU5MzUzMTA3N2JiNTE3N2M1ZGVjMGU0ZWVhOWI5.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="23" data-index="23" data-video-url="https://player.vimeo.com/video/1180219558" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/23^^00973b24c304273d77ce0b92c0eb350dMTc3NTEwNzg0NjAwOTczYjI0YzMwNDI3M2Q3N2NlMGI5MmMwZWIzNTBk.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/23^^00973b24c304273d77ce0b92c0eb350dMTc3NTEwNzg0NjAwOTczYjI0YzMwNDI3M2Q3N2NlMGI5MmMwZWIzNTBk.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="24" data-index="24" data-video-url="https://player.vimeo.com/video/1180219899" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/24^^df7dfda07c94747b8d153d39f2593b41MTc3NTEwNzg0NmRmN2RmZGEwN2M5NDc0N2I4ZDE1M2QzOWYyNTkzYjQx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/24^^df7dfda07c94747b8d153d39f2593b41MTc3NTEwNzg0NmRmN2RmZGEwN2M5NDc0N2I4ZDE1M2QzOWYyNTkzYjQx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="25" data-index="25" data-video-url="https://player.vimeo.com/video/1180220528" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/25^^996ae59b8d8748c41be5bdfd0d6e084aMTc3NTEwNzg0Njk5NmFlNTliOGQ4NzQ4YzQxYmU1YmRmZDBkNmUwODRh.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/25^^996ae59b8d8748c41be5bdfd0d6e084aMTc3NTEwNzg0Njk5NmFlNTliOGQ4NzQ4YzQxYmU1YmRmZDBkNmUwODRh.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="26" data-index="26" data-video-url="https://player.vimeo.com/video/1180221384" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/26^^f881e0def1430f04cf9ebe758f226a74MTc3NTEwNzg0NmY4ODFlMGRlZjE0MzBmMDRjZjllYmU3NThmMjI2YTc0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/26^^f881e0def1430f04cf9ebe758f226a74MTc3NTEwNzg0NmY4ODFlMGRlZjE0MzBmMDRjZjllYmU3NThmMjI2YTc0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="27" data-index="27" data-video-url="https://player.vimeo.com/video/1180222027" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/27^^559ecbbf13b46642a7808c9f1f871d76MTc3NTEwNzg0NjU1OWVjYmJmMTNiNDY2NDJhNzgwOGM5ZjFmODcxZDc2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/27^^559ecbbf13b46642a7808c9f1f871d76MTc3NTEwNzg0NjU1OWVjYmJmMTNiNDY2NDJhNzgwOGM5ZjFmODcxZDc2.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="28" data-index="28" data-video-url="https://player.vimeo.com/video/1180222258" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/28^^7fd0efd322619d0f8af5336c08cf808eMTc3NTEwNzg0NjdmZDBlZmQzMjI2MTlkMGY4YWY1MzM2YzA4Y2Y4MDhl.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/28^^7fd0efd322619d0f8af5336c08cf808eMTc3NTEwNzg0NjdmZDBlZmQzMjI2MTlkMGY4YWY1MzM2YzA4Y2Y4MDhl.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="29" data-index="29" data-video-url="https://player.vimeo.com/video/1181881795" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/29^^65dec15351204789409ccc21bdf98a31MTc3NTEwNzg0NjY1ZGVjMTUzNTEyMDQ3ODk0MDljY2MyMWJkZjk4YTMx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/29^^65dec15351204789409ccc21bdf98a31MTc3NTEwNzg0NjY1ZGVjMTUzNTEyMDQ3ODk0MDljY2MyMWJkZjk4YTMx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="30" data-index="30" data-video-url="https://player.vimeo.com/video/1181887168" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/30^^ce0b49c83004da16003f65f30ccfb699MTc3NTEwNzg0NmNlMGI0OWM4MzAwNGRhMTYwMDNmNjVmMzBjY2ZiNjk5.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/30^^ce0b49c83004da16003f65f30ccfb699MTc3NTEwNzg0NmNlMGI0OWM4MzAwNGRhMTYwMDNmNjVmMzBjY2ZiNjk5.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="31" data-index="31" data-video-url="https://player.vimeo.com/video/1181887556" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/31^^4e5a06050752b1ad49894a4043491d05MTc3NTEwNzg0NjRlNWEwNjA1MDc1MmIxYWQ0OTg5NGE0MDQzNDkxZDA1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/31^^4e5a06050752b1ad49894a4043491d05MTc3NTEwNzg0NjRlNWEwNjA1MDc1MmIxYWQ0OTg5NGE0MDQzNDkxZDA1.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="32" data-index="32" data-video-url="https://player.vimeo.com/video/1181888228" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/32^^3d38a5169437b91c55d0d64d45a4fa24MTc3NTEwNzg0NjNkMzhhNTE2OTQzN2I5MWM1NWQwZDY0ZDQ1YTRmYTI0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/32^^3d38a5169437b91c55d0d64d45a4fa24MTc3NTEwNzg0NjNkMzhhNTE2OTQzN2I5MWM1NWQwZDY0ZDQ1YTRmYTI0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="33" data-index="33" data-video-url="https://player.vimeo.com/video/1181889994" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/33^^4f4ceb2901f871cb8b3fc7d5bf0b1d55MTc3NTEwNzg0NjRmNGNlYjI5MDFmODcxY2I4YjNmYzdkNWJmMGIxZDU1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/33^^4f4ceb2901f871cb8b3fc7d5bf0b1d55MTc3NTEwNzg0NjRmNGNlYjI5MDFmODcxY2I4YjNmYzdkNWJmMGIxZDU1.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="34" data-index="34" data-video-url="https://player.vimeo.com/video/1181890204" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/34^^7b85e54638f001ad8b3fb9247c21b688MTc3NTEwNzg0NjdiODVlNTQ2MzhmMDAxYWQ4YjNmYjkyNDdjMjFiNjg4.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/34^^7b85e54638f001ad8b3fb9247c21b688MTc3NTEwNzg0NjdiODVlNTQ2MzhmMDAxYWQ4YjNmYjkyNDdjMjFiNjg4.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="35" data-index="35" data-video-url="https://player.vimeo.com/video/1181891125" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/35^^0aefeda29bd71d4ee2bc1f8a86b50c14MTc3NTEwNzg0NjBhZWZlZGEyOWJkNzFkNGVlMmJjMWY4YTg2YjUwYzE0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/35^^0aefeda29bd71d4ee2bc1f8a86b50c14MTc3NTEwNzg0NjBhZWZlZGEyOWJkNzFkNGVlMmJjMWY4YTg2YjUwYzE0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="36" data-index="36" data-video-url="https://player.vimeo.com/video/1181891296" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/36^^11b953b9ae0b804b466096283bfcd852MTc3NTEwNzg0NjExYjk1M2I5YWUwYjgwNGI0NjYwOTYyODNiZmNkODUy.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/36^^11b953b9ae0b804b466096283bfcd852MTc3NTEwNzg0NjExYjk1M2I5YWUwYjgwNGI0NjYwOTYyODNiZmNkODUy.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="37" data-index="37" data-video-url="https://player.vimeo.com/video/1181891954" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/37^^e1f55bdef67928cc674dab8364d09a72MTc3NTEwNzg0NmUxZjU1YmRlZjY3OTI4Y2M2NzRkYWI4MzY0ZDA5YTcy.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/37^^e1f55bdef67928cc674dab8364d09a72MTc3NTEwNzg0NmUxZjU1YmRlZjY3OTI4Y2M2NzRkYWI4MzY0ZDA5YTcy.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="38" data-index="38" data-video-url="https://player.vimeo.com/video/1181892162" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/38^^8c2d525ed416b552891bdec48c2c1a76MTc3NTEwNzg0NjhjMmQ1MjVlZDQxNmI1NTI4OTFiZGVjNDhjMmMxYTc2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/38^^8c2d525ed416b552891bdec48c2c1a76MTc3NTEwNzg0NjhjMmQ1MjVlZDQxNmI1NTI4OTFiZGVjNDhjMmMxYTc2.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="39" data-index="39" data-video-url="https://player.vimeo.com/video/1181892162" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./biology slides_files/39^^6a816056281afedd2353f778305db147MTc3NTEwNzg0NjZhODE2MDU2MjgxYWZlZGQyMzUzZjc3ODMwNWRiMTQ3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/341576534/39^^6a816056281afedd2353f778305db147MTc3NTEwNzg0NjZhODE2MDU2MjgxYWZlZGQyMzUzZjc3ODMwNWRiMTQ3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                            </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#slideCarousel" data-bs-slide="prev">
+                        <span class="bg-dark rounded-circle d-flex align-items-center justify-content-center" style="width:35px; height:35px; opacity: 0.8;background-color: #fff !important;">
+                            <i class="fa fa-chevron-left text-primary"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#slideCarousel" data-bs-slide="next">
+                        <span class="bg-dark rounded-circle d-flex align-items-center justify-content-center" style="width:35px; height:35px; background-color: #fff !important;">
+                            <i class="fa fa-chevron-right text-primary"></i>
+                        </span>
+                    </button>
+                </div>
+                    </div>
+                    <div class="app-card p-4 mb-5" id="video-stat-section" style="position: relative; overflow: hidden;">
+
+                <!-- Actions Row -->
+                <div class="actions-row">
+                    <div class="row g-0 align-items-stretch">
+                        <div class="col-4 border-end action-item" id="bm_add" style="cursor:pointer;" onclick="slidebookmark(1, 1)">
+                            <i class="bi bi-bookmark action-icon text-primary" id="bookmark-icon-bio"></i>
+                            <span class="action-label" id="bookmark-label-bio">Bookmark</span>
+                        </div>
+                        <div class="col-4 border-end action-item" style="cursor:pointer;" onclick="ExportSlides('MzQxNTc2NTM0')">
+                            <i class="bi bi-download action-icon text-success"></i>
+                            <span class="action-label">Download All Slides</span>
+                        </div>
+                        <div class="col-4 action-item" id="play_video_btn" style="cursor:pointer;" onclick="PlaySlide('https://player.vimeo.com/video/1180207927')">
+                            <i class="bi bi-play-circle action-icon" style="color: #7c3aed;"></i>
+                            <span class="action-label">Play Video</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section pt-0">
+                    <!-- Subject Title -->
+                    <div class="breadcrumb-text mb-2" id="slide-topic-title" style="font-size: 1.05rem;">
+                        <b>Cell Structure &amp; Function</b> - (Introduction to Cell, Plasma Membrane)
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="d-flex gap-2 align-items-center justify-content-start mb-3">
+                        <div class="stat-badge badge-views"><i class="bi bi-eye-fill me-1"></i> <span id="slide_views_count">3.2k</span></div>
+
+                        <div class="stat-badge badge-likes" style="cursor:pointer;" id="like" onclick="Updatefrnfeedback(1)">
+                            <span>
+                                <i id="yt-up-fill" class="bi bi-hand-thumbs-up-fill me-1" style="display:none;"></i>
+                                <i id="yt-up-empty" class="bi bi-hand-thumbs-up me-1" style="display:inline-block;"></i>
+                                <span id="likescounts">112</span>
+                            </span>
+                        </div>
+
+                        <div class="stat-badge badge-dislikes" style="cursor:pointer;" id="dislike" onclick="Updatefrnfeedback(2)">
+                            <span>
+                                <i id="yt-down-empty" class="bi bi-hand-thumbs-down me-1" style="display:inline-block;"></i>
+                                <i id="yt-down-fill" class="bi bi-hand-thumbs-down-fill me-1" style="display:none;"></i>
+                            </span>
+                        </div>
+                        <input type="hidden" id="frn_id_enc" value="1">
+                        <input type="hidden" id="slide_id_count" value="39">
+                    </div>
+                    <style>
+                        #comment-input:focus {
+                            /* border-bottom: 2px solid #000 !important; */
+                        }
+
+                        #comment-input::placeholder {
+                            color: #999999;
+                        }
+
+                        .comment-user {
+                            font-size: 13px;
+                            font-weight: bold;
+                            margin-right: 8px;
+                        }
+
+                        .comment-time {
+                            font-size: 12px;
+                            color: #606060;
+                        }
+
+                        .comment-text {
+                            font-size: 14px;
+                            margin-top: 2px;
+                        }
+
+                        /* .action-icon {
+                            font-size: 14px;
+                            cursor: pointer;
+                            color: #030303;
+                        } */
+                    </style>
+                    <div class="border rounded-3 p-2 mt-4">
+                        <div class="d-flex align-items-center gap-2 mb-2" style="font-size: 0.85rem;color:#1754bb;">
+                            <i class="bi bi-chat-left-text"></i> <span class="fw-bold">Comments &amp; Feedback <span id="all-comments-counter"></span></span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="bg-light rounded-circle border d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                                <i class="bi bi-person text-secondary"></i>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="comment-input" class="form-control form-control-sm border-1 bg-light" placeholder="Post your comment or feedback here..." aria-label="Comment">
+                                <div id="action-buttons" class="text-end mt-2 d-none">
+                                    <button class="btn btn-sm btn-link text-primary" type="button" id="submit-btn" onclick="postComment(&#39;https://app.topgrade.pk/&#39;, &#39;f&#39;, &#39;10774&#39;)">
+                                        <i class="bi bi-send-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="d-flex justify-content-between align-items-center">
+                        <a onclick="ReportIssueModal()" style="cursor:pointer;" class="text-decoration-underline small fw-bold text-primary">Give Feedback</a>
+                    </div> -->
+                </div>
+            <div id="page-loader" class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white opacity-75 d-none" style="position: absolute !important; inset: 0px !important; width: 100% !important; height: 100% !important; min-height: 100% !important; background: rgba(255, 255, 255, 0.8) !important; display: none; align-items: center !important; justify-content: center !important; z-index: 999 !important;">
+    <div class="loader-wrapper">
+        <div class="spinner-border text-primary custom-spinner" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <img src="./biology slides_files/tg-insignia.webp" alt="Loading Icon" class="loader-icon">
+    </div>
+</div></div>
+                <nav class="bottom-nav">
+                        <div class="container py-3 d-flex justify-content-center gap-3">
+                <div class="d-flex flex-wrap justify-content-center gap-3" style="max-width: 600px; width: 100%;">
+                    <a href="https://app.topgrade.pk/main-session/1?day_topic_id=MQ&amp;day=MQ" class="btn-app-action flex-fill text-decoration-none text-center" style="cursor: pointer; min-width: 140px;">
+                        <i class="fa-solid fa-angles-left"></i> Roadmap
+                    </a>
+                    <a onclick="startStep(&#39;Mw&#39;, &#39;MQ&#39;, &#39;MQ&#39;)" class="btn-app-action flex-fill text-decoration-none text-center bg-success" style="cursor: pointer; min-width: 140px;">
+                        Next Step <i class="fa-solid fa-angles-right"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="app-footer d-none">
+            <div class="nav-container">
+                                <a href="https://app.topgrade.pk/main-session/1?day_topic_id=MQ&amp;day=MQ" class="nav-btn btn-prev text-decoration-none">
+                    <i class="bi bi-chevron-left me-2"></i>
+                    <span>Road Map</span>
+                </a>
+
+                <a onclick="startStep(&#39;Mw&#39;, &#39;MQ&#39;, &#39;MQ&#39;)" style="cursor:pointer;" class="nav-btn btn-next text-decoration-none">
+                    <span>Next Step</span>
+                    <i class="bi bi-chevron-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark border-0">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="playable_video" src="./biology slides_files/saved_resource.html" title="Video Player" allowfullscreen="" allow="autoplay; encrypted-media">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="modal-footer border-0 pt-0 justify-content-center">
+                    <p class="text-white-50 small mb-0"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="report_issue_model" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body text-center px-4 pb-4">
+                    <img class="img-fluid mb-3" src="./biology slides_files/frn-issue.png" style="max-height: 150px;" alt="Issue Icon">
+                    <h4 class="fw-bold">Give Feedback</h4>
+                    <p class="text-muted small">Select any of the following to help us improve</p>
+                    <hr class="my-4 opacity-25">
+
+                    <div class="text-start">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="issue" id="radio1" value="FRN Seems to have a mistake" checked="">
+                            <label class="form-check-label w-100" for="radio1">FRN Seems to have a mistake</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="issue" id="radio2" value="Teaching strategy Needs Improvement">
+                            <label class="form-check-label w-100" for="radio2">Teaching strategy Needs Improvement</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="issue" id="radio3" value="FRN Seems to be out of exam scope">
+                            <label class="form-check-label w-100" for="radio3">FRN Seems to be out of exam scope</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="issue" id="radio4" value="0">
+                            <label class="form-check-label w-100" for="radio4">Other</label>
+                        </div>
+
+                        <div id="issue_msg_container" class="mt-3">
+                            <textarea class="form-control bg-light" id="issue_msg" name="issue_msg" rows="3" placeholder="Explain the issue here..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="button" onclick="SendVideoFrnIssue(&#39;https://app.topgrade.pk/&#39;, &#39;f&#39;, &#39;10774&#39;)" class="btn btn-primary btn-lg w-100 rounded-pill">Submit Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="report_issue_model_thanks" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content border-0 text-center p-4">
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
+                <img class="img-fluid my-3 mx-auto" src="./biology slides_files/thanks.png" style="max-width: 120px;">
+                <h5 class="fw-bold">Thank You!</h5>
+                <p class="text-muted small mb-0">We appreciate your feedback.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="modal fade" id="fullViewModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down">
+                <div class="modal-content bg-dark border-0">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0 d-flex align-items-center justify-content-center" style="overflow: hidden;">
+                        <div class="zoom-container w-100 h-100 d-flex align-items-center justify-content-center">
+                            <img src="" id="fullViewImage" class="img-fluid slide-zoom" alt="Full View Slide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- Full View Modal -->
+    <div class="modal fade" id="fullViewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down modal-xl">
+            <div class="modal-content bg-dark border-0 position-relative h-100">
+
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="background-color: rgba(0,0,0,0.5); padding: 10px; border-radius: 50%;"></button>
+
+                <div class="modal-body p-0 d-flex align-items-center justify-content-center modal-swipe-zone position-relative overflow-hidden" style="min-height: 80vh; background-color: #0d1117;">
+
+                    <button class="btn text-white position-absolute start-0 top-50 translate-middle-y z-3 p-3 m-2 d-none d-md-block" onclick="modalNavigate(&#39;prev&#39;)" style="background-color: rgba(0,0,0,0.4); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa fa-chevron-left fs-4"></i>
+                    </button>
+
+                    <div class="w-100 h-100 d-flex align-items-center justify-content-center overflow-auto">
+                        <img id="fullViewImage" src="https://app.topgrade.pk/slides_viewer/MQ/NDU4NA" class="img-fluid" style="max-height: 90vh; max-width: 100%; object-fit: contain; transition: transform 0.2s ease-in-out; transform-origin: center center; cursor: zoom-in;" alt="Full view screen">
+                    </div>
+
+                    <button class="btn text-white position-absolute end-0 top-50 translate-middle-y z-3 p-3 m-2 d-none d-md-block" onclick="modalNavigate(&#39;next&#39;)" style="background-color: rgba(0,0,0,0.4); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa fa-chevron-right fs-4"></i>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="report_issue_model_thanks" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered shadow-sm">
+            <div class="modal-content text-center p-5 border-0" style="border-radius: 20px;">
+                <img src="./biology slides_files/thanks.png" class="img-fluid mx-auto mb-3" style="max-height: 100px;">
+                <h4 class="fw-bold">Thank You!</h4>
+                <p class="text-muted">Comment posted successfully.</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm mx-auto w-50" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+<script src="./biology slides_files/bootstrap.bundle.min.js.download"></script>
+<!-- Custom JS -->
+<script src="./biology slides_files/custom.js.download"></script>
+<script src="./biology slides_files/jquery.min.js.download"></script>
+<script src="./biology slides_files/select2.min.js.download"></script>
+<script>
+    function SessionTarget(url, way, learning_session_id) {
+        $("#page-loader").removeClass('d-none');
+        if (url == "") {
+            $("#page-loader").addClass('d-none');
+            return false;
+        } else {
+            if (learning_session_id == 3 || learning_session_id == 1) {
+                SetTag(127);
+            } else if (learning_session_id == 27) {
+                SetTag(134);
+            }
+            ajaxurl = "https://app.topgrade.pk/session-preparation-way";
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                async: false,
+                data: {
+                    way: way,
+                    learning_session_id: learning_session_id
+                },
+                success: function(term) {
+                    setTimeout(function() {
+                        $("#page-loader").addClass('d-none');
+                        location.href = url;
+                    }, 1000);
+                    //                    $("#page-loader").addClass('d-none');
+                    //                    location.href = url;
+                }
+            });
+        }
+    }
+</script>
+<script>
+    function BuildCourse(course_id, hrefurl, show_parent_home) {
+        $("#page-loader").removeClass('d-none');
+        if (course_id == "155") {
+            BuildCourseByCategory(course_id, hrefurl);
+            return false;
+        }
+        $.ajax({
+            url: 'https://app.topgrade.pk/BuildCourse',
+            data: {
+                course_id: course_id,
+                show_parent_home: show_parent_home
+            },
+            type: 'post',
+            async: false,
+            success: function(msg) {
+                setTimeout(function() {
+                    $("#page-loader").addClass('d-none');
+                    location.href = hrefurl;
+                }, 2000);
+            }
+        });
+    }
+</script>
+<script>
+    function BuildCourseByCategory(course_id, hrefurl) {
+        $("#page-loader").removeClass('d-none');
+        $.ajax({
+            url: 'https://app.topgrade.pk/BuildCourseByCategory',
+            data: {
+                course_id: course_id
+            },
+            type: 'post',
+            async: false,
+            success: function(msg) {
+                setTimeout(function() {
+                    $("#page-loader").addClass('d-none');
+                    location.href = hrefurl;
+                }, 2000);
+            }
+        });
+    }
+</script>
+<script>
+    $(document).ready(function() {
+        $('#courseSearch').select2({
+            placeholder: "Search Your Course",
+            allowClear: false,
+            width: 'resolve',
+            templateResult: function(data) {
+                if (!data.id) return data.text; // placeholder
+
+                var badge = $(data.element).data("badge") || "";
+                var text = $('<span class="option-text">' + data.text + '</span>');
+
+                // Only show badge if exists
+                if (badge) {
+                    return $(
+                        '<span style="display:flex; justify-content:space-between; width:100%;">' +
+                        "<span>" + data.text + "</span>" +
+                        '<span class="option-badge" style="flex-shrink: 0;align-self: center;display: inline-flex;align-items: center;justify-content: center;background: green;color: #fff;border-radius: 12px;padding: 3px 8px;font-size: 11px;height: fit-content;white-space: nowrap;">' +
+                        badge +
+                        "</span>" +
+                        "</span>"
+                    );
+                } else {
+                    return data.text;
+                }
+            },
+            templateSelection: function(data) {
+                // Optional: how selected item appears in the box
+                return data.text;
+            }
+        });
+    });
+</script>
+<script>
+    function FlutterDialer(IsApp, type, phone, message) {
+        $("#page-loader").removeClass('d-none');
+        if (IsApp == 1) {
+            $("#page-loader").addClass('d-none');
+            // Inside Flutter app: call handlers with phone and message
+            if (message !== '') {
+                message = decodeURIComponent(message);
+            }
+            if (type === 0) {
+                window.flutter_inappwebview.callHandler('dialer', phone, message);
+            } else {
+                window.flutter_inappwebview.callHandler('whatsapp', phone, message);
+            }
+        } else {
+            $("#page-loader").addClass('d-none');
+            // Outside app (browser)
+            if (type == 0) {
+                // Dialer fallback
+                window.location.href = `tel:${phone}`;
+            } else {
+                // WhatsApp web with message support (URL encoded)
+                const url = message ?
+                    `https://wa.me/${phone}?text=${message}` :
+                    `https://wa.me/${phone}`;
+                window.open(url, '_blank');
+            }
+        }
+    }
+</script>
+<script>
+    function SetTag(tag_id) {
+        $("#page-loader").removeClass('d-none');
+        $.ajax({
+            url: 'https://app.topgrade.pk/SetTag',
+            data: {
+                tag_id: tag_id
+            },
+            type: 'post',
+            async: false,
+            success: function(msg) {
+                $("#page-loader").addeClass('d-none');
+            }
+        });
+    }
+</script>
+<script>
+    function PreparationWay(way) {
+        $("#page-loader").removeClass('d-none');
+        url = "https://app.topgrade.pk/preparation-way";
+        $.ajax({
+            url: url,
+            type: 'POST',
+            async: false,
+            data: {
+                way: way
+            },
+            success: function(term) {
+                $("#page-loader").addClass('d-none');
+                location.href = 'https://app.topgrade.pk/';
+            }
+        });
+    }
+</script>
+<script>
+    function loadYouTube(el) {
+        $("#page-loader").removeClass('d-none');
+        const id = el.dataset.id;
+        el.innerHTML = `
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/${id}?autoplay=1"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            `;
+        setTimeout(function() {
+            $("#page-loader").addClass('d-none');
+        }, 1000);
+    }
+</script>
+<script>
+    function GetInvoice() {
+        location.href = 'https://app.topgrade.pk/get-invoice';
+    }
+</script>    <script src="./biology slides_files/sweetalert2@11"></script>
+    <!--        <script>
+            $(document).ready(function () {
+                var carouselEl = document.getElementById('slideCarousel');
+                if (carouselEl) {
+                    // 'slid.bs.carousel' triggers after the animation is finished
+                    carouselEl.addEventListener('slid.bs.carousel', function (event) {
+
+                        // 1. Update UI Counter
+                        var currentIndex = $(event.relatedTarget).data('index');
+                        $('#current_idx').text(currentIndex);
+
+                        // 2. Get Data for AJAX
+                        var slideId = $(event.relatedTarget).data('slide-id');
+                        var rrnId = "4584";
+
+                        // 3. Background AJAX call to update stats
+                        $.ajax({
+                            url: "https://app.topgrade.pk/learning_session/update_slide_view_stat",
+                            type: "POST",
+                            data: {slide_id: slideId, rrn_id: rrnId},
+                            success: function (res) {
+                                console.log("Stats updated for slide " + slideId);
+                            }
+                        });
+                    });
+                }
+            });
+        </script>-->
+    <script>
+        $(document).ready(function() {
+            /* For First Slide */
+            SlideStats("4584", 1);
+            var carouselEl = document.getElementById('slideCarousel');
+
+            // Bootstrap 5 Event: Jab slide mukammal taur par change ho jaye
+            carouselEl.addEventListener('slid.bs.carousel', function(event) {
+
+                // 1. Get data from the now ACTIVE slide
+                var activeSlide = $(event.relatedTarget);
+                var slide_id_enc = activeSlide.data('slide-id'); // data-slide-id se ID uthayen
+                var current_idx = activeSlide.data('index'); // data-index se number uthayen
+                var frn_id = "4584";
+                var hasVideo = activeSlide.data('has-video');
+                var videoUrl = activeSlide.data('video-url');
+                var isbookmarked = activeSlide.data('has-bookmark');
+                if (hasVideo === true || hasVideo === 'true') {
+                    $('#play_video_btn').removeClass('d-none'); // Button show karein
+                    $('#play_video_btn').attr('onclick', "PlaySlide('" + videoUrl + "')");
+                } else {
+                    $('#play_video_btn').attr('onclick', "");
+                    $('#play_video_btn').addClass('d-none'); // Button hide karein
+                }
+                if (isbookmarked === true || isbookmarked === 'true') {
+                    $('#bm_add').attr('onclick', "slidebookmark(" + slide_id_enc + ", 0)");
+                    const icon = document.getElementById('bookmark-icon-bio');
+                    const label = document.getElementById('bookmark-label-bio');
+                    icon.classList.remove('bi-bookmark');
+                    icon.classList.add('bi-bookmark-fill');
+                    label.textContent = 'Bookmarked';
+                    label.style.color = '#1676dd';
+                } else {
+                    $('#bm_add').attr('onclick', "slidebookmark(" + slide_id_enc + ", 1)");
+                    const icon = document.getElementById('bookmark-icon-bio');
+                    const label = document.getElementById('bookmark-label-bio');
+                    icon.classList.remove('bi-bookmark-fill');
+                    icon.classList.add('bi-bookmark');
+                    label.textContent = 'Bookmark';
+                    label.style.color = '';
+                }
+
+
+
+
+
+
+                // 2. Update UI Counter (Slide 1 of X)
+                $('#current_idx').text(current_idx);
+
+                // 3. Update hidden input (agar aap tracking ke liye use kar rahay hain)
+                $("#frn_id_enc").val(current_idx);
+
+                // 4. Run your AJAX logic
+                SlideStats(frn_id, slide_id_enc);
+            });
+
+            // Keyboard Arrow Support
+            $(document).keydown(function(e) {
+                var carousel = bootstrap.Carousel.getInstance(carouselEl);
+                if (e.which == 37)
+                    carousel.prev(); // Left
+                if (e.which == 39)
+                    carousel.next(); // Right
+            });
+
+        });
+    </script>
+    <script>
+        function SlideStats(frn_id, slide_id_enc) {
+            const $loader = $("#page-loader");
+            const $section = $("#video-stat-section");
+
+            $section.css({
+                position: "relative",
+                overflow: "hidden"
+            });
+
+            $loader.appendTo($section);
+
+            $loader.attr(
+                "style",
+                `
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    background: rgba(255,255,255,0.8) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 999 !important;
+    `
+            );
+
+            $loader.removeClass("d-none").css("display", "flex");
+            $('#bm_add').addClass('d-none');
+            $('#bm_remove').addClass('d-none');
+            $.ajax({
+                url: 'https://app.topgrade.pk/' + 'viewed-slide',
+                data: {
+                    frn_id: frn_id,
+                    slide_id: slide_id_enc,
+                    by_learning_funnel: 2,
+                    frn_slides_status: 1
+                },
+                type: 'post',
+                success: function(msg) {
+                    console.log("New Ajax = " + msg);
+                    var res = msg.split("^^");
+
+                    // Views aur Likes update karein
+                    $("#slide_views_count").html(res[0]);
+                    $("#likescounts").html(res[1]);
+
+                    // Bookmark toggle logic
+                    // Pehle saaray bookmarks hide karein phir sirf current wala show karein
+
+                    if (res[3] == 1) {
+                        console.log("bookmarked");
+                        $('#bm_add').attr('onclick', "slidebookmark(" + slide_id_enc + ", 0)");
+                        const icon = document.getElementById('bookmark-icon-bio');
+                        const label = document.getElementById('bookmark-label-bio');
+                        icon.classList.remove('bi-bookmark');
+                        icon.classList.add('bi-bookmark-fill');
+                        label.textContent = 'Bookmarked';
+                        label.style.color = '#1676dd';
+                    } else {
+                        console.log("nobookmarked");
+                        $('#bm_add').attr('onclick', "slidebookmark(" + slide_id_enc + ", 1)");
+                        const icon = document.getElementById('bookmark-icon-bio');
+                        const label = document.getElementById('bookmark-label-bio');
+                        icon.classList.remove('bi-bookmark-fill');
+                        icon.classList.add('bi-bookmark');
+                        label.textContent = 'Bookmark';
+                        label.style.color = '';
+                    }
+                    updateVoteIcons(res[2]);
+                }
+            });
+            setTimeout(() => {
+                $loader.addClass("d-none").css("display", "none");
+            }, 500);
+
+        }
+    </script>
+    <script>
+        function updateVoteIcons(status) {
+            $("#yt-down-fill, #yt-up-fill").addClass('d-none');
+            $("#yt-down-empty, #yt-up-empty").removeClass('d-none');
+
+            if (status == '1') { // Liked
+                $("#yt-up-fill").removeClass('d-none');
+                $("#yt-up-empty").addClass('d-none');
+            } else if (status == '2') { // Disliked
+                $("#yt-down-fill").removeClass('d-none');
+                $("#yt-down-empty").addClass('d-none');
+            }
+        }
+    </script>
+    <script>
+        function Updatefrnfeedback(stat) {
+            // Selectors
+            const $likesDisplay = $('#likescounts');
+            const frn_id = "4584";
+            const slide_id = $("#frn_id_enc").val();
+            const url = 'https://app.topgrade.pk/slide-like-dislike-status';
+
+            let currentLikes = parseInt($likesDisplay.text()) || 0;
+
+            $("#page-loader").removeClass('d-none');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {
+                    frn_id: frn_id,
+                    frn_stat: stat,
+                    slide_id: slide_id
+                },
+                success: function(result) {
+                    console.log(result);
+                    // Result 1 means backend successfully updated
+                    if (result == 1) {
+                        if (stat == 1) {
+                            // UI: Show Like Fill, Hide Dislike Fill
+                            $('#yt-up-fill').removeClass('d-none');
+                            $('#yt-up-empty').addClass('d-none');
+                            $('#yt-down-fill').addClass('d-none');
+                            $('#yt-down-empty').removeClass('d-none');
+
+                            // Count Update (Logic: Basic increment)
+                            $likesDisplay.text(currentLikes + 1);
+                        } else {
+                            // UI: Show Dislike Fill, Hide Like Fill
+                            $('#yt-up-fill').addClass('d-none');
+                            $('#yt-up-empty').removeClass('d-none');
+                            $('#yt-down-fill').removeClass('d-none');
+                            $('#yt-down-empty').addClass('d-none');
+
+                            // Count Update (Only decrement if it's > 0)
+                            if (currentLikes > 0)
+                                $likesDisplay.text(currentLikes - 1);
+                        }
+                    }
+                    $("#page-loader").addClass('d-none');
+                },
+                error: function() {
+                    $("#page-loader").addClass('d-none');
+                    console.error("AJAX error in feedback update");
+                }
+            });
+        }
+    </script>
+    <script>
+        function PlaySlide(vid) {
+            // 1. Set video source
+            $("#playable_video").attr('src', vid);
+
+            // 2. Open Modal using Bootstrap 5 Instance
+            const modalElement = document.getElementById('myModal');
+            const modalInstance = bootstrap.Modal.getOrCreateInstance(modalElement);
+            modalInstance.show();
+
+            // 3. Handle 'shown' event (using once:true to prevent multiple triggers)
+            $(modalElement).one('shown.bs.modal', function() {
+                if (typeof SleepLoading === "function") {
+                    SleepLoading();
+                }
+            });
+
+            // 4. AJAX View Count Update
+            const frn_id = "4584";
+            const slide_id_enc = $("#frn_id_enc").val(); // Removed parseInt to keep it consistent with backend expectations
+
+            $.ajax({
+                url: 'https://app.topgrade.pk/play-slide-count',
+                type: 'POST',
+                data: {
+                    frn_id: frn_id,
+                    slide_id: slide_id_enc
+                },
+                success: function(response) {
+                    console.log("View count updated");
+                    // Optional: Update views count on UI if backend returns the new number
+                    // if(response.new_count) $('#slide_views_count').text(response.new_count + " views");
+                },
+                error: function(err) {
+                    console.error("View count update failed", err);
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            // Stop video when modal is hidden (Bootstrap 5 event)
+            $("#myModal").on('hide.bs.modal', function() {
+                $("#video, #playable_video").attr('src', '');
+            });
+        });
+    </script>
+    <script>
+        function slidebookmark(slide_id, stat) {
+            frn_id = "4584";
+            $.ajax({
+                url: 'https://app.topgrade.pk/' + 'marked-slide',
+                data: {
+                    frn_id: frn_id,
+                    slide_id: slide_id,
+                    by_learning_funnel: 1,
+                    marked_status: stat,
+                    frn_slides_status: 1
+                },
+                type: 'post',
+                success: function(msg) {
+                    console.log(msg);
+                    const icon = document.getElementById('bookmark-icon-bio');
+                    const label = document.getElementById('bookmark-label-bio');
+                    if (stat == 1) {
+                        icon.classList.remove('bi-bookmark');
+                        icon.classList.add('bi-bookmark-fill');
+                        label.textContent = 'Bookmarked';
+                        label.style.color = '#1676dd';
+                    } else {
+                        icon.classList.remove('bi-bookmark-fill');
+                        icon.classList.add('bi-bookmark');
+                        label.textContent = 'Bookmark';
+                        label.style.color = '';
+                    }
+                }
+            });
+        }
+    </script>
+    <script>
+        function ExportSlides(frn_id) {
+            window.open("https://app.topgrade.pk/export-slides/" + frn_id, '_blank');
+        }
+    </script>
+    <script>
+        function ReportIssueModal() {
+            const frn_id = "4584";
+            const apiUrl = 'https://app.topgrade.pk/fast-revision-notes/already-report-issue';
+
+            $("#page-loader").removeClass('d-none');
+
+            $.ajax({
+                url: apiUrl,
+                type: 'POST',
+                data: {
+                    video_frn_id: frn_id,
+                    video_frn: 'frn_id'
+                },
+                success: function(msg) {
+                    $("#page-loader").addClass('d-none');
+                    if (msg == 1) {
+                        Swal.fire({
+                            title: "Feedback Already Received",
+                            text: "You have already given feedback, try again after 48 hours.",
+                            icon: "info",
+                            confirmButtonColor: '#3f6ad8',
+                            confirmButtonText: 'OK',
+                            customClass: {
+                                confirmButton: 'btn btn-info'
+                            }
+                        });
+                        return false;
+                    } else {
+                        // Open BS5 Modal
+                        const reportModal = new bootstrap.Modal(document.getElementById('report_issue_model'));
+                        reportModal.show();
+                    }
+                },
+                error: function() {
+                    $$("#page-loader").addClass('d-none');
+                }
+            });
+        }
+
+        // Optimized Toggle for Textarea
+        $(document).on('change', 'input[name="issue"]', function() {
+            const selectedVal = $(this).val();
+            const $msgContainer = $('#issue_msg_container');
+
+            // Show textarea if "Other" or "Mistake" is selected (customize as needed)
+            if (selectedVal === '0' || selectedVal === 'FRN Seems to have a mistake') {
+                $msgContainer.removeClass('d-none').hide().fadeIn();
+            } else {
+                $msgContainer.fadeOut(function() {
+                    $(this).addClass('d-none');
+                    $('#issue_msg').val('');
+                });
+            }
+        });
+    </script>
+    <script>
+        function SendVideoFrnIssue(base_url, type, s_id) {
+            // 1. Get Values
+            const frn_id = "4584";
+            var issue = $('input[name="issue"]:checked').val();
+            var other_issue_msg = $("#issue_msg").val().trim();
+
+            // 2. Validation Logic
+            // Agar "Other" select ho ya mistake wali options hon to message required hai
+            $("#issue_msg").removeClass('is-invalid').css('border', '1px solid #ced4da');
+
+            if ((issue == "0" || issue == 'Video Seems to have a mistake' || issue == 'FRN Seems to have a mistake') && other_issue_msg == '') {
+                $("#issue_msg").addClass('is-invalid').css('border', '1px solid red').focus();
+                return false;
+            }
+
+            // 3. ID Selection based on type
+            var id = (type == 'v') ? $('#_v_id').val() : frn_id;
+
+            // 4. URL Construction
+            var folder = (type == 'v') ? '/video-lectures/' : '/fast-revision-notes/';
+            var url = base_url + folder + 'report-issue';
+
+            $("#page-loader").removeClass('d-none');
+
+            // 5. AJAX Call
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: {
+                    id: id,
+                    type: type,
+                    u_sub_section_id: s_id,
+                    other_issue_msg: other_issue_msg,
+                    issue: issue
+                },
+                success: function(msg) {
+                    $("#page-loader").addClass('d-none');
+
+                    // UI Reset
+                    $("#issue_msg").val('').hide();
+                    $('#report_issue_model').modal('hide');
+
+                    // Show Success Modal
+                    $('#report_issue_model_thanks').modal('show');
+
+                    // Auto hide thanks modal
+                    setTimeout(function() {
+                        $('#report_issue_model_thanks').modal('hide');
+                    }, 4000);
+                },
+                error: function() {
+                    $("#page-loader").addClass('d-none');
+                    alert("Something went wrong. Please try again.");
+                }
+            });
+        }
+    </script>
+    <script>
+        function startStep(enc_type, enc_media_id, enc_topic_id) {
+            // atob() function base64 ko wapis normal string banata hai
+            $("#page-loader").removeClass('d-none');
+            var type = atob(enc_type);
+            var baseUrl = "https://app.topgrade.pk/";
+            if (type == 1) {
+                // video
+                window.location.href = baseUrl + "video_player/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            } else if (type == 2) {
+                // slides
+                window.location.href = baseUrl + "slides_viewer/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            } else if (type == 3) {
+                //test
+                SetTag(131);
+                window.location.href = baseUrl + "take_test/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            } else if (type == 6) {
+                //test
+                SetTag(133);
+                window.location.href = baseUrl + "read_text_book/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            }
+        }
+    </script>
+    <script>
+        let bgCarousel;
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Automatically find your Bootstrap carousel
+            const carouselEl = document.querySelector('.carousel') || document.getElementById('myMainCarouselElementId');
+            if (carouselEl) {
+                bgCarousel = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+            }
+
+            // Attach swipe listeners to the modal image container
+            const modalImageContainer = document.querySelector('.modal-swipe-zone');
+            if (modalImageContainer) {
+                modalImageContainer.addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, {
+                    passive: true
+                });
+
+                modalImageContainer.addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipeGesture();
+                }, {
+                    passive: true
+                });
+            }
+        });
+
+        // Detect real left/right swipes
+        function handleSwipeGesture() {
+            const swipeThreshold = 50; // Minimum swipe distance in pixels
+            if (touchEndX < touchStartX - swipeThreshold) {
+                modalNavigate('next'); // Swiped left -> Show next
+            }
+            if (touchEndX > touchStartX + swipeThreshold) {
+                modalNavigate('prev'); // Swiped right -> Show prev
+            }
+        }
+
+        function openFullView(imgUrl) {
+            const fullImg = document.getElementById('fullViewImage');
+            fullImg.src = imgUrl;
+            fullImg.style.transform = "scale(1)"; // Reset zoom
+
+            const myModal = new bootstrap.Modal(document.getElementById('fullViewModal'));
+            myModal.show();
+        }
+
+        function modalNavigate(direction) {
+            if (!bgCarousel) return;
+
+            const carouselEl = document.querySelector('.carousel') || document.getElementById('myMainCarouselElementId');
+
+            const updateModalImage = function(event) {
+                const activeImg = event.relatedTarget.querySelector('img');
+                if (activeImg) {
+                    const fullImg = document.getElementById('fullViewImage');
+                    fullImg.src = activeImg.src;
+                    fullImg.style.transform = "scale(1)"; // Reset zoom on slide change
+                }
+                carouselEl.removeEventListener('slid.bs.carousel', updateModalImage);
+            };
+
+            carouselEl.addEventListener('slid.bs.carousel', updateModalImage);
+
+            if (direction === 'next') bgCarousel.next();
+            if (direction === 'prev') bgCarousel.prev();
+        }
+
+        // Double-tap to zoom toggle
+        let lastTap = 0;
+        document.getElementById('fullViewImage').addEventListener('touchend', function(e) {
+            let currentTime = new Date().getTime();
+            let tapLength = currentTime - lastTap;
+            if (tapLength < 300 && tapLength > 0) {
+                if (this.style.transform === "scale(2)") {
+                    this.style.transform = "scale(1)";
+                    this.style.cursor = "zoom-in";
+                } else {
+                    this.style.transform = "scale(2)";
+                    this.style.cursor = "zoom-out";
+                }
+                e.preventDefault();
+            }
+            lastTap = currentTime;
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Input pe click karne se buttons show hon
+            $('#comment-input').on('focus', function() {
+                $('#action-buttons').removeClass('d-none');
+            });
+
+            // Button enable/disable logic
+            $('#comment-input').on('input', function() {
+                $('#submit-btn').prop('disabled', this.value.trim() === "");
+            });
+        });
+
+        function cancelComment() {
+            $('#comment-input').val('');
+            $('#action-buttons').addClass('d-none');
+        }
+
+        function postComment(base_url, type, s_id) {
+            $("#page-loader").removeClass('d-none');
+            let text = $('#comment-input').val();
+            if (text == "") {
+                $("#page-loader").addClass('d-none');
+                $("#comment-input").addClass('is-invalid').css('border', '1px solid red').focus();
+                return false;
+            }
+            var id = "4584";
+
+            // 4. URL Construction
+            var url = base_url + '/fast-revision-notes/report-issue';
+            var issue = 0;
+            var other_issue_msg = text;
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: {
+                    id: id,
+                    type: type,
+                    u_sub_section_id: s_id,
+                    other_issue_msg: other_issue_msg,
+                    issue: issue
+                },
+                success: function(res) {
+                    // Naya comment top pe dikhane ke liye
+                    $("#comment-input").removeClass('is-invalid')
+                    //                        $('#comments-container').prepend(renderComment(res));
+                    $('#comment-input').val('');
+                    cancelComment();
+                    $("#page-loader").addClass('d-none');
+                    // Show Success Modal
+                    $('#report_issue_model_thanks').modal('show');
+
+                    // Auto hide thanks modal
+                    setTimeout(function() {
+                        $('#report_issue_model_thanks').modal('hide');
+                    }, 4000);
+                }
+            });
+        }
+    </script>
+
+
+</body></html>

@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Chemistry Slides | TopGrade.pk</title>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <link rel="icon" type="image/png" href="https://app.topgrade.pk/assets/images/fav.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="./chemistry slides_files/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="./chemistry slides_files/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="./chemistry slides_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./chemistry slides_files/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./chemistry slides_files/custom.css">
+
+<style>
+    :root {
+        --primary-blue: #3f6ad8;
+        --primary-green: #3ac47d;
+        --bg-gray: #f8f9fa;
+        --blue-primary: #1676dd;
+    }
+
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        background-color: var(--bg-gray);
+        font-family: 'Inter', -apple-system, sans-serif;
+    }
+
+    .app-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        align-items: center;
+        padding: 10px;
+        position: relative;
+    }
+
+    .app-card {
+        width: 100%;
+        max-width: 700px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .video-section {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .info-section {
+        padding: 1.25rem;
+    }
+
+    .breadcrumb-text {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: #1754bb;
+    }
+
+    .stat-badge {
+        border: none;
+        border-radius: 8px;
+        padding: 6px 16px;
+        font-weight: 500;
+        font-size: .9rem;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .badge-views {
+        background-color: #eef2ff;
+        color: #4338ca;
+    }
+
+    .badge-likes {
+        background-color: #ecfdf5;
+        color: #065f46;
+    }
+
+    .badge-dislikes {
+        background-color: #fef2f2;
+        color: #991b1b;
+    }
+
+    /* Fixed Sticky Footer */
+    .app-footer {
+        width: 100%;
+        max-width: 500px;
+        position: sticky;
+        bottom: 20px;
+        margin: 0 auto 10px auto;
+        z-index: 1000;
+    }
+
+    .nav-container {
+        display: flex;
+        border-radius: 50px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        background: white;
+    }
+
+    .nav-btn {
+        flex: 1;
+        border: none;
+        padding: 14px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    }
+
+    .btn-prev {
+        background-color: var(--primary-blue);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-next {
+        background-color: var(--primary-green);
+    }
+
+    .nav-btn:hover {
+        opacity: 0.9;
+        color: white;
+    }
+
+    .nav-btn:active {
+        transform: scale(0.98);
+    }
+
+    .carousel-item img {
+        cursor: zoom-in;
+    }
+
+    .slide-zoom {
+        max-height: 90vh;
+        transition: transform 0.3s ease;
+        cursor: grab;
+    }
+
+    .heading-title {
+        font-size: 22px;
+        font-weight: bold;
+        margin: 0;
+        line-height: 34px;
+    }
+
+    .greeting-section {
+        display: grid;
+        grid-template-columns: 65px 1fr;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 0px;
+        flex-shrink: 0;
+        width: 700px;
+    }
+
+    .hero-mascot {
+        display: block;
+        margin: 0 auto 12px;
+        width: 70px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .speech-bubble {
+        position: relative;
+        background: var(--blue-primary);
+        color: #fff;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 14px;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 2px 8px rgba(27, 72, 174, 0.1);
+        font-size: 0.85rem;
+        line-height: 1.35;
+        font-weight: 500;
+    }
+
+    .speech-bubble::before {
+        content: "";
+        position: absolute;
+        left: -14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 14px solid var(--blue-primary);
+    }
+
+    .app-subtitle {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .slide-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px 0;
+        width: 30%;
+    }
+
+    .slide-indicator .text {
+        font-weight: 500;
+        font-size: 14px;
+        color: #4a4aee;
+        margin: 0 12px;
+        white-space: nowrap;
+    }
+
+    /* Actions Row (card-style) */
+    .actions-row {
+        border: 1px solid #e5e8f0;
+        border-radius: 12px;
+        background: #fff;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+
+    .action-item {
+        cursor: pointer;
+        padding: 14px 8px;
+        transition: background 0.2s;
+        text-align: center;
+    }
+
+    .action-item:hover { background: #f8fafc; }
+    .action-item:active { background: #f1f5f9; }
+
+    .action-item .action-icon {
+        font-size: 22px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .action-item .action-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: #111827;
+    }
+
+    .action-link {
+        text-decoration: none !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        line-height: 1.2;
+    }
+
+    .text-purple {
+        color: #9b5de5;
+    }
+
+    /* Bottom Nav */
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: #fff;
+        border-top: 1px solid #e5e8f0;
+        box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        padding: 0 12px;
+    }
+
+    .btn-app-action {
+        background-image: linear-gradient(to right, #054dc7, #081236);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        box-shadow: 0 6px 15px rgba(93, 70, 226, 0.3);
+        cursor: pointer;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        text-decoration: none;
+        height: 44px;
+    }
+
+    .btn-app-action:hover {
+        color: white;
+        opacity: 0.92;
+    }
+
+    .bottom-nav .btn-app-action.bg-success {
+        background: linear-gradient(90deg, #ffc400 0%, #ff7a12 100%);
+    }
+
+    .bg-brand { background-color: #0d1b41 !important; }
+
+    .dropdown-premium {
+        width: auto;
+        min-width: 220px;
+        border-radius: 12px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* Loader */
+    .loader-wrapper { position: relative; display: flex; align-items: center; justify-content: center; }
+    .loader-icon { position: absolute; width: 33px; object-fit: contain; }
+    .custom-spinner { width: 4.5rem; height: 4.5rem; border-width: 0.25em; }
+
+    /* Mobile responsive */
+    @media (max-width: 576px) {
+        body, html { overflow-y: auto; }
+        .app-wrapper { padding-bottom: 100px; justify-content: flex-start; }
+        .app-card { margin-bottom: 20px; }
+    }
+
+    @media (max-width: 480px) {
+        .bottom-nav { height: 60px; }
+        .action-item .action-icon { font-size: 16px; }
+        .action-item .action-label { font-size: 11px; }
+        .slide-indicator { width: 80%; }
+        .breadcrumb-text { font-size: 14px; line-height: 20px; }
+    }
+
+    @media (max-width: 768px) {
+        .heading-title { font-size: 20px; line-height: 26px; }
+        .greeting-section { width: 100%; }
+        .app-subtitle { font-size: 12px; line-height: 18px; }
+    }
+</style></head>
+
+
+
+<body>
+    <style>
+    .loader-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .loader-icon {
+        position: absolute;
+        width: 33px;
+        object-fit: contain;
+    }
+    .custom-spinner {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-width: 0.25em;
+    }
+    </style>
+
+    <header class="p-1 bg-brand border-bottom fixed-top">
+        <div class="container-fluid d-flex justify-content-between align-items-center px-1">
+            <a onclick="history.back()" style="cursor: pointer;" id="header_home_link">
+                <span id="header_home_text" class="ms-2 fw-bold text-white"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</span>
+            </a>
+            <select class="form-select dropdown-premium mx-auto">
+                <option selected>MDCAT (Punjab)</option>
+                <option>F.Sc 1st Year Pre-Med. (Punjab)</option>
+                <option>F.Sc 2nd Year Pre-Medical (Punjab)</option>
+            </select>
+            <div class="d-flex align-items-center">
+                <a href="#">
+                    <i class="fa fa-sign-out text-white" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="app-wrapper mt-4 py-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="heading-title w-100 text-center">Slides</h1>
+        </div>
+        <div class="greeting-section">
+            <img src="./chemistry slides_files/docm-frn.png" alt="Review Mascot" class="hero-mascot">
+            <div class="speech-bubble shadow-sm">
+                <p class="app-subtitle text-white">Revise with slides, clear with video, save with bookmark.</p>
+            </div>
+        </div>
+        <div class="slide-indicator">
+            <div class="text">Slide <span id="current_idx">1</span> / 36</div>
+        </div>
+        <div class="video-section border rounded shadow-sm mb-3" id="slide_show">
+            <div id="slideCarousel" class="carousel slide" data-bs-interval="false">
+                <div class="carousel-inner" id="slider">
+                    <div class="carousel-item active" data-slide-id="1" data-index="1" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/1^^b37d845e6f05dd59560124d59deea53dMTc3NTM3NTUxN2IzN2Q4NDVlNmYwNWRkNTk1NjAxMjRkNTlkZWVhNTNk.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="2" data-index="2" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/2^^6890e42a8abf9045cad8f233d4e8ead2MTc3NTM3NTUxNzY4OTBlNDJhOGFiZjkwNDVjYWQ4ZjIzM2Q0ZThlYWQy.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="3" data-index="3" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/3^^5b0b3866a6b1af5c551a0b7de3b18e6fMTc3NTM3NTUxNzViMGIzODY2YTZiMWFmNWM1NTFhMGI3ZGUzYjE4ZTZm.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="4" data-index="4" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/4^^90da443888d67f359bda4b01987c31b0MTc3NTM3NTUxNzkwZGE0NDM4ODhkNjdmMzU5YmRhNGIwMTk4N2MzMWIw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="5" data-index="5" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/5^^b41fcf75f05199944caa8298740f8260MTc3NTM3NTUxN2I0MWZjZjc1ZjA1MTk5OTQ0Y2FhODI5ODc0MGY4MjYw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="6" data-index="6" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/6^^3218e3abeb69b7fbcf93ffff6815e907MTc3NTM3NTUxNzMyMThlM2FiZWI2OWI3ZmJjZjkzZmZmZjY4MTVlOTA3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="7" data-index="7" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/7^^ec88c9aab6421ec701b8ca9ec96b80f6MTc3NTM3NTUxN2VjODhjOWFhYjY0MjFlYzcwMWI4Y2E5ZWM5NmI4MGY2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="8" data-index="8" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/8^^0af35cfdd183f88a838c80a8fcd7cbc1MTc3NTM3NTUxNzBhZjM1Y2ZkZDE4M2Y4OGE4MzhjODBhOGZjZDdjYmMx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="9" data-index="9" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/9^^f7f9665e2b76b69583b26a08fbfa4575MTc3NTM3NTUxN2Y3Zjk2NjVlMmI3NmI2OTU4M2IyNmEwOGZiZmE0NTc1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="10" data-index="10" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/10^^fd5f625d33f0cfdcdcc5ea048d05e29eMTc3NTM3NTUxN2ZkNWY2MjVkMzNmMGNmZGNkY2M1ZWEwNDhkMDVlMjll.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="11" data-index="11" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/11^^03a9b11f63cf7b5441501686cfd6a1aaMTc3NTM3NTUxNzAzYTliMTFmNjNjZjdiNTQ0MTUwMTY4NmNmZDZhMWFh.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="12" data-index="12" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/12^^58f0f61723bccf7a824d0c5f60566d8fMTc3NTM3NTUxNzU4ZjBmNjE3MjNiY2NmN2E4MjRkMGM1ZjYwNTY2ZDhm.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="13" data-index="13" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/13^^6b918913750a9dbb49ccc94e262164eaMTc3NTM3NTUxNzZiOTE4OTEzNzUwYTlkYmI0OWNjYzk0ZTI2MjE2NGVh.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="14" data-index="14" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/14^^681f250d98a7ccb5513a2bba48eab4a8MTc3NTM3NTUxNzY4MWYyNTBkOThhN2NjYjU1MTNhMmJiYTQ4ZWFiNGE4.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="15" data-index="15" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/15^^861f2b499ebce3203227ab836e50a596MTc3NTM3NTUxNzg2MWYyYjQ5OWViY2UzMjAzMjI3YWI4MzZlNTBhNTk2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="16" data-index="16" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/16^^b8a0160f1ab27eddf316bc67423ccefbMTc3NTM3NTUxN2I4YTAxNjBmMWFiMjdlZGRmMzE2YmM2NzQyM2NjZWZi.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="17" data-index="17" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/17^^48e2c18224a03e302a8ecb0aaffc73dbMTc3NTM3NTUxNzQ4ZTJjMTgyMjRhMDNlMzAyYThlY2IwYWFmZmM3M2Ri.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="18" data-index="18" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/18^^780f7fdbaf3ec90c440f16b329ab621cMTc3NTM3NTUxNzc4MGY3ZmRiYWYzZWM5MGM0NDBmMTZiMzI5YWI2MjFj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="19" data-index="19" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/19^^452eee6ab9e1662fb871a0ce71724234MTc3NTM3NTUxNzQ1MmVlZTZhYjllMTY2MmZiODcxYTBjZTcxNzI0MjM0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="20" data-index="20" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/20^^47989f555a92edd0af83889c7d2b97c4MTc3NTM3NTUxNzQ3OTg5ZjU1NWE5MmVkZDBhZjgzODg5YzdkMmI5N2M0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="21" data-index="21" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/21^^a31145f40effb9f56a13764d4492f1f7MTc3NTM3NTUxN2EzMTE0NWY0MGVmZmI5ZjU2YTEzNzY0ZDQ0OTJmMWY3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="22" data-index="22" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/22^^26d4cfe5b458852e81508ad09696ad49MTc3NTM3NTUxNzI2ZDRjZmU1YjQ1ODg1MmU4MTUwOGFkMDk2OTZhZDQ5.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="23" data-index="23" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/23^^f6a424a317f9d0baab772cc785e98f3cMTc3NTM3NTUxN2Y2YTQyNGEzMTdmOWQwYmFhYjc3MmNjNzg1ZTk4ZjNj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="24" data-index="24" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/24^^82ec4d33747bb683d223d985bf298b56MTc3NTM3NTUxNzgyZWM0ZDMzNzQ3YmI2ODNkMjIzZDk4NWJmMjk4YjU2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="25" data-index="25" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/25^^b68e02cb12329447deb64577a77a4202MTc3NTM3NTUxN2I2OGUwMmNiMTIzMjk0NDdkZWI2NDU3N2E3N2E0MjAy.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="26" data-index="26" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/26^^d6d49d0605ef19a04873e2e9f62a5c96MTc3NTM3NTUxN2Q2ZDQ5ZDA2MDVlZjE5YTA0ODczZTJlOWY2MmE1Yzk2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="27" data-index="27" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/27^^b828935615b91f199cf0650a1bb61f41MTc3NTM3NTUxN2I0Mjg5MzU2MTViOTFmMTk5Y2YwNjUwYTFiYjYxZjQx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="28" data-index="28" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/28^^af31e4549fb17a61cd6befb868c5c6f5MTc3NTM3NTUxN2FmMzFlNDU0OWZiMTdhNjFjZDZiZWZiODY4YzVjNmY1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="29" data-index="29" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/29^^5b276282de4990f4fdcf1e2fff9cf167MTc3NTM3NTUxNzViMjc2MjgyZGU0OTkwZjRmZGNmMWUyZmZmOWNmMTY3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="30" data-index="30" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/30^^93534cf2acc12b7e562101629f610696MTc3NTM3NTUxNzkzNTM0Y2YyYWNjMTJiN2U1NjIxMDE2MjlmNjEwNjk2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="31" data-index="31" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/31^^83927f7ce932476b95b02b5dd4c87f8dMTc3NTM3NTUxNzgzOTI3ZjdjZTkzMjQ3NmI5NWIwMmI1ZGQ0Yzg3Zjhk.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="32" data-index="32" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/32^^d66b2e82d071c8387ab417f12b139ff5MTc3NTM3NTUxN2Q2NmIyZTgyZDA3MWM4Mzg3YWI0MTdmMTJiMTM5ZmY1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="33" data-index="33" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/33^^cf54fdf32b0f0158c31c606c4c1c2990MTc3NTM3NTUxN2NmNTRmZGYzMmIwZjAxNThjMzFjNjA2YzRjMWMyOTkw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="34" data-index="34" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/34^^91a0a885a9b0d4aaab1e272ba45743e7MTc3NTM3NTUxNzkxYTBhODg1YTliMGQ0YWFhYjFlMjcyYmE0NTc0M2U3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="35" data-index="35" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/35^^5cca325d0065184534efbce442500151MTc3NTM3NTUxNzVjY2EzMjVkMDA2NTE4NDUzNGVmYmNlNDQyNTAwMTUx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-slide-id="36" data-index="36" data-has-video="false" data-has-bookmark="false">
+                        <div class="p-2 text-center">
+                            <img src="./chemistry slides_files/36^^e47237dcfed3d7052033c4e2e6890067MTc3NTM3NTUxN2U0NzIzN2RjZmVkM2Q3MDUyMDMzYzRlMmU2ODkwMDY3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(this.src)">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#slideCarousel" data-bs-slide="prev">
+                    <span class="bg-dark rounded-circle d-flex align-items-center justify-content-center" style="width:35px; height:35px; opacity: 0.8;background-color: #fff !important;">
+                        <i class="fa fa-chevron-left text-primary"></i>
+                    </span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slideCarousel" data-bs-slide="next">
+                    <span class="bg-dark rounded-circle d-flex align-items-center justify-content-center" style="width:35px; height:35px; background-color: #fff !important;">
+                        <i class="fa fa-chevron-right text-primary"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Master Card: Actions + Title + Stats + Comments -->
+        <div class="app-card p-4 mb-5" id="video-stat-section" style="position: relative; overflow: hidden;">
+
+            <!-- Actions Row -->
+            <div class="actions-row">
+                <div class="row g-0 align-items-stretch">
+                    <div class="col-4 border-end action-item" id="bm_add" style="cursor:pointer;" onclick="slidebookmark(1, 1)">
+                        <i class="bi bi-bookmark action-icon text-primary" id="bookmark-icon-ch"></i>
+                        <span class="action-label" id="bookmark-label-ch">Bookmark</span>
+                    </div>
+                    <div class="col-4 border-end action-item" style="cursor:pointer;" onclick="ExportSlides('chemistry')">
+                        <i class="bi bi-download action-icon text-success"></i>
+                        <span class="action-label">Download All Slides</span>
+                    </div>
+                    <div class="col-4 action-item" id="play_video_btn" style="cursor:pointer;" onclick="PlaySlide('https://www.youtube.com/embed/chemistry_video')">
+                        <i class="bi bi-play-circle action-icon" style="color: #7c3aed;"></i>
+                        <span class="action-label">Play Video</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section pt-0">
+                <!-- Subject Title -->
+                <div class="breadcrumb-text mb-2" id="slide-topic-title" style="font-size: 1.05rem;">
+                    <b>Fundamentals of Chemistry</b> - (Moles &amp; Avogadro's Number)
+                </div>
+
+                <!-- Stats -->
+                <div class="d-flex gap-2 align-items-center justify-content-start mb-3">
+                    <div class="stat-badge badge-views"><i class="bi bi-eye-fill me-1"></i> <span id="slide_views_count">2.4k</span></div>
+
+                    <div class="stat-badge badge-likes" style="cursor:pointer;" id="like" onclick="Updatefrnfeedback(1)">
+                        <span>
+                            <i id="yt-up-fill" class="bi bi-hand-thumbs-up-fill me-1" style="display:none;"></i>
+                            <i id="yt-up-empty" class="bi bi-hand-thumbs-up me-1" style="display:inline-block;"></i>
+                            <span id="likescounts">87</span>
+                        </span>
+                    </div>
+
+                    <div class="stat-badge badge-dislikes" style="cursor:pointer;" id="dislike" onclick="Updatefrnfeedback(2)">
+                        <span>
+                            <i id="yt-down-empty" class="bi bi-hand-thumbs-down me-1" style="display:inline-block;"></i>
+                            <i id="yt-down-fill" class="bi bi-hand-thumbs-down-fill me-1" style="display:none;"></i>
+                        </span>
+                    </div>
+                    <input type="hidden" id="frn_id_enc" value="1">
+                    <input type="hidden" id="slide_id_count" value="36">
+                </div>
+            </div>
+
+            <div class="border rounded-3 p-2 mt-4">
+                <div class="d-flex align-items-center gap-2 mb-2" style="font-size: 0.85rem; color: #1754bb;">
+                    <i class="bi bi-chat-left-text"></i>
+                    <span class="fw-bold">Comments &amp; Feedback <span id="all-comments-counter"></span></span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <div class="bg-light rounded-circle border d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink:0;">
+                        <i class="bi bi-person text-secondary"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="comment-input" class="form-control form-control-sm border-1 bg-light" placeholder="Post your comment or feedback here..." aria-label="Comment">
+                        <div id="action-buttons" class="text-end mt-2 d-none">
+                            <button class="btn btn-sm btn-link text-primary" type="button" id="submit-btn" onclick="postComment('https://app.topgrade.pk/', 'f', 'chemistry')">
+                                <i class="bi bi-send-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page-loader" class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white opacity-75 d-none" style="position: absolute !important; inset: 0px !important; width: 100% !important; height: 100% !important; min-height: 100% !important; background: rgba(255, 255, 255, 0.8) !important; display: none; align-items: center !important; justify-content: center !important; z-index: 999 !important;">
+                <div class="loader-wrapper">
+                    <div class="spinner-border text-primary custom-spinner" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img src="./chemistry slides_files/tg-insignia.webp" alt="Loading Icon" class="loader-icon">
+                </div>
+            </div>
+        </div>
+
+        <nav class="bottom-nav">
+            <div class="container py-2 d-flex justify-content-center gap-3" style="max-width: 600px; width: 100%; padding: 0 12px;">
+                <a onclick="history.back()" class="btn-app-action flex-fill text-decoration-none text-center" style="cursor: pointer; min-width: 140px;">
+                    <i class="fa-solid fa-angles-left"></i> Roadmap
+                </a>
+                <a onclick="alert('Moving to next step: Take the Test!')" class="btn-app-action flex-fill text-decoration-none text-center bg-success" style="cursor: pointer; min-width: 140px; background: linear-gradient(90deg, #ffc400 0%, #ff7a12 100%) !important; box-shadow: 0 6px 15px rgba(255, 122, 18, 0.24);">
+                    Next Step <i class="fa-solid fa-angles-right"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Full View Modal -->
+    <div class="modal fade" id="fullViewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-dark border-0">
+                <div class="modal-header border-0 pb-0">
+                    <div class="d-flex align-items-center gap-2">
+                        <button type="button" class="btn btn-sm btn-outline-light" onclick="modalNavigate('prev')">&#8592; Prev</button>
+                        <button type="button" class="btn btn-sm btn-outline-light" onclick="modalNavigate('next')">Next &#8594;</button>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center overflow-auto" style="max-height:85vh;">
+                    <img id="fullViewImage" src="" class="slide-zoom img-fluid" alt="Full View Slide" style="cursor:zoom-in;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="report_issue_model_thanks" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered shadow-sm">
+            <div class="modal-content text-center p-5 border-0" style="border-radius: 20px;">
+                <img src="./chemistry slides_files/thanks.png" class="img-fluid mx-auto mb-3" style="max-height: 100px;">
+                <h4 class="fw-bold" id="modal-title-text">Done!</h4>
+                <p class="text-muted" id="modal-body-text">Comment posted successfully.</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm mx-auto w-50" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="./chemistry slides_files/bootstrap.bundle.min.js.download"></script>
+    <script src="./chemistry slides_files/jquery.min.js.download"></script>
+
+    <script>
+        // Slide counter update on carousel slide
+        const carouselEl = document.getElementById('slideCarousel');
+        carouselEl.addEventListener('slide.bs.carousel', function(e) {
+            document.getElementById('current_idx').textContent = e.to + 1;
+        });
+
+        // Bookmark toggle
+        let isBookmarked = false;
+        function slidebookmark(v, state) {
+            isBookmarked = !isBookmarked;
+            const icon = document.getElementById('bookmark-icon-ch');
+            const label = document.getElementById('bookmark-label-ch');
+            if (isBookmarked) {
+                icon.classList.remove('bi-bookmark');
+                icon.classList.add('bi-bookmark-fill');
+                label.textContent = 'Bookmarked';
+                label.style.color = '#1676dd';
+            } else {
+                icon.classList.remove('bi-bookmark-fill');
+                icon.classList.add('bi-bookmark');
+                label.textContent = 'Bookmark';
+                label.style.color = '';
+            }
+        }
+
+        // Play video
+        function PlaySlide(url) {
+            alert('Opening video player...');
+        }
+
+        // Export slides
+        function ExportSlides(id) {
+            $('#report_issue_model_thanks').modal('show');
+            $('#modal-title-text').text('Downloading...');
+            $('#modal-body-text').text('Starting download of all 36 slides as PDF.');
+            setTimeout(function() { $('#report_issue_model_thanks').modal('hide'); }, 3000);
+        }
+
+        // Feedback
+        let likeState = null;
+        let likesCount = 87;
+        function Updatefrnfeedback(type) {
+            if (type === 1) {
+                if (likeState === true) { likeState = null; likesCount--; }
+                else { if (likeState === false) likeState = null; likeState = true; likesCount++; }
+            } else {
+                if (likeState === false) { likeState = null; }
+                else { if (likeState === true) likesCount--; likeState = false; }
+            }
+            document.getElementById('likescounts').textContent = likesCount;
+            if (likeState === true) {
+                document.getElementById('yt-up-fill').style.display = 'inline-block';
+                document.getElementById('yt-up-empty').style.display = 'none';
+                document.getElementById('yt-down-fill').style.display = 'none';
+                document.getElementById('yt-down-empty').style.display = 'inline-block';
+            } else if (likeState === false) {
+                document.getElementById('yt-up-fill').style.display = 'none';
+                document.getElementById('yt-up-empty').style.display = 'inline-block';
+                document.getElementById('yt-down-fill').style.display = 'inline-block';
+                document.getElementById('yt-down-empty').style.display = 'none';
+            } else {
+                document.getElementById('yt-up-fill').style.display = 'none';
+                document.getElementById('yt-up-empty').style.display = 'inline-block';
+                document.getElementById('yt-down-fill').style.display = 'none';
+                document.getElementById('yt-down-empty').style.display = 'inline-block';
+            }
+        }
+
+        // Full view modal
+        let bgCarousel = null;
+        function openFullView(src) {
+            const fullImg = document.getElementById('fullViewImage');
+            fullImg.src = src;
+            fullImg.style.transform = "scale(1)";
+            const myModal = new bootstrap.Modal(document.getElementById('fullViewModal'));
+            myModal.show();
+            if (!bgCarousel) {
+                bgCarousel = new bootstrap.Carousel(document.getElementById('slideCarousel'), { interval: false });
+            }
+        }
+
+        function modalNavigate(direction) {
+            if (!bgCarousel) return;
+            const carouselEl = document.getElementById('slideCarousel');
+            const updateModalImage = function(event) {
+                const activeImg = event.relatedTarget.querySelector('img');
+                if (activeImg) {
+                    const fullImg = document.getElementById('fullViewImage');
+                    fullImg.src = activeImg.src;
+                    fullImg.style.transform = "scale(1)";
+                }
+                carouselEl.removeEventListener('slid.bs.carousel', updateModalImage);
+            };
+            carouselEl.addEventListener('slid.bs.carousel', updateModalImage);
+            if (direction === 'next') bgCarousel.next();
+            if (direction === 'prev') bgCarousel.prev();
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#comment-input').on('focus', function() {
+                $('#action-buttons').removeClass('d-none');
+            });
+            $('#comment-input').on('input', function() {
+                $('#submit-btn').prop('disabled', this.value.trim() === "");
+            });
+        });
+
+        function cancelComment() {
+            $('#comment-input').val('');
+            $('#action-buttons').addClass('d-none');
+        }
+
+        function postComment(base_url, type, s_id) {
+            let text = $('#comment-input').val();
+            if (text == "") {
+                $("#comment-input").addClass('is-invalid').css('border', '1px solid red').focus();
+                return false;
+            }
+            $('#comment-input').val('');
+            cancelComment();
+            $('#report_issue_model_thanks').modal('show');
+            $('#modal-title-text').text('Comment Posted');
+            $('#modal-body-text').text('Your comment has been added.');
+            setTimeout(function() { $('#report_issue_model_thanks').modal('hide'); }, 4000);
+        }
+    </script>
+
+</body></html>

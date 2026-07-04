@@ -1,0 +1,969 @@
+:root {
+    --primary-color: #2563eb;
+    --bg-color: #f8fafc;
+    --card-radius: 20px;
+    --nav-height: 70px;
+    --max-width-desktop: 1024px;
+}
+
+body {
+    /*font-family: 'Outfit', 'Inter', sans-serif;*/
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-color);
+    color: #1e293b;
+    padding-bottom: var(--nav-height);
+    padding-top: 30px;
+    /*padding-top: 65px;*/
+    /* Space for bottom nav */
+}
+.small, small {
+    font-size: 0.85em;
+}
+.dropdown-toggle::after {
+    display: none !important;
+}
+/* Desktop Centering */
+@media (min-width: 992px) {
+    main.container {
+        max-width: var(--max-width-desktop);
+        margin: 0 auto;
+    }
+}
+
+/* Glassmorphism & Cards */
+.card-premium {
+    background: #ffffff;
+    border-radius: var(--card-radius);
+    border: none;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+    /* Ensure cards in a row have same height */
+}
+
+.card-premium:active {
+    transform: scale(0.98);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px; /*var(--nav-height);*/
+    background: rgb(225 225 225);
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-item-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-item-mobile.active {
+    color: var(--primary-color);
+}
+
+.nav-item-mobile i {
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+}
+
+/* Session Header Card */
+.session-card-header {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border-radius: var(--card-radius) var(--card-radius) 0 0;
+    padding: 20px;
+}
+
+.status-badge {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+//---------------------
+/* Specific Styles to Match Image Precisely */
+.brand-logo {
+    font-weight: 800;
+    color: #1e3a8a;
+    font-size: 1.5rem;
+}
+.bg-brand{
+    background-color:#0d1b41 !important;
+}
+.brand-arrow {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-left: 4px;
+}
+
+.image-area-carousel {
+    background-color: #e0e7ff;
+    border-radius: 20px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #6366f1;
+    margin-bottom: 20px;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #cbd5e1;
+}
+
+.dot.active {
+    background: #2563eb;
+    width: 12px;
+    border-radius: 4px;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+.stat-card {
+    padding: 15px;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #2563eb;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+}
+
+.stat-icon {
+    margin-top: 5px;
+    color: #94a3b8;
+}
+
+.progress-container {
+    margin: 20px 0;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+.progress {
+    height: 8px;
+    border-radius: 4px;
+    background-color: #c8d3df;
+    //#f1f5f9;
+}
+.progress-bar {
+    border-radius: 20px;
+}
+.inner-progress{
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    padding: 0px 10px 3px 10px;
+    /*border-radius: 5px;*/
+    /*background: #ffffff;*/
+    border-radius: 10px 10px 10px 10px;
+}
+
+.sessions-list-card {
+    background: white;
+    border-radius: 0 0 var(--card-radius) var(--card-radius);
+    padding: 20px;
+    padding-top:10px;
+}
+
+.roadmap-item {
+    display: flex;
+    gap: 15px;
+    padding: 5px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.roadmap-icon-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.strategy-icon {
+    background: #e0e7ff;
+    color: #4f46e5;
+}
+
+.lecture-icon {
+    background: #f5f3ff;
+    color: #7c3aed;
+}
+
+.test-icon {
+    background: #fef9c3 !important;
+    color: #ea580c;
+}
+
+.discussion-icon {
+    background: #dcfce7 !important;
+    color: #059669;
+}
+
+.roadmap-content h6 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.roadmap-content p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.outcome-box {
+    background: #f8fafc;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px dashed #cbd5e1;
+}
+
+.outcome-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    /*                text-transform: uppercase;*/
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.outcome-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.outcome-item {
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.view-more-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #2563eb;
+    margin-top: 20px;
+}
+
+.card-premium a {
+    text-decoration: none !important;
+}
+.card-premium-heading {
+    font-size: 18px;
+}
+.card-premium.active-card {
+    /*background-color: #f9fafb;  Light background to make it stand out */
+    /*border: 2px solid #2563eb;  Border around the card to highlight it */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add a strong shadow for elevation */
+    /*transform: scale(1.05);  Slightly enlarge the card */
+    transition: all 0.3s ease-in-out; /* Smooth transition on hover or state change */
+    cursor:pointer;
+    height: auto !important;
+    /*transition: transform 0.3s ease;*/
+}
+
+/*.card-premium.active-card:hover {
+    transform: scale(1.08);  Enlarge on hover for a more interactive feel
+}*/
+/* Base styles (Mobile First) - No hover effect here */
+/*.card-premium.active-card {
+    transition: transform 0.3s ease;  Smooth transition when it returns to normal
+}*/
+
+/* Desktop Only (992px and up) */
+@media (min-width: 992px) {
+    .card-premium.active-card:hover {
+        transform: scale(1.08); /* Only enlarges on larger screens */
+        cursor: pointer;
+    }
+}
+.card-premium.inactive-card {
+    background-color: #fcfdfe; /* Lighter background for inactive cards */
+    border: 2px solid #e2e8f0; /* Subtle border */
+    box-shadow: none; /* Remove shadow */
+    opacity: 0.4; /* Make it look duller */
+    transform: scale(1); /* Keep size as normal */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    height: auto !important;
+}
+
+.card-premium.inactive-card:hover,
+.card-premium.inactive-card a {
+    transform: scale(1); /* No hover effect for inactive */
+    cursor: not-allowed; /* Change cursor to indicate inactivity */
+}
+h4.mb-1 {
+    font-size: 18px;
+}
+.active-card .session-card-header,
+.inactive-card .session-card-header {
+    /* Changed from 180deg (top-bottom) to 90deg (left-right) */
+    background: linear-gradient(90deg, #054dc7 0%, #081236 100%);
+    /*background: linear-gradient(90deg, #1e3a8aa6 0%, #001a4d 100%);*/
+    padding: 12px 15px 5px 15px;
+}
+.session-card-header.card-cs-bg,
+.session-card-header.card-cs-bg,
+.session-card-header.card-cs-bg{
+    background: linear-gradient(90deg, #e91e63 0%, #081236 100%) !important;
+}
+.session-card-header.card-tp-bg,
+.session-card-header.card-tp-bg,
+.session-card-header.card-tp-bg{
+    background: linear-gradient(90deg, #9c27b0 0%, #081236 100%) !important;
+}
+.session-card-header.card-cp-bg,
+.session-card-header.card-cp-bg,
+.session-card-header.card-cp-bg{
+    background: linear-gradient(90deg, #3f51b5 0%, #081236 100%) !important;
+}
+.session-card-header.card-ts-bg,
+.session-card-header.card-ts-bg,
+.session-card-header.card-ts-bg{
+    background: linear-gradient(90deg, #2196f3 0%, #081236 100%) !important;
+}
+.session-card-header.card-tqb-bg,
+.session-card-header.card-tqb-bg,
+.session-card-header.card-tqb-bg{
+    background: linear-gradient(90deg, #4caf50 0%, #081236 100%) !important;
+}
+.session-card-header.card-pps-bg,
+.session-card-header.card-pps-bg,
+.session-card-header.card-pps-bg{
+    background: linear-gradient(90deg, #303532 0%, #081236 100%) !important;
+}
+.session-card-header.card-ldsb-bg,
+.session-card-header.card-ldsb-bg,
+.session-card-header.card-ldsb-bg{
+    background: linear-gradient(90deg, #ff9800 0%, #081236 100%) !important;
+}
+
+.active-card .status-badge-active,
+.inactive-card .status-badge-active {
+    background: rgba(255, 255, 255, 0.2);
+    color: #41ff86;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    font-size: 0.65rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    /*text-transform: uppercase;*/
+    display: inline-flex;
+    align-items: center;
+    /*gap: 4px;*/
+}
+
+/* Custom Progress Underline (Line of Action) */
+.roadmap-content {
+    width: 100%;
+    position: relative;
+}
+
+.line-progress {
+    height: 3px;
+    width: 100%;
+    background: #f1f5f9;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.line-progress .fill {
+    height: 100%;
+    border-radius: 2px;
+}
+
+.percentage-text {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+}
+
+/* Button style from image */
+.launch-btn {
+    background: #eab308;
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 10px;
+    text-transform: none;
+    letter-spacing: 1px;
+}
+.inactive-card .launch-btn {
+    background: #eab3082b;
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: not-allowed;
+}
+.journey-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 8px 20px; /* 15px 20px  */
+    margin-bottom: 20px; /* Reduced margin */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.journey-icon-box {
+    background-color: #dbeafe;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #a78bfa;
+    flex-shrink: 0;
+    margin-left:-10px;
+}
+.percentage{
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.select2-container--default .select2-selection--single {
+    border: 1px solid #aaaaaa5e !important;
+}
+.select2-container{
+    /* width: 225px !important; */
+    width: 190px !important;
+}
+.select2-container .select2-selection--single {
+    height: 38px !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 4px !important;
+    padding: 5px 10px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 26px !important;
+    /*color: #495057;*/
+    background: none !important;
+    color: #06c !important;
+    font-size:14px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 36px !important;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: #cccccc96 !important;
+}
+/* 1. App-Style Floating Container */
+.app-topbar {
+    background: rgba(255, 255, 255, 0.9); /* Glass effect */
+    /*backdrop-filter: blur(10px);  Modern iOS/Android blur */
+    border-radius: 20px; /* Rounded app corners */
+    margin: 15px; /* Floats away from screen edges */
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Soft depth */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 5px;
+}
+
+/* 2. The Smart Badge (App Icon Style) */
+.app-badge-hex {
+    /* width: 48px;
+    height: 48px; */
+    width: auto;
+    height: auto;
+    /*background: linear-gradient(135deg, #434343, #000000);*/
+    /*clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFD700; /* Gold number */
+    font-weight: 900;
+    font-size: 1.4rem;
+    /*filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));*/
+}
+.app-badge-hex img{
+    width: 70px !important;
+}
+
+/* 3. Typography (Clean & Compact) */
+.app-content {
+    flex: 1;
+}
+
+.app-title {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.2;
+
+    /*    font-size: 0.95rem;
+        font-weight: 800;
+        color: #1a1a1a;
+        margin: 0;
+        line-height: 1.2;*/
+}
+
+.app-subtitle {
+    font-size: 0.8rem;
+    color: #7a7a7a;
+    margin: 2px 0 0 0;
+    font-weight: 500;
+}
+
+/* 4. The "Haptic" Button */
+.btn-app-action {
+    background-image: linear-gradient(to right, #054dc7, #081236);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px; /* Squircle shape */
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    box-shadow: 0 6px 15px rgba(93, 70, 226, 0.3);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    white-space: nowrap;
+}
+.btn-app-action.whatsapp{
+    font-size: 32px !important;
+    line-height: 38px !important;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #f1b605, #ed7b1d) !important;
+}
+button.btn-app-action{
+    width:30% !important;
+}
+
+/* App-style press effect */
+.btn-app-action:active {
+    transform: scale(0.92); /* Shrinks when pressed like a real app button */
+    filter: brightness(0.9);
+}
+
+/* Optional "Smart" Notification Dot */
+.app-badge-hex::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 10px;
+    height: 10px;
+    background: #FF4B4B; /* Red alert dot */
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.extra-wrapper {
+    position: relative;
+    margin-top: 15px;
+    perspective: 1500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* 2. The Mascot: 3D Leap & Point Animation */
+.extra-mascot {
+    position: absolute;
+    top: -20px;
+    left: 15%;
+    z-index: 1;
+    font-size: 32px;
+    opacity: 0;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+    pointer-events: none;
+    /* The Leap Logic */
+    animation: extraordinaryLeap 7s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+@keyframes extraordinaryLeap {
+    0%, 5% {
+        transform: translateY(40px) scale(0);
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(-60px) rotate(-20deg) scale(1.2);
+        opacity: 1;
+    } /* The Jump */
+    15% {
+        transform: translateY(-45px) rotate(360deg) scale(1);
+    }              /* The Flip */
+    20%, 35% {
+        transform: translateY(-40px) translateX(10px) scale(1.1);
+        opacity: 1;
+    } /* The Pointing Pose */
+    40% {
+        transform: translateY(40px) scale(0);
+        opacity: 0;
+    }                 /* The Hide */
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 3. The Extraordinary Button: Neon Breathing & 3D Tilt */
+.btn-extraordinary {
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(to right,#f1b605,#ed7b1d)!important;
+    animation: gradientAnimation 2s ease infinite;
+    background-size: 200% 200%;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 0px;
+    width: 100%;
+    color: #fff;
+    font-weight: normal;
+    font-size: 1.1rem;
+    text-transform: none;
+    /*letter-spacing: 2px;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /*box-shadow: 0 10px 30px rgba(255, 189, 0, 0.4);*/
+    /*animation: buttonBreath 3.5s ease-in-out infinite, flowBG 5s linear infinite;*/
+}
+.inactive-card .btn-extraordinary,.inactive-card .btn-extraordinary svg, .inactive-card .btn-extraordinary i {
+    animation: none;
+}
+
+@keyframes flowBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes buttonBreath {
+    0%, 100% {
+        transform: scale(1) translateZ(0);
+        box-shadow: 0 10px 30px rgba(255, 189, 0, 0.4);
+    }
+    50% {
+        transform: scale(1.04) translateZ(20px);
+        box-shadow: 0 15px 45px rgba(255, 189, 0, 0.6);
+    }
+}
+
+/* The Moving Arrow Icon */
+.btn-extraordinary svg, .btn-extraordinary i {
+    animation: arrowMove 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowMove {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(8px);
+    }
+}
+
+/* Hover State: Extreme Depth */
+.btn-extraordinary:hover {
+    transform: translateY(-5px) rotateX(10deg);
+    filter: brightness(1.1);
+    letter-spacing: 3px;
+}
+
+.btn-extraordinary:active {
+    transform: scale(0.95);
+}
+.benefits-card {
+    background: #fff;
+    border: 2px solid #3157A7;  /*#FFC107;*/
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+/* 2. Header Style */
+.benefits-header {
+    background-color: #054dc7; /*#3157A7;*/
+    padding: 18px;
+    text-align: center;
+}
+
+.benefits-header h2 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+/* 3. Grid Layout */
+.benefits-body {
+    padding: 30px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #444;
+}
+
+/* 4. The "Smart" Checkmark */
+.check-icon {
+    width: 22px;
+    height: 22px;
+    /*background: #054dc7; #3157A7;*/
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+    box-shadow: 0 2px 5px rgba(255, 193, 7, 0.4);
+    background-image: linear-gradient(to right, #f1b605, #ed7b1d) !important;
+}
+
+.check-icon svg {
+    width: 14px;
+    height: 14px;
+    stroke: #fff;
+    stroke-width: 4;
+}
+
+/* 5. Typography Highlights */
+.benefit-text b {
+    color: #1a1a1a;
+    font-weight: 700;
+    /*text-decoration: underline;*/
+    text-underline-offset: 3px;
+    text-decoration-color: #3157A7; /*rgba(255, 193, 7, 0.5);*/
+}
+.app-image-container {
+    max-width: 100%; /* 450px; Limits width so it doesn't stretch too much on desktop */
+    /*margin: 2rem auto;*/
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+/* Subtle hover lift effect */
+.app-image-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Ensures the image fills the rounded container perfectly */
+.app-image-card {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Apply this to the DIV you want to load */
+/* This makes the DIV the reference point for the loader */
+#progress-div,
+.card-premium,
+.course-card{
+    position: relative !important;
+    /*min-height: 60px;  Adjust based on your card height */
+    overflow: hidden; /* Keeps the loader background from leaking out of rounded corners */
+}
+
+/* The Overlay */
+.section-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Opaque white to hide 'Loading...' text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Spinner scaling */
+.loader-wrapper-sm {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-icon-sm {
+    position: absolute;
+    width: 22px;
+}
+
+.custom-spinner-sm {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.2em;
+}
+.bg-validity{
+    background-color:#ffc107;
+}
+.bg-structured{
+    background-color: rgb(45 161 94) !important;
+}
+.bg-trending{
+    background-color: rgb(237 38 57) !important;
+}
+.bg-dark-blue{
+    background-color:#081236;
+}
+@media (max-width: 992px) {
+    button.btn-app-action {
+        width: 50% !important;
+    }
+}
+@media (max-width: 767px) {
+    #heroCarousel img {
+        height: 150px !important;
+        margin: 0 auto; /* Optional: centers the image if it's a block element */
+    }
+    button.btn-app-action{
+        width:100% !important;
+    }
+    .app-badge-hex img{
+        width: 70px !important;
+    }
+}
+@media (max-width: 575px) {
+    .journey-container .card-title{
+        font-size:18px !important;
+    }
+    h2{
+        font-size:20px;
+        line-height:26px;
+    }
+    .app-topbar{
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: 0;
+        gap: 5px;
+        margin-bottom: 5px !important;
+    }
+    .app-badge-hex{
+        /* width: 35px;
+        height: 35px; */
+    }
+    .app-badge-hex img{
+        width: 70px !important;
+    }
+    .app-title{
+        font-size: 12px;
+        line-height:18px;
+    }
+    .app-subtitle{
+        font-size: 0.70rem;
+    }
+    .btn-app-action{
+        /* font-size: 0.70rem; */
+        font-size: 14px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .btn-app-action.whatsapp {
+        font-size: 20px !important;
+        line-height: 26px !important;
+    }
+    button.btn-app-action{
+        width:100% !important;
+    }
+    .app-topbar button.btn-app-action{
+        width:35% !important;
+    }
+
+    .benefits-header h2 {
+        font-size:1rem;
+    }
+    .journey-icon-box {
+        width: 50px;
+        height: 50px;
+    }
+}
+@media (max-width: 413px) {
+    .bar-seprator {
+        margin-top: 115px !important;
+    }
+}

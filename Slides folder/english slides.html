@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://app.topgrade.pk/slides_viewer/MTY1/NDU5MA -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dashboard | TopGrade.pk</title>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <link rel="icon" type="image/png" href="https://app.topgrade.pk/assets/images/fav.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="./english slides_files/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="./english slides_files/bootstrap-icons.css">
+    <!-- Google Fonts: Outfit -->
+    <link href="./english slides_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./english slides_files/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./english slides_files/custom.css">
+    <link href="./english slides_files/select2.min.css" rel="stylesheet">
+        <script async="" src="./english slides_files/clarity.js.download"></script><script type="text/javascript" async="" src="./english slides_files/js"></script><script async="" src="./english slides_files/fjri95a5s1"></script><script async="" src="./english slides_files/gtm.js.download"></script><script type="text/javascript" async="" src="./english slides_files/analytics.js.download"></script><script type="text/javascript" async="" src="./english slides_files/js(1)"></script><script async="" src="./english slides_files/js(2)"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-114282899-2', {'optimize_id': 'GTM-523GCW9'});
+        </script>
+    <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-P4H5QPV');</script>
+
+    
+                    <script type="text/javascript">
+                (function (c, l, a, r, i, t, y) {
+                    c[a] = c[a] || function () {
+                        (c[a].q = c[a].q || []).push(arguments)
+                    };
+                    t = l.createElement(r);t.async = 1;t.src = "https://www.clarity.ms/tag/" + i;
+                    y = l.getElementsByTagName(r)[0];
+                    y.parentNode.insertBefore(t, y);
+                })(window, document, "clarity", "script", "fjri95a5s1");
+                clarity("set", "username", "03294121768");
+            </script>
+        
+        <script async="" defer="" src="./english slides_files/lo.js.download"></script>
+        <script>
+            window.LOQ = window.LOQ || [];
+            window.LOQ.push(['ready', async LO => {
+                    await LO.$internal.ready('events');
+
+                    // Track Product Name if exists
+        
+                    // Identify User
+                            await LO.$internal.ready('visitor');
+                    LO.visitor.identify('453531', {
+                        name: 'Testing',
+                        email: 'testing@gmail.com',
+                        type: 'Trial User',
+                        subscription: 'None'
+                    });
+                }]);
+        </script>
+    
+<style>
+    :root {
+        --primary-blue: #3f6ad8;
+        --primary-green: #3ac47d;
+        --bg-gray: #f8f9fa;
+        --blue-primary: #1676dd;
+    }
+
+    /* Prevent scrolling on desktop, allow on mobile if content is tall */
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        background-color: var(--bg-gray);
+        font-family: 'Inter', -apple-system, sans-serif;
+    }
+
+    /* Main App Wrapper */
+    .app-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        /* Use min-height to allow expansion */
+        align-items: center;
+        padding: 10px;
+        position: relative;
+    }
+
+    /* The Content Card - Pushed to center */
+    .app-card {
+        width: 100%;
+        max-width: 700px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        margin-top: auto;
+        /* Magic: pushes card from top */
+        margin-bottom: auto;
+        /* Magic: pushes card from bottom */
+    }
+
+    .video-section {
+        width: 100%;
+        max-width: 700px;
+        /* background: #000; */
+    }
+
+    .info-section {
+        padding: 1.25rem;
+    }
+
+    .breadcrumb-text {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: #1754bb;
+    }
+
+    .stat-badge {
+        border: none;
+        border-radius: 8px;
+        padding: 6px 16px;
+        font-weight: 500;
+        font-size: .9rem;
+    }
+
+    .badge-views {
+        background-color: #eef2ff;
+        color: #4338ca;
+    }
+
+    .badge-likes {
+        background-color: #ecfdf5;
+        color: #065f46;
+    }
+
+    .badge-dislikes {
+        background-color: #fef2f2;
+        color: #991b1b;
+    }
+
+    .bottom-nav .btn-app-action.bg-success {
+        /* background-image: linear-gradient(to right, #198754, #0a5b35); */
+        background: linear-gradient(90deg, #ffc400 0%, #ff7a12 100%);
+    }
+
+    /* Fixed Sticky Footer */
+    .app-footer {
+        width: 100%;
+        max-width: 500px;
+        /* Small and centered like an app */
+        position: sticky;
+        bottom: 20px;
+        /* Distance from bottom */
+        margin: 0 auto 10px auto;
+        z-index: 1000;
+    }
+
+    .nav-container {
+        display: flex;
+        border-radius: 50px;
+        /* Pill shape for app feel */
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        background: white;
+    }
+
+    .nav-btn {
+        flex: 1;
+        border: none;
+        padding: 14px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    }
+
+    .btn-prev {
+        background-color: var(--primary-blue);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-next {
+        background-color: var(--primary-green);
+    }
+
+    .nav-btn:hover {
+        opacity: 0.9;
+        color: white;
+    }
+
+    .nav-btn:active {
+        transform: scale(0.98);
+    }
+
+    /* Mobile par jab image click ho to scroll allow karein */
+    /* Image par zoom-in cursor dikhane ke liye */
+    .carousel-item img {
+        cursor: zoom-in;
+    }
+
+    /* Modal ke andar image ki styling */
+    .slide-zoom {
+        max-height: 90vh;
+        transition: transform 0.3s ease;
+        cursor: grab;
+    }
+
+    .heading-title {
+        font-size: 22px;
+        font-weight: bold;
+        /* color: #1754bb; */
+        margin: 0;
+        line-height: 34px;
+    }
+
+    /* -------------------------------------
+           GREETING SECTION
+        -------------------------------------- */
+    .greeting-section {
+        display: grid;
+        grid-template-columns: 65px 1fr;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 0px;
+        flex-shrink: 0;
+        width: 700px;
+    }
+
+    .hero-mascot {
+        display: block;
+        margin: 0 auto 12px;
+        width: 70px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .speech-bubble {
+        position: relative;
+        background: var(--blue-primary);
+        color: #fff;
+        border-radius: 10px;
+        /* 1. Flexbox alignment add karein */
+        display: flex;
+        align-items: center;
+        /* Vertical center */
+        justify-content: center;
+        /* Horizontal center */
+        text-align: center;
+        padding: 10px 14px;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 2px 8px rgba(27, 72, 174, 0.1);
+        font-size: 0.85rem;
+        line-height: 1.35;
+        font-weight: 500;
+    }
+
+    .speech-bubble::before {
+        content: "";
+        position: absolute;
+        left: -14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 14px solid var(--blue-primary);
+    }
+
+    .app-subtitle {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .slide-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px 0;
+        width: 30%;
+    }
+
+    .slide-indicator .line-container {
+        flex: 1;
+        position: relative;
+        height: 2px;
+        background-color: #c0c0ff;
+        /* line color */
+    }
+
+    /* Left line: use ::after for the diamond */
+    .slide-indicator .line-container:first-child::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #c0c0ff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: -3px;
+        right: -4px;
+    }
+
+    /* Right line: use ::before for the diamond */
+    .slide-indicator .line-container:last-child::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #c0c0ff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: -3px;
+        left: -4px;
+    }
+
+    .slide-indicator .text {
+        font-weight: 500;
+        font-size: 14px;
+        color: #4a4aee;
+        margin: 0 12px;
+        white-space: nowrap;
+    }
+
+    /* Actions Row (card-style) */
+    .actions-row {
+        border: 1px solid #e5e8f0;
+        border-radius: 12px;
+        background: #fff;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+
+    .action-item {
+        cursor: pointer;
+        padding: 14px 8px;
+        transition: background 0.2s;
+        text-align: center;
+    }
+
+    .action-item:hover { background: #f8fafc; }
+    .action-item:active { background: #f1f5f9; }
+
+    .action-item .action-icon {
+        font-size: 22px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .action-item .action-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: #111827;
+    }
+
+    .action-link {
+        text-decoration: none !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        line-height: 1.2;
+    }
+
+    .text-purple {
+        color: #9b5de5;
+    }
+
+    /* Mobile responsive full view */
+    @media (max-width: 576px) {
+        .modal-body {
+            overflow: auto !important;
+            /* Mobile par user scroll/pinch kar sakay */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .slide-zoom {
+            max-height: unset;
+            width: 100%;
+        }
+
+
+    }
+
+    @media (max-width: 480px) {
+        .bottom-nav {
+            height: 60px;
+        }
+
+        .video-action-box .action-icon {
+            font-size: 16px;
+        }
+
+        .video-action-item {
+            font-size: 12px;
+        }
+
+        .slide-indicator {
+            width: 80%;
+        }
+
+        .breadcrumb-text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    /* Glassmorphism Background */
+    #fullViewModal .modal-content {
+        background: rgba(0, 0, 0, 0.85) !important;
+        backdrop-filter: blur(8px);
+    }
+
+    /* Responsive Tweaks */
+    @media (max-width: 768px) {
+
+        body,
+        html {
+            overflow-y: auto;
+        }
+
+        /* Ensure mobile can scroll if video is large */
+
+        .app-wrapper {
+            padding-bottom: 100px;
+            /* Space for the fixed footer */
+            justify-content: flex-start;
+        }
+
+        .app-footer {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: none;
+        }
+
+        .app-card {
+            /* margin-top: 15px; */
+            margin-bottom: 20px;
+        }
+
+        .nav-btn span {
+            font-size: 0.85rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .heading-title {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        .greeting-section {
+            width: 100%;
+        }
+
+        .app-subtitle {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+</style><style>:root{--swal2-outline: 0 0 0 3px rgba(100, 150, 200, 0.5);--swal2-container-padding: 0.625em;--swal2-backdrop: rgba(0, 0, 0, 0.4);--swal2-backdrop-transition: background-color 0.15s;--swal2-width: 32em;--swal2-padding: 0 0 1.25em;--swal2-border: none;--swal2-border-radius: 0.3125rem;--swal2-background: white;--swal2-color: #545454;--swal2-show-animation: swal2-show 0.3s;--swal2-hide-animation: swal2-hide 0.15s forwards;--swal2-icon-zoom: 1;--swal2-title-padding: 0.8em 1em 0;--swal2-html-container-padding: 1em 1.6em 0.3em;--swal2-input-border: 1px solid #d9d9d9;--swal2-input-border-radius: 0.1875em;--swal2-input-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;--swal2-input-background: transparent;--swal2-input-transition: border-color 0.2s, box-shadow 0.2s;--swal2-input-hover-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;--swal2-input-focus-border: 1px solid #b4dbed;--swal2-input-focus-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px rgba(100, 150, 200, 0.5);--swal2-progress-step-background: #add8e6;--swal2-validation-message-background: #f0f0f0;--swal2-validation-message-color: #666;--swal2-footer-border-color: #eee;--swal2-footer-background: transparent;--swal2-footer-color: inherit;--swal2-timer-progress-bar-background: rgba(0, 0, 0, 0.3);--swal2-close-button-position: initial;--swal2-close-button-inset: auto;--swal2-close-button-font-size: 2.5em;--swal2-close-button-color: #ccc;--swal2-close-button-transition: color 0.2s, box-shadow 0.2s;--swal2-close-button-outline: initial;--swal2-close-button-box-shadow: inset 0 0 0 3px transparent;--swal2-close-button-focus-box-shadow: inset var(--swal2-outline);--swal2-close-button-hover-transform: none;--swal2-actions-justify-content: center;--swal2-actions-width: auto;--swal2-actions-margin: 1.25em auto 0;--swal2-actions-padding: 0;--swal2-actions-border-radius: 0;--swal2-actions-background: transparent;--swal2-action-button-transition: background-color 0.2s, box-shadow 0.2s;--swal2-action-button-hover: black 10%;--swal2-action-button-active: black 10%;--swal2-confirm-button-box-shadow: none;--swal2-confirm-button-border-radius: 0.25em;--swal2-confirm-button-background-color: #7066e0;--swal2-confirm-button-color: #fff;--swal2-deny-button-box-shadow: none;--swal2-deny-button-border-radius: 0.25em;--swal2-deny-button-background-color: #dc3741;--swal2-deny-button-color: #fff;--swal2-cancel-button-box-shadow: none;--swal2-cancel-button-border-radius: 0.25em;--swal2-cancel-button-background-color: #6e7881;--swal2-cancel-button-color: #fff;--swal2-toast-show-animation: swal2-toast-show 0.5s;--swal2-toast-hide-animation: swal2-toast-hide 0.1s forwards;--swal2-toast-border: none;--swal2-toast-box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 1px 2px hsl(0deg 0% 0% / 0.075), 1px 2px 4px hsl(0deg 0% 0% / 0.075), 1px 3px 8px hsl(0deg 0% 0% / 0.075), 2px 4px 16px hsl(0deg 0% 0% / 0.075)}[data-swal2-theme=dark]{--swal2-dark-theme-black: #19191a;--swal2-dark-theme-white: #e1e1e1;--swal2-background: var(--swal2-dark-theme-black);--swal2-color: var(--swal2-dark-theme-white);--swal2-footer-border-color: #555;--swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);--swal2-validation-message-background: color-mix( in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10% );--swal2-validation-message-color: var(--swal2-dark-theme-white);--swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7)}@media(prefers-color-scheme: dark){[data-swal2-theme=auto]{--swal2-dark-theme-black: #19191a;--swal2-dark-theme-white: #e1e1e1;--swal2-background: var(--swal2-dark-theme-black);--swal2-color: var(--swal2-dark-theme-white);--swal2-footer-border-color: #555;--swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);--swal2-validation-message-background: color-mix( in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10% );--swal2-validation-message-color: var(--swal2-dark-theme-white);--swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7)}}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto !important}body.swal2-no-backdrop .swal2-container{background-color:rgba(0,0,0,0) !important;pointer-events:none}body.swal2-no-backdrop .swal2-container .swal2-popup{pointer-events:auto}body.swal2-no-backdrop .swal2-container .swal2-modal{box-shadow:0 0 10px var(--swal2-backdrop)}body.swal2-toast-shown .swal2-container{box-sizing:border-box;width:360px;max-width:100%;background-color:rgba(0,0,0,0);pointer-events:none}body.swal2-toast-shown .swal2-container.swal2-top{inset:0 auto auto 50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{inset:0 0 auto auto}body.swal2-toast-shown .swal2-container.swal2-top-start,body.swal2-toast-shown .swal2-container.swal2-top-left{inset:0 auto auto 0}body.swal2-toast-shown .swal2-container.swal2-center-start,body.swal2-toast-shown .swal2-container.swal2-center-left{inset:50% auto auto 0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{inset:50% auto auto 50%;transform:translate(-50%, -50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{inset:50% 0 auto auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-start,body.swal2-toast-shown .swal2-container.swal2-bottom-left{inset:auto auto 0 0}body.swal2-toast-shown .swal2-container.swal2-bottom{inset:auto auto 0 50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{inset:auto 0 0 auto}@media print{body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown){overflow-y:scroll !important}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown) .swal2-container{position:static !important}}div:where(.swal2-container){display:grid;position:fixed;z-index:1060;inset:0;box-sizing:border-box;grid-template-areas:"top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";grid-template-rows:minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);height:100%;padding:var(--swal2-container-padding);overflow-x:hidden;transition:var(--swal2-backdrop-transition);-webkit-overflow-scrolling:touch}div:where(.swal2-container).swal2-backdrop-show,div:where(.swal2-container).swal2-noanimation{background:var(--swal2-backdrop)}div:where(.swal2-container).swal2-backdrop-hide{background:rgba(0,0,0,0) !important}div:where(.swal2-container).swal2-top-start,div:where(.swal2-container).swal2-center-start,div:where(.swal2-container).swal2-bottom-start{grid-template-columns:minmax(0, 1fr) auto auto}div:where(.swal2-container).swal2-top,div:where(.swal2-container).swal2-center,div:where(.swal2-container).swal2-bottom{grid-template-columns:auto minmax(0, 1fr) auto}div:where(.swal2-container).swal2-top-end,div:where(.swal2-container).swal2-center-end,div:where(.swal2-container).swal2-bottom-end{grid-template-columns:auto auto minmax(0, 1fr)}div:where(.swal2-container).swal2-top-start>.swal2-popup{align-self:start}div:where(.swal2-container).swal2-top>.swal2-popup{grid-column:2;place-self:start center}div:where(.swal2-container).swal2-top-end>.swal2-popup,div:where(.swal2-container).swal2-top-right>.swal2-popup{grid-column:3;place-self:start end}div:where(.swal2-container).swal2-center-start>.swal2-popup,div:where(.swal2-container).swal2-center-left>.swal2-popup{grid-row:2;align-self:center}div:where(.swal2-container).swal2-center>.swal2-popup{grid-column:2;grid-row:2;place-self:center center}div:where(.swal2-container).swal2-center-end>.swal2-popup,div:where(.swal2-container).swal2-center-right>.swal2-popup{grid-column:3;grid-row:2;place-self:center end}div:where(.swal2-container).swal2-bottom-start>.swal2-popup,div:where(.swal2-container).swal2-bottom-left>.swal2-popup{grid-column:1;grid-row:3;align-self:end}div:where(.swal2-container).swal2-bottom>.swal2-popup{grid-column:2;grid-row:3;place-self:end center}div:where(.swal2-container).swal2-bottom-end>.swal2-popup,div:where(.swal2-container).swal2-bottom-right>.swal2-popup{grid-column:3;grid-row:3;place-self:end end}div:where(.swal2-container).swal2-grow-row>.swal2-popup,div:where(.swal2-container).swal2-grow-fullscreen>.swal2-popup{grid-column:1/4;width:100%}div:where(.swal2-container).swal2-grow-column>.swal2-popup,div:where(.swal2-container).swal2-grow-fullscreen>.swal2-popup{grid-row:1/4;align-self:stretch}div:where(.swal2-container).swal2-no-transition{transition:none !important}div:where(.swal2-container)[popover]{width:auto;border:0}div:where(.swal2-container) div:where(.swal2-popup){display:none;position:relative;box-sizing:border-box;grid-template-columns:minmax(0, 100%);width:var(--swal2-width);max-width:100%;padding:var(--swal2-padding);border:var(--swal2-border);border-radius:var(--swal2-border-radius);background:var(--swal2-background);color:var(--swal2-color);font-family:inherit;font-size:1rem}div:where(.swal2-container) div:where(.swal2-popup):focus{outline:none}div:where(.swal2-container) div:where(.swal2-popup).swal2-loading{overflow-y:hidden}div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable{cursor:grab}div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable div:where(.swal2-icon){cursor:grab}div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging{cursor:grabbing}div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging div:where(.swal2-icon){cursor:grabbing}div:where(.swal2-container) h2:where(.swal2-title){position:relative;max-width:100%;margin:0;padding:var(--swal2-title-padding);color:inherit;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;overflow-wrap:break-word;cursor:initial}div:where(.swal2-container) div:where(.swal2-actions){display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:var(--swal2-actions-justify-content);width:var(--swal2-actions-width);margin:var(--swal2-actions-margin);padding:var(--swal2-actions-padding);border-radius:var(--swal2-actions-border-radius);background:var(--swal2-actions-background)}div:where(.swal2-container) div:where(.swal2-loader){display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 rgba(0,0,0,0) #2778c4 rgba(0,0,0,0)}div:where(.swal2-container) button:where(.swal2-styled){margin:.3125em;padding:.625em 1.1em;transition:var(--swal2-action-button-transition);border:none;box-shadow:0 0 0 3px rgba(0,0,0,0);font-weight:500}div:where(.swal2-container) button:where(.swal2-styled):not([disabled]){cursor:pointer}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){border-radius:var(--swal2-confirm-button-border-radius);background:initial;background-color:var(--swal2-confirm-button-background-color);box-shadow:var(--swal2-confirm-button-box-shadow);color:var(--swal2-confirm-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):hover{background-color:color-mix(in srgb, var(--swal2-confirm-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):active{background-color:color-mix(in srgb, var(--swal2-confirm-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny){border-radius:var(--swal2-deny-button-border-radius);background:initial;background-color:var(--swal2-deny-button-background-color);box-shadow:var(--swal2-deny-button-box-shadow);color:var(--swal2-deny-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny):hover{background-color:color-mix(in srgb, var(--swal2-deny-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny):active{background-color:color-mix(in srgb, var(--swal2-deny-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel){border-radius:var(--swal2-cancel-button-border-radius);background:initial;background-color:var(--swal2-cancel-button-background-color);box-shadow:var(--swal2-cancel-button-box-shadow);color:var(--swal2-cancel-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel):hover{background-color:color-mix(in srgb, var(--swal2-cancel-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel):active{background-color:color-mix(in srgb, var(--swal2-cancel-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):focus-visible{outline:none;box-shadow:var(--swal2-action-button-focus-box-shadow)}div:where(.swal2-container) button:where(.swal2-styled)[disabled]:not(.swal2-loading){opacity:.4}div:where(.swal2-container) button:where(.swal2-styled)::-moz-focus-inner{border:0}div:where(.swal2-container) div:where(.swal2-footer){margin:1em 0 0;padding:1em 1em 0;border-top:1px solid var(--swal2-footer-border-color);background:var(--swal2-footer-background);color:var(--swal2-footer-color);font-size:1em;text-align:center;cursor:initial}div:where(.swal2-container) .swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;grid-column:auto !important;overflow:hidden;border-bottom-right-radius:var(--swal2-border-radius);border-bottom-left-radius:var(--swal2-border-radius)}div:where(.swal2-container) div:where(.swal2-timer-progress-bar){width:100%;height:.25em;background:var(--swal2-timer-progress-bar-background)}div:where(.swal2-container) img:where(.swal2-image){max-width:100%;margin:2em auto 1em;cursor:initial}div:where(.swal2-container) button:where(.swal2-close){position:var(--swal2-close-button-position);inset:var(--swal2-close-button-inset);z-index:2;align-items:center;justify-content:center;width:1.2em;height:1.2em;margin-top:0;margin-right:0;margin-bottom:-1.2em;padding:0;overflow:hidden;transition:var(--swal2-close-button-transition);border:none;border-radius:var(--swal2-border-radius);outline:var(--swal2-close-button-outline);background:rgba(0,0,0,0);color:var(--swal2-close-button-color);font-family:monospace;font-size:var(--swal2-close-button-font-size);cursor:pointer;justify-self:end}div:where(.swal2-container) button:where(.swal2-close):hover{transform:var(--swal2-close-button-hover-transform);background:rgba(0,0,0,0);color:#f27474}div:where(.swal2-container) button:where(.swal2-close):focus-visible{outline:none;box-shadow:var(--swal2-close-button-focus-box-shadow)}div:where(.swal2-container) button:where(.swal2-close)::-moz-focus-inner{border:0}div:where(.swal2-container) div:where(.swal2-html-container){z-index:1;justify-content:center;margin:0;padding:var(--swal2-html-container-padding);overflow:auto;color:inherit;font-size:1.125em;font-weight:normal;line-height:normal;text-align:center;overflow-wrap:break-word;word-break:break-word;cursor:initial}div:where(.swal2-container) input:where(.swal2-input),div:where(.swal2-container) input:where(.swal2-file),div:where(.swal2-container) textarea:where(.swal2-textarea),div:where(.swal2-container) select:where(.swal2-select),div:where(.swal2-container) div:where(.swal2-radio),div:where(.swal2-container) label:where(.swal2-checkbox){margin:1em 2em 3px}div:where(.swal2-container) input:where(.swal2-input),div:where(.swal2-container) input:where(.swal2-file),div:where(.swal2-container) textarea:where(.swal2-textarea){box-sizing:border-box;width:auto;transition:var(--swal2-input-transition);border:var(--swal2-input-border);border-radius:var(--swal2-input-border-radius);background:var(--swal2-input-background);box-shadow:var(--swal2-input-box-shadow);color:inherit;font-size:1.125em}div:where(.swal2-container) input:where(.swal2-input).swal2-inputerror,div:where(.swal2-container) input:where(.swal2-file).swal2-inputerror,div:where(.swal2-container) textarea:where(.swal2-textarea).swal2-inputerror{border-color:#f27474 !important;box-shadow:0 0 2px #f27474 !important}div:where(.swal2-container) input:where(.swal2-input):hover,div:where(.swal2-container) input:where(.swal2-file):hover,div:where(.swal2-container) textarea:where(.swal2-textarea):hover{box-shadow:var(--swal2-input-hover-box-shadow)}div:where(.swal2-container) input:where(.swal2-input):focus,div:where(.swal2-container) input:where(.swal2-file):focus,div:where(.swal2-container) textarea:where(.swal2-textarea):focus{border:var(--swal2-input-focus-border);outline:none;box-shadow:var(--swal2-input-focus-box-shadow)}div:where(.swal2-container) input:where(.swal2-input)::placeholder,div:where(.swal2-container) input:where(.swal2-file)::placeholder,div:where(.swal2-container) textarea:where(.swal2-textarea)::placeholder{color:#ccc}div:where(.swal2-container) .swal2-range{margin:1em 2em 3px;background:var(--swal2-background)}div:where(.swal2-container) .swal2-range input{width:80%}div:where(.swal2-container) .swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}div:where(.swal2-container) .swal2-range input,div:where(.swal2-container) .swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}div:where(.swal2-container) .swal2-input{height:2.625em;padding:0 .75em}div:where(.swal2-container) .swal2-file{width:75%;margin-right:auto;margin-left:auto;background:var(--swal2-input-background);font-size:1.125em}div:where(.swal2-container) .swal2-textarea{height:6.75em;padding:.75em}div:where(.swal2-container) .swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:var(--swal2-input-background);color:inherit;font-size:1.125em}div:where(.swal2-container) .swal2-radio,div:where(.swal2-container) .swal2-checkbox{align-items:center;justify-content:center;background:var(--swal2-background);color:inherit}div:where(.swal2-container) .swal2-radio label,div:where(.swal2-container) .swal2-checkbox label{margin:0 .6em;font-size:1.125em}div:where(.swal2-container) .swal2-radio input,div:where(.swal2-container) .swal2-checkbox input{flex-shrink:0;margin:0 .4em}div:where(.swal2-container) label:where(.swal2-input-label){display:flex;justify-content:center;margin:1em auto 0}div:where(.swal2-container) div:where(.swal2-validation-message){align-items:center;justify-content:center;margin:1em 0 0;padding:.625em;overflow:hidden;background:var(--swal2-validation-message-background);color:var(--swal2-validation-message-color);font-size:1em;font-weight:300}div:where(.swal2-container) div:where(.swal2-validation-message)::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}div:where(.swal2-container) .swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:1.25em auto;padding:0;background:rgba(0,0,0,0);font-weight:600}div:where(.swal2-container) .swal2-progress-steps li{display:inline-block;position:relative}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:var(--swal2-progress-step-background);color:#fff}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:var(--swal2-progress-step-background)}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}div:where(.swal2-icon){position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:2.5em auto .6em;zoom:var(--swal2-icon-zoom);border:.25em solid rgba(0,0,0,0);border-radius:50%;border-color:#000;font-family:inherit;line-height:5em;cursor:default;user-select:none}div:where(.swal2-icon) .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}div:where(.swal2-icon).swal2-error{border-color:#f27474;color:#f27474}div:where(.swal2-icon).swal2-error .swal2-x-mark{position:relative;flex-grow:1}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-error.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-error.swal2-icon-show .swal2-x-mark{animation:swal2-animate-error-x-mark .5s}div:where(.swal2-icon).swal2-warning{border-color:#f8bb86;color:#f8bb86}div:where(.swal2-icon).swal2-warning.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-warning.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .5s}div:where(.swal2-icon).swal2-info{border-color:#3fc3ee;color:#3fc3ee}div:where(.swal2-icon).swal2-info.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-info.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .8s}div:where(.swal2-icon).swal2-question{border-color:#87adbd;color:#87adbd}div:where(.swal2-icon).swal2-question.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-question.swal2-icon-show .swal2-icon-content{animation:swal2-animate-question-mark .8s}div:where(.swal2-icon).swal2-success{border-color:#a5dc86;color:#a5dc86}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;border-radius:50%}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}div:where(.swal2-icon).swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-0.25em;left:-0.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}div:where(.swal2-icon).swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-animate-success-line-tip .75s}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-animate-success-line-long .75s}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-circular-line-right{animation:swal2-rotate-success-circular-line 4.25s ease-in}[class^=swal2]{-webkit-tap-highlight-color:rgba(0,0,0,0)}.swal2-show{animation:var(--swal2-show-animation)}.swal2-hide{animation:var(--swal2-hide-animation)}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{margin-right:initial;margin-left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}.swal2-toast{box-sizing:border-box;grid-column:1/4 !important;grid-row:1/4 !important;grid-template-columns:min-content auto min-content;padding:1em;overflow-y:hidden;border:var(--swal2-toast-border);background:var(--swal2-background);box-shadow:var(--swal2-toast-box-shadow);pointer-events:auto}.swal2-toast>*{grid-column:2}.swal2-toast h2:where(.swal2-title){margin:.5em 1em;padding:0;font-size:1em;text-align:initial}.swal2-toast .swal2-loading{justify-content:center}.swal2-toast input:where(.swal2-input){height:2em;margin:.5em;font-size:1em}.swal2-toast .swal2-validation-message{font-size:1em}.swal2-toast div:where(.swal2-footer){margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-toast button:where(.swal2-close){grid-column:3/3;grid-row:1/99;align-self:center;width:.8em;height:.8em;margin:0;font-size:2em}.swal2-toast div:where(.swal2-html-container){margin:.5em 1em;padding:0;overflow:initial;font-size:1em;text-align:initial}.swal2-toast div:where(.swal2-html-container):empty{padding:0}.swal2-toast .swal2-loader{grid-column:1;grid-row:1/99;align-self:center;width:2em;height:2em;margin:.25em}.swal2-toast .swal2-icon{grid-column:1;grid-row:1/99;align-self:center;width:2em;min-width:2em;height:2em;margin:0 .5em 0 0}.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:bold}.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-toast div:where(.swal2-actions){justify-content:flex-start;height:auto;margin:0;margin-top:.5em;padding:0 .5em}.swal2-toast button:where(.swal2-styled){margin:.25em .5em;padding:.4em .6em;font-size:1em}.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;border-radius:50%}.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.8em;left:-0.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-toast-animate-success-line-tip .75s}.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-toast-animate-success-line-long .75s}.swal2-toast.swal2-show{animation:var(--swal2-toast-show-animation)}.swal2-toast.swal2-hide{animation:var(--swal2-toast-hide-animation)}@keyframes swal2-show{0%{transform:translate3d(0, -50px, 0) scale(0.9);opacity:0}100%{transform:translate3d(0, 0, 0) scale(1);opacity:1}}@keyframes swal2-hide{0%{transform:translate3d(0, 0, 0) scale(1);opacity:1}100%{transform:translate3d(0, -50px, 0) scale(0.9);opacity:0}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-0.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(0.4);opacity:0}50%{margin-top:1.625em;transform:scale(0.4);opacity:0}80%{margin-top:-0.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0deg);opacity:1}}@keyframes swal2-rotate-loading{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes swal2-animate-question-mark{0%{transform:rotateY(-360deg)}100%{transform:rotateY(0)}}@keyframes swal2-animate-i-mark{0%{transform:rotateZ(45deg);opacity:0}25%{transform:rotateZ(-25deg);opacity:.4}50%{transform:rotateZ(15deg);opacity:.8}75%{transform:rotateZ(-5deg);opacity:1}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-toast-show{0%{transform:translateY(-0.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(0.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0deg)}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-0.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}</style></head>
+
+
+
+<body>
+    <style>
+    /* Container for the logo + spinner */
+    .loader-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* The custom icon in the center */
+    .loader-icon {
+        position: absolute;
+        width: 33px; /* Adjust size to fit inside the spinner */
+        /*height: 30px;*/
+        object-fit: contain;
+    }
+
+    /* Adjusting the spinner size to wrap the icon */
+    .custom-spinner {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-width: 0.25em;
+    }
+</style>
+
+    <header class="p-1 bg-brand border-bottom fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-1">
+                    <a onclick="PreparationWay(0)" style="cursor: pointer;" id="header_home_link">
+                <picture id="header_home_image" class="d-none">
+                    <source srcset="https://www.topgrade.pk/public/assets/website/images/tg-insignia-white.webp" type="image/webp">
+                    <source srcset="https://www.topgrade.pk/public/assets/website/images/tg-insignia-white.png" type="image/png">
+                    <img class="img-fluid" style="width: 32px; border-radius: 0" src="./english slides_files/tg-insignia-white.png" alt="Online Entry Test Preparation" title="Online Entry Test Preparation">
+                </picture>
+                <span id="header_home_text" class="ms-2 fw-bold text-white "><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</span>
+            </a>
+                <style>
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        text-align: center !important;
+    }
+
+    /** */
+    .select2-container--default .select2-results>.select2-results__options {
+        padding: 0px 10px 10px 10px;
+    }
+
+    .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+        background-color: #cccccc82 !important;
+        color: #000;
+        margin-bottom: 7px !important;
+        margin-top: 7px !important;
+    }
+
+    .select2-results__option {
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 14px;
+    }
+</style>
+<select id="courseSearch" class="form-select dropdown-premium mx-auto select2-hidden-accessible" style="
+    width: auto;
+    min-width: 220px;
+    border-radius: 12px;
+    /*padding: 10px 20px;*/
+    border: 1px solid #ccc;
+    /*                        font-weight: 600;
+                            color: #1e293b;*/
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    " onchange="BuildCourse(this.value, &#39;https://app.topgrade.pk/&#39;, &#39;0&#39;)" data-select2-id="select2-data-courseSearch" tabindex="-1" aria-hidden="true">
+    <option selected="" disabled="">Select Your Course</option>
+                    <option value="170">F.Sc 2nd Year Pre-Medical (Punjab)</option>
+                                <option value="229">F.Sc 1st Year Pre-Med. (Punjab - 2025 Sm</option>
+                                <option value="188" selected="" data-badge="Active" data-select2-id="select2-data-2-4amm">MDCAT (Punjab)</option>
+                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-1-97xo" style="width: 352px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-courseSearch-container" aria-controls="select2-courseSearch-container"><span class="select2-selection__rendered" id="select2-courseSearch-container" role="textbox" aria-readonly="true" title="MDCAT (Punjab)">MDCAT (Punjab)</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>        <div class="d-flex align-items-center">
+                            <a href="https://app.topgrade.pk/logout">
+                    <i class="fa fa-sign-out text-white" aria-hidden="true"></i>
+                </a>
+                    </div>
+    </div>
+</header>
+
+
+    <div class="app-wrapper mt-4 py-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="heading-title w-100 text-center">Slides</h1>
+        </div>
+        <div class="greeting-section">
+            <img src="./english slides_files/docm-frn.png" alt="Review Mascot" class="hero-mascot">
+            <div class="speech-bubble shadow-sm">
+                <p class="app-subtitle text-white">Revise with slides, clear with video, save with bookmark.</p>
+            </div>
+        </div>
+                    <div class="slide-indicator">
+                <!-- <div class="line-container"></div> -->
+                <div class="text">Slide <span id="current_idx">1</span> / 72</div>
+                <!-- <div class="line-container"></div> -->
+            </div>
+                <div class="video-section border rounded shadow-sm mb-3" id="slide_show">
+                            <div id="slideCarousel" class="carousel slide" data-bs-interval="false">
+                    <!-- <div class="text-center py-2 bg-light border-bottom">
+                            <span class="fw-bold text-primary" style="font-size:14px;">
+                                Slide - <span id="current_idx">1</span> of 72                            </span>
+                        </div> -->
+
+                    <div class="carousel-inner" id="slider">
+                                                    <div class="carousel-item active" data-slide-id="1" data-index="1" data-video-url="" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/1^^513cbe04907cb34cc3c9afa175b32b33MTc3NTM3NDc1NzUxM2NiZTA0OTA3Y2IzNGNjM2M5YWZhMTc1YjMyYjMz.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/1^^513cbe04907cb34cc3c9afa175b32b33MTc3NTM3NDc1NzUxM2NiZTA0OTA3Y2IzNGNjM2M5YWZhMTc1YjMyYjMz.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="2" data-index="2" data-video-url="https://www.youtube.com/embed/PmPYLvrLWk0" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/2^^62664c789486dfe686eb6eeed34e34b3MTc3NTM3NDc1NzYyNjY0Yzc4OTQ4NmRmZTY4NmViNmVlZWQzNGUzNGIz.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/2^^62664c789486dfe686eb6eeed34e34b3MTc3NTM3NDc1NzYyNjY0Yzc4OTQ4NmRmZTY4NmViNmVlZWQzNGUzNGIz.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="3" data-index="3" data-video-url="https://www.youtube.com/embed/XoTjHYg8lHM" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/3^^96bd96e67c95e1bc521b37f36bf31d13MTc3NTM3NDc1Nzk2YmQ5NmU2N2M5NWUxYmM1MjFiMzdmMzZiZjMxZDEz.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/3^^96bd96e67c95e1bc521b37f36bf31d13MTc3NTM3NDc1Nzk2YmQ5NmU2N2M5NWUxYmM1MjFiMzdmMzZiZjMxZDEz.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="4" data-index="4" data-video-url="https://www.youtube.com/embed/w88oJ67LEpY" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/4^^ac7ebf2ca256951cdf97d586eb2de5e4MTc3NTM3NDc1N2FjN2ViZjJjYTI1Njk1MWNkZjk3ZDU4NmViMmRlNWU0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/4^^ac7ebf2ca256951cdf97d586eb2de5e4MTc3NTM3NDc1N2FjN2ViZjJjYTI1Njk1MWNkZjk3ZDU4NmViMmRlNWU0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="5" data-index="5" data-video-url="https://www.youtube.com/embed/EKzLsrGwuUM" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/5^^14a9708ec48cb0a91b16718b146dbd85MTc3NTM3NDc1NzE0YTk3MDhlYzQ4Y2IwYTkxYjE2NzE4YjE0NmRiZDg1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/5^^14a9708ec48cb0a91b16718b146dbd85MTc3NTM3NDc1NzE0YTk3MDhlYzQ4Y2IwYTkxYjE2NzE4YjE0NmRiZDg1.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="6" data-index="6" data-video-url="https://www.youtube.com/embed/J1b6v5wDigQ" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/6^^3d9e99abf0ad6e7e19e68c7cb026b8a7MTc3NTM3NDc1NzNkOWU5OWFiZjBhZDZlN2UxOWU2OGM3Y2IwMjZiOGE3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/6^^3d9e99abf0ad6e7e19e68c7cb026b8a7MTc3NTM3NDc1NzNkOWU5OWFiZjBhZDZlN2UxOWU2OGM3Y2IwMjZiOGE3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="7" data-index="7" data-video-url="https://www.youtube.com/embed/zhlpOCCoz6s" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/7^^54c3d9db3ef81daa195ef10d48c4a7feMTc3NTM3NDc1NzU0YzNkOWRiM2VmODFkYWExOTVlZjEwZDQ4YzRhN2Zl.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/7^^54c3d9db3ef81daa195ef10d48c4a7feMTc3NTM3NDc1NzU0YzNkOWRiM2VmODFkYWExOTVlZjEwZDQ4YzRhN2Zl.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="8" data-index="8" data-video-url="https://www.youtube.com/embed/9two7UFyMlE" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/8^^6cebbc389e5ddde681e51b5688d2988bMTc3NTM3NDc1NzZjZWJiYzM4OWU1ZGRkZTY4MWU1MWI1Njg4ZDI5ODhi.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/8^^6cebbc389e5ddde681e51b5688d2988bMTc3NTM3NDc1NzZjZWJiYzM4OWU1ZGRkZTY4MWU1MWI1Njg4ZDI5ODhi.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="9" data-index="9" data-video-url="https://www.youtube.com/embed/5gy3Ny_yRdk" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/9^^0e0a1e2a13ad3c4519d2c3baa2614106MTc3NTM3NDc1NzBlMGExZTJhMTNhZDNjNDUxOWQyYzNiYWEyNjE0MTA2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/9^^0e0a1e2a13ad3c4519d2c3baa2614106MTc3NTM3NDc1NzBlMGExZTJhMTNhZDNjNDUxOWQyYzNiYWEyNjE0MTA2.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="10" data-index="10" data-video-url="https://www.youtube.com/embed/P2TUy8ynAMI" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/10^^a7e66a2015a67740d4fa90ce5c2cb001MTc3NTM3NDc1N2E3ZTY2YTIwMTVhNjc3NDBkNGZhOTBjZTVjMmNiMDAx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/10^^a7e66a2015a67740d4fa90ce5c2cb001MTc3NTM3NDc1N2E3ZTY2YTIwMTVhNjc3NDBkNGZhOTBjZTVjMmNiMDAx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="11" data-index="11" data-video-url="https://www.youtube.com/embed/Pw30d1IYcUQ" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/11^^6cadcf154a61d280a3090fba4bcbb7bcMTc3NTM3NDc1NzZjYWRjZjE1NGE2MWQyODBhMzA5MGZiYTRiY2JiN2Jj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/11^^6cadcf154a61d280a3090fba4bcbb7bcMTc3NTM3NDc1NzZjYWRjZjE1NGE2MWQyODBhMzA5MGZiYTRiY2JiN2Jj.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="12" data-index="12" data-video-url="https://www.youtube.com/embed/G2B00ZmiS9c" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/12^^0148cae039a503cd7d1d583888f0a5c8MTc3NTM3NDc1NzAxNDhjYWUwMzlhNTAzY2Q3ZDFkNTgzODg4ZjBhNWM4.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/12^^0148cae039a503cd7d1d583888f0a5c8MTc3NTM3NDc1NzAxNDhjYWUwMzlhNTAzY2Q3ZDFkNTgzODg4ZjBhNWM4.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="13" data-index="13" data-video-url="https://www.youtube.com/embed/_JUN-nqrcB0" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/13^^56472f9af84ff418590706862c15ace5MTc3NTM3NDc1NzU2NDcyZjlhZjg0ZmY0MTg1OTA3MDY4NjJjMTVhY2U1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/13^^56472f9af84ff418590706862c15ace5MTc3NTM3NDc1NzU2NDcyZjlhZjg0ZmY0MTg1OTA3MDY4NjJjMTVhY2U1.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="14" data-index="14" data-video-url="https://www.youtube.com/embed/f4qDS2Fv2b4" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/14^^7f233de368dd9e391c1edfec1cfbfd4bMTc3NTM3NDc1NzdmMjMzZGUzNjhkZDllMzkxYzFlZGZlYzFjZmJmZDRi.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/14^^7f233de368dd9e391c1edfec1cfbfd4bMTc3NTM3NDc1NzdmMjMzZGUzNjhkZDllMzkxYzFlZGZlYzFjZmJmZDRi.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="15" data-index="15" data-video-url="https://www.youtube.com/embed/czKl38r7cxM" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/15^^a112df5ef1614d827ebe64a747d5b1a0MTc3NTM3NDc1N2ExMTJkZjVlZjE2MTRkODI3ZWJlNjRhNzQ3ZDViMWEw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/15^^a112df5ef1614d827ebe64a747d5b1a0MTc3NTM3NDc1N2ExMTJkZjVlZjE2MTRkODI3ZWJlNjRhNzQ3ZDViMWEw.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="16" data-index="16" data-video-url="https://www.youtube.com/embed/v4HoqzTBLqI" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/16^^1787929fd4b100f6f274f38816467a6fMTc3NTM3NDc1NzE3ODc5MjlmZDRiMTAwZjZmMjc0ZjM4ODE2NDY3YTZm.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/16^^1787929fd4b100f6f274f38816467a6fMTc3NTM3NDc1NzE3ODc5MjlmZDRiMTAwZjZmMjc0ZjM4ODE2NDY3YTZm.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="17" data-index="17" data-video-url="https://www.youtube.com/embed/Q_Gs6oKMHcg" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/17^^4eab9a3464ecf19e85c579e63463f05bMTc3NTM3NDc1NzRlYWI5YTM0NjRlY2YxOWU4NWM1NzllNjM0NjNmMDVi.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/17^^4eab9a3464ecf19e85c579e63463f05bMTc3NTM3NDc1NzRlYWI5YTM0NjRlY2YxOWU4NWM1NzllNjM0NjNmMDVi.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="18" data-index="18" data-video-url="https://www.youtube.com/embed/_O8HvPHFWz8" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/18^^7d111017007a5e8da97720311bb54b2dMTc3NTM3NDc1NzdkMTExMDE3MDA3YTVlOGRhOTc3MjAzMTFiYjU0YjJk.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/18^^7d111017007a5e8da97720311bb54b2dMTc3NTM3NDc1NzdkMTExMDE3MDA3YTVlOGRhOTc3MjAzMTFiYjU0YjJk.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="19" data-index="19" data-video-url="https://www.youtube.com/embed/KJ7_ExK70jk" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/19^^0de85408fd9ff4e3da9f227e7d346a20MTc3NTM3NDc1NzBkZTg1NDA4ZmQ5ZmY0ZTNkYTlmMjI3ZTdkMzQ2YTIw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/19^^0de85408fd9ff4e3da9f227e7d346a20MTc3NTM3NDc1NzBkZTg1NDA4ZmQ5ZmY0ZTNkYTlmMjI3ZTdkMzQ2YTIw.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="20" data-index="20" data-video-url="https://www.youtube.com/embed/ngAZiNeYk9I" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/20^^5f414c1203be75c7d29c8ebcd6cb4fd1MTc3NTM3NDc1NzVmNDE0YzEyMDNiZTc1YzdkMjljOGViY2Q2Y2I0ZmQx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/20^^5f414c1203be75c7d29c8ebcd6cb4fd1MTc3NTM3NDc1NzVmNDE0YzEyMDNiZTc1YzdkMjljOGViY2Q2Y2I0ZmQx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="21" data-index="21" data-video-url="https://www.youtube.com/embed/hRyH03oVa4I" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/21^^6e7f49801f4ca0f01b8d88d4be29ea2fMTc3NTM3NDc1NzZlN2Y0OTgwMWY0Y2EwZjAxYjhkODhkNGJlMjllYTJm.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/21^^6e7f49801f4ca0f01b8d88d4be29ea2fMTc3NTM3NDc1NzZlN2Y0OTgwMWY0Y2EwZjAxYjhkODhkNGJlMjllYTJm.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="22" data-index="22" data-video-url="https://www.youtube.com/embed/eqmZBbkjaVE" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/22^^77eb3c07b03c7cdb47cb77a329929645MTc3NTM3NDc1Nzc3ZWIzYzA3YjAzYzdjZGI0N2NiNzdhMzI5OTI5NjQ1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/22^^77eb3c07b03c7cdb47cb77a329929645MTc3NTM3NDc1Nzc3ZWIzYzA3YjAzYzdjZGI0N2NiNzdhMzI5OTI5NjQ1.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="23" data-index="23" data-video-url="https://www.youtube.com/embed/E3ZXtdXVFOE" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/23^^c8326e522a133d21c85cddb89a7f3cceMTc3NTM3NDc1N2M4MzI2ZTUyMmExMzNkMjFjODVjZGRiODlhN2YzY2Nl.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/23^^c8326e522a133d21c85cddb89a7f3cceMTc3NTM3NDc1N2M4MzI2ZTUyMmExMzNkMjFjODVjZGRiODlhN2YzY2Nl.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="24" data-index="24" data-video-url="https://www.youtube.com/embed/TuKJIgpjyQM" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/24^^82bbd263ceaaac8541df0065d2cb34d1MTc3NTM3NDc1NzgyYmJkMjYzY2VhYWFjODU0MWRmMDA2NWQyY2IzNGQx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/24^^82bbd263ceaaac8541df0065d2cb34d1MTc3NTM3NDc1NzgyYmJkMjYzY2VhYWFjODU0MWRmMDA2NWQyY2IzNGQx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="25" data-index="25" data-video-url="https://www.youtube.com/embed/9wjQU5LZTLE" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/25^^f374aa527599df95cbb7510733814719MTc3NTM3NDc1N2YzNzRhYTUyNzU5OWRmOTVjYmI3NTEwNzMzODE0NzE5.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/25^^f374aa527599df95cbb7510733814719MTc3NTM3NDc1N2YzNzRhYTUyNzU5OWRmOTVjYmI3NTEwNzMzODE0NzE5.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="26" data-index="26" data-video-url="https://www.youtube.com/embed/YkOpyQWQtII" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/26^^a6cf61b2dffd99c383422a35dcaa2057MTc3NTM3NDc1N2E2Y2Y2MWIyZGZmZDk5YzM4MzQyMmEzNWRjYWEyMDU3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/26^^a6cf61b2dffd99c383422a35dcaa2057MTc3NTM3NDc1N2E2Y2Y2MWIyZGZmZDk5YzM4MzQyMmEzNWRjYWEyMDU3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="27" data-index="27" data-video-url="https://www.youtube.com/embed/JCwz1pF9vxw" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/27^^5856e0710e691e83653b620018f78a80MTc3NTM3NDc1NzU4NTZlMDcxMGU2OTFlODM2NTNiNjIwMDE4Zjc4YTgw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/27^^5856e0710e691e83653b620018f78a80MTc3NTM3NDc1NzU4NTZlMDcxMGU2OTFlODM2NTNiNjIwMDE4Zjc4YTgw.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="28" data-index="28" data-video-url="https://www.youtube.com/embed/wUGMxeNy8rU" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/28^^4f20706bfdce24f28b70754bf8b2bffcMTc3NTM3NDc1NzRmMjA3MDZiZmRjZTI0ZjI4YjcwNzU0YmY4YjJiZmZj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/28^^4f20706bfdce24f28b70754bf8b2bffcMTc3NTM3NDc1NzRmMjA3MDZiZmRjZTI0ZjI4YjcwNzU0YmY4YjJiZmZj.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="29" data-index="29" data-video-url="" data-has-video="false" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/29^^0e22d63ebfbf551f45f76ae679319fb1MTc3NTM3NDc1NzBlMjJkNjNlYmZiZjU1MWY0NWY3NmFlNjc5MzE5ZmIx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/29^^0e22d63ebfbf551f45f76ae679319fb1MTc3NTM3NDc1NzBlMjJkNjNlYmZiZjU1MWY0NWY3NmFlNjc5MzE5ZmIx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="30" data-index="30" data-video-url="https://www.youtube.com/embed/4vUpYenmdsM" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/30^^51f5bd3ed161b040c9342c8eaa791c6cMTc3NTM3NDc1NzUxZjViZDNlZDE2MWIwNDBjOTM0MmM4ZWFhNzkxYzZj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/30^^51f5bd3ed161b040c9342c8eaa791c6cMTc3NTM3NDc1NzUxZjViZDNlZDE2MWIwNDBjOTM0MmM4ZWFhNzkxYzZj.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="31" data-index="31" data-video-url="https://www.youtube.com/embed/r0Ku0_Q481s" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/31^^8cc91af4b7de3516e75e5842442b95baMTc3NTM3NDc1NzhjYzkxYWY0YjdkZTM1MTZlNzVlNTg0MjQ0MmI5NWJh.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/31^^8cc91af4b7de3516e75e5842442b95baMTc3NTM3NDc1NzhjYzkxYWY0YjdkZTM1MTZlNzVlNTg0MjQ0MmI5NWJh.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="32" data-index="32" data-video-url="https://www.youtube.com/embed/SlpDLvKzreA" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/32^^6fa9b7ff3d0cb26e362919c132d607afMTc3NTM3NDc1NzZmYTliN2ZmM2QwY2IyNmUzNjI5MTljMTMyZDYwN2Fm.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/32^^6fa9b7ff3d0cb26e362919c132d607afMTc3NTM3NDc1NzZmYTliN2ZmM2QwY2IyNmUzNjI5MTljMTMyZDYwN2Fm.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="33" data-index="33" data-video-url="https://www.youtube.com/embed/7L15RfwP3QQ" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/33^^f7c39b4019c71478d50e69ef780f058aMTc3NTM3NDc1N2Y3YzM5YjQwMTljNzE0NzhkNTBlNjllZjc4MGYwNThh.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/33^^f7c39b4019c71478d50e69ef780f058aMTc3NTM3NDc1N2Y3YzM5YjQwMTljNzE0NzhkNTBlNjllZjc4MGYwNThh.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="34" data-index="34" data-video-url="https://www.youtube.com/embed/qY1Cq7NUcJs" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/34^^f1217282731e6d8419c0ebb8adc896daMTc3NTM3NDc1N2YxMjE3MjgyNzMxZTZkODQxOWMwZWJiOGFkYzg5NmRh.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/34^^f1217282731e6d8419c0ebb8adc896daMTc3NTM3NDc1N2YxMjE3MjgyNzMxZTZkODQxOWMwZWJiOGFkYzg5NmRh.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="35" data-index="35" data-video-url="https://www.youtube.com/embed/0BvJRIMRlqo" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/35^^9444e06b5b506eda4b9237f6fe6441b8MTc3NTM3NDc1Nzk0NDRlMDZiNWI1MDZlZGE0YjkyMzdmNmZlNjQ0MWI4.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/35^^9444e06b5b506eda4b9237f6fe6441b8MTc3NTM3NDc1Nzk0NDRlMDZiNWI1MDZlZGE0YjkyMzdmNmZlNjQ0MWI4.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="36" data-index="36" data-video-url="https://www.youtube.com/embed/OFV_wfKIK_c" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/36^^e5fa574791d3aee518682d39e77a9d4aMTc3NTM3NDc1N2U1ZmE1NzQ3OTFkM2FlZTUxODY4MmQzOWU3N2E5ZDRh.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/36^^e5fa574791d3aee518682d39e77a9d4aMTc3NTM3NDc1N2U1ZmE1NzQ3OTFkM2FlZTUxODY4MmQzOWU3N2E5ZDRh.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="37" data-index="37" data-video-url="https://www.youtube.com/embed/1zw7dRpU6N0" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/37^^c3b01347d20778749aeed597d7e11ae4MTc3NTM3NDc1N2MzYjAxMzQ3ZDIwNzc4NzQ5YWVlZDU5N2Q3ZTExYWU0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/37^^c3b01347d20778749aeed597d7e11ae4MTc3NTM3NDc1N2MzYjAxMzQ3ZDIwNzc4NzQ5YWVlZDU5N2Q3ZTExYWU0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="38" data-index="38" data-video-url="https://www.youtube.com/embed/QZ5u6OgMoGw" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/38^^87f55cea9d9bd49e11bec08a93cd6d58MTc3NTM3NDc1Nzg3ZjU1Y2VhOWQ5YmQ0OWUxMWJlYzA4YTkzY2Q2ZDU4.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/38^^87f55cea9d9bd49e11bec08a93cd6d58MTc3NTM3NDc1Nzg3ZjU1Y2VhOWQ5YmQ0OWUxMWJlYzA4YTkzY2Q2ZDU4.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="39" data-index="39" data-video-url="https://www.youtube.com/embed/cwlQ-vvwWvo" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/39^^e5dccba2d796393f0ef0aab81402360bMTc3NTM3NDc1N2U1ZGNjYmEyZDc5NjM5M2YwZWYwYWFiODE0MDIzNjBi.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/39^^e5dccba2d796393f0ef0aab81402360bMTc3NTM3NDc1N2U1ZGNjYmEyZDc5NjM5M2YwZWYwYWFiODE0MDIzNjBi.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="40" data-index="40" data-video-url="https://www.youtube.com/embed/Wkka1JORx9Y" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/40^^0a3949b31c70f948ba2a995beaedd695MTc3NTM3NDc1NzBhMzk0OWIzMWM3MGY5NDhiYTJhOTk1YmVhZWRkNjk1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/40^^0a3949b31c70f948ba2a995beaedd695MTc3NTM3NDc1NzBhMzk0OWIzMWM3MGY5NDhiYTJhOTk1YmVhZWRkNjk1.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="41" data-index="41" data-video-url="https://www.youtube.com/embed/hHkkqwtLn_4" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/41^^62c9ea079f929505ae8909e3404a7c11MTc3NTM3NDc1NzYyYzllYTA3OWY5Mjk1MDVhZTg5MDllMzQwNGE3YzEx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/41^^62c9ea079f929505ae8909e3404a7c11MTc3NTM3NDc1NzYyYzllYTA3OWY5Mjk1MDVhZTg5MDllMzQwNGE3YzEx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="42" data-index="42" data-video-url="https://www.youtube.com/embed/DQYRKXVLDrY" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/42^^a5c9a62ba0b81da107c02d08e255eeaeMTc3NTM3NDc1N2E1YzlhNjJiYTBiODFkYTEwN2MwMmQwOGUyNTVlZWFl.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/42^^a5c9a62ba0b81da107c02d08e255eeaeMTc3NTM3NDc1N2E1YzlhNjJiYTBiODFkYTEwN2MwMmQwOGUyNTVlZWFl.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="43" data-index="43" data-video-url="https://www.youtube.com/embed/Oq2YIa6h4DY" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/43^^3be7087d6072b76241727ab54968beecMTc3NTM3NDc1NzNiZTcwODdkNjA3MmI3NjI0MTcyN2FiNTQ5NjhiZWVj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/43^^3be7087d6072b76241727ab54968beecMTc3NTM3NDc1NzNiZTcwODdkNjA3MmI3NjI0MTcyN2FiNTQ5NjhiZWVj.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="44" data-index="44" data-video-url="https://www.youtube.com/embed/yDNClqep5HM" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/44^^b54eeb920279af9aa9f459d47d3d02feMTc3NTM3NDc1N2I1NGVlYjkyMDI3OWFmOWFhOWY0NTlkNDdkM2QwMmZl.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/44^^b54eeb920279af9aa9f459d47d3d02feMTc3NTM3NDc1N2I1NGVlYjkyMDI3OWFmOWFhOWY0NTlkNDdkM2QwMmZl.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="45" data-index="45" data-video-url="https://www.youtube.com/embed/gN_h6ZZ3xk4" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/45^^d6068eedf89efd6e3bd2c049ba997811MTc3NTM3NDc1N2Q2MDY4ZWVkZjg5ZWZkNmUzYmQyYzA0OWJhOTk3ODEx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/45^^d6068eedf89efd6e3bd2c049ba997811MTc3NTM3NDc1N2Q2MDY4ZWVkZjg5ZWZkNmUzYmQyYzA0OWJhOTk3ODEx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="46" data-index="46" data-video-url="https://www.youtube.com/embed/loCEYbGd_k0" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/46^^5a841239ae81079c3d7ef440c406cd07MTc3NTM3NDc1NzVhODQxMjM5YWU4MTA3OWMzZDdlZjQ0MGM0MDZjZDA3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/46^^5a841239ae81079c3d7ef440c406cd07MTc3NTM3NDc1NzVhODQxMjM5YWU4MTA3OWMzZDdlZjQ0MGM0MDZjZDA3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="47" data-index="47" data-video-url="https://www.youtube.com/embed/oxAjL7RRtBo" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/47^^976d3c1c0f0a75ee153cc185ec209151MTc3NTM3NDc1Nzk3NmQzYzFjMGYwYTc1ZWUxNTNjYzE4NWVjMjA5MTUx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/47^^976d3c1c0f0a75ee153cc185ec209151MTc3NTM3NDc1Nzk3NmQzYzFjMGYwYTc1ZWUxNTNjYzE4NWVjMjA5MTUx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="48" data-index="48" data-video-url="https://www.youtube.com/embed/sJ1HjRWTSP4" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/48^^26eca8f972affa1559b014f2c4d57fdbMTc3NTM3NDc1NzI2ZWNhOGY5NzJhZmZhMTU1OWIwMTRmMmM0ZDU3ZmRi.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/48^^26eca8f972affa1559b014f2c4d57fdbMTc3NTM3NDc1NzI2ZWNhOGY5NzJhZmZhMTU1OWIwMTRmMmM0ZDU3ZmRi.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="49" data-index="49" data-video-url="https://www.youtube.com/embed/ENZqBdZxq04" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/49^^6d33ea343a37537363c914c860f34250MTc3NTM3NDc1NzZkMzNlYTM0M2EzNzUzNzM2M2M5MTRjODYwZjM0MjUw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/49^^6d33ea343a37537363c914c860f34250MTc3NTM3NDc1NzZkMzNlYTM0M2EzNzUzNzM2M2M5MTRjODYwZjM0MjUw.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="50" data-index="50" data-video-url="https://www.youtube.com/embed/KbSkTeBemFU" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/50^^dae2c2de77e5681f37148755e692b599MTc3NTM3NDc1N2RhZTJjMmRlNzdlNTY4MWYzNzE0ODc1NWU2OTJiNTk5.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/50^^dae2c2de77e5681f37148755e692b599MTc3NTM3NDc1N2RhZTJjMmRlNzdlNTY4MWYzNzE0ODc1NWU2OTJiNTk5.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="51" data-index="51" data-video-url="https://www.youtube.com/embed/W1eqzIWUjQQ" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/51^^cd83831aad32cec6cc8b18131e56ad8dMTc3NTM3NDc1N2NkODM4MzFhYWQzMmNlYzZjYzhiMTgxMzFlNTZhZDhk.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/51^^cd83831aad32cec6cc8b18131e56ad8dMTc3NTM3NDc1N2NkODM4MzFhYWQzMmNlYzZjYzhiMTgxMzFlNTZhZDhk.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="52" data-index="52" data-video-url="https://www.youtube.com/embed/WqLY5KbNsfk" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/52^^7aacd0fae60c1d67a43cd45c17fd87d1MTc3NTM3NDc1NzdhYWNkMGZhZTYwYzFkNjdhNDNjZDQ1YzE3ZmQ4N2Qx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/52^^7aacd0fae60c1d67a43cd45c17fd87d1MTc3NTM3NDc1NzdhYWNkMGZhZTYwYzFkNjdhNDNjZDQ1YzE3ZmQ4N2Qx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="53" data-index="53" data-video-url="https://www.youtube.com/embed/mUpf8ajjjok" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/53^^c0f5eac9282a7a368befd3dba4e2c0a3MTc3NTM3NDc1N2MwZjVlYWM5MjgyYTdhMzY4YmVmZDNkYmE0ZTJjMGEz.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/53^^c0f5eac9282a7a368befd3dba4e2c0a3MTc3NTM3NDc1N2MwZjVlYWM5MjgyYTdhMzY4YmVmZDNkYmE0ZTJjMGEz.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="54" data-index="54" data-video-url="https://www.youtube.com/embed/VCQO1Ny2M38" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/54^^ab9ba0c140621cfa66c0017eacfc7579MTc3NTM3NDc1N2FiOWJhMGMxNDA2MjFjZmE2NmMwMDE3ZWFjZmM3NTc5.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/54^^ab9ba0c140621cfa66c0017eacfc7579MTc3NTM3NDc1N2FiOWJhMGMxNDA2MjFjZmE2NmMwMDE3ZWFjZmM3NTc5.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="55" data-index="55" data-video-url="https://www.youtube.com/embed/v7aVqS1gL1I" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/55^^d471bb96e37570dc50e39dc9a068c141MTc3NTM3NDc1N2Q0NzFiYjk2ZTM3NTcwZGM1MGUzOWRjOWEwNjhjMTQx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/55^^d471bb96e37570dc50e39dc9a068c141MTc3NTM3NDc1N2Q0NzFiYjk2ZTM3NTcwZGM1MGUzOWRjOWEwNjhjMTQx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="56" data-index="56" data-video-url="" data-has-video="false" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/56^^a0d41af0e30c99cc27c097dd5280f677MTc3NTM3NDc1N2EwZDQxYWYwZTMwYzk5Y2MyN2MwOTdkZDUyODBmNjc3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/56^^a0d41af0e30c99cc27c097dd5280f677MTc3NTM3NDc1N2EwZDQxYWYwZTMwYzk5Y2MyN2MwOTdkZDUyODBmNjc3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="57" data-index="57" data-video-url="https://www.youtube.com/embed/U8ZnLWJLqGc" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/57^^77fdfcf5f782febabb3978fd900a6417MTc3NTM3NDc1Nzc3ZmRmY2Y1Zjc4MmZlYmFiYjM5NzhmZDkwMGE2NDE3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/57^^77fdfcf5f782febabb3978fd900a6417MTc3NTM3NDc1Nzc3ZmRmY2Y1Zjc4MmZlYmFiYjM5NzhmZDkwMGE2NDE3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="58" data-index="58" data-video-url="https://www.youtube.com/embed/wjRNxgpSARw" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/58^^4bee06986f8b66b6332779b45bf97d73MTc3NTM3NDc1NzRiZWUwNjk4NmY4YjY2YjYzMzI3NzliNDViZjk3ZDcz.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/58^^4bee06986f8b66b6332779b45bf97d73MTc3NTM3NDc1NzRiZWUwNjk4NmY4YjY2YjYzMzI3NzliNDViZjk3ZDcz.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="59" data-index="59" data-video-url="https://www.youtube.com/embed/EhhLts7nvVw" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/59^^728bcb3a08a43e693e8cc4084f7a7767MTc3NTM3NDc1NzcyOGJjYjNhMDhhNDNlNjkzZThjYzQwODRmN2E3NzY3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/59^^728bcb3a08a43e693e8cc4084f7a7767MTc3NTM3NDc1NzcyOGJjYjNhMDhhNDNlNjkzZThjYzQwODRmN2E3NzY3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="60" data-index="60" data-video-url="https://www.youtube.com/embed/adWJ8c6EzZE" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/60^^36daee0df5d9b49a41b175e979603d27MTc3NTM3NDc1NzM2ZGFlZTBkZjVkOWI0OWE0MWIxNzVlOTc5NjAzZDI3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/60^^36daee0df5d9b49a41b175e979603d27MTc3NTM3NDc1NzM2ZGFlZTBkZjVkOWI0OWE0MWIxNzVlOTc5NjAzZDI3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="61" data-index="61" data-video-url="https://www.youtube.com/embed/2P_n_EOQNic" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/61^^14d4f1cd777fc2fcb284ce39f87aca23MTc3NTM3NDc1NzE0ZDRmMWNkNzc3ZmMyZmNiMjg0Y2UzOWY4N2FjYTIz.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/61^^14d4f1cd777fc2fcb284ce39f87aca23MTc3NTM3NDc1NzE0ZDRmMWNkNzc3ZmMyZmNiMjg0Y2UzOWY4N2FjYTIz.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="62" data-index="62" data-video-url="https://www.youtube.com/embed/HjIpOiaxcHk" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/62^^0832a1a427f4ddd0f0032a531d626296MTc3NTM3NDc1NzA4MzJhMWE0MjdmNGRkZDBmMDAzMmE1MzFkNjI2Mjk2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/62^^0832a1a427f4ddd0f0032a531d626296MTc3NTM3NDc1NzA4MzJhMWE0MjdmNGRkZDBmMDAzMmE1MzFkNjI2Mjk2.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="63" data-index="63" data-video-url="https://www.youtube.com/embed/LCPMoQ9gLbA" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/63^^5e587e1eafd7f8da9690c6a4ee36807fMTc3NTM3NDc1NzVlNTg3ZTFlYWZkN2Y4ZGE5NjkwYzZhNGVlMzY4MDdm.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/63^^5e587e1eafd7f8da9690c6a4ee36807fMTc3NTM3NDc1NzVlNTg3ZTFlYWZkN2Y4ZGE5NjkwYzZhNGVlMzY4MDdm.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="64" data-index="64" data-video-url="https://www.youtube.com/embed/_0zTC_NMqOU" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/64^^94ae6a744c265bc930c776ec6f7bf6d5MTc3NTM3NDc1Nzk0YWU2YTc0NGMyNjViYzkzMGM3NzZlYzZmN2JmNmQ1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/64^^94ae6a744c265bc930c776ec6f7bf6d5MTc3NTM3NDc1Nzk0YWU2YTc0NGMyNjViYzkzMGM3NzZlYzZmN2JmNmQ1.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="65" data-index="65" data-video-url="https://www.youtube.com/embed/V2GHwdwKJqo" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/65^^c1912cec58b4d391c7205bca67b99e38MTc3NTM3NDc1N2MxOTEyY2VjNThiNGQzOTFjNzIwNWJjYTY3Yjk5ZTM4.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/65^^c1912cec58b4d391c7205bca67b99e38MTc3NTM3NDc1N2MxOTEyY2VjNThiNGQzOTFjNzIwNWJjYTY3Yjk5ZTM4.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="66" data-index="66" data-video-url="https://www.youtube.com/embed/skNHAzZM6ks" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/66^^68291eae9268da64d7b3e08adde75ba7MTc3NTM3NDc1NzY4MjkxZWFlOTI2OGRhNjRkN2IzZTA4YWRkZTc1YmE3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/66^^68291eae9268da64d7b3e08adde75ba7MTc3NTM3NDc1NzY4MjkxZWFlOTI2OGRhNjRkN2IzZTA4YWRkZTc1YmE3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="67" data-index="67" data-video-url="https://www.youtube.com/embed/-CffPkl_ce8" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/67^^9e4d4eedd3eadb9e26035232de499496MTc3NTM3NDc1NzllNGQ0ZWVkZDNlYWRiOWUyNjAzNTIzMmRlNDk5NDk2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/67^^9e4d4eedd3eadb9e26035232de499496MTc3NTM3NDc1NzllNGQ0ZWVkZDNlYWRiOWUyNjAzNTIzMmRlNDk5NDk2.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="68" data-index="68" data-video-url="https://www.youtube.com/embed/WvhSZZM6FFA" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/68^^aa0e641b8d10df5fb6428673f4e63671MTc3NTM3NDc1N2FhMGU2NDFiOGQxMGRmNWZiNjQyODY3M2Y0ZTYzNjcx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/68^^aa0e641b8d10df5fb6428673f4e63671MTc3NTM3NDc1N2FhMGU2NDFiOGQxMGRmNWZiNjQyODY3M2Y0ZTYzNjcx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="69" data-index="69" data-video-url="https://www.youtube.com/embed/CfCbHBftyPs" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/69^^aeb78a5ace1d6aaed6f928aff136ba27MTc3NTM3NDc1N2FlYjc4YTVhY2UxZDZhYWVkNmY5MjhhZmYxMzZiYTI3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/69^^aeb78a5ace1d6aaed6f928aff136ba27MTc3NTM3NDc1N2FlYjc4YTVhY2UxZDZhYWVkNmY5MjhhZmYxMzZiYTI3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="70" data-index="70" data-video-url="https://www.youtube.com/embed/wcGiq-WOQuc" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/70^^67486775872fa9e57a20947b4f599961MTc3NTM3NDc1NzY3NDg2Nzc1ODcyZmE5ZTU3YTIwOTQ3YjRmNTk5OTYx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/70^^67486775872fa9e57a20947b4f599961MTc3NTM3NDc1NzY3NDg2Nzc1ODcyZmE5ZTU3YTIwOTQ3YjRmNTk5OTYx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="71" data-index="71" data-video-url="https://www.youtube.com/embed/roNWANZ3Z14" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/71^^7fe21f905bf3e8334736ca834e1e1d70MTc3NTM3NDc1NzdmZTIxZjkwNWJmM2U4MzM0NzM2Y2E4MzRlMWUxZDcw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/71^^7fe21f905bf3e8334736ca834e1e1d70MTc3NTM3NDc1NzdmZTIxZjkwNWJmM2U4MzM0NzM2Y2E4MzRlMWUxZDcw.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="72" data-index="72" data-video-url="https://www.youtube.com/embed/oP6T6rm0qlI" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./english slides_files/72^^acb2fcfeef7bb9f45bbbc1a6c4bf767aMTc3NTM3NDc1N2FjYjJmY2ZlZWY3YmI5ZjQ1YmJiYzFhNmM0YmY3Njdh.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/647586298/72^^acb2fcfeef7bb9f45bbbc1a6c4bf767aMTc3NTM3NDc1N2FjYjJmY2ZlZWY3YmI5ZjQ1YmJiYzFhNmM0YmY3Njdh.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                            </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#slideCarousel" data-bs-slide="prev">
+                        <span class="bg-dark rounded-circle d-flex align-items-center justify-content-center" style="width:35px; height:35px; opacity: 0.8;background-color: #fff !important;">
+                            <i class="fa fa-chevron-left text-primary"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#slideCarousel" data-bs-slide="next">
+                        <span class="bg-dark rounded-circle d-flex align-items-center justify-content-center" style="width:35px; height:35px; background-color: #fff !important;">
+                            <i class="fa fa-chevron-right text-primary"></i>
+                        </span>
+                    </button>
+                </div>
+                    </div>
+                    <div class="app-card p-4 mb-5" id="video-stat-section" style="position: relative; overflow: hidden;">
+
+                <!-- Actions Row -->
+                <div class="actions-row">
+                    <div class="row g-0 align-items-stretch">
+                        <div class="col-4 border-end action-item" id="bm_add" style="cursor:pointer;" onclick="slidebookmark(1, 1)">
+                            <i class="bi bi-bookmark action-icon text-primary" id="bookmark-icon-en"></i>
+                            <span class="action-label" id="bookmark-label-en">Bookmark</span>
+                        </div>
+                        <div class="col-4 border-end action-item" style="cursor:pointer;" onclick="ExportSlides('NjQ3NTg2Mjk4')">
+                            <i class="bi bi-download action-icon text-success"></i>
+                            <span class="action-label">Download All Slides</span>
+                        </div>
+                        <div class="col-4 action-item" id="play_video_btn" style="cursor:pointer;" onclick="PlaySlide('https://www.youtube.com/embed/CXiVvy8GD7Y')">
+                            <i class="bi bi-play-circle action-icon" style="color: #7c3aed;"></i>
+                            <span class="action-label">Play Video</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section pt-0">
+                    <!-- Subject Title -->
+                    <div class="breadcrumb-text mb-2" id="slide-topic-title" style="font-size: 1.05rem;">
+                        <b>English &amp; Logical Reasoning</b> - (Parts of sentences, Phrases)
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="d-flex gap-2 align-items-center justify-content-start mb-3">
+                        <div class="stat-badge badge-views"><i class="bi bi-eye-fill me-1"></i> <span id="slide_views_count">1.0k</span></div>
+
+                        <div class="stat-badge badge-likes" style="cursor:pointer;" id="like" onclick="Updatefrnfeedback(1)">
+                            <span>
+                                <i id="yt-up-fill" class="bi bi-hand-thumbs-up-fill me-1" style="display:none;"></i>
+                                <i id="yt-up-empty" class="bi bi-hand-thumbs-up me-1" style="display:inline-block;"></i>
+                                <span id="likescounts">16</span>
+                            </span>
+                        </div>
+
+                        <div class="stat-badge badge-dislikes" style="cursor:pointer;" id="dislike" onclick="Updatefrnfeedback(2)">
+                            <span>
+                                <i id="yt-down-empty" class="bi bi-hand-thumbs-down me-1" style="display:inline-block;"></i>
+                                <i id="yt-down-fill" class="bi bi-hand-thumbs-down-fill me-1 d-none"></i>
+                            </span>
+                        </div>
+                        <input type="hidden" id="frn_id_enc" value="1">
+                        <input type="hidden" id="slide_id_count" value="72">
+                    </div>
+                </div>
+
+                <div class="border rounded-3 p-2 mt-4">
+                    <div class="d-flex align-items-center gap-2 mb-2" style="font-size: 0.85rem; color: #1754bb;">
+                        <i class="bi bi-chat-left-text"></i>
+                        <span class="fw-bold">Comments &amp; Feedback <span id="all-comments-counter"></span></span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="bg-light rounded-circle border d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink:0;">
+                            <i class="bi bi-person text-secondary"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="comment-input" class="form-control form-control-sm border-1 bg-light" placeholder="Post your comment or feedback here..." aria-label="Comment">
+                            <div id="action-buttons" class="text-end mt-2 d-none">
+                                <button class="btn btn-sm btn-link text-primary" type="button" id="submit-btn" onclick="postComment('https://app.topgrade.pk/', 'f', 'english')">
+                                    <i class="bi bi-send-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div id="page-loader" class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white opacity-75 d-none" style="position: absolute !important; inset: 0px !important; width: 100% !important; height: 100% !important; min-height: 100% !important; background: rgba(255, 255, 255, 0.8) !important; display: none; align-items: center !important; justify-content: center !important; z-index: 999 !important;">
+    <div class="loader-wrapper">
+        <div class="spinner-border text-primary custom-spinner" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <img src="./english slides_files/tg-insignia.webp" alt="Loading Icon" class="loader-icon">
+    </div>
+</div></div>
+                <nav class="bottom-nav">
+                        <div class="container py-3 d-flex justify-content-center gap-3">
+                <div class="d-flex flex-wrap justify-content-center gap-3" style="max-width: 600px; width: 100%;">
+                    <a href="https://app.topgrade.pk/main-session/1?day_topic_id=MTY1&amp;day=MQ" class="btn-app-action flex-fill text-decoration-none text-center" style="cursor: pointer; min-width: 140px;">
+                        <i class="fa-solid fa-angles-left"></i> Roadmap
+                    </a>
+                    <a onclick="startStep(&#39;Mw&#39;, &#39;MTU3&#39;, &#39;MTY1&#39;)" class="btn-app-action flex-fill text-decoration-none text-center bg-success" style="cursor: pointer; min-width: 140px;">
+                        Next Step <i class="fa-solid fa-angles-right"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="app-footer d-none">
+            <div class="nav-container">
+                                <a href="https://app.topgrade.pk/main-session/1?day_topic_id=MTY1&amp;day=MQ" class="nav-btn btn-prev text-decoration-none">
+                    <i class="bi bi-chevron-left me-2"></i>
+                    <span>Road Map</span>
+                </a>
+
+                <a onclick="startStep(&#39;Mw&#39;, &#39;MTU3&#39;, &#39;MTY1&#39;)" style="cursor:pointer;" class="nav-btn btn-next text-decoration-none">
+                    <span>Next Step</span>
+                    <i class="bi bi-chevron-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark border-0">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="playable_video" src="./english slides_files/saved_resource.html" title="Video Player" allowfullscreen="" allow="autoplay; encrypted-media">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="modal-footer border-0 pt-0 justify-content-center">
+                    <p class="text-white-50 small mb-0"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="report_issue_model" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body text-center px-4 pb-4">
+                    <img class="img-fluid mb-3" src="./english slides_files/frn-issue.png" style="max-height: 150px;" alt="Issue Icon">
+                    <h4 class="fw-bold">Give Feedback</h4>
+                    <p class="text-muted small">Select any of the following to help us improve</p>
+                    <hr class="my-4 opacity-25">
+
+                    <div class="text-start">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="issue" id="radio1" value="FRN Seems to have a mistake" checked="">
+                            <label class="form-check-label w-100" for="radio1">FRN Seems to have a mistake</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="issue" id="radio2" value="Teaching strategy Needs Improvement">
+                            <label class="form-check-label w-100" for="radio2">Teaching strategy Needs Improvement</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="issue" id="radio3" value="FRN Seems to be out of exam scope">
+                            <label class="form-check-label w-100" for="radio3">FRN Seems to be out of exam scope</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="issue" id="radio4" value="0">
+                            <label class="form-check-label w-100" for="radio4">Other</label>
+                        </div>
+
+                        <div id="issue_msg_container" class="mt-3">
+                            <textarea class="form-control bg-light" id="issue_msg" name="issue_msg" rows="3" placeholder="Explain the issue here..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="button" onclick="SendVideoFrnIssue(&#39;https://app.topgrade.pk/&#39;, &#39;f&#39;, &#39;10863&#39;)" class="btn btn-primary btn-lg w-100 rounded-pill">Submit Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="report_issue_model_thanks" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content border-0 text-center p-4">
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
+                <img class="img-fluid my-3 mx-auto" src="./english slides_files/thanks.png" style="max-width: 120px;">
+                <h5 class="fw-bold">Thank You!</h5>
+                <p class="text-muted small mb-0">We appreciate your feedback.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="modal fade" id="fullViewModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down">
+                <div class="modal-content bg-dark border-0">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0 d-flex align-items-center justify-content-center" style="overflow: hidden;">
+                        <div class="zoom-container w-100 h-100 d-flex align-items-center justify-content-center">
+                            <img src="" id="fullViewImage" class="img-fluid slide-zoom" alt="Full View Slide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- Full View Modal -->
+    <div class="modal fade" id="fullViewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down modal-xl">
+            <div class="modal-content bg-dark border-0 position-relative h-100">
+
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="background-color: rgba(0,0,0,0.5); padding: 10px; border-radius: 50%;"></button>
+
+                <div class="modal-body p-0 d-flex align-items-center justify-content-center modal-swipe-zone position-relative overflow-hidden" style="min-height: 80vh; background-color: #0d1117;">
+
+                    <button class="btn text-white position-absolute start-0 top-50 translate-middle-y z-3 p-3 m-2 d-none d-md-block" onclick="modalNavigate(&#39;prev&#39;)" style="background-color: rgba(0,0,0,0.4); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa fa-chevron-left fs-4"></i>
+                    </button>
+
+                    <div class="w-100 h-100 d-flex align-items-center justify-content-center overflow-auto">
+                        <img id="fullViewImage" src="https://app.topgrade.pk/slides_viewer/MTY1/NDU5MA" class="img-fluid" style="max-height: 90vh; max-width: 100%; object-fit: contain; transition: transform 0.2s ease-in-out; transform-origin: center center; cursor: zoom-in;" alt="Full view screen">
+                    </div>
+
+                    <button class="btn text-white position-absolute end-0 top-50 translate-middle-y z-3 p-3 m-2 d-none d-md-block" onclick="modalNavigate(&#39;next&#39;)" style="background-color: rgba(0,0,0,0.4); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa fa-chevron-right fs-4"></i>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="report_issue_model_thanks" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered shadow-sm">
+            <div class="modal-content text-center p-5 border-0" style="border-radius: 20px;">
+                <img src="./english slides_files/thanks.png" class="img-fluid mx-auto mb-3" style="max-height: 100px;">
+                <h4 class="fw-bold">Thank You!</h4>
+                <p class="text-muted">Comment posted successfully.</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm mx-auto w-50" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+<script src="./english slides_files/bootstrap.bundle.min.js.download"></script>
+<!-- Custom JS -->
+<script src="./english slides_files/custom.js.download"></script>
+<script src="./english slides_files/jquery.min.js.download"></script>
+<script src="./english slides_files/select2.min.js.download"></script>
+<script>
+    function SessionTarget(url, way, learning_session_id) {
+        $("#page-loader").removeClass('d-none');
+        if (url == "") {
+            $("#page-loader").addClass('d-none');
+            return false;
+        } else {
+            if (learning_session_id == 3 || learning_session_id == 1) {
+                SetTag(127);
+            } else if (learning_session_id == 27) {
+                SetTag(134);
+            }
+            ajaxurl = "https://app.topgrade.pk/session-preparation-way";
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                async: false,
+                data: {
+                    way: way,
+                    learning_session_id: learning_session_id
+                },
+                success: function(term) {
+                    setTimeout(function() {
+                        $("#page-loader").addClass('d-none');
+                        location.href = url;
+                    }, 1000);
+                    //                    $("#page-loader").addClass('d-none');
+                    //                    location.href = url;
+                }
+            });
+        }
+    }
+</script>
+<script>
+    function BuildCourse(course_id, hrefurl, show_parent_home) {
+        $("#page-loader").removeClass('d-none');
+        if (course_id == "155") {
+            BuildCourseByCategory(course_id, hrefurl);
+            return false;
+        }
+        $.ajax({
+            url: 'https://app.topgrade.pk/BuildCourse',
+            data: {
+                course_id: course_id,
+                show_parent_home: show_parent_home
+            },
+            type: 'post',
+            async: false,
+            success: function(msg) {
+                setTimeout(function() {
+                    $("#page-loader").addClass('d-none');
+                    location.href = hrefurl;
+                }, 2000);
+            }
+        });
+    }
+</script>
+<script>
+    function BuildCourseByCategory(course_id, hrefurl) {
+        $("#page-loader").removeClass('d-none');
+        $.ajax({
+            url: 'https://app.topgrade.pk/BuildCourseByCategory',
+            data: {
+                course_id: course_id
+            },
+            type: 'post',
+            async: false,
+            success: function(msg) {
+                setTimeout(function() {
+                    $("#page-loader").addClass('d-none');
+                    location.href = hrefurl;
+                }, 2000);
+            }
+        });
+    }
+</script>
+<script>
+    $(document).ready(function() {
+        $('#courseSearch').select2({
+            placeholder: "Search Your Course",
+            allowClear: false,
+            width: 'resolve',
+            templateResult: function(data) {
+                if (!data.id) return data.text; // placeholder
+
+                var badge = $(data.element).data("badge") || "";
+                var text = $('<span class="option-text">' + data.text + '</span>');
+
+                // Only show badge if exists
+                if (badge) {
+                    return $(
+                        '<span style="display:flex; justify-content:space-between; width:100%;">' +
+                        "<span>" + data.text + "</span>" +
+                        '<span class="option-badge" style="flex-shrink: 0;align-self: center;display: inline-flex;align-items: center;justify-content: center;background: green;color: #fff;border-radius: 12px;padding: 3px 8px;font-size: 11px;height: fit-content;white-space: nowrap;">' +
+                        badge +
+                        "</span>" +
+                        "</span>"
+                    );
+                } else {
+                    return data.text;
+                }
+            },
+            templateSelection: function(data) {
+                // Optional: how selected item appears in the box
+                return data.text;
+            }
+        });
+    });
+</script>
+<script>
+    function FlutterDialer(IsApp, type, phone, message) {
+        $("#page-loader").removeClass('d-none');
+        if (IsApp == 1) {
+            $("#page-loader").addClass('d-none');
+            // Inside Flutter app: call handlers with phone and message
+            if (message !== '') {
+                message = decodeURIComponent(message);
+            }
+            if (type === 0) {
+                window.flutter_inappwebview.callHandler('dialer', phone, message);
+            } else {
+                window.flutter_inappwebview.callHandler('whatsapp', phone, message);
+            }
+        } else {
+            $("#page-loader").addClass('d-none');
+            // Outside app (browser)
+            if (type == 0) {
+                // Dialer fallback
+                window.location.href = `tel:${phone}`;
+            } else {
+                // WhatsApp web with message support (URL encoded)
+                const url = message ?
+                    `https://wa.me/${phone}?text=${message}` :
+                    `https://wa.me/${phone}`;
+                window.open(url, '_blank');
+            }
+        }
+    }
+</script>
+<script>
+    function SetTag(tag_id) {
+        $("#page-loader").removeClass('d-none');
+        $.ajax({
+            url: 'https://app.topgrade.pk/SetTag',
+            data: {
+                tag_id: tag_id
+            },
+            type: 'post',
+            async: false,
+            success: function(msg) {
+                $("#page-loader").addeClass('d-none');
+            }
+        });
+    }
+</script>
+<script>
+    function PreparationWay(way) {
+        $("#page-loader").removeClass('d-none');
+        url = "https://app.topgrade.pk/preparation-way";
+        $.ajax({
+            url: url,
+            type: 'POST',
+            async: false,
+            data: {
+                way: way
+            },
+            success: function(term) {
+                $("#page-loader").addClass('d-none');
+                location.href = 'https://app.topgrade.pk/';
+            }
+        });
+    }
+</script>
+<script>
+    function loadYouTube(el) {
+        $("#page-loader").removeClass('d-none');
+        const id = el.dataset.id;
+        el.innerHTML = `
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/${id}?autoplay=1"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            `;
+        setTimeout(function() {
+            $("#page-loader").addClass('d-none');
+        }, 1000);
+    }
+</script>
+<script>
+    function GetInvoice() {
+        location.href = 'https://app.topgrade.pk/get-invoice';
+    }
+</script>    <script src="./english slides_files/sweetalert2@11"></script>
+    <!--        <script>
+            $(document).ready(function () {
+                var carouselEl = document.getElementById('slideCarousel');
+                if (carouselEl) {
+                    // 'slid.bs.carousel' triggers after the animation is finished
+                    carouselEl.addEventListener('slid.bs.carousel', function (event) {
+
+                        // 1. Update UI Counter
+                        var currentIndex = $(event.relatedTarget).data('index');
+                        $('#current_idx').text(currentIndex);
+
+                        // 2. Get Data for AJAX
+                        var slideId = $(event.relatedTarget).data('slide-id');
+                        var rrnId = "4590";
+
+                        // 3. Background AJAX call to update stats
+                        $.ajax({
+                            url: "https://app.topgrade.pk/learning_session/update_slide_view_stat",
+                            type: "POST",
+                            data: {slide_id: slideId, rrn_id: rrnId},
+                            success: function (res) {
+                                console.log("Stats updated for slide " + slideId);
+                            }
+                        });
+                    });
+                }
+            });
+        </script>-->
+    <script>
+        $(document).ready(function() {
+            /* For First Slide */
+            SlideStats("4590", 1);
+            var carouselEl = document.getElementById('slideCarousel');
+
+            // Bootstrap 5 Event: Jab slide mukammal taur par change ho jaye
+            carouselEl.addEventListener('slid.bs.carousel', function(event) {
+
+                // 1. Get data from the now ACTIVE slide
+                var activeSlide = $(event.relatedTarget);
+                var slide_id_enc = activeSlide.data('slide-id'); // data-slide-id se ID uthayen
+                var current_idx = activeSlide.data('index'); // data-index se number uthayen
+                var frn_id = "4590";
+                var hasVideo = activeSlide.data('has-video');
+                var videoUrl = activeSlide.data('video-url');
+                var isbookmarked = activeSlide.data('has-bookmark');
+                if (hasVideo === true || hasVideo === 'true') {
+                    $('#play_video_btn').removeClass('d-none'); // Button show karein
+                    $('#play_video_btn').attr('onclick', "PlaySlide('" + videoUrl + "')");
+                } else {
+                    $('#play_video_btn').attr('onclick', "");
+                    $('#play_video_btn').addClass('d-none'); // Button hide karein
+                }
+                if (isbookmarked === true || isbookmarked === 'true') {
+                    $('#bm_remove').attr('onclick', "slidebookmark(" + slide_id_enc + ", 0)");
+                    $('#bm_remove').removeClass('d-none');
+                    $('#bm_add').addClass('d-none');
+                } else {
+                    $('#bm_add').attr('onclick', "slidebookmark(" + slide_id_enc + ", 1)");
+                    $('#bm_add').removeClass('d-none');
+                    $('#bm_remove').addClass('d-none');
+                }
+
+
+
+
+
+
+                // 2. Update UI Counter (Slide 1 of X)
+                $('#current_idx').text(current_idx);
+
+                // 3. Update hidden input (agar aap tracking ke liye use kar rahay hain)
+                $("#frn_id_enc").val(current_idx);
+
+                // 4. Run your AJAX logic
+                SlideStats(frn_id, slide_id_enc);
+            });
+
+            // Keyboard Arrow Support
+            $(document).keydown(function(e) {
+                var carousel = bootstrap.Carousel.getInstance(carouselEl);
+                if (e.which == 37)
+                    carousel.prev(); // Left
+                if (e.which == 39)
+                    carousel.next(); // Right
+            });
+
+        });
+    </script>
+    <script>
+        function SlideStats(frn_id, slide_id_enc) {
+            const $loader = $("#page-loader");
+            const $section = $("#video-stat-section");
+
+            $section.css({
+                position: "relative",
+                overflow: "hidden"
+            });
+
+            $loader.appendTo($section);
+
+            $loader.attr(
+                "style",
+                `
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    background: rgba(255,255,255,0.8) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 999 !important;
+    `
+            );
+
+            $loader.removeClass("d-none").css("display", "flex");
+            $('#bm_add').addClass('d-none');
+            $('#bm_remove').addClass('d-none');
+            $.ajax({
+                url: 'https://app.topgrade.pk/' + 'viewed-slide',
+                data: {
+                    frn_id: frn_id,
+                    slide_id: slide_id_enc,
+                    by_learning_funnel: 2,
+                    frn_slides_status: 1
+                },
+                type: 'post',
+                success: function(msg) {
+                    console.log("New Ajax = " + msg);
+                    var res = msg.split("^^");
+
+                    // Views aur Likes update karein
+                    $("#slide_views_count").html(res[0]);
+                    $("#likescounts").html(res[1]);
+
+                    // Bookmark toggle logic
+                    // Pehle saaray bookmarks hide karein phir sirf current wala show karein
+
+                    if (res[3] == 1) {
+                        console.log("bookmarked");
+                        $('#bm_remove').attr('onclick', "slidebookmark(" + slide_id_enc + ", 0)");
+                        $('#bm_remove').removeClass('d-none');
+                        $('#bm_add').addClass('d-none');
+                    } else {
+                        console.log("nobookmarked");
+                        $('#bm_add').attr('onclick', "slidebookmark(" + slide_id_enc + ", 1)");
+                        $('#bm_add').removeClass('d-none');
+                        $('#bm_remove').addClass('d-none');
+                    }
+                    updateVoteIcons(res[2]);
+                }
+            });
+            setTimeout(() => {
+                $loader.addClass("d-none").css("display", "none");
+            }, 500);
+
+        }
+    </script>
+    <script>
+        function updateVoteIcons(status) {
+            $("#yt-down-fill, #yt-up-fill").addClass('d-none');
+            $("#yt-down-empty, #yt-up-empty").removeClass('d-none');
+
+            if (status == '1') { // Liked
+                $("#yt-up-fill").removeClass('d-none');
+                $("#yt-up-empty").addClass('d-none');
+            } else if (status == '2') { // Disliked
+                $("#yt-down-fill").removeClass('d-none');
+                $("#yt-down-empty").addClass('d-none');
+            }
+        }
+    </script>
+    <script>
+        function Updatefrnfeedback(stat) {
+            // Selectors
+            const $likesDisplay = $('#likescounts');
+            const frn_id = "4590";
+            const slide_id = $("#frn_id_enc").val();
+            const url = 'https://app.topgrade.pk/slide-like-dislike-status';
+
+            let currentLikes = parseInt($likesDisplay.text()) || 0;
+
+            $("#page-loader").removeClass('d-none');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {
+                    frn_id: frn_id,
+                    frn_stat: stat,
+                    slide_id: slide_id
+                },
+                success: function(result) {
+                    console.log(result);
+                    // Result 1 means backend successfully updated
+                    if (result == 1) {
+                        if (stat == 1) {
+                            // UI: Show Like Fill, Hide Dislike Fill
+                            $('#yt-up-fill').removeClass('d-none');
+                            $('#yt-up-empty').addClass('d-none');
+                            $('#yt-down-fill').addClass('d-none');
+                            $('#yt-down-empty').removeClass('d-none');
+
+                            // Count Update (Logic: Basic increment)
+                            $likesDisplay.text(currentLikes + 1);
+                        } else {
+                            // UI: Show Dislike Fill, Hide Like Fill
+                            $('#yt-up-fill').addClass('d-none');
+                            $('#yt-up-empty').removeClass('d-none');
+                            $('#yt-down-fill').removeClass('d-none');
+                            $('#yt-down-empty').addClass('d-none');
+
+                            // Count Update (Only decrement if it's > 0)
+                            if (currentLikes > 0)
+                                $likesDisplay.text(currentLikes - 1);
+                        }
+                    }
+                    $("#page-loader").addClass('d-none');
+                },
+                error: function() {
+                    $("#page-loader").addClass('d-none');
+                    console.error("AJAX error in feedback update");
+                }
+            });
+        }
+    </script>
+    <script>
+        function PlaySlide(vid) {
+            // 1. Set video source
+            $("#playable_video").attr('src', vid);
+
+            // 2. Open Modal using Bootstrap 5 Instance
+            const modalElement = document.getElementById('myModal');
+            const modalInstance = bootstrap.Modal.getOrCreateInstance(modalElement);
+            modalInstance.show();
+
+            // 3. Handle 'shown' event (using once:true to prevent multiple triggers)
+            $(modalElement).one('shown.bs.modal', function() {
+                if (typeof SleepLoading === "function") {
+                    SleepLoading();
+                }
+            });
+
+            // 4. AJAX View Count Update
+            const frn_id = "4590";
+            const slide_id_enc = $("#frn_id_enc").val(); // Removed parseInt to keep it consistent with backend expectations
+
+            $.ajax({
+                url: 'https://app.topgrade.pk/play-slide-count',
+                type: 'POST',
+                data: {
+                    frn_id: frn_id,
+                    slide_id: slide_id_enc
+                },
+                success: function(response) {
+                    console.log("View count updated");
+                    // Optional: Update views count on UI if backend returns the new number
+                    // if(response.new_count) $('#slide_views_count').text(response.new_count + " views");
+                },
+                error: function(err) {
+                    console.error("View count update failed", err);
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            // Stop video when modal is hidden (Bootstrap 5 event)
+            $("#myModal").on('hide.bs.modal', function() {
+                $("#video, #playable_video").attr('src', '');
+            });
+        });
+    </script>
+    <script>
+        function slidebookmark(slide_id, stat) {
+            frn_id = "4590";
+            $.ajax({
+                url: 'https://app.topgrade.pk/' + 'marked-slide',
+                data: {
+                    frn_id: frn_id,
+                    slide_id: slide_id,
+                    by_learning_funnel: 1,
+                    marked_status: stat,
+                    frn_slides_status: 1
+                },
+                type: 'post',
+                success: function(msg) {
+                    console.log(msg);
+                    if (stat == 1) {
+                        $('#bm_remove').attr('onclick', "slidebookmark(" + slide_id + ", 0)");
+                        $('#bm_remove').removeClass('d-none');
+                        $('#bm_add').addClass('d-none');
+                    } else {
+                        $('#bm_add').attr('onclick', "slidebookmark(" + slide_id + ", 1)");
+                        $('#bm_add').removeClass('d-none');
+                        $('#bm_remove').addClass('d-none');
+                    }
+                }
+            });
+            console.log(slide_id + "--" + stat + "--" + frn_id);
+        }
+    </script>
+    <script>
+        function ExportSlides(frn_id) {
+            window.open("https://app.topgrade.pk/export-slides/" + frn_id, '_blank');
+        }
+    </script>
+    <script>
+        function ReportIssueModal() {
+            const frn_id = "4590";
+            const apiUrl = 'https://app.topgrade.pk/fast-revision-notes/already-report-issue';
+
+            $("#page-loader").removeClass('d-none');
+
+            $.ajax({
+                url: apiUrl,
+                type: 'POST',
+                data: {
+                    video_frn_id: frn_id,
+                    video_frn: 'frn_id'
+                },
+                success: function(msg) {
+                    $("#page-loader").addClass('d-none');
+                    if (msg == 1) {
+                        Swal.fire({
+                            title: "Feedback Already Received",
+                            text: "You have already given feedback, try again after 48 hours.",
+                            icon: "info",
+                            confirmButtonColor: '#3f6ad8',
+                            confirmButtonText: 'OK',
+                            customClass: {
+                                confirmButton: 'btn btn-info'
+                            }
+                        });
+                        return false;
+                    } else {
+                        // Open BS5 Modal
+                        const reportModal = new bootstrap.Modal(document.getElementById('report_issue_model'));
+                        reportModal.show();
+                    }
+                },
+                error: function() {
+                    $$("#page-loader").addClass('d-none');
+                }
+            });
+        }
+
+        // Optimized Toggle for Textarea
+        $(document).on('change', 'input[name="issue"]', function() {
+            const selectedVal = $(this).val();
+            const $msgContainer = $('#issue_msg_container');
+
+            // Show textarea if "Other" or "Mistake" is selected (customize as needed)
+            if (selectedVal === '0' || selectedVal === 'FRN Seems to have a mistake') {
+                $msgContainer.removeClass('d-none').hide().fadeIn();
+            } else {
+                $msgContainer.fadeOut(function() {
+                    $(this).addClass('d-none');
+                    $('#issue_msg').val('');
+                });
+            }
+        });
+    </script>
+    <script>
+        function SendVideoFrnIssue(base_url, type, s_id) {
+            // 1. Get Values
+            const frn_id = "4590";
+            var issue = $('input[name="issue"]:checked').val();
+            var other_issue_msg = $("#issue_msg").val().trim();
+
+            // 2. Validation Logic
+            // Agar "Other" select ho ya mistake wali options hon to message required hai
+            $("#issue_msg").removeClass('is-invalid').css('border', '1px solid #ced4da');
+
+            if ((issue == "0" || issue == 'Video Seems to have a mistake' || issue == 'FRN Seems to have a mistake') && other_issue_msg == '') {
+                $("#issue_msg").addClass('is-invalid').css('border', '1px solid red').focus();
+                return false;
+            }
+
+            // 3. ID Selection based on type
+            var id = (type == 'v') ? $('#_v_id').val() : frn_id;
+
+            // 4. URL Construction
+            var folder = (type == 'v') ? '/video-lectures/' : '/fast-revision-notes/';
+            var url = base_url + folder + 'report-issue';
+
+            $("#page-loader").removeClass('d-none');
+
+            // 5. AJAX Call
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: {
+                    id: id,
+                    type: type,
+                    u_sub_section_id: s_id,
+                    other_issue_msg: other_issue_msg,
+                    issue: issue
+                },
+                success: function(msg) {
+                    $("#page-loader").addClass('d-none');
+
+                    // UI Reset
+                    $("#issue_msg").val('').hide();
+                    $('#report_issue_model').modal('hide');
+
+                    // Show Success Modal
+                    $('#report_issue_model_thanks').modal('show');
+
+                    // Auto hide thanks modal
+                    setTimeout(function() {
+                        $('#report_issue_model_thanks').modal('hide');
+                    }, 4000);
+                },
+                error: function() {
+                    $("#page-loader").addClass('d-none');
+                    alert("Something went wrong. Please try again.");
+                }
+            });
+        }
+    </script>
+    <script>
+        function startStep(enc_type, enc_media_id, enc_topic_id) {
+            // atob() function base64 ko wapis normal string banata hai
+            $("#page-loader").removeClass('d-none');
+            var type = atob(enc_type);
+            var baseUrl = "https://app.topgrade.pk/";
+            if (type == 1) {
+                // video
+                window.location.href = baseUrl + "video_player/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            } else if (type == 2) {
+                // slides
+                window.location.href = baseUrl + "slides_viewer/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            } else if (type == 3) {
+                //test
+                SetTag(131);
+                window.location.href = baseUrl + "take_test/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            } else if (type == 6) {
+                //test
+                SetTag(133);
+                window.location.href = baseUrl + "read_text_book/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            }
+        }
+    </script>
+    <script>
+        let bgCarousel;
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Automatically find your Bootstrap carousel
+            const carouselEl = document.querySelector('.carousel') || document.getElementById('myMainCarouselElementId');
+            if (carouselEl) {
+                bgCarousel = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+            }
+
+            // Attach swipe listeners to the modal image container
+            const modalImageContainer = document.querySelector('.modal-swipe-zone');
+            if (modalImageContainer) {
+                modalImageContainer.addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, {
+                    passive: true
+                });
+
+                modalImageContainer.addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipeGesture();
+                }, {
+                    passive: true
+                });
+            }
+        });
+
+        // Detect real left/right swipes
+        function handleSwipeGesture() {
+            const swipeThreshold = 50; // Minimum swipe distance in pixels
+            if (touchEndX < touchStartX - swipeThreshold) {
+                modalNavigate('next'); // Swiped left -> Show next
+            }
+            if (touchEndX > touchStartX + swipeThreshold) {
+                modalNavigate('prev'); // Swiped right -> Show prev
+            }
+        }
+
+        function openFullView(imgUrl) {
+            const fullImg = document.getElementById('fullViewImage');
+            fullImg.src = imgUrl;
+            fullImg.style.transform = "scale(1)"; // Reset zoom
+
+            const myModal = new bootstrap.Modal(document.getElementById('fullViewModal'));
+            myModal.show();
+        }
+
+        function modalNavigate(direction) {
+            if (!bgCarousel) return;
+
+            const carouselEl = document.querySelector('.carousel') || document.getElementById('myMainCarouselElementId');
+
+            const updateModalImage = function(event) {
+                const activeImg = event.relatedTarget.querySelector('img');
+                if (activeImg) {
+                    const fullImg = document.getElementById('fullViewImage');
+                    fullImg.src = activeImg.src;
+                    fullImg.style.transform = "scale(1)"; // Reset zoom on slide change
+                }
+                carouselEl.removeEventListener('slid.bs.carousel', updateModalImage);
+            };
+
+            carouselEl.addEventListener('slid.bs.carousel', updateModalImage);
+
+            if (direction === 'next') bgCarousel.next();
+            if (direction === 'prev') bgCarousel.prev();
+        }
+
+        // Double-tap to zoom toggle
+        let lastTap = 0;
+        document.getElementById('fullViewImage').addEventListener('touchend', function(e) {
+            let currentTime = new Date().getTime();
+            let tapLength = currentTime - lastTap;
+            if (tapLength < 300 && tapLength > 0) {
+                if (this.style.transform === "scale(2)") {
+                    this.style.transform = "scale(1)";
+                    this.style.cursor = "zoom-in";
+                } else {
+                    this.style.transform = "scale(2)";
+                    this.style.cursor = "zoom-out";
+                }
+                e.preventDefault();
+            }
+            lastTap = currentTime;
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Input pe click karne se buttons show hon
+            $('#comment-input').on('focus', function() {
+                $('#action-buttons').removeClass('d-none');
+            });
+
+            // Button enable/disable logic
+            $('#comment-input').on('input', function() {
+                $('#submit-btn').prop('disabled', this.value.trim() === "");
+            });
+        });
+
+        function cancelComment() {
+            $('#comment-input').val('');
+            $('#action-buttons').addClass('d-none');
+        }
+
+        function postComment(base_url, type, s_id) {
+            $("#page-loader").removeClass('d-none');
+            let text = $('#comment-input').val();
+            if (text == "") {
+                $("#page-loader").addClass('d-none');
+                $("#comment-input").addClass('is-invalid').css('border', '1px solid red').focus();
+                return false;
+            }
+            var id = "4590";
+
+            // 4. URL Construction
+            var url = base_url + '/fast-revision-notes/report-issue';
+            var issue = 0;
+            var other_issue_msg = text;
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: {
+                    id: id,
+                    type: type,
+                    u_sub_section_id: s_id,
+                    other_issue_msg: other_issue_msg,
+                    issue: issue
+                },
+                success: function(res) {
+                    // Naya comment top pe dikhane ke liye
+                    $("#comment-input").removeClass('is-invalid')
+                    //                        $('#comments-container').prepend(renderComment(res));
+                    $('#comment-input').val('');
+                    cancelComment();
+                    $("#page-loader").addClass('d-none');
+                    // Show Success Modal
+                    $('#report_issue_model_thanks').modal('show');
+
+                    // Auto hide thanks modal
+                    setTimeout(function() {
+                        $('#report_issue_model_thanks').modal('hide');
+                    }, 4000);
+                }
+            });
+        }
+    </script>
+
+
+</body></html>

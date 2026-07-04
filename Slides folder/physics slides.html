@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://app.topgrade.pk/slides_viewer/NjE/NDYxMA -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dashboard | TopGrade.pk</title>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <link rel="icon" type="image/png" href="https://app.topgrade.pk/assets/images/fav.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="./physics slides_files/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="./physics slides_files/bootstrap-icons.css">
+    <!-- Google Fonts: Outfit -->
+    <link href="./physics slides_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./physics slides_files/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./physics slides_files/custom.css">
+    <link href="./physics slides_files/select2.min.css" rel="stylesheet">
+        <script async="" src="./physics slides_files/clarity.js.download"></script><script type="text/javascript" async="" src="./physics slides_files/js"></script><script type="text/javascript" async="" src="./physics slides_files/analytics.js.download"></script><script type="text/javascript" async="" src="./physics slides_files/js(1)"></script><script async="" src="./physics slides_files/fjri95a5s1"></script><script async="" src="./physics slides_files/gtm.js.download"></script><script async="" src="./physics slides_files/js(2)"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-114282899-2', {'optimize_id': 'GTM-523GCW9'});
+        </script>
+    <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-P4H5QPV');</script>
+
+    
+                    <script type="text/javascript">
+                (function (c, l, a, r, i, t, y) {
+                    c[a] = c[a] || function () {
+                        (c[a].q = c[a].q || []).push(arguments)
+                    };
+                    t = l.createElement(r);t.async = 1;t.src = "https://www.clarity.ms/tag/" + i;
+                    y = l.getElementsByTagName(r)[0];
+                    y.parentNode.insertBefore(t, y);
+                })(window, document, "clarity", "script", "fjri95a5s1");
+                clarity("set", "username", "03294121768");
+            </script>
+        
+        <script async="" defer="" src="./physics slides_files/lo.js.download"></script>
+        <script>
+            window.LOQ = window.LOQ || [];
+            window.LOQ.push(['ready', async LO => {
+                    await LO.$internal.ready('events');
+
+                    // Track Product Name if exists
+        
+                    // Identify User
+                            await LO.$internal.ready('visitor');
+                    LO.visitor.identify('453531', {
+                        name: 'Testing',
+                        email: 'testing@gmail.com',
+                        type: 'Trial User',
+                        subscription: 'None'
+                    });
+                }]);
+        </script>
+    
+<style>
+    :root {
+        --primary-blue: #3f6ad8;
+        --primary-green: #3ac47d;
+        --bg-gray: #f8f9fa;
+        --blue-primary: #1676dd;
+    }
+
+    /* Prevent scrolling on desktop, allow on mobile if content is tall */
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        background-color: var(--bg-gray);
+        font-family: 'Inter', -apple-system, sans-serif;
+    }
+
+    /* Main App Wrapper */
+    .app-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        /* Use min-height to allow expansion */
+        align-items: center;
+        padding: 10px;
+        position: relative;
+    }
+
+    /* The Content Card - Pushed to center */
+    .app-card {
+        width: 100%;
+        max-width: 700px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        margin-top: auto;
+        /* Magic: pushes card from top */
+        margin-bottom: auto;
+        /* Magic: pushes card from bottom */
+    }
+
+    .video-section {
+        width: 100%;
+        max-width: 700px;
+        /* background: #000; */
+    }
+
+    .info-section {
+        padding: 1.25rem;
+    }
+
+    .breadcrumb-text {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: #1754bb;
+    }
+
+    .stat-badge {
+        border: none;
+        border-radius: 8px;
+        padding: 6px 16px;
+        font-weight: 500;
+        font-size: .9rem;
+    }
+
+    .badge-views {
+        background-color: #eef2ff;
+        color: #4338ca;
+    }
+
+    .badge-likes {
+        background-color: #ecfdf5;
+        color: #065f46;
+    }
+
+    .badge-dislikes {
+        background-color: #fef2f2;
+        color: #991b1b;
+    }
+
+    .bottom-nav .btn-app-action.bg-success {
+        /* background-image: linear-gradient(to right, #198754, #0a5b35); */
+        background: linear-gradient(90deg, #ffc400 0%, #ff7a12 100%);
+    }
+
+    /* Fixed Sticky Footer */
+    .app-footer {
+        width: 100%;
+        max-width: 500px;
+        /* Small and centered like an app */
+        position: sticky;
+        bottom: 20px;
+        /* Distance from bottom */
+        margin: 0 auto 10px auto;
+        z-index: 1000;
+    }
+
+    .nav-container {
+        display: flex;
+        border-radius: 50px;
+        /* Pill shape for app feel */
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        background: white;
+    }
+
+    .nav-btn {
+        flex: 1;
+        border: none;
+        padding: 14px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    }
+
+    .btn-prev {
+        background-color: var(--primary-blue);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-next {
+        background-color: var(--primary-green);
+    }
+
+    .nav-btn:hover {
+        opacity: 0.9;
+        color: white;
+    }
+
+    .nav-btn:active {
+        transform: scale(0.98);
+    }
+
+    /* Mobile par jab image click ho to scroll allow karein */
+    /* Image par zoom-in cursor dikhane ke liye */
+    .carousel-item img {
+        cursor: zoom-in;
+    }
+
+    /* Modal ke andar image ki styling */
+    .slide-zoom {
+        max-height: 90vh;
+        transition: transform 0.3s ease;
+        cursor: grab;
+    }
+
+    .heading-title {
+        font-size: 22px;
+        font-weight: bold;
+        /* color: #1754bb; */
+        margin: 0;
+        line-height: 34px;
+    }
+
+    /* -------------------------------------
+           GREETING SECTION
+        -------------------------------------- */
+    .greeting-section {
+        display: grid;
+        grid-template-columns: 65px 1fr;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 0px;
+        flex-shrink: 0;
+        width: 700px;
+    }
+
+    .hero-mascot {
+        display: block;
+        margin: 0 auto 12px;
+        width: 70px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .speech-bubble {
+        position: relative;
+        background: var(--blue-primary);
+        color: #fff;
+        border-radius: 10px;
+        /* 1. Flexbox alignment add karein */
+        display: flex;
+        align-items: center;
+        /* Vertical center */
+        justify-content: center;
+        /* Horizontal center */
+        text-align: center;
+        padding: 10px 14px;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 2px 8px rgba(27, 72, 174, 0.1);
+        font-size: 0.85rem;
+        line-height: 1.35;
+        font-weight: 500;
+    }
+
+    .speech-bubble::before {
+        content: "";
+        position: absolute;
+        left: -14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 14px solid var(--blue-primary);
+    }
+
+    .app-subtitle {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .slide-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px 0;
+        width: 30%;
+    }
+
+    .slide-indicator .line-container {
+        flex: 1;
+        position: relative;
+        height: 2px;
+        background-color: #c0c0ff;
+        /* line color */
+    }
+
+    /* Left line: use ::after for the diamond */
+    .slide-indicator .line-container:first-child::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #c0c0ff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: -3px;
+        right: -4px;
+    }
+
+    /* Right line: use ::before for the diamond */
+    .slide-indicator .line-container:last-child::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #c0c0ff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: -3px;
+        left: -4px;
+    }
+
+    .slide-indicator .text {
+        font-weight: 500;
+        font-size: 14px;
+        color: #4a4aee;
+        margin: 0 12px;
+        white-space: nowrap;
+    }
+
+    /* Actions Row (card-style) */
+    .actions-row {
+        border: 1px solid #e5e8f0;
+        border-radius: 12px;
+        background: #fff;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+
+    .action-item {
+        cursor: pointer;
+        padding: 14px 8px;
+        transition: background 0.2s;
+        text-align: center;
+    }
+
+    .action-item:hover { background: #f8fafc; }
+    .action-item:active { background: #f1f5f9; }
+
+    .action-item .action-icon {
+        font-size: 22px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .action-item .action-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: #111827;
+    }
+
+    .action-link {
+        text-decoration: none !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        line-height: 1.2;
+    }
+
+    .text-purple {
+        color: #9b5de5;
+    }
+
+    /* Mobile responsive full view */
+    @media (max-width: 576px) {
+        .modal-body {
+            overflow: auto !important;
+            /* Mobile par user scroll/pinch kar sakay */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .slide-zoom {
+            max-height: unset;
+            width: 100%;
+        }
+
+
+    }
+
+    @media (max-width: 480px) {
+        .bottom-nav {
+            height: 60px;
+        }
+
+        .video-action-box .action-icon {
+            font-size: 16px;
+        }
+
+        .video-action-item {
+            font-size: 12px;
+        }
+
+        .slide-indicator {
+            width: 80%;
+        }
+
+        .breadcrumb-text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    /* Glassmorphism Background */
+    #fullViewModal .modal-content {
+        background: rgba(0, 0, 0, 0.85) !important;
+        backdrop-filter: blur(8px);
+    }
+
+    /* Responsive Tweaks */
+    @media (max-width: 768px) {
+
+        body,
+        html {
+            overflow-y: auto;
+        }
+
+        /* Ensure mobile can scroll if video is large */
+
+        .app-wrapper {
+            padding-bottom: 100px;
+            /* Space for the fixed footer */
+            justify-content: flex-start;
+        }
+
+        .app-footer {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: none;
+        }
+
+        .app-card {
+            /* margin-top: 15px; */
+            margin-bottom: 20px;
+        }
+
+        .nav-btn span {
+            font-size: 0.85rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .heading-title {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        .greeting-section {
+            width: 100%;
+        }
+
+        .app-subtitle {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+</style><style>:root{--swal2-outline: 0 0 0 3px rgba(100, 150, 200, 0.5);--swal2-container-padding: 0.625em;--swal2-backdrop: rgba(0, 0, 0, 0.4);--swal2-backdrop-transition: background-color 0.15s;--swal2-width: 32em;--swal2-padding: 0 0 1.25em;--swal2-border: none;--swal2-border-radius: 0.3125rem;--swal2-background: white;--swal2-color: #545454;--swal2-show-animation: swal2-show 0.3s;--swal2-hide-animation: swal2-hide 0.15s forwards;--swal2-icon-zoom: 1;--swal2-title-padding: 0.8em 1em 0;--swal2-html-container-padding: 1em 1.6em 0.3em;--swal2-input-border: 1px solid #d9d9d9;--swal2-input-border-radius: 0.1875em;--swal2-input-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;--swal2-input-background: transparent;--swal2-input-transition: border-color 0.2s, box-shadow 0.2s;--swal2-input-hover-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;--swal2-input-focus-border: 1px solid #b4dbed;--swal2-input-focus-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px rgba(100, 150, 200, 0.5);--swal2-progress-step-background: #add8e6;--swal2-validation-message-background: #f0f0f0;--swal2-validation-message-color: #666;--swal2-footer-border-color: #eee;--swal2-footer-background: transparent;--swal2-footer-color: inherit;--swal2-timer-progress-bar-background: rgba(0, 0, 0, 0.3);--swal2-close-button-position: initial;--swal2-close-button-inset: auto;--swal2-close-button-font-size: 2.5em;--swal2-close-button-color: #ccc;--swal2-close-button-transition: color 0.2s, box-shadow 0.2s;--swal2-close-button-outline: initial;--swal2-close-button-box-shadow: inset 0 0 0 3px transparent;--swal2-close-button-focus-box-shadow: inset var(--swal2-outline);--swal2-close-button-hover-transform: none;--swal2-actions-justify-content: center;--swal2-actions-width: auto;--swal2-actions-margin: 1.25em auto 0;--swal2-actions-padding: 0;--swal2-actions-border-radius: 0;--swal2-actions-background: transparent;--swal2-action-button-transition: background-color 0.2s, box-shadow 0.2s;--swal2-action-button-hover: black 10%;--swal2-action-button-active: black 10%;--swal2-confirm-button-box-shadow: none;--swal2-confirm-button-border-radius: 0.25em;--swal2-confirm-button-background-color: #7066e0;--swal2-confirm-button-color: #fff;--swal2-deny-button-box-shadow: none;--swal2-deny-button-border-radius: 0.25em;--swal2-deny-button-background-color: #dc3741;--swal2-deny-button-color: #fff;--swal2-cancel-button-box-shadow: none;--swal2-cancel-button-border-radius: 0.25em;--swal2-cancel-button-background-color: #6e7881;--swal2-cancel-button-color: #fff;--swal2-toast-show-animation: swal2-toast-show 0.5s;--swal2-toast-hide-animation: swal2-toast-hide 0.1s forwards;--swal2-toast-border: none;--swal2-toast-box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 1px 2px hsl(0deg 0% 0% / 0.075), 1px 2px 4px hsl(0deg 0% 0% / 0.075), 1px 3px 8px hsl(0deg 0% 0% / 0.075), 2px 4px 16px hsl(0deg 0% 0% / 0.075)}[data-swal2-theme=dark]{--swal2-dark-theme-black: #19191a;--swal2-dark-theme-white: #e1e1e1;--swal2-background: var(--swal2-dark-theme-black);--swal2-color: var(--swal2-dark-theme-white);--swal2-footer-border-color: #555;--swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);--swal2-validation-message-background: color-mix( in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10% );--swal2-validation-message-color: var(--swal2-dark-theme-white);--swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7)}@media(prefers-color-scheme: dark){[data-swal2-theme=auto]{--swal2-dark-theme-black: #19191a;--swal2-dark-theme-white: #e1e1e1;--swal2-background: var(--swal2-dark-theme-black);--swal2-color: var(--swal2-dark-theme-white);--swal2-footer-border-color: #555;--swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);--swal2-validation-message-background: color-mix( in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10% );--swal2-validation-message-color: var(--swal2-dark-theme-white);--swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7)}}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto !important}body.swal2-no-backdrop .swal2-container{background-color:rgba(0,0,0,0) !important;pointer-events:none}body.swal2-no-backdrop .swal2-container .swal2-popup{pointer-events:auto}body.swal2-no-backdrop .swal2-container .swal2-modal{box-shadow:0 0 10px var(--swal2-backdrop)}body.swal2-toast-shown .swal2-container{box-sizing:border-box;width:360px;max-width:100%;background-color:rgba(0,0,0,0);pointer-events:none}body.swal2-toast-shown .swal2-container.swal2-top{inset:0 auto auto 50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{inset:0 0 auto auto}body.swal2-toast-shown .swal2-container.swal2-top-start,body.swal2-toast-shown .swal2-container.swal2-top-left{inset:0 auto auto 0}body.swal2-toast-shown .swal2-container.swal2-center-start,body.swal2-toast-shown .swal2-container.swal2-center-left{inset:50% auto auto 0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{inset:50% auto auto 50%;transform:translate(-50%, -50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{inset:50% 0 auto auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-start,body.swal2-toast-shown .swal2-container.swal2-bottom-left{inset:auto auto 0 0}body.swal2-toast-shown .swal2-container.swal2-bottom{inset:auto auto 0 50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{inset:auto 0 0 auto}@media print{body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown){overflow-y:scroll !important}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown) .swal2-container{position:static !important}}div:where(.swal2-container){display:grid;position:fixed;z-index:1060;inset:0;box-sizing:border-box;grid-template-areas:"top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";grid-template-rows:minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);height:100%;padding:var(--swal2-container-padding);overflow-x:hidden;transition:var(--swal2-backdrop-transition);-webkit-overflow-scrolling:touch}div:where(.swal2-container).swal2-backdrop-show,div:where(.swal2-container).swal2-noanimation{background:var(--swal2-backdrop)}div:where(.swal2-container).swal2-backdrop-hide{background:rgba(0,0,0,0) !important}div:where(.swal2-container).swal2-top-start,div:where(.swal2-container).swal2-center-start,div:where(.swal2-container).swal2-bottom-start{grid-template-columns:minmax(0, 1fr) auto auto}div:where(.swal2-container).swal2-top,div:where(.swal2-container).swal2-center,div:where(.swal2-container).swal2-bottom{grid-template-columns:auto minmax(0, 1fr) auto}div:where(.swal2-container).swal2-top-end,div:where(.swal2-container).swal2-center-end,div:where(.swal2-container).swal2-bottom-end{grid-template-columns:auto auto minmax(0, 1fr)}div:where(.swal2-container).swal2-top-start>.swal2-popup{align-self:start}div:where(.swal2-container).swal2-top>.swal2-popup{grid-column:2;place-self:start center}div:where(.swal2-container).swal2-top-end>.swal2-popup,div:where(.swal2-container).swal2-top-right>.swal2-popup{grid-column:3;place-self:start end}div:where(.swal2-container).swal2-center-start>.swal2-popup,div:where(.swal2-container).swal2-center-left>.swal2-popup{grid-row:2;align-self:center}div:where(.swal2-container).swal2-center>.swal2-popup{grid-column:2;grid-row:2;place-self:center center}div:where(.swal2-container).swal2-center-end>.swal2-popup,div:where(.swal2-container).swal2-center-right>.swal2-popup{grid-column:3;grid-row:2;place-self:center end}div:where(.swal2-container).swal2-bottom-start>.swal2-popup,div:where(.swal2-container).swal2-bottom-left>.swal2-popup{grid-column:1;grid-row:3;align-self:end}div:where(.swal2-container).swal2-bottom>.swal2-popup{grid-column:2;grid-row:3;place-self:end center}div:where(.swal2-container).swal2-bottom-end>.swal2-popup,div:where(.swal2-container).swal2-bottom-right>.swal2-popup{grid-column:3;grid-row:3;place-self:end end}div:where(.swal2-container).swal2-grow-row>.swal2-popup,div:where(.swal2-container).swal2-grow-fullscreen>.swal2-popup{grid-column:1/4;width:100%}div:where(.swal2-container).swal2-grow-column>.swal2-popup,div:where(.swal2-container).swal2-grow-fullscreen>.swal2-popup{grid-row:1/4;align-self:stretch}div:where(.swal2-container).swal2-no-transition{transition:none !important}div:where(.swal2-container)[popover]{width:auto;border:0}div:where(.swal2-container) div:where(.swal2-popup){display:none;position:relative;box-sizing:border-box;grid-template-columns:minmax(0, 100%);width:var(--swal2-width);max-width:100%;padding:var(--swal2-padding);border:var(--swal2-border);border-radius:var(--swal2-border-radius);background:var(--swal2-background);color:var(--swal2-color);font-family:inherit;font-size:1rem}div:where(.swal2-container) div:where(.swal2-popup):focus{outline:none}div:where(.swal2-container) div:where(.swal2-popup).swal2-loading{overflow-y:hidden}div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable{cursor:grab}div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable div:where(.swal2-icon){cursor:grab}div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging{cursor:grabbing}div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging div:where(.swal2-icon){cursor:grabbing}div:where(.swal2-container) h2:where(.swal2-title){position:relative;max-width:100%;margin:0;padding:var(--swal2-title-padding);color:inherit;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;overflow-wrap:break-word;cursor:initial}div:where(.swal2-container) div:where(.swal2-actions){display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:var(--swal2-actions-justify-content);width:var(--swal2-actions-width);margin:var(--swal2-actions-margin);padding:var(--swal2-actions-padding);border-radius:var(--swal2-actions-border-radius);background:var(--swal2-actions-background)}div:where(.swal2-container) div:where(.swal2-loader){display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 rgba(0,0,0,0) #2778c4 rgba(0,0,0,0)}div:where(.swal2-container) button:where(.swal2-styled){margin:.3125em;padding:.625em 1.1em;transition:var(--swal2-action-button-transition);border:none;box-shadow:0 0 0 3px rgba(0,0,0,0);font-weight:500}div:where(.swal2-container) button:where(.swal2-styled):not([disabled]){cursor:pointer}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){border-radius:var(--swal2-confirm-button-border-radius);background:initial;background-color:var(--swal2-confirm-button-background-color);box-shadow:var(--swal2-confirm-button-box-shadow);color:var(--swal2-confirm-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):hover{background-color:color-mix(in srgb, var(--swal2-confirm-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):active{background-color:color-mix(in srgb, var(--swal2-confirm-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny){border-radius:var(--swal2-deny-button-border-radius);background:initial;background-color:var(--swal2-deny-button-background-color);box-shadow:var(--swal2-deny-button-box-shadow);color:var(--swal2-deny-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny):hover{background-color:color-mix(in srgb, var(--swal2-deny-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny):active{background-color:color-mix(in srgb, var(--swal2-deny-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel){border-radius:var(--swal2-cancel-button-border-radius);background:initial;background-color:var(--swal2-cancel-button-background-color);box-shadow:var(--swal2-cancel-button-box-shadow);color:var(--swal2-cancel-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel):hover{background-color:color-mix(in srgb, var(--swal2-cancel-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel):active{background-color:color-mix(in srgb, var(--swal2-cancel-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):focus-visible{outline:none;box-shadow:var(--swal2-action-button-focus-box-shadow)}div:where(.swal2-container) button:where(.swal2-styled)[disabled]:not(.swal2-loading){opacity:.4}div:where(.swal2-container) button:where(.swal2-styled)::-moz-focus-inner{border:0}div:where(.swal2-container) div:where(.swal2-footer){margin:1em 0 0;padding:1em 1em 0;border-top:1px solid var(--swal2-footer-border-color);background:var(--swal2-footer-background);color:var(--swal2-footer-color);font-size:1em;text-align:center;cursor:initial}div:where(.swal2-container) .swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;grid-column:auto !important;overflow:hidden;border-bottom-right-radius:var(--swal2-border-radius);border-bottom-left-radius:var(--swal2-border-radius)}div:where(.swal2-container) div:where(.swal2-timer-progress-bar){width:100%;height:.25em;background:var(--swal2-timer-progress-bar-background)}div:where(.swal2-container) img:where(.swal2-image){max-width:100%;margin:2em auto 1em;cursor:initial}div:where(.swal2-container) button:where(.swal2-close){position:var(--swal2-close-button-position);inset:var(--swal2-close-button-inset);z-index:2;align-items:center;justify-content:center;width:1.2em;height:1.2em;margin-top:0;margin-right:0;margin-bottom:-1.2em;padding:0;overflow:hidden;transition:var(--swal2-close-button-transition);border:none;border-radius:var(--swal2-border-radius);outline:var(--swal2-close-button-outline);background:rgba(0,0,0,0);color:var(--swal2-close-button-color);font-family:monospace;font-size:var(--swal2-close-button-font-size);cursor:pointer;justify-self:end}div:where(.swal2-container) button:where(.swal2-close):hover{transform:var(--swal2-close-button-hover-transform);background:rgba(0,0,0,0);color:#f27474}div:where(.swal2-container) button:where(.swal2-close):focus-visible{outline:none;box-shadow:var(--swal2-close-button-focus-box-shadow)}div:where(.swal2-container) button:where(.swal2-close)::-moz-focus-inner{border:0}div:where(.swal2-container) div:where(.swal2-html-container){z-index:1;justify-content:center;margin:0;padding:var(--swal2-html-container-padding);overflow:auto;color:inherit;font-size:1.125em;font-weight:normal;line-height:normal;text-align:center;overflow-wrap:break-word;word-break:break-word;cursor:initial}div:where(.swal2-container) input:where(.swal2-input),div:where(.swal2-container) input:where(.swal2-file),div:where(.swal2-container) textarea:where(.swal2-textarea),div:where(.swal2-container) select:where(.swal2-select),div:where(.swal2-container) div:where(.swal2-radio),div:where(.swal2-container) label:where(.swal2-checkbox){margin:1em 2em 3px}div:where(.swal2-container) input:where(.swal2-input),div:where(.swal2-container) input:where(.swal2-file),div:where(.swal2-container) textarea:where(.swal2-textarea){box-sizing:border-box;width:auto;transition:var(--swal2-input-transition);border:var(--swal2-input-border);border-radius:var(--swal2-input-border-radius);background:var(--swal2-input-background);box-shadow:var(--swal2-input-box-shadow);color:inherit;font-size:1.125em}div:where(.swal2-container) input:where(.swal2-input).swal2-inputerror,div:where(.swal2-container) input:where(.swal2-file).swal2-inputerror,div:where(.swal2-container) textarea:where(.swal2-textarea).swal2-inputerror{border-color:#f27474 !important;box-shadow:0 0 2px #f27474 !important}div:where(.swal2-container) input:where(.swal2-input):hover,div:where(.swal2-container) input:where(.swal2-file):hover,div:where(.swal2-container) textarea:where(.swal2-textarea):hover{box-shadow:var(--swal2-input-hover-box-shadow)}div:where(.swal2-container) input:where(.swal2-input):focus,div:where(.swal2-container) input:where(.swal2-file):focus,div:where(.swal2-container) textarea:where(.swal2-textarea):focus{border:var(--swal2-input-focus-border);outline:none;box-shadow:var(--swal2-input-focus-box-shadow)}div:where(.swal2-container) input:where(.swal2-input)::placeholder,div:where(.swal2-container) input:where(.swal2-file)::placeholder,div:where(.swal2-container) textarea:where(.swal2-textarea)::placeholder{color:#ccc}div:where(.swal2-container) .swal2-range{margin:1em 2em 3px;background:var(--swal2-background)}div:where(.swal2-container) .swal2-range input{width:80%}div:where(.swal2-container) .swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}div:where(.swal2-container) .swal2-range input,div:where(.swal2-container) .swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}div:where(.swal2-container) .swal2-input{height:2.625em;padding:0 .75em}div:where(.swal2-container) .swal2-file{width:75%;margin-right:auto;margin-left:auto;background:var(--swal2-input-background);font-size:1.125em}div:where(.swal2-container) .swal2-textarea{height:6.75em;padding:.75em}div:where(.swal2-container) .swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:var(--swal2-input-background);color:inherit;font-size:1.125em}div:where(.swal2-container) .swal2-radio,div:where(.swal2-container) .swal2-checkbox{align-items:center;justify-content:center;background:var(--swal2-background);color:inherit}div:where(.swal2-container) .swal2-radio label,div:where(.swal2-container) .swal2-checkbox label{margin:0 .6em;font-size:1.125em}div:where(.swal2-container) .swal2-radio input,div:where(.swal2-container) .swal2-checkbox input{flex-shrink:0;margin:0 .4em}div:where(.swal2-container) label:where(.swal2-input-label){display:flex;justify-content:center;margin:1em auto 0}div:where(.swal2-container) div:where(.swal2-validation-message){align-items:center;justify-content:center;margin:1em 0 0;padding:.625em;overflow:hidden;background:var(--swal2-validation-message-background);color:var(--swal2-validation-message-color);font-size:1em;font-weight:300}div:where(.swal2-container) div:where(.swal2-validation-message)::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}div:where(.swal2-container) .swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:1.25em auto;padding:0;background:rgba(0,0,0,0);font-weight:600}div:where(.swal2-container) .swal2-progress-steps li{display:inline-block;position:relative}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:var(--swal2-progress-step-background);color:#fff}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:var(--swal2-progress-step-background)}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}div:where(.swal2-icon){position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:2.5em auto .6em;zoom:var(--swal2-icon-zoom);border:.25em solid rgba(0,0,0,0);border-radius:50%;border-color:#000;font-family:inherit;line-height:5em;cursor:default;user-select:none}div:where(.swal2-icon) .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}div:where(.swal2-icon).swal2-error{border-color:#f27474;color:#f27474}div:where(.swal2-icon).swal2-error .swal2-x-mark{position:relative;flex-grow:1}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-error.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-error.swal2-icon-show .swal2-x-mark{animation:swal2-animate-error-x-mark .5s}div:where(.swal2-icon).swal2-warning{border-color:#f8bb86;color:#f8bb86}div:where(.swal2-icon).swal2-warning.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-warning.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .5s}div:where(.swal2-icon).swal2-info{border-color:#3fc3ee;color:#3fc3ee}div:where(.swal2-icon).swal2-info.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-info.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .8s}div:where(.swal2-icon).swal2-question{border-color:#87adbd;color:#87adbd}div:where(.swal2-icon).swal2-question.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-question.swal2-icon-show .swal2-icon-content{animation:swal2-animate-question-mark .8s}div:where(.swal2-icon).swal2-success{border-color:#a5dc86;color:#a5dc86}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;border-radius:50%}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}div:where(.swal2-icon).swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-0.25em;left:-0.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}div:where(.swal2-icon).swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-animate-success-line-tip .75s}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-animate-success-line-long .75s}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-circular-line-right{animation:swal2-rotate-success-circular-line 4.25s ease-in}[class^=swal2]{-webkit-tap-highlight-color:rgba(0,0,0,0)}.swal2-show{animation:var(--swal2-show-animation)}.swal2-hide{animation:var(--swal2-hide-animation)}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{margin-right:initial;margin-left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}.swal2-toast{box-sizing:border-box;grid-column:1/4 !important;grid-row:1/4 !important;grid-template-columns:min-content auto min-content;padding:1em;overflow-y:hidden;border:var(--swal2-toast-border);background:var(--swal2-background);box-shadow:var(--swal2-toast-box-shadow);pointer-events:auto}.swal2-toast>*{grid-column:2}.swal2-toast h2:where(.swal2-title){margin:.5em 1em;padding:0;font-size:1em;text-align:initial}.swal2-toast .swal2-loading{justify-content:center}.swal2-toast input:where(.swal2-input){height:2em;margin:.5em;font-size:1em}.swal2-toast .swal2-validation-message{font-size:1em}.swal2-toast div:where(.swal2-footer){margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-toast button:where(.swal2-close){grid-column:3/3;grid-row:1/99;align-self:center;width:.8em;height:.8em;margin:0;font-size:2em}.swal2-toast div:where(.swal2-html-container){margin:.5em 1em;padding:0;overflow:initial;font-size:1em;text-align:initial}.swal2-toast div:where(.swal2-html-container):empty{padding:0}.swal2-toast .swal2-loader{grid-column:1;grid-row:1/99;align-self:center;width:2em;height:2em;margin:.25em}.swal2-toast .swal2-icon{grid-column:1;grid-row:1/99;align-self:center;width:2em;min-width:2em;height:2em;margin:0 .5em 0 0}.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:bold}.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-toast div:where(.swal2-actions){justify-content:flex-start;height:auto;margin:0;margin-top:.5em;padding:0 .5em}.swal2-toast button:where(.swal2-styled){margin:.25em .5em;padding:.4em .6em;font-size:1em}.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;border-radius:50%}.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.8em;left:-0.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-toast-animate-success-line-tip .75s}.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-toast-animate-success-line-long .75s}.swal2-toast.swal2-show{animation:var(--swal2-toast-show-animation)}.swal2-toast.swal2-hide{animation:var(--swal2-toast-hide-animation)}@keyframes swal2-show{0%{transform:translate3d(0, -50px, 0) scale(0.9);opacity:0}100%{transform:translate3d(0, 0, 0) scale(1);opacity:1}}@keyframes swal2-hide{0%{transform:translate3d(0, 0, 0) scale(1);opacity:1}100%{transform:translate3d(0, -50px, 0) scale(0.9);opacity:0}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-0.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(0.4);opacity:0}50%{margin-top:1.625em;transform:scale(0.4);opacity:0}80%{margin-top:-0.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0deg);opacity:1}}@keyframes swal2-rotate-loading{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes swal2-animate-question-mark{0%{transform:rotateY(-360deg)}100%{transform:rotateY(0)}}@keyframes swal2-animate-i-mark{0%{transform:rotateZ(45deg);opacity:0}25%{transform:rotateZ(-25deg);opacity:.4}50%{transform:rotateZ(15deg);opacity:.8}75%{transform:rotateZ(-5deg);opacity:1}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-toast-show{0%{transform:translateY(-0.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(0.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0deg)}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-0.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}</style></head>
+
+
+
+<body>
+    <style>
+    /* Container for the logo + spinner */
+    .loader-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* The custom icon in the center */
+    .loader-icon {
+        position: absolute;
+        width: 33px; /* Adjust size to fit inside the spinner */
+        /*height: 30px;*/
+        object-fit: contain;
+    }
+
+    /* Adjusting the spinner size to wrap the icon */
+    .custom-spinner {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-width: 0.25em;
+    }
+</style>
+
+    <header class="p-1 bg-brand border-bottom fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-1">
+                    <a onclick="PreparationWay(0)" style="cursor: pointer;" id="header_home_link">
+                <picture id="header_home_image" class="d-none">
+                    <source srcset="https://www.topgrade.pk/public/assets/website/images/tg-insignia-white.webp" type="image/webp">
+                    <source srcset="https://www.topgrade.pk/public/assets/website/images/tg-insignia-white.png" type="image/png">
+                    <img class="img-fluid" style="width: 32px; border-radius: 0" src="./physics slides_files/tg-insignia-white.png" alt="Online Entry Test Preparation" title="Online Entry Test Preparation">
+                </picture>
+                <span id="header_home_text" class="ms-2 fw-bold text-white "><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</span>
+            </a>
+                <style>
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        text-align: center !important;
+    }
+
+    /** */
+    .select2-container--default .select2-results>.select2-results__options {
+        padding: 0px 10px 10px 10px;
+    }
+
+    .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+        background-color: #cccccc82 !important;
+        color: #000;
+        margin-bottom: 7px !important;
+        margin-top: 7px !important;
+    }
+
+    .select2-results__option {
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 14px;
+    }
+</style>
+<select id="courseSearch" class="form-select dropdown-premium mx-auto select2-hidden-accessible" style="
+    width: auto;
+    min-width: 220px;
+    border-radius: 12px;
+    /*padding: 10px 20px;*/
+    border: 1px solid #ccc;
+    /*                        font-weight: 600;
+                            color: #1e293b;*/
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    " onchange="BuildCourse(this.value, &#39;https://app.topgrade.pk/&#39;, &#39;0&#39;)" data-select2-id="select2-data-courseSearch" tabindex="-1" aria-hidden="true">
+    <option selected="" disabled="">Select Your Course</option>
+                    <option value="229">F.Sc 1st Year Pre-Med. (Punjab - 2025 Sm</option>
+                                <option value="170">F.Sc 2nd Year Pre-Medical (Punjab)</option>
+                                <option value="188" selected="" data-badge="Active" data-select2-id="select2-data-2-7291">MDCAT (Punjab)</option>
+                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-1-0ayw" style="width: 352px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-courseSearch-container" aria-controls="select2-courseSearch-container"><span class="select2-selection__rendered" id="select2-courseSearch-container" role="textbox" aria-readonly="true" title="MDCAT (Punjab)">MDCAT (Punjab)</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>        <div class="d-flex align-items-center">
+                            <a href="https://app.topgrade.pk/logout">
+                    <i class="fa fa-sign-out text-white" aria-hidden="true"></i>
+                </a>
+                    </div>
+    </div>
+</header>
+
+
+    <div class="app-wrapper mt-4 py-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="heading-title w-100 text-center">Slides</h1>
+        </div>
+        <div class="greeting-section">
+            <img src="./physics slides_files/docm-frn.png" alt="Review Mascot" class="hero-mascot">
+            <div class="speech-bubble shadow-sm">
+                <p class="app-subtitle text-white">Revise with slides, clear with video, save with bookmark.</p>
+            </div>
+        </div>
+                    <div class="slide-indicator">
+                <!-- <div class="line-container"></div> -->
+                <div class="text">Slide <span id="current_idx">1</span> / 73</div>
+                <!-- <div class="line-container"></div> -->
+            </div>
+                <div class="video-section border rounded shadow-sm mb-3" id="slide_show">
+                            <div id="slideCarousel" class="carousel slide" data-bs-interval="false">
+                    <!-- <div class="text-center py-2 bg-light border-bottom">
+                            <span class="fw-bold text-primary" style="font-size:14px;">
+                                Slide - <span id="current_idx">1</span> of 73                            </span>
+                        </div> -->
+
+                    <div class="carousel-inner" id="slider">
+                                                    <div class="carousel-item active" data-slide-id="1" data-index="1" data-video-url="" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/1^^ea5209002412390b9acc0e3ea8ec4155MTc3Nzg5ODcwM2VhNTIwOTAwMjQxMjM5MGI5YWNjMGUzZWE4ZWM0MTU1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/1^^ea5209002412390b9acc0e3ea8ec4155MTc3Nzg5ODcwM2VhNTIwOTAwMjQxMjM5MGI5YWNjMGUzZWE4ZWM0MTU1.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="2" data-index="2" data-video-url="https://www.youtube.com/embed/4iVb2AzKhBM" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/2^^0928e67350ae66bf393963e817da2a0dMTc3Nzg5ODcwMzA5MjhlNjczNTBhZTY2YmYzOTM5NjNlODE3ZGEyYTBk.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/2^^0928e67350ae66bf393963e817da2a0dMTc3Nzg5ODcwMzA5MjhlNjczNTBhZTY2YmYzOTM5NjNlODE3ZGEyYTBk.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="3" data-index="3" data-video-url="https://www.youtube.com/embed/uM7qvOe4QYE" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/3^^12a666a3ee28688c2b23608f9d30acc7MTc3Nzg5ODcwMzEyYTY2NmEzZWUyODY4OGMyYjIzNjA4ZjlkMzBhY2M3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/3^^12a666a3ee28688c2b23608f9d30acc7MTc3Nzg5ODcwMzEyYTY2NmEzZWUyODY4OGMyYjIzNjA4ZjlkMzBhY2M3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="4" data-index="4" data-video-url="https://www.youtube.com/embed/7LGh15rB4mw" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/4^^604fd08bbdded600f072f6aa70b193a6MTc3Nzg5ODcwMzYwNGZkMDhiYmRkZWQ2MDBmMDcyZjZhYTcwYjE5M2E2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/4^^604fd08bbdded600f072f6aa70b193a6MTc3Nzg5ODcwMzYwNGZkMDhiYmRkZWQ2MDBmMDcyZjZhYTcwYjE5M2E2.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="5" data-index="5" data-video-url="https://www.youtube.com/embed/asSI6U6e5oI" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/5^^0234b239adc0f051033597f9f35a2f23MTc3Nzg5ODcwMzAyMzRiMjM5YWRjMGYwNTEwMzM1OTdmOWYzNWEyZjIz.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/5^^0234b239adc0f051033597f9f35a2f23MTc3Nzg5ODcwMzAyMzRiMjM5YWRjMGYwNTEwMzM1OTdmOWYzNWEyZjIz.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="6" data-index="6" data-video-url="https://www.youtube.com/embed/Ty3DUEK45ys" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/6^^4b18788545e3c5a8c066df2a0ff863a8MTc3Nzg5ODcwMzRiMTg3ODg1NDVlM2M1YThjMDY2ZGYyYTBmZjg2M2E4.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/6^^4b18788545e3c5a8c066df2a0ff863a8MTc3Nzg5ODcwMzRiMTg3ODg1NDVlM2M1YThjMDY2ZGYyYTBmZjg2M2E4.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="7" data-index="7" data-video-url="https://www.youtube.com/embed/gUFhTGqa540" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/7^^aa41a34a9ea9313777ad2abfa90bc681MTc3Nzg5ODcwM2FhNDFhMzRhOWVhOTMxMzc3N2FkMmFiZmE5MGJjNjgx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/7^^aa41a34a9ea9313777ad2abfa90bc681MTc3Nzg5ODcwM2FhNDFhMzRhOWVhOTMxMzc3N2FkMmFiZmE5MGJjNjgx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="8" data-index="8" data-video-url="https://www.youtube.com/embed/ZUIGgAAK8-8" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/8^^fa27592f7dddfde9db4ed0cda7a99e96MTc3Nzg5ODcwM2ZhMjc1OTJmN2RkZGZkZTlkYjRlZDBjZGE3YTk5ZTk2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/8^^fa27592f7dddfde9db4ed0cda7a99e96MTc3Nzg5ODcwM2ZhMjc1OTJmN2RkZGZkZTlkYjRlZDBjZGE3YTk5ZTk2.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="9" data-index="9" data-video-url="https://www.youtube.com/embed/LqkAncIeQjU" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/9^^27c134765dc240e64fc2a69dd7c30d4eMTc3Nzg5ODcwMzI3YzEzNDc2NWRjMjQwZTY0ZmMyYTY5ZGQ3YzMwZDRl.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/9^^27c134765dc240e64fc2a69dd7c30d4eMTc3Nzg5ODcwMzI3YzEzNDc2NWRjMjQwZTY0ZmMyYTY5ZGQ3YzMwZDRl.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="10" data-index="10" data-video-url="https://www.youtube.com/embed/hiWuzSLnvDY" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/10^^548aa56fa142a96ffa1ae4e3a560ccffMTc3Nzg5ODcwMzU0OGFhNTZmYTE0MmE5NmZmYTFhZTRlM2E1NjBjY2Zm.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/10^^548aa56fa142a96ffa1ae4e3a560ccffMTc3Nzg5ODcwMzU0OGFhNTZmYTE0MmE5NmZmYTFhZTRlM2E1NjBjY2Zm.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="11" data-index="11" data-video-url="https://www.youtube.com/embed/ZonrkWQAS-E" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/11^^4796b0234878713a04f8d1f8b07e6ae9MTc3Nzg5ODcwMzQ3OTZiMDIzNDg3ODcxM2EwNGY4ZDFmOGIwN2U2YWU5.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/11^^4796b0234878713a04f8d1f8b07e6ae9MTc3Nzg5ODcwMzQ3OTZiMDIzNDg3ODcxM2EwNGY4ZDFmOGIwN2U2YWU5.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="12" data-index="12" data-video-url="https://www.youtube.com/embed/Sd43JEHMd2c" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/12^^4d6afcf19b6f32ade3021925b04c5b23MTc3Nzg5ODcwMzRkNmFmY2YxOWI2ZjMyYWRlMzAyMTkyNWIwNGM1YjIz.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/12^^4d6afcf19b6f32ade3021925b04c5b23MTc3Nzg5ODcwMzRkNmFmY2YxOWI2ZjMyYWRlMzAyMTkyNWIwNGM1YjIz.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="13" data-index="13" data-video-url="https://www.youtube.com/embed/aYXGfq220Us" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/13^^d7f8c671a998dd15b6f0508e7336ab8cMTc3Nzg5ODcwM2Q3ZjhjNjcxYTk5OGRkMTViNmYwNTA4ZTczMzZhYjhj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/13^^d7f8c671a998dd15b6f0508e7336ab8cMTc3Nzg5ODcwM2Q3ZjhjNjcxYTk5OGRkMTViNmYwNTA4ZTczMzZhYjhj.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="14" data-index="14" data-video-url="https://www.youtube.com/embed/dCf-y35rrrU" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/14^^834fe88642b7061930f8ef628142bf0dMTc3Nzg5ODcwMzgzNGZlODg2NDJiNzA2MTkzMGY4ZWY2MjgxNDJiZjBk.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/14^^834fe88642b7061930f8ef628142bf0dMTc3Nzg5ODcwMzgzNGZlODg2NDJiNzA2MTkzMGY4ZWY2MjgxNDJiZjBk.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="15" data-index="15" data-video-url="https://www.youtube.com/embed/Gg_S0bYvTNc" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/15^^2fde01e14a1cbe02ae6a6310e14838e3MTc3Nzg5ODcwMzJmZGUwMWUxNGExY2JlMDJhZTZhNjMxMGUxNDgzOGUz.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/15^^2fde01e14a1cbe02ae6a6310e14838e3MTc3Nzg5ODcwMzJmZGUwMWUxNGExY2JlMDJhZTZhNjMxMGUxNDgzOGUz.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="16" data-index="16" data-video-url="https://www.youtube.com/embed/d_6iAvOZRp4" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/16^^580ed5fe6a015b4e6549eccd135a59ffMTc3Nzg5ODcwMzU4MGVkNWZlNmEwMTViNGU2NTQ5ZWNjZDEzNWE1OWZm.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/16^^580ed5fe6a015b4e6549eccd135a59ffMTc3Nzg5ODcwMzU4MGVkNWZlNmEwMTViNGU2NTQ5ZWNjZDEzNWE1OWZm.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="17" data-index="17" data-video-url="https://www.youtube.com/embed/kvc1Nih-NFw" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/17^^1802a61b1fa3f6eeb77b2f5bc5c561d2MTc3Nzg5ODcwMzE4MDJhNjFiMWZhM2Y2ZWViNzdiMmY1YmM1YzU2MWQy.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/17^^1802a61b1fa3f6eeb77b2f5bc5c561d2MTc3Nzg5ODcwMzE4MDJhNjFiMWZhM2Y2ZWViNzdiMmY1YmM1YzU2MWQy.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="18" data-index="18" data-video-url="https://www.youtube.com/embed/UYrJZQnin5s" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/18^^8a598c4fbd5e3fedd0134ecaad91190fMTc3Nzg5ODcwMzhhNTk4YzRmYmQ1ZTNmZWRkMDEzNGVjYWFkOTExOTBm.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/18^^8a598c4fbd5e3fedd0134ecaad91190fMTc3Nzg5ODcwMzhhNTk4YzRmYmQ1ZTNmZWRkMDEzNGVjYWFkOTExOTBm.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="19" data-index="19" data-video-url="https://www.youtube.com/embed/dgk5h3iYbHg" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/19^^b254a3064d33094dcda60ec445f97bbfMTc3Nzg5ODcwM2IyNTRhMzA2NGQzMzA5NGRjZGE2MGVjNDQ1Zjk3YmJm.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/19^^b254a3064d33094dcda60ec445f97bbfMTc3Nzg5ODcwM2IyNTRhMzA2NGQzMzA5NGRjZGE2MGVjNDQ1Zjk3YmJm.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="20" data-index="20" data-video-url="https://www.youtube.com/embed/LglAPvT_h9M" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/20^^b39edfae0ebaeb2ad1b1cd1e1eec768cMTc3Nzg5ODcwM2IzOWVkZmFlMGViYWViMmFkMWIxY2QxZTFlZWM3Njhj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/20^^b39edfae0ebaeb2ad1b1cd1e1eec768cMTc3Nzg5ODcwM2IzOWVkZmFlMGViYWViMmFkMWIxY2QxZTFlZWM3Njhj.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="21" data-index="21" data-video-url="https://www.youtube.com/embed/_v3Xa6Bt6vk" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/21^^bbfb0624b398b29ed11e1f355d8aeffaMTc3Nzg5ODcwM2JiZmIwNjI0YjM5OGIyOWVkMTFlMWYzNTVkOGFlZmZh.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/21^^bbfb0624b398b29ed11e1f355d8aeffaMTc3Nzg5ODcwM2JiZmIwNjI0YjM5OGIyOWVkMTFlMWYzNTVkOGFlZmZh.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="22" data-index="22" data-video-url="https://www.youtube.com/embed/YK5mUcY7G0I" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/22^^de836806750a322008115ff106d0dcbdMTc3Nzg5ODcwM2RlODM2ODA2NzUwYTMyMjAwODExNWZmMTA2ZDBkY2Jk.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/22^^de836806750a322008115ff106d0dcbdMTc3Nzg5ODcwM2RlODM2ODA2NzUwYTMyMjAwODExNWZmMTA2ZDBkY2Jk.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="23" data-index="23" data-video-url="https://www.youtube.com/embed/mKa1lyT_PIw" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/23^^01f8dd1e22a2692f703f980f482a0212MTc3Nzg5ODcwMzAxZjhkZDFlMjJhMjY5MmY3MDNmOTgwZjQ4MmEwMjEy.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/23^^01f8dd1e22a2692f703f980f482a0212MTc3Nzg5ODcwMzAxZjhkZDFlMjJhMjY5MmY3MDNmOTgwZjQ4MmEwMjEy.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="24" data-index="24" data-video-url="https://www.youtube.com/embed/X8oPY18H5aU" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/24^^44c5444ab83c22d562778fc1dd9b20f7MTc3Nzg5ODcwMzQ0YzU0NDRhYjgzYzIyZDU2Mjc3OGZjMWRkOWIyMGY3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/24^^44c5444ab83c22d562778fc1dd9b20f7MTc3Nzg5ODcwMzQ0YzU0NDRhYjgzYzIyZDU2Mjc3OGZjMWRkOWIyMGY3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="25" data-index="25" data-video-url="https://www.youtube.com/embed/eM0vcCdBtY4" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/25^^f3bf63b7fedef35a40b966b546a8691fMTc3Nzg5ODcwM2YzYmY2M2I3ZmVkZWYzNWE0MGI5NjZiNTQ2YTg2OTFm.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/25^^f3bf63b7fedef35a40b966b546a8691fMTc3Nzg5ODcwM2YzYmY2M2I3ZmVkZWYzNWE0MGI5NjZiNTQ2YTg2OTFm.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="26" data-index="26" data-video-url="https://www.youtube.com/embed/0QRTalHoPsc" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/26^^be534b5a11b7f9caa598b67fc00e6a3cMTc3Nzg5ODcwM2JlNTM0YjVhMTFiN2Y5Y2FhNTk4YjY3ZmMwMGU2YTNj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/26^^be534b5a11b7f9caa598b67fc00e6a3cMTc3Nzg5ODcwM2JlNTM0YjVhMTFiN2Y5Y2FhNTk4YjY3ZmMwMGU2YTNj.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="27" data-index="27" data-video-url="https://www.youtube.com/embed/eZKAl1Q94Og" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/27^^37b4b38398b7d557fd72b7c4e76062a8MTc3Nzg5ODcwMzM3YjRiMzgzOThiN2Q1NTdmZDcyYjdjNGU3NjA2MmE4.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/27^^37b4b38398b7d557fd72b7c4e76062a8MTc3Nzg5ODcwMzM3YjRiMzgzOThiN2Q1NTdmZDcyYjdjNGU3NjA2MmE4.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="28" data-index="28" data-video-url="https://www.youtube.com/embed/y353sVZVtuA" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/28^^9896e0aef4b82b8a0cdc86601947f274MTc3Nzg5ODcwMzk4OTZlMGFlZjRiODJiOGEwY2RjODY2MDE5NDdmMjc0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/28^^9896e0aef4b82b8a0cdc86601947f274MTc3Nzg5ODcwMzk4OTZlMGFlZjRiODJiOGEwY2RjODY2MDE5NDdmMjc0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="29" data-index="29" data-video-url="https://www.youtube.com/embed/3qdlymGVpKw" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/29^^4f57b85f11c0f255267244c1485fd098MTc3Nzg5ODcwMzRmNTdiODVmMTFjMGYyNTUyNjcyNDRjMTQ4NWZkMDk4.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/29^^4f57b85f11c0f255267244c1485fd098MTc3Nzg5ODcwMzRmNTdiODVmMTFjMGYyNTUyNjcyNDRjMTQ4NWZkMDk4.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="30" data-index="30" data-video-url="https://www.youtube.com/embed/ZmRyumehHZU" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/30^^2b23041ebd292eb25ae124c9edcab0edMTc3Nzg5ODcwMzJiMjMwNDFlYmQyOTJlYjI1YWUxMjRjOWVkY2FiMGVk.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/30^^2b23041ebd292eb25ae124c9edcab0edMTc3Nzg5ODcwMzJiMjMwNDFlYmQyOTJlYjI1YWUxMjRjOWVkY2FiMGVk.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="31" data-index="31" data-video-url="https://www.youtube.com/embed/aYqOxznj7Fc" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/31^^50b4df9fdbfc659f38d44acc08176248MTc3Nzg5ODcwMzUwYjRkZjlmZGJmYzY1OWYzOGQ0NGFjYzA4MTc2MjQ4.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/31^^50b4df9fdbfc659f38d44acc08176248MTc3Nzg5ODcwMzUwYjRkZjlmZGJmYzY1OWYzOGQ0NGFjYzA4MTc2MjQ4.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="32" data-index="32" data-video-url="https://www.youtube.com/embed/W01wnTW6_yA" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/32^^ef1a095d408e35ac5dc76d20b1cf9778MTc3Nzg5ODcwM2VmMWEwOTVkNDA4ZTM1YWM1ZGM3NmQyMGIxY2Y5Nzc4.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/32^^ef1a095d408e35ac5dc76d20b1cf9778MTc3Nzg5ODcwM2VmMWEwOTVkNDA4ZTM1YWM1ZGM3NmQyMGIxY2Y5Nzc4.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="33" data-index="33" data-video-url="https://www.youtube.com/embed/_qpjzkJgZ80" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/33^^9a00d8e9e8f12336235176614ef1b594MTc3Nzg5ODcwMzlhMDBkOGU5ZThmMTIzMzYyMzUxNzY2MTRlZjFiNTk0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/33^^9a00d8e9e8f12336235176614ef1b594MTc3Nzg5ODcwMzlhMDBkOGU5ZThmMTIzMzYyMzUxNzY2MTRlZjFiNTk0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="34" data-index="34" data-video-url="https://www.youtube.com/embed/2OMHXFh8P98" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/34^^c30be4b8f7ebc3c6690d28ba82cf627fMTc3Nzg5ODcwM2MzMGJlNGI4ZjdlYmMzYzY2OTBkMjhiYTgyY2Y2Mjdm.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/34^^c30be4b8f7ebc3c6690d28ba82cf627fMTc3Nzg5ODcwM2MzMGJlNGI4ZjdlYmMzYzY2OTBkMjhiYTgyY2Y2Mjdm.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="35" data-index="35" data-video-url="https://www.youtube.com/embed/hjKzwgLdZ8Y" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/35^^23d0e84ede76362a4bb26958bba2b1f7MTc3Nzg5ODcwMzIzZDBlODRlZGU3NjM2MmE0YmIyNjk1OGJiYTJiMWY3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/35^^23d0e84ede76362a4bb26958bba2b1f7MTc3Nzg5ODcwMzIzZDBlODRlZGU3NjM2MmE0YmIyNjk1OGJiYTJiMWY3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="36" data-index="36" data-video-url="https://www.youtube.com/embed/bcWmDIW0v_k" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/36^^fa3fc39743d7e41d097a1408d7555ba1MTc3Nzg5ODcwM2ZhM2ZjMzk3NDNkN2U0MWQwOTdhMTQwOGQ3NTU1YmEx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/36^^fa3fc39743d7e41d097a1408d7555ba1MTc3Nzg5ODcwM2ZhM2ZjMzk3NDNkN2U0MWQwOTdhMTQwOGQ3NTU1YmEx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="37" data-index="37" data-video-url="https://www.youtube.com/embed/ssc3SRC5-EM" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/37^^d0761275f87c3580b478f73e6876ab3cMTc3Nzg5ODcwM2QwNzYxMjc1Zjg3YzM1ODBiNDc4ZjczZTY4NzZhYjNj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/37^^d0761275f87c3580b478f73e6876ab3cMTc3Nzg5ODcwM2QwNzYxMjc1Zjg3YzM1ODBiNDc4ZjczZTY4NzZhYjNj.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="38" data-index="38" data-video-url="https://www.youtube.com/embed/wFGE1Z-nBxc" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/38^^14b8d7a8a1e64c2659d5f020f33fb720MTc3Nzg5ODcwMzE0YjhkN2E4YTFlNjRjMjY1OWQ1ZjAyMGYzM2ZiNzIw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/38^^14b8d7a8a1e64c2659d5f020f33fb720MTc3Nzg5ODcwMzE0YjhkN2E4YTFlNjRjMjY1OWQ1ZjAyMGYzM2ZiNzIw.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="39" data-index="39" data-video-url="https://www.youtube.com/embed/oWSgl6By2mE" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/39^^0a1beca131958a807c5f0fea855e11a3MTc3Nzg5ODcwMzBhMWJlY2ExMzE5NThhODA3YzVmMGZlYTg1NWUxMWEz.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/39^^0a1beca131958a807c5f0fea855e11a3MTc3Nzg5ODcwMzBhMWJlY2ExMzE5NThhODA3YzVmMGZlYTg1NWUxMWEz.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="40" data-index="40" data-video-url="https://www.youtube.com/embed/Zs6MI5I3BaE" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/40^^f0c8629fe7864f83eb795109bf927b35MTc3Nzg5ODcwM2YwYzg2MjlmZTc4NjRmODNlYjc5NTEwOWJmOTI3YjM1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/40^^f0c8629fe7864f83eb795109bf927b35MTc3Nzg5ODcwM2YwYzg2MjlmZTc4NjRmODNlYjc5NTEwOWJmOTI3YjM1.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="41" data-index="41" data-video-url="https://www.youtube.com/embed/oRDw7Z1tPrU" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/41^^7d964439c452beb5cd3cade7ffafdb65MTc3Nzg5ODcwMzdkOTY0NDM5YzQ1MmJlYjVjZDNjYWRlN2ZmYWZkYjY1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/41^^7d964439c452beb5cd3cade7ffafdb65MTc3Nzg5ODcwMzdkOTY0NDM5YzQ1MmJlYjVjZDNjYWRlN2ZmYWZkYjY1.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="42" data-index="42" data-video-url="https://www.youtube.com/embed/oDccx0OIwxk" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/42^^2e43b84e2f7467c43f9c8d84bfd950a9MTc3Nzg5ODcwMzJlNDNiODRlMmY3NDY3YzQzZjljOGQ4NGJmZDk1MGE5.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/42^^2e43b84e2f7467c43f9c8d84bfd950a9MTc3Nzg5ODcwMzJlNDNiODRlMmY3NDY3YzQzZjljOGQ4NGJmZDk1MGE5.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="43" data-index="43" data-video-url="https://www.youtube.com/embed/NaOlUtkCtWs" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/43^^9ccf99f7ef3d7db128d810e87217c61dMTc3Nzg5ODcwMzljY2Y5OWY3ZWYzZDdkYjEyOGQ4MTBlODcyMTdjNjFk.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/43^^9ccf99f7ef3d7db128d810e87217c61dMTc3Nzg5ODcwMzljY2Y5OWY3ZWYzZDdkYjEyOGQ4MTBlODcyMTdjNjFk.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="44" data-index="44" data-video-url="https://www.youtube.com/embed/mtLhUT5D36U" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/44^^4f94a1e318d0c74c813752f2c5c10cc0MTc3Nzg5ODcwMzRmOTRhMWUzMThkMGM3NGM4MTM3NTJmMmM1YzEwY2Mw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/44^^4f94a1e318d0c74c813752f2c5c10cc0MTc3Nzg5ODcwMzRmOTRhMWUzMThkMGM3NGM4MTM3NTJmMmM1YzEwY2Mw.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="45" data-index="45" data-video-url="https://www.youtube.com/embed/Qar5WrEHgds" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/45^^3b49f53fbda0dc3016110340bc5675c1MTc3Nzg5ODcwMzNiNDlmNTNmYmRhMGRjMzAxNjExMDM0MGJjNTY3NWMx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/45^^3b49f53fbda0dc3016110340bc5675c1MTc3Nzg5ODcwMzNiNDlmNTNmYmRhMGRjMzAxNjExMDM0MGJjNTY3NWMx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="46" data-index="46" data-video-url="https://www.youtube.com/embed/gGC6atEXFwM" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/46^^399d75c5cf80fb73ed89777258490412MTc3Nzg5ODcwMzM5OWQ3NWM1Y2Y4MGZiNzNlZDg5Nzc3MjU4NDkwNDEy.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/46^^399d75c5cf80fb73ed89777258490412MTc3Nzg5ODcwMzM5OWQ3NWM1Y2Y4MGZiNzNlZDg5Nzc3MjU4NDkwNDEy.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="47" data-index="47" data-video-url="https://www.youtube.com/embed/lk54VqZSTYA" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/47^^38290e47256ffb28978530ca62023d44MTc3Nzg5ODcwMzM4MjkwZTQ3MjU2ZmZiMjg5Nzg1MzBjYTYyMDIzZDQ0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/47^^38290e47256ffb28978530ca62023d44MTc3Nzg5ODcwMzM4MjkwZTQ3MjU2ZmZiMjg5Nzg1MzBjYTYyMDIzZDQ0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="48" data-index="48" data-video-url="https://www.youtube.com/embed/l_FHmjYbW2U" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/48^^36c25dc75762da47c5e32c44138a37e4MTc3Nzg5ODcwMzM2YzI1ZGM3NTc2MmRhNDdjNWUzMmM0NDEzOGEzN2U0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/48^^36c25dc75762da47c5e32c44138a37e4MTc3Nzg5ODcwMzM2YzI1ZGM3NTc2MmRhNDdjNWUzMmM0NDEzOGEzN2U0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="49" data-index="49" data-video-url="https://www.youtube.com/embed/6bkF406rmDk" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/49^^e7fbbdeef25969acafb988061c323f39MTc3Nzg5ODcwM2U3ZmJiZGVlZjI1OTY5YWNhZmI5ODgwNjFjMzIzZjM5.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/49^^e7fbbdeef25969acafb988061c323f39MTc3Nzg5ODcwM2U3ZmJiZGVlZjI1OTY5YWNhZmI5ODgwNjFjMzIzZjM5.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="50" data-index="50" data-video-url="https://www.youtube.com/embed/I5juPg8gaKA" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/50^^c6aec9e06e930d331945b42606a48b04MTc3Nzg5ODcwM2M2YWVjOWUwNmU5MzBkMzMxOTQ1YjQyNjA2YTQ4YjA0.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/50^^c6aec9e06e930d331945b42606a48b04MTc3Nzg5ODcwM2M2YWVjOWUwNmU5MzBkMzMxOTQ1YjQyNjA2YTQ4YjA0.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="51" data-index="51" data-video-url="https://www.youtube.com/embed/l1gYgcEvjrs" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/51^^ca406b162c27961eb0094d7279e965cdMTc3Nzg5ODcwM2NhNDA2YjE2MmMyNzk2MWViMDA5NGQ3Mjc5ZTk2NWNk.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/51^^ca406b162c27961eb0094d7279e965cdMTc3Nzg5ODcwM2NhNDA2YjE2MmMyNzk2MWViMDA5NGQ3Mjc5ZTk2NWNk.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="52" data-index="52" data-video-url="https://www.youtube.com/embed/kCxB9SljpbU" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/52^^52c0ed2aac0a0a131c7ddb2d1771778cMTc3Nzg5ODcwMzUyYzBlZDJhYWMwYTBhMTMxYzdkZGIyZDE3NzE3Nzhj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/52^^52c0ed2aac0a0a131c7ddb2d1771778cMTc3Nzg5ODcwMzUyYzBlZDJhYWMwYTBhMTMxYzdkZGIyZDE3NzE3Nzhj.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="53" data-index="53" data-video-url="https://www.youtube.com/embed/WW-t2_C3Fdo" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/53^^6bd04d80469e2dcc572bff9e79c9a2a9MTc3Nzg5ODcwMzZiZDA0ZDgwNDY5ZTJkY2M1NzJiZmY5ZTc5YzlhMmE5.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/53^^6bd04d80469e2dcc572bff9e79c9a2a9MTc3Nzg5ODcwMzZiZDA0ZDgwNDY5ZTJkY2M1NzJiZmY5ZTc5YzlhMmE5.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="54" data-index="54" data-video-url="https://www.youtube.com/embed/I1H2L2a0Y3Y" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/54^^34a9f6da12c273842c100771ec4405f6MTc3Nzg5ODcwMzM0YTlmNmRhMTJjMjczODQyYzEwMDc3MWVjNDQwNWY2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/54^^34a9f6da12c273842c100771ec4405f6MTc3Nzg5ODcwMzM0YTlmNmRhMTJjMjczODQyYzEwMDc3MWVjNDQwNWY2.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="55" data-index="55" data-video-url="https://www.youtube.com/embed/VdQWN94L3wA" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/55^^30d91d4972de6f3779f73ae6e7e414c0MTc3Nzg5ODcwMzMwZDkxZDQ5NzJkZTZmMzc3OWY3M2FlNmU3ZTQxNGMw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/55^^30d91d4972de6f3779f73ae6e7e414c0MTc3Nzg5ODcwMzMwZDkxZDQ5NzJkZTZmMzc3OWY3M2FlNmU3ZTQxNGMw.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="56" data-index="56" data-video-url="https://www.youtube.com/embed/LUdbNcMH2AA" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/56^^4c0bf5526cfd44429e946e94ecc14d1cMTc3Nzg5ODcwMzRjMGJmNTUyNmNmZDQ0NDI5ZTk0NmU5NGVjYzE0ZDFj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/56^^4c0bf5526cfd44429e946e94ecc14d1cMTc3Nzg5ODcwMzRjMGJmNTUyNmNmZDQ0NDI5ZTk0NmU5NGVjYzE0ZDFj.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="57" data-index="57" data-video-url="https://www.youtube.com/embed/fcCh8rVl3uU" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/57^^018e52909e90f9a379019d211b7de49bMTc3Nzg5ODcwMzAxOGU1MjkwOWU5MGY5YTM3OTAxOWQyMTFiN2RlNDli.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/57^^018e52909e90f9a379019d211b7de49bMTc3Nzg5ODcwMzAxOGU1MjkwOWU5MGY5YTM3OTAxOWQyMTFiN2RlNDli.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="58" data-index="58" data-video-url="https://www.youtube.com/embed/Hv2CM8YwJ40" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/58^^a976bccc8ff3a583a0fb5775c17fafe7MTc3Nzg5ODcwM2E5NzZiY2NjOGZmM2E1ODNhMGZiNTc3NWMxN2ZhZmU3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/58^^a976bccc8ff3a583a0fb5775c17fafe7MTc3Nzg5ODcwM2E5NzZiY2NjOGZmM2E1ODNhMGZiNTc3NWMxN2ZhZmU3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="59" data-index="59" data-video-url="https://www.youtube.com/embed/zoGcnAVfvIU" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/59^^fdc195ef3845a01eae6bd4813e958072MTc3Nzg5ODcwM2ZkYzE5NWVmMzg0NWEwMWVhZTZiZDQ4MTNlOTU4MDcy.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/59^^fdc195ef3845a01eae6bd4813e958072MTc3Nzg5ODcwM2ZkYzE5NWVmMzg0NWEwMWVhZTZiZDQ4MTNlOTU4MDcy.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="60" data-index="60" data-video-url="https://www.youtube.com/embed/P2mBJ_HrKOo" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/60^^c1c21689688bd6bde02284a1253708c0MTc3Nzg5ODcwM2MxYzIxNjg5Njg4YmQ2YmRlMDIyODRhMTI1MzcwOGMw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/60^^c1c21689688bd6bde02284a1253708c0MTc3Nzg5ODcwM2MxYzIxNjg5Njg4YmQ2YmRlMDIyODRhMTI1MzcwOGMw.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="61" data-index="61" data-video-url="https://www.youtube.com/embed/uNFIYq70a38" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/61^^26304b909ed140c556d665dc811e8107MTc3Nzg5ODcwMzI2MzA0YjkwOWVkMTQwYzU1NmQ2NjVkYzgxMWU4MTA3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/61^^26304b909ed140c556d665dc811e8107MTc3Nzg5ODcwMzI2MzA0YjkwOWVkMTQwYzU1NmQ2NjVkYzgxMWU4MTA3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="62" data-index="62" data-video-url="https://www.youtube.com/embed/kDEntXewVzw" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/62^^5ff922fc123f2c1882bdd433948a3451MTc3Nzg5ODcwMzVmZjkyMmZjMTIzZjJjMTg4MmJkZDQzMzk0OGEzNDUx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/62^^5ff922fc123f2c1882bdd433948a3451MTc3Nzg5ODcwMzVmZjkyMmZjMTIzZjJjMTg4MmJkZDQzMzk0OGEzNDUx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="63" data-index="63" data-video-url="https://www.youtube.com/embed/PTeF7zkgcAY" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/63^^607e4d1f883c0fddb21a242cfb49eaaaMTc3Nzg5ODcwMzYwN2U0ZDFmODgzYzBmZGRiMjFhMjQyY2ZiNDllYWFh.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/63^^607e4d1f883c0fddb21a242cfb49eaaaMTc3Nzg5ODcwMzYwN2U0ZDFmODgzYzBmZGRiMjFhMjQyY2ZiNDllYWFh.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="64" data-index="64" data-video-url="https://www.youtube.com/embed/gLJ09zsf4xE" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/64^^6d56b9d7d19b678fed1118b6758aa417MTc3Nzg5ODcwMzZkNTZiOWQ3ZDE5YjY3OGZlZDExMThiNjc1OGFhNDE3.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/64^^6d56b9d7d19b678fed1118b6758aa417MTc3Nzg5ODcwMzZkNTZiOWQ3ZDE5YjY3OGZlZDExMThiNjc1OGFhNDE3.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="65" data-index="65" data-video-url="https://www.youtube.com/embed/crOLyDt6E5M" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/65^^e8587eb6731cfc18ae70aacb6a4d5d43MTc3Nzg5ODcwM2U4NTg3ZWI2NzMxY2ZjMThhZTcwYWFjYjZhNGQ1ZDQz.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/65^^e8587eb6731cfc18ae70aacb6a4d5d43MTc3Nzg5ODcwM2U4NTg3ZWI2NzMxY2ZjMThhZTcwYWFjYjZhNGQ1ZDQz.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="66" data-index="66" data-video-url="https://www.youtube.com/embed/OX8gBMecaSE" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/66^^3fcf00d794c987b544e152774e690a5eMTc3Nzg5ODcwMzNmY2YwMGQ3OTRjOTg3YjU0NGUxNTI3NzRlNjkwYTVl.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/66^^3fcf00d794c987b544e152774e690a5eMTc3Nzg5ODcwMzNmY2YwMGQ3OTRjOTg3YjU0NGUxNTI3NzRlNjkwYTVl.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="67" data-index="67" data-video-url="https://www.youtube.com/embed/0OzVFta7Dh0" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/67^^05263af4da620e0b448cf35c97f682a5MTc3Nzg5ODcwMzA1MjYzYWY0ZGE2MjBlMGI0NDhjZjM1Yzk3ZjY4MmE1.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/67^^05263af4da620e0b448cf35c97f682a5MTc3Nzg5ODcwMzA1MjYzYWY0ZGE2MjBlMGI0NDhjZjM1Yzk3ZjY4MmE1.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="68" data-index="68" data-video-url="https://www.youtube.com/embed/ixfNdrykc6s" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/68^^316d9cdb57960aed046baf03091d644cMTc3Nzg5ODcwMzMxNmQ5Y2RiNTc5NjBhZWQwNDZiYWYwMzA5MWQ2NDRj.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/68^^316d9cdb57960aed046baf03091d644cMTc3Nzg5ODcwMzMxNmQ5Y2RiNTc5NjBhZWQwNDZiYWYwMzA5MWQ2NDRj.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="69" data-index="69" data-video-url="https://www.youtube.com/embed/QyK3__jjiKM" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/69^^2f3b972ebac5b2f9e2d4eab533ca490bMTc3Nzg5ODcwMzJmM2I5NzJlYmFjNWIyZjllMmQ0ZWFiNTMzY2E0OTBi.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/69^^2f3b972ebac5b2f9e2d4eab533ca490bMTc3Nzg5ODcwMzJmM2I5NzJlYmFjNWIyZjllMmQ0ZWFiNTMzY2E0OTBi.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="70" data-index="70" data-video-url="https://www.youtube.com/embed/GjIPQMHorpc" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/70^^5f1e050f97560b5c8ef11722f02bc876MTc3Nzg5ODcwMzVmMWUwNTBmOTc1NjBiNWM4ZWYxMTcyMmYwMmJjODc2.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/70^^5f1e050f97560b5c8ef11722f02bc876MTc3Nzg5ODcwMzVmMWUwNTBmOTc1NjBiNWM4ZWYxMTcyMmYwMmJjODc2.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="71" data-index="71" data-video-url="https://www.youtube.com/embed/VwCGpeyGs1M" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/71^^a0916247f3cb018233910e85199ec461MTc3Nzg5ODcwM2EwOTE2MjQ3ZjNjYjAxODIzMzkxMGU4NTE5OWVjNDYx.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/71^^a0916247f3cb018233910e85199ec461MTc3Nzg5ODcwM2EwOTE2MjQ3ZjNjYjAxODIzMzkxMGU4NTE5OWVjNDYx.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="72" data-index="72" data-video-url="https://www.youtube.com/embed/mt-rc0PRlQQ" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/72^^05848bd1e69e8964c79b073aa48d526eMTc3Nzg5ODcwMzA1ODQ4YmQxZTY5ZTg5NjRjNzliMDczYWE0OGQ1MjZl.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/72^^05848bd1e69e8964c79b073aa48d526eMTc3Nzg5ODcwMzA1ODQ4YmQxZTY5ZTg5NjRjNzliMDczYWE0OGQ1MjZl.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                                    <div class="carousel-item " data-slide-id="73" data-index="73" data-video-url="https://www.youtube.com/embed/cO25zM6l3B8" data-has-video="true" data-has-bookmark="false">
+                                <div class="p-2 text-center">
+                                    <img src="./physics slides_files/73^^7ffdb1774ac65b175699d540bab95680MTc3Nzg5ODcwMzdmZmRiMTc3NGFjNjViMTc1Njk5ZDU0MGJhYjk1Njgw.JPG" class="img-fluid rounded shadow-sm cursor-pointer" style="max-height:500px;cursor:zoom-in;" alt="Slide" onclick="openFullView(&#39;https://app.topgrade.pk/assets/frns-slides/445516862/73^^7ffdb1774ac65b175699d540bab95680MTc3Nzg5ODcwMzdmZmRiMTc3NGFjNjViMTc1Njk5ZDU0MGJhYjk1Njgw.JPG&#39;)">
+
+
+                                </div>
+                            </div>
+                                            </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#slideCarousel" data-bs-slide="prev">
+                        <span class="bg-dark rounded-circle d-flex align-items-center justify-content-center" style="width:35px; height:35px; opacity: 0.8;background-color: #fff !important;">
+                            <i class="fa fa-chevron-left text-primary"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#slideCarousel" data-bs-slide="next">
+                        <span class="bg-dark rounded-circle d-flex align-items-center justify-content-center" style="width:35px; height:35px; background-color: #fff !important;">
+                            <i class="fa fa-chevron-right text-primary"></i>
+                        </span>
+                    </button>
+                </div>
+                    </div>
+                    <div class="app-card p-4 mb-5" id="video-stat-section" style="position: relative; overflow: hidden;">
+
+                <!-- Actions Row -->
+                <div class="actions-row">
+                    <div class="row g-0 align-items-stretch">
+                        <div class="col-4 border-end action-item" id="bm_add" style="cursor:pointer;" onclick="slidebookmark(1, 1)">
+                            <i class="bi bi-bookmark action-icon text-primary" id="bookmark-icon-ph"></i>
+                            <span class="action-label" id="bookmark-label-ph">Bookmark</span>
+                        </div>
+                        <div class="col-4 border-end action-item" style="cursor:pointer;" onclick="ExportSlides('NDQ1NTE2ODYy')">
+                            <i class="bi bi-download action-icon text-success"></i>
+                            <span class="action-label">Download All Slides</span>
+                        </div>
+                        <div class="col-4 action-item" id="play_video_btn" style="cursor:pointer;" onclick="PlaySlide('https://www.youtube.com/embed/ZT2ffR2gU8U')">
+                            <i class="bi bi-play-circle action-icon" style="color: #7c3aed;"></i>
+                            <span class="action-label">Play Video</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section pt-0">
+                    <!-- Subject Title -->
+                    <div class="breadcrumb-text mb-2" id="slide-topic-title" style="font-size: 1.05rem;">
+                        <b>Force And Motion</b> - (Displacement, Velocity)
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="d-flex gap-2 align-items-center justify-content-start mb-3">
+                        <div class="stat-badge badge-views"><i class="bi bi-eye-fill me-1"></i> <span id="slide_views_count">1.3k</span></div>
+
+                        <div class="stat-badge badge-likes" style="cursor:pointer;" id="like" onclick="Updatefrnfeedback(1)">
+                            <span>
+                                <i id="yt-up-fill" class="bi bi-hand-thumbs-up-fill me-1" style="display:none;"></i>
+                                <i id="yt-up-empty" class="bi bi-hand-thumbs-up me-1" style="display:inline-block;"></i>
+                                <span id="likescounts">34</span>
+                            </span>
+                        </div>
+
+                        <div class="stat-badge badge-dislikes" style="cursor:pointer;" id="dislike" onclick="Updatefrnfeedback(2)">
+                            <span>
+                                <i id="yt-down-empty" class="bi bi-hand-thumbs-down me-1" style="display:inline-block;"></i>
+                                <i id="yt-down-fill" class="bi bi-hand-thumbs-down-fill me-1 d-none"></i>
+                            </span>
+                        </div>
+                        <input type="hidden" id="frn_id_enc" value="1">
+                        <input type="hidden" id="slide_id_count" value="73">
+                    </div>
+                </div>
+
+                <div class="border rounded-3 p-2 mt-4">
+                    <div class="d-flex align-items-center gap-2 mb-2" style="font-size: 0.85rem; color: #1754bb;">
+                        <i class="bi bi-chat-left-text"></i>
+                        <span class="fw-bold">Comments &amp; Feedback <span id="all-comments-counter"></span></span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="bg-light rounded-circle border d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink:0;">
+                            <i class="bi bi-person text-secondary"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="comment-input" class="form-control form-control-sm border-1 bg-light" placeholder="Post your comment or feedback here..." aria-label="Comment">
+                            <div id="action-buttons" class="text-end mt-2 d-none">
+                                <button class="btn btn-sm btn-link text-primary" type="button" id="submit-btn" onclick="postComment('https://app.topgrade.pk/', 'f', 'physics')">
+                                    <i class="bi bi-send-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div id="page-loader" class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white opacity-75 d-none" style="position: absolute !important; inset: 0px !important; width: 100% !important; height: 100% !important; min-height: 100% !important; background: rgba(255, 255, 255, 0.8) !important; display: none; align-items: center !important; justify-content: center !important; z-index: 999 !important;">
+    <div class="loader-wrapper">
+        <div class="spinner-border text-primary custom-spinner" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <img src="./physics slides_files/tg-insignia.webp" alt="Loading Icon" class="loader-icon">
+    </div>
+</div></div>
+                <nav class="bottom-nav">
+                        <div class="container py-3 d-flex justify-content-center gap-3">
+                <div class="d-flex flex-wrap justify-content-center gap-3" style="max-width: 600px; width: 100%;">
+                    <a href="https://app.topgrade.pk/main-session/1?day_topic_id=NjE&amp;day=MQ" class="btn-app-action flex-fill text-decoration-none text-center" style="cursor: pointer; min-width: 140px;">
+                        <i class="fa-solid fa-angles-left"></i> Roadmap
+                    </a>
+                    <a onclick="startStep(&#39;Mw&#39;, &#39;NTM&#39;, &#39;NjE&#39;)" class="btn-app-action flex-fill text-decoration-none text-center bg-success" style="cursor: pointer; min-width: 140px;">
+                        Next Step <i class="fa-solid fa-angles-right"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="app-footer d-none">
+            <div class="nav-container">
+                                <a href="https://app.topgrade.pk/main-session/1?day_topic_id=NjE&amp;day=MQ" class="nav-btn btn-prev text-decoration-none">
+                    <i class="bi bi-chevron-left me-2"></i>
+                    <span>Road Map</span>
+                </a>
+
+                <a onclick="startStep(&#39;Mw&#39;, &#39;NTM&#39;, &#39;NjE&#39;)" style="cursor:pointer;" class="nav-btn btn-next text-decoration-none">
+                    <span>Next Step</span>
+                    <i class="bi bi-chevron-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark border-0">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="playable_video" src="./physics slides_files/saved_resource.html" title="Video Player" allowfullscreen="" allow="autoplay; encrypted-media">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="modal-footer border-0 pt-0 justify-content-center">
+                    <p class="text-white-50 small mb-0"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="report_issue_model" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body text-center px-4 pb-4">
+                    <img class="img-fluid mb-3" src="./physics slides_files/frn-issue.png" style="max-height: 150px;" alt="Issue Icon">
+                    <h4 class="fw-bold">Give Feedback</h4>
+                    <p class="text-muted small">Select any of the following to help us improve</p>
+                    <hr class="my-4 opacity-25">
+
+                    <div class="text-start">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="issue" id="radio1" value="FRN Seems to have a mistake" checked="">
+                            <label class="form-check-label w-100" for="radio1">FRN Seems to have a mistake</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="issue" id="radio2" value="Teaching strategy Needs Improvement">
+                            <label class="form-check-label w-100" for="radio2">Teaching strategy Needs Improvement</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="issue" id="radio3" value="FRN Seems to be out of exam scope">
+                            <label class="form-check-label w-100" for="radio3">FRN Seems to be out of exam scope</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="issue" id="radio4" value="0">
+                            <label class="form-check-label w-100" for="radio4">Other</label>
+                        </div>
+
+                        <div id="issue_msg_container" class="mt-3">
+                            <textarea class="form-control bg-light" id="issue_msg" name="issue_msg" rows="3" placeholder="Explain the issue here..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="button" onclick="SendVideoFrnIssue(&#39;https://app.topgrade.pk/&#39;, &#39;f&#39;, &#39;11023&#39;)" class="btn btn-primary btn-lg w-100 rounded-pill">Submit Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="report_issue_model_thanks" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content border-0 text-center p-4">
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
+                <img class="img-fluid my-3 mx-auto" src="./physics slides_files/thanks.png" style="max-width: 120px;">
+                <h5 class="fw-bold">Thank You!</h5>
+                <p class="text-muted small mb-0">We appreciate your feedback.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="modal fade" id="fullViewModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down">
+                <div class="modal-content bg-dark border-0">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0 d-flex align-items-center justify-content-center" style="overflow: hidden;">
+                        <div class="zoom-container w-100 h-100 d-flex align-items-center justify-content-center">
+                            <img src="" id="fullViewImage" class="img-fluid slide-zoom" alt="Full View Slide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- Full View Modal -->
+    <div class="modal fade" id="fullViewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down modal-xl">
+            <div class="modal-content bg-dark border-0 position-relative h-100">
+
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="background-color: rgba(0,0,0,0.5); padding: 10px; border-radius: 50%;"></button>
+
+                <div class="modal-body p-0 d-flex align-items-center justify-content-center modal-swipe-zone position-relative overflow-hidden" style="min-height: 80vh; background-color: #0d1117;">
+
+                    <button class="btn text-white position-absolute start-0 top-50 translate-middle-y z-3 p-3 m-2 d-none d-md-block" onclick="modalNavigate(&#39;prev&#39;)" style="background-color: rgba(0,0,0,0.4); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa fa-chevron-left fs-4"></i>
+                    </button>
+
+                    <div class="w-100 h-100 d-flex align-items-center justify-content-center overflow-auto">
+                        <img id="fullViewImage" src="https://app.topgrade.pk/slides_viewer/NjE/NDYxMA" class="img-fluid" style="max-height: 90vh; max-width: 100%; object-fit: contain; transition: transform 0.2s ease-in-out; transform-origin: center center; cursor: zoom-in;" alt="Full view screen">
+                    </div>
+
+                    <button class="btn text-white position-absolute end-0 top-50 translate-middle-y z-3 p-3 m-2 d-none d-md-block" onclick="modalNavigate(&#39;next&#39;)" style="background-color: rgba(0,0,0,0.4); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa fa-chevron-right fs-4"></i>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="report_issue_model_thanks" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered shadow-sm">
+            <div class="modal-content text-center p-5 border-0" style="border-radius: 20px;">
+                <img src="./physics slides_files/thanks.png" class="img-fluid mx-auto mb-3" style="max-height: 100px;">
+                <h4 class="fw-bold">Thank You!</h4>
+                <p class="text-muted">Comment posted successfully.</p>
+                <button type="button" class="btn btn-outline-secondary btn-sm mx-auto w-50" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+<script src="./physics slides_files/bootstrap.bundle.min.js.download"></script>
+<!-- Custom JS -->
+<script src="./physics slides_files/custom.js.download"></script>
+<script src="./physics slides_files/jquery.min.js.download"></script>
+<script src="./physics slides_files/select2.min.js.download"></script>
+<script>
+    function SessionTarget(url, way, learning_session_id) {
+        $("#page-loader").removeClass('d-none');
+        if (url == "") {
+            $("#page-loader").addClass('d-none');
+            return false;
+        } else {
+            if (learning_session_id == 3 || learning_session_id == 1) {
+                SetTag(127);
+            } else if (learning_session_id == 27) {
+                SetTag(134);
+            }
+            ajaxurl = "https://app.topgrade.pk/session-preparation-way";
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                async: false,
+                data: {
+                    way: way,
+                    learning_session_id: learning_session_id
+                },
+                success: function(term) {
+                    setTimeout(function() {
+                        $("#page-loader").addClass('d-none');
+                        location.href = url;
+                    }, 1000);
+                    //                    $("#page-loader").addClass('d-none');
+                    //                    location.href = url;
+                }
+            });
+        }
+    }
+</script>
+<script>
+    function BuildCourse(course_id, hrefurl, show_parent_home) {
+        $("#page-loader").removeClass('d-none');
+        if (course_id == "155") {
+            BuildCourseByCategory(course_id, hrefurl);
+            return false;
+        }
+        $.ajax({
+            url: 'https://app.topgrade.pk/BuildCourse',
+            data: {
+                course_id: course_id,
+                show_parent_home: show_parent_home
+            },
+            type: 'post',
+            async: false,
+            success: function(msg) {
+                setTimeout(function() {
+                    $("#page-loader").addClass('d-none');
+                    location.href = hrefurl;
+                }, 2000);
+            }
+        });
+    }
+</script>
+<script>
+    function BuildCourseByCategory(course_id, hrefurl) {
+        $("#page-loader").removeClass('d-none');
+        $.ajax({
+            url: 'https://app.topgrade.pk/BuildCourseByCategory',
+            data: {
+                course_id: course_id
+            },
+            type: 'post',
+            async: false,
+            success: function(msg) {
+                setTimeout(function() {
+                    $("#page-loader").addClass('d-none');
+                    location.href = hrefurl;
+                }, 2000);
+            }
+        });
+    }
+</script>
+<script>
+    $(document).ready(function() {
+        $('#courseSearch').select2({
+            placeholder: "Search Your Course",
+            allowClear: false,
+            width: 'resolve',
+            templateResult: function(data) {
+                if (!data.id) return data.text; // placeholder
+
+                var badge = $(data.element).data("badge") || "";
+                var text = $('<span class="option-text">' + data.text + '</span>');
+
+                // Only show badge if exists
+                if (badge) {
+                    return $(
+                        '<span style="display:flex; justify-content:space-between; width:100%;">' +
+                        "<span>" + data.text + "</span>" +
+                        '<span class="option-badge" style="flex-shrink: 0;align-self: center;display: inline-flex;align-items: center;justify-content: center;background: green;color: #fff;border-radius: 12px;padding: 3px 8px;font-size: 11px;height: fit-content;white-space: nowrap;">' +
+                        badge +
+                        "</span>" +
+                        "</span>"
+                    );
+                } else {
+                    return data.text;
+                }
+            },
+            templateSelection: function(data) {
+                // Optional: how selected item appears in the box
+                return data.text;
+            }
+        });
+    });
+</script>
+<script>
+    function FlutterDialer(IsApp, type, phone, message) {
+        $("#page-loader").removeClass('d-none');
+        if (IsApp == 1) {
+            $("#page-loader").addClass('d-none');
+            // Inside Flutter app: call handlers with phone and message
+            if (message !== '') {
+                message = decodeURIComponent(message);
+            }
+            if (type === 0) {
+                window.flutter_inappwebview.callHandler('dialer', phone, message);
+            } else {
+                window.flutter_inappwebview.callHandler('whatsapp', phone, message);
+            }
+        } else {
+            $("#page-loader").addClass('d-none');
+            // Outside app (browser)
+            if (type == 0) {
+                // Dialer fallback
+                window.location.href = `tel:${phone}`;
+            } else {
+                // WhatsApp web with message support (URL encoded)
+                const url = message ?
+                    `https://wa.me/${phone}?text=${message}` :
+                    `https://wa.me/${phone}`;
+                window.open(url, '_blank');
+            }
+        }
+    }
+</script>
+<script>
+    function SetTag(tag_id) {
+        $("#page-loader").removeClass('d-none');
+        $.ajax({
+            url: 'https://app.topgrade.pk/SetTag',
+            data: {
+                tag_id: tag_id
+            },
+            type: 'post',
+            async: false,
+            success: function(msg) {
+                $("#page-loader").addeClass('d-none');
+            }
+        });
+    }
+</script>
+<script>
+    function PreparationWay(way) {
+        $("#page-loader").removeClass('d-none');
+        url = "https://app.topgrade.pk/preparation-way";
+        $.ajax({
+            url: url,
+            type: 'POST',
+            async: false,
+            data: {
+                way: way
+            },
+            success: function(term) {
+                $("#page-loader").addClass('d-none');
+                location.href = 'https://app.topgrade.pk/';
+            }
+        });
+    }
+</script>
+<script>
+    function loadYouTube(el) {
+        $("#page-loader").removeClass('d-none');
+        const id = el.dataset.id;
+        el.innerHTML = `
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/${id}?autoplay=1"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            `;
+        setTimeout(function() {
+            $("#page-loader").addClass('d-none');
+        }, 1000);
+    }
+</script>
+<script>
+    function GetInvoice() {
+        location.href = 'https://app.topgrade.pk/get-invoice';
+    }
+</script>    <script src="./physics slides_files/sweetalert2@11"></script>
+    <!--        <script>
+            $(document).ready(function () {
+                var carouselEl = document.getElementById('slideCarousel');
+                if (carouselEl) {
+                    // 'slid.bs.carousel' triggers after the animation is finished
+                    carouselEl.addEventListener('slid.bs.carousel', function (event) {
+
+                        // 1. Update UI Counter
+                        var currentIndex = $(event.relatedTarget).data('index');
+                        $('#current_idx').text(currentIndex);
+
+                        // 2. Get Data for AJAX
+                        var slideId = $(event.relatedTarget).data('slide-id');
+                        var rrnId = "4610";
+
+                        // 3. Background AJAX call to update stats
+                        $.ajax({
+                            url: "https://app.topgrade.pk/learning_session/update_slide_view_stat",
+                            type: "POST",
+                            data: {slide_id: slideId, rrn_id: rrnId},
+                            success: function (res) {
+                                console.log("Stats updated for slide " + slideId);
+                            }
+                        });
+                    });
+                }
+            });
+        </script>-->
+    <script>
+        $(document).ready(function() {
+            /* For First Slide */
+            SlideStats("4610", 1);
+            var carouselEl = document.getElementById('slideCarousel');
+
+            // Bootstrap 5 Event: Jab slide mukammal taur par change ho jaye
+            carouselEl.addEventListener('slid.bs.carousel', function(event) {
+
+                // 1. Get data from the now ACTIVE slide
+                var activeSlide = $(event.relatedTarget);
+                var slide_id_enc = activeSlide.data('slide-id'); // data-slide-id se ID uthayen
+                var current_idx = activeSlide.data('index'); // data-index se number uthayen
+                var frn_id = "4610";
+                var hasVideo = activeSlide.data('has-video');
+                var videoUrl = activeSlide.data('video-url');
+                var isbookmarked = activeSlide.data('has-bookmark');
+                if (hasVideo === true || hasVideo === 'true') {
+                    $('#play_video_btn').removeClass('d-none'); // Button show karein
+                    $('#play_video_btn').attr('onclick', "PlaySlide('" + videoUrl + "')");
+                } else {
+                    $('#play_video_btn').attr('onclick', "");
+                    $('#play_video_btn').addClass('d-none'); // Button hide karein
+                }
+                if (isbookmarked === true || isbookmarked === 'true') {
+                    $('#bm_remove').attr('onclick', "slidebookmark(" + slide_id_enc + ", 0)");
+                    $('#bm_remove').removeClass('d-none');
+                    $('#bm_add').addClass('d-none');
+                } else {
+                    $('#bm_add').attr('onclick', "slidebookmark(" + slide_id_enc + ", 1)");
+                    $('#bm_add').removeClass('d-none');
+                    $('#bm_remove').addClass('d-none');
+                }
+
+
+
+
+
+
+                // 2. Update UI Counter (Slide 1 of X)
+                $('#current_idx').text(current_idx);
+
+                // 3. Update hidden input (agar aap tracking ke liye use kar rahay hain)
+                $("#frn_id_enc").val(current_idx);
+
+                // 4. Run your AJAX logic
+                SlideStats(frn_id, slide_id_enc);
+            });
+
+            // Keyboard Arrow Support
+            $(document).keydown(function(e) {
+                var carousel = bootstrap.Carousel.getInstance(carouselEl);
+                if (e.which == 37)
+                    carousel.prev(); // Left
+                if (e.which == 39)
+                    carousel.next(); // Right
+            });
+
+        });
+    </script>
+    <script>
+        function SlideStats(frn_id, slide_id_enc) {
+            const $loader = $("#page-loader");
+            const $section = $("#video-stat-section");
+
+            $section.css({
+                position: "relative",
+                overflow: "hidden"
+            });
+
+            $loader.appendTo($section);
+
+            $loader.attr(
+                "style",
+                `
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    background: rgba(255,255,255,0.8) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 999 !important;
+    `
+            );
+
+            $loader.removeClass("d-none").css("display", "flex");
+            $('#bm_add').addClass('d-none');
+            $('#bm_remove').addClass('d-none');
+            $.ajax({
+                url: 'https://app.topgrade.pk/' + 'viewed-slide',
+                data: {
+                    frn_id: frn_id,
+                    slide_id: slide_id_enc,
+                    by_learning_funnel: 2,
+                    frn_slides_status: 1
+                },
+                type: 'post',
+                success: function(msg) {
+                    console.log("New Ajax = " + msg);
+                    var res = msg.split("^^");
+
+                    // Views aur Likes update karein
+                    $("#slide_views_count").html(res[0]);
+                    $("#likescounts").html(res[1]);
+
+                    // Bookmark toggle logic
+                    // Pehle saaray bookmarks hide karein phir sirf current wala show karein
+
+                    if (res[3] == 1) {
+                        console.log("bookmarked");
+                        $('#bm_remove').attr('onclick', "slidebookmark(" + slide_id_enc + ", 0)");
+                        $('#bm_remove').removeClass('d-none');
+                        $('#bm_add').addClass('d-none');
+                    } else {
+                        console.log("nobookmarked");
+                        $('#bm_add').attr('onclick', "slidebookmark(" + slide_id_enc + ", 1)");
+                        $('#bm_add').removeClass('d-none');
+                        $('#bm_remove').addClass('d-none');
+                    }
+                    updateVoteIcons(res[2]);
+                }
+            });
+            setTimeout(() => {
+                $loader.addClass("d-none").css("display", "none");
+            }, 500);
+
+        }
+    </script>
+    <script>
+        function updateVoteIcons(status) {
+            $("#yt-down-fill, #yt-up-fill").addClass('d-none');
+            $("#yt-down-empty, #yt-up-empty").removeClass('d-none');
+
+            if (status == '1') { // Liked
+                $("#yt-up-fill").removeClass('d-none');
+                $("#yt-up-empty").addClass('d-none');
+            } else if (status == '2') { // Disliked
+                $("#yt-down-fill").removeClass('d-none');
+                $("#yt-down-empty").addClass('d-none');
+            }
+        }
+    </script>
+    <script>
+        function Updatefrnfeedback(stat) {
+            // Selectors
+            const $likesDisplay = $('#likescounts');
+            const frn_id = "4610";
+            const slide_id = $("#frn_id_enc").val();
+            const url = 'https://app.topgrade.pk/slide-like-dislike-status';
+
+            let currentLikes = parseInt($likesDisplay.text()) || 0;
+
+            $("#page-loader").removeClass('d-none');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {
+                    frn_id: frn_id,
+                    frn_stat: stat,
+                    slide_id: slide_id
+                },
+                success: function(result) {
+                    console.log(result);
+                    // Result 1 means backend successfully updated
+                    if (result == 1) {
+                        if (stat == 1) {
+                            // UI: Show Like Fill, Hide Dislike Fill
+                            $('#yt-up-fill').removeClass('d-none');
+                            $('#yt-up-empty').addClass('d-none');
+                            $('#yt-down-fill').addClass('d-none');
+                            $('#yt-down-empty').removeClass('d-none');
+
+                            // Count Update (Logic: Basic increment)
+                            $likesDisplay.text(currentLikes + 1);
+                        } else {
+                            // UI: Show Dislike Fill, Hide Like Fill
+                            $('#yt-up-fill').addClass('d-none');
+                            $('#yt-up-empty').removeClass('d-none');
+                            $('#yt-down-fill').removeClass('d-none');
+                            $('#yt-down-empty').addClass('d-none');
+
+                            // Count Update (Only decrement if it's > 0)
+                            if (currentLikes > 0)
+                                $likesDisplay.text(currentLikes - 1);
+                        }
+                    }
+                    $("#page-loader").addClass('d-none');
+                },
+                error: function() {
+                    $("#page-loader").addClass('d-none');
+                    console.error("AJAX error in feedback update");
+                }
+            });
+        }
+    </script>
+    <script>
+        function PlaySlide(vid) {
+            // 1. Set video source
+            $("#playable_video").attr('src', vid);
+
+            // 2. Open Modal using Bootstrap 5 Instance
+            const modalElement = document.getElementById('myModal');
+            const modalInstance = bootstrap.Modal.getOrCreateInstance(modalElement);
+            modalInstance.show();
+
+            // 3. Handle 'shown' event (using once:true to prevent multiple triggers)
+            $(modalElement).one('shown.bs.modal', function() {
+                if (typeof SleepLoading === "function") {
+                    SleepLoading();
+                }
+            });
+
+            // 4. AJAX View Count Update
+            const frn_id = "4610";
+            const slide_id_enc = $("#frn_id_enc").val(); // Removed parseInt to keep it consistent with backend expectations
+
+            $.ajax({
+                url: 'https://app.topgrade.pk/play-slide-count',
+                type: 'POST',
+                data: {
+                    frn_id: frn_id,
+                    slide_id: slide_id_enc
+                },
+                success: function(response) {
+                    console.log("View count updated");
+                    // Optional: Update views count on UI if backend returns the new number
+                    // if(response.new_count) $('#slide_views_count').text(response.new_count + " views");
+                },
+                error: function(err) {
+                    console.error("View count update failed", err);
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            // Stop video when modal is hidden (Bootstrap 5 event)
+            $("#myModal").on('hide.bs.modal', function() {
+                $("#video, #playable_video").attr('src', '');
+            });
+        });
+    </script>
+    <script>
+        function slidebookmark(slide_id, stat) {
+            frn_id = "4610";
+            $.ajax({
+                url: 'https://app.topgrade.pk/' + 'marked-slide',
+                data: {
+                    frn_id: frn_id,
+                    slide_id: slide_id,
+                    by_learning_funnel: 1,
+                    marked_status: stat,
+                    frn_slides_status: 1
+                },
+                type: 'post',
+                success: function(msg) {
+                    console.log(msg);
+                    if (stat == 1) {
+                        $('#bm_remove').attr('onclick', "slidebookmark(" + slide_id + ", 0)");
+                        $('#bm_remove').removeClass('d-none');
+                        $('#bm_add').addClass('d-none');
+                    } else {
+                        $('#bm_add').attr('onclick', "slidebookmark(" + slide_id + ", 1)");
+                        $('#bm_add').removeClass('d-none');
+                        $('#bm_remove').addClass('d-none');
+                    }
+                }
+            });
+            console.log(slide_id + "--" + stat + "--" + frn_id);
+        }
+    </script>
+    <script>
+        function ExportSlides(frn_id) {
+            window.open("https://app.topgrade.pk/export-slides/" + frn_id, '_blank');
+        }
+    </script>
+    <script>
+        function ReportIssueModal() {
+            const frn_id = "4610";
+            const apiUrl = 'https://app.topgrade.pk/fast-revision-notes/already-report-issue';
+
+            $("#page-loader").removeClass('d-none');
+
+            $.ajax({
+                url: apiUrl,
+                type: 'POST',
+                data: {
+                    video_frn_id: frn_id,
+                    video_frn: 'frn_id'
+                },
+                success: function(msg) {
+                    $("#page-loader").addClass('d-none');
+                    if (msg == 1) {
+                        Swal.fire({
+                            title: "Feedback Already Received",
+                            text: "You have already given feedback, try again after 48 hours.",
+                            icon: "info",
+                            confirmButtonColor: '#3f6ad8',
+                            confirmButtonText: 'OK',
+                            customClass: {
+                                confirmButton: 'btn btn-info'
+                            }
+                        });
+                        return false;
+                    } else {
+                        // Open BS5 Modal
+                        const reportModal = new bootstrap.Modal(document.getElementById('report_issue_model'));
+                        reportModal.show();
+                    }
+                },
+                error: function() {
+                    $$("#page-loader").addClass('d-none');
+                }
+            });
+        }
+
+        // Optimized Toggle for Textarea
+        $(document).on('change', 'input[name="issue"]', function() {
+            const selectedVal = $(this).val();
+            const $msgContainer = $('#issue_msg_container');
+
+            // Show textarea if "Other" or "Mistake" is selected (customize as needed)
+            if (selectedVal === '0' || selectedVal === 'FRN Seems to have a mistake') {
+                $msgContainer.removeClass('d-none').hide().fadeIn();
+            } else {
+                $msgContainer.fadeOut(function() {
+                    $(this).addClass('d-none');
+                    $('#issue_msg').val('');
+                });
+            }
+        });
+    </script>
+    <script>
+        function SendVideoFrnIssue(base_url, type, s_id) {
+            // 1. Get Values
+            const frn_id = "4610";
+            var issue = $('input[name="issue"]:checked').val();
+            var other_issue_msg = $("#issue_msg").val().trim();
+
+            // 2. Validation Logic
+            // Agar "Other" select ho ya mistake wali options hon to message required hai
+            $("#issue_msg").removeClass('is-invalid').css('border', '1px solid #ced4da');
+
+            if ((issue == "0" || issue == 'Video Seems to have a mistake' || issue == 'FRN Seems to have a mistake') && other_issue_msg == '') {
+                $("#issue_msg").addClass('is-invalid').css('border', '1px solid red').focus();
+                return false;
+            }
+
+            // 3. ID Selection based on type
+            var id = (type == 'v') ? $('#_v_id').val() : frn_id;
+
+            // 4. URL Construction
+            var folder = (type == 'v') ? '/video-lectures/' : '/fast-revision-notes/';
+            var url = base_url + folder + 'report-issue';
+
+            $("#page-loader").removeClass('d-none');
+
+            // 5. AJAX Call
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: {
+                    id: id,
+                    type: type,
+                    u_sub_section_id: s_id,
+                    other_issue_msg: other_issue_msg,
+                    issue: issue
+                },
+                success: function(msg) {
+                    $("#page-loader").addClass('d-none');
+
+                    // UI Reset
+                    $("#issue_msg").val('').hide();
+                    $('#report_issue_model').modal('hide');
+
+                    // Show Success Modal
+                    $('#report_issue_model_thanks').modal('show');
+
+                    // Auto hide thanks modal
+                    setTimeout(function() {
+                        $('#report_issue_model_thanks').modal('hide');
+                    }, 4000);
+                },
+                error: function() {
+                    $("#page-loader").addClass('d-none');
+                    alert("Something went wrong. Please try again.");
+                }
+            });
+        }
+    </script>
+    <script>
+        function startStep(enc_type, enc_media_id, enc_topic_id) {
+            // atob() function base64 ko wapis normal string banata hai
+            $("#page-loader").removeClass('d-none');
+            var type = atob(enc_type);
+            var baseUrl = "https://app.topgrade.pk/";
+            if (type == 1) {
+                // video
+                window.location.href = baseUrl + "video_player/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            } else if (type == 2) {
+                // slides
+                window.location.href = baseUrl + "slides_viewer/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            } else if (type == 3) {
+                //test
+                SetTag(131);
+                window.location.href = baseUrl + "take_test/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            } else if (type == 6) {
+                //test
+                SetTag(133);
+                window.location.href = baseUrl + "read_text_book/" + enc_topic_id + "/" + enc_media_id;
+                $("#page-loader").addClass('d-none');
+            }
+        }
+    </script>
+    <script>
+        let bgCarousel;
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Automatically find your Bootstrap carousel
+            const carouselEl = document.querySelector('.carousel') || document.getElementById('myMainCarouselElementId');
+            if (carouselEl) {
+                bgCarousel = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+            }
+
+            // Attach swipe listeners to the modal image container
+            const modalImageContainer = document.querySelector('.modal-swipe-zone');
+            if (modalImageContainer) {
+                modalImageContainer.addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, {
+                    passive: true
+                });
+
+                modalImageContainer.addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipeGesture();
+                }, {
+                    passive: true
+                });
+            }
+        });
+
+        // Detect real left/right swipes
+        function handleSwipeGesture() {
+            const swipeThreshold = 50; // Minimum swipe distance in pixels
+            if (touchEndX < touchStartX - swipeThreshold) {
+                modalNavigate('next'); // Swiped left -> Show next
+            }
+            if (touchEndX > touchStartX + swipeThreshold) {
+                modalNavigate('prev'); // Swiped right -> Show prev
+            }
+        }
+
+        function openFullView(imgUrl) {
+            const fullImg = document.getElementById('fullViewImage');
+            fullImg.src = imgUrl;
+            fullImg.style.transform = "scale(1)"; // Reset zoom
+
+            const myModal = new bootstrap.Modal(document.getElementById('fullViewModal'));
+            myModal.show();
+        }
+
+        function modalNavigate(direction) {
+            if (!bgCarousel) return;
+
+            const carouselEl = document.querySelector('.carousel') || document.getElementById('myMainCarouselElementId');
+
+            const updateModalImage = function(event) {
+                const activeImg = event.relatedTarget.querySelector('img');
+                if (activeImg) {
+                    const fullImg = document.getElementById('fullViewImage');
+                    fullImg.src = activeImg.src;
+                    fullImg.style.transform = "scale(1)"; // Reset zoom on slide change
+                }
+                carouselEl.removeEventListener('slid.bs.carousel', updateModalImage);
+            };
+
+            carouselEl.addEventListener('slid.bs.carousel', updateModalImage);
+
+            if (direction === 'next') bgCarousel.next();
+            if (direction === 'prev') bgCarousel.prev();
+        }
+
+        // Double-tap to zoom toggle
+        let lastTap = 0;
+        document.getElementById('fullViewImage').addEventListener('touchend', function(e) {
+            let currentTime = new Date().getTime();
+            let tapLength = currentTime - lastTap;
+            if (tapLength < 300 && tapLength > 0) {
+                if (this.style.transform === "scale(2)") {
+                    this.style.transform = "scale(1)";
+                    this.style.cursor = "zoom-in";
+                } else {
+                    this.style.transform = "scale(2)";
+                    this.style.cursor = "zoom-out";
+                }
+                e.preventDefault();
+            }
+            lastTap = currentTime;
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Input pe click karne se buttons show hon
+            $('#comment-input').on('focus', function() {
+                $('#action-buttons').removeClass('d-none');
+            });
+
+            // Button enable/disable logic
+            $('#comment-input').on('input', function() {
+                $('#submit-btn').prop('disabled', this.value.trim() === "");
+            });
+        });
+
+        function cancelComment() {
+            $('#comment-input').val('');
+            $('#action-buttons').addClass('d-none');
+        }
+
+        function postComment(base_url, type, s_id) {
+            $("#page-loader").removeClass('d-none');
+            let text = $('#comment-input').val();
+            if (text == "") {
+                $("#page-loader").addClass('d-none');
+                $("#comment-input").addClass('is-invalid').css('border', '1px solid red').focus();
+                return false;
+            }
+            var id = "4610";
+
+            // 4. URL Construction
+            var url = base_url + '/fast-revision-notes/report-issue';
+            var issue = 0;
+            var other_issue_msg = text;
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: {
+                    id: id,
+                    type: type,
+                    u_sub_section_id: s_id,
+                    other_issue_msg: other_issue_msg,
+                    issue: issue
+                },
+                success: function(res) {
+                    // Naya comment top pe dikhane ke liye
+                    $("#comment-input").removeClass('is-invalid')
+                    //                        $('#comments-container').prepend(renderComment(res));
+                    $('#comment-input').val('');
+                    cancelComment();
+                    $("#page-loader").addClass('d-none');
+                    // Show Success Modal
+                    $('#report_issue_model_thanks').modal('show');
+
+                    // Auto hide thanks modal
+                    setTimeout(function() {
+                        $('#report_issue_model_thanks').modal('hide');
+                    }, 4000);
+                }
+            });
+        }
+    </script>
+
+
+</body></html>
