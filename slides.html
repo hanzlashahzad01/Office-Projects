@@ -394,7 +394,7 @@
             </div>
         </div>
 
-        <!-- Master Card: Actions + Title + Stats + Comments -->
+        <!-- Master Card: Actions + Title + Stats -->
         <div class="app-card mt-0 mb-5 p-4" id="video-stat-section">
             
             <!-- Actions row -->
@@ -441,22 +441,29 @@
                     </div>
                 </div>
 
-                <!-- Comments & Feedback -->
+                <!-- Comments Section -->
                 <div class="border rounded-3 p-2 mt-4">
-                    <div class="d-flex align-items-center gap-2 mb-2" style="font-size: 0.85rem; color: #1754bb;">
-                        <i class="bi bi-chat-left-text"></i>
-                        <span class="fw-bold">Comments &amp; Feedback <span id="comments-counter"></span></span>
+                    <div class="d-flex align-items-center gap-2 mb-2" style="font-size: 0.85rem;color:#1754bb;">
+                        <i class="bi bi-chat-left-text"></i> <span class="fw-bold">Comments &amp; Feedback <span id="all-comments-counter"></span></span>
                     </div>
                     <div class="d-flex align-items-center gap-2">
-                        <div class="bg-light rounded-circle border d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; flex-shrink:0;">
+                        <div class="bg-light rounded-circle border d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
                             <i class="bi bi-person text-secondary"></i>
                         </div>
                         <div class="input-group">
                             <input type="text" id="comment-input" class="form-control form-control-sm border-1 bg-light" placeholder="Post your comment or feedback here..." aria-label="Comment">
-                            <button class="btn btn-sm btn-link text-primary" type="button" id="submit-btn" disabled style="padding: 0.25rem 0.5rem; text-decoration:none;">
-                                <i class="bi bi-send-fill"></i>
-                            </button>
+                            <div id="action-buttons" class="text-end mt-2 d-none">
+                                <button class="btn btn-sm btn-link text-primary" type="button" id="submit-btn">
+                                    <i class="bi bi-send-fill"></i>
+                                </button>
+                            </div>
                         </div>
+                    </div>
+                    <div class="rounded-3 p-3" id="comments-container">
+                        <!-- Comments will be appended here -->
+                    </div>
+                    <div class="text-center mt-2">
+                        <button id="load-more-btn" class="btn btn-primary d-none">Load More</button>
                     </div>
                 </div>
 
@@ -498,6 +505,8 @@
     <script>
         const SUBJECT_DATA = window.SLIDES_SUBJECT_DATA;
 
+        const INITIAL_COMMENTS = [];
+
         // ─── Init ────────────────────────────────────────────────────────
         const urlParams = new URLSearchParams(window.location.search);
         const subjectKey = urlParams.get('subject') || 'biology';
@@ -508,6 +517,7 @@
         let isBookmarked = false;
         let likeState = null;
         let likesCount = data.likes;
+        let commentsList = [...INITIAL_COMMENTS];
 
         $(document).ready(function() {
             // 1. Set UI Data
@@ -516,6 +526,7 @@
             $('#likes-count').text(likesCount);
             updateSlideCounter();
             loadSlide(1);
+            renderComments();
 
             // 2. Navigation URLs
             const roadmapUrl = `index.html?roadmap=${subjectKey}`;
@@ -529,8 +540,7 @@
             // 3. Next Step
             $('#bottom-next-step').on('click', function(e) {
                 e.preventDefault();
-                alert("Moving to next step: Take the Test!");
-                window.location.href = roadmapUrl;
+                startStep('Mw==', 'MQ==', 'MQ==');
             });
 
             // 4. Slide Navigation
@@ -592,6 +602,32 @@
                 updateLikesUI();
             });
 
+            // 9. Comment Input
+            $('#comment-input').on('focus', function() {
+                $('#action-buttons').removeClass('d-none');
+            });
+            $('#comment-input').on('input', function() {
+                $('#submit-btn').prop('disabled', this.value.trim() === '');
+            });
+            $('#submit-btn').on('click', function() {
+                const text = $('#comment-input').val().trim();
+                if (!text) return;
+                commentsList.unshift({ name: 'Testing User', comment: text });
+                $('#comment-input').val('');
+                $('#action-buttons').addClass('d-none');
+                renderComments();
+                showModal('Comment Posted', 'Your comment has been added.');
+            });
+
+            // 10. Load More Comments
+            $('#load-more-btn').on('click', function() {
+                commentsList.push(
+                    { name: 'Kashif Ali', comment: 'Really nice slides, sir.' },
+                    { name: 'Areeba', comment: 'Very helpful for entry test prep.' }
+                );
+                renderComments();
+                $('#load-more-btn').hide();
+            });
         });
 
         function loadSlide(num) {
@@ -618,11 +654,44 @@
             }
         }
 
+        function renderComments() {
+            $('#all-comments-counter').text(`(${commentsList.length})`);
+            $('#comments-container').empty();
+            commentsList.forEach(function(c) {
+                $('#comments-container').append(`
+                    <div class="d-flex mt-3">
+                        <div class="flex-shrink-0">
+                            <div class="bg-light rounded-circle border d-flex align-items-center justify-content-center" style="width:32px;height:32px;">
+                                <i class="bi bi-person text-secondary"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-2 d-flex justify-content-between">
+                            <div style="min-width: 0;">
+                                <strong style="font-size: 0.9rem;text-transform: capitalize;">${c.name}</strong>
+                                <p class="mb-0" style="font-size: 0.85rem; word-break: break-word;">${c.comment}</p>
+                            </div>
+                        </div>
+                    </div>
+                `);
+            });
+        }
+
         function showModal(title, message) {
             $('#modal-title-text').text(title);
             $('#modal-body-text').text(message);
             $('#report_issue_model_thanks').modal('show');
             setTimeout(function() { $('#report_issue_model_thanks').modal('hide'); }, 2500);
+        }
+
+        function startStep(enc_type, enc_media_id, enc_topic_id) {
+            var type = atob(enc_type);
+            console.log("startStep called with type:", type);
+            
+            if (type == 3) {
+                console.log("Opening test file: Test folder/" + subjectKey + " test.html");
+                window.location.href = "Test folder/" + subjectKey + " test.html";
+                return;
+            }
         }
     </script>
 </body>
