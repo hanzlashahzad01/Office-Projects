@@ -311,17 +311,51 @@
     /* Responsive */
     @media (max-width: 768px) {
         body, html { overflow-y: auto; }
-        .app-wrapper { padding-bottom: 90px; justify-content: flex-start; }
-        .app-card { margin-top: 10px; margin-bottom: 20px; }
-        .greeting-section { width: 100%; }
+        .app-wrapper { padding-bottom: 90px; justify-content: flex-start; padding: 8px; }
+        .app-card { margin-top: 10px; margin-bottom: 20px; border-radius: 12px; }
+        .greeting-section { width: 100%; grid-template-columns: 50px 1fr; gap: 8px; }
+        .hero-mascot { width: 50px; }
+        .speech-bubble { font-size: 0.75rem; padding: 8px 12px; }
+        .speech-bubble::before { left: -10px; border-right-width: 10px; }
+        .info-section { padding: 1rem; }
+        .breadcrumb-text { font-size: 16px; line-height: 22px; }
+        .stat-badge { padding: 4px 10px; font-size: 0.85rem; }
+        .slide-section { border-radius: 10px; }
+        .slide-nav-btn { width: 32px; height: 32px; font-size: 14px; }
+        .action-item { padding: 10px 6px; }
+        .action-item .action-icon { font-size: 18px; }
+        .action-item .action-label { font-size: 12px; }
+        .bottom-nav { height: 60px; padding: 0 8px; }
+        .btn-app-action { padding: 8px 16px; font-size: 0.85rem; height: 40px; min-width: 120px; }
+        .heading-title { font-size: 18px; margin-top: 20px; }
+        #comment-input { font-size: 14px; }
     }
 
     @media (max-width: 480px) {
-        .btn-app-action { font-size: 14px; }
-        .app-subtitle { font-size: 12px; line-height: 18px; }
-        .heading-title { font-size: 20px; line-height: 26px; }
-        .app-card { margin-top: 0 !important; }
+        .app-wrapper { padding: 5px; padding-bottom: 80px; }
+        .app-card { margin-top: 5px; margin-bottom: 15px; border-radius: 10px; }
+        .greeting-section { grid-template-columns: 45px 1fr; gap: 6px; margin-bottom: 6px; }
+        .hero-mascot { width: 45px; }
+        .speech-bubble { font-size: 0.7rem; padding: 6px 10px; }
+        .speech-bubble::before { left: -8px; border-right-width: 8px; }
+        .info-section { padding: 0.875rem; }
         .breadcrumb-text { font-size: 14px; line-height: 20px; }
+        .heading-title { font-size: 16px; line-height: 24px; margin-top: 15px; }
+        .stat-badge { padding: 3px 8px; font-size: 0.8rem; }
+        .slide-nav-btn { width: 28px; height: 28px; font-size: 12px; }
+        .slide-prev { left: 5px; }
+        .slide-next { right: 5px; }
+        .action-item { padding: 8px 4px; }
+        .action-item .action-icon { font-size: 16px; margin-bottom: 3px; }
+        .action-item .action-label { font-size: 11px; }
+        .bottom-nav { height: 56px; padding: 0 6px; }
+        .btn-app-action { padding: 6px 12px; font-size: 0.8rem; height: 36px; min-width: 100px; gap: 4px; }
+        .slide-counter { font-size: 13px; }
+        #comment-input { font-size: 13px; }
+        
+        /* Header adjustments */
+        header .form-select { font-size: 12px; padding: 4px 8px; min-width: auto; }
+        header .ms-2 { font-size: 14px; }
     }
 </style>
 
